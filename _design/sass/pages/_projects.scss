@@ -1,0 +1,63 @@
+ 
+
+
+.project-head {
+ width:100%;
+ overflow:hidden;
+ position: absolute;
+ opacity: 0.5;
+ z-index:-9999;
+ }
+.project-head img {
+    width:100%;
+    margin-top: -31%;
+    }
+    
+ body.project{
+ background:none !important;}
+
+.project .nav, .project .nav ul {
+    background: none; }
+
+
+/*===========================================
+    WHATS ON PROJECT TEMPLATES
+    =======================================*/
+   
+
+.news-title {
+  position: absolute;
+  left:230px;
+  top: -0.732em; }
+        
+.news-content {
+  position: absolute;
+  left:230px; 
+  top: 30px; }
+    
+.latest-news h3 a {
+  background:    #DFE9F4;
+  text-decoration: none;
+  padding:5px 2px; }
+    
+.news-read-more {
+  position: absolute;
+  left:230px; 
+  top: 10.732em;  }
+    
+.right-column p, .course p {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0.732em 0; }
+    
+.right-article {
+        margin-top:12px; }
+
+.right-column .project h3 {
+        border-top:2px dashed #B6D6B6;
+        /*margin-top:15px; */}
+        
+    
+img.portal-img {
+        cursor:pointer; 
+        max-width:150%; }

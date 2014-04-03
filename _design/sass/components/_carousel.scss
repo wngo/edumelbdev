@@ -1,0 +1,70 @@
+#main-content #home-banners .banner-navigation {
+background: #005596;
+bottom: 0;
+right: 10px;
+top: auto;}
+
+
+.banner-img-wrapper {
+   float:left;
+   height: 300px;
+   width:60%;
+overflow:hidden
+}
+#home-banners .home-banner img {
+ height:300px;
+ }
+
+#main-content #home-banners .home-banner .summary {
+  float:left;
+  position: relative;
+  height:300px;
+  width:40%;
+}
+.summary h2{
+color: #005596;
+margin-bottom: 0;
+padding: 0 10px;
+font-size:176%;
+text-align: left;
+margin-top:2em;}
+
+.summary h4 {
+ margin-bottom: 0; }
+
+#home-banners .home-banner .summary .hero-heading {
+font-size: 220%; }
+
+#home-banners .home-banner .summary .hero-heading a {
+  line-height:1.263em; }
+
+h2.reset-m {
+ margin: 0; }
+
+#home-banners .home-banner .subheading {
+  font-size:180%;  
+  margin-top:0; }
+
+#home-banners .home-banner .summary p, #home-banners .home-banner .summary strong, .summary h4 {
+  color:#005596;
+}
+
+#main-content #home-banners {
+  box-shadow: 2px 2px 2px rgba(0,85,150,0.2);
+  margin-bottom: 2em;
+}
+
+#main-content #home-banners .home-banner .summary {
+background-color: #ffffff;
+ background: rgba(255,255,255,1); }
+
+
+
+.banner:hover .banner-text h2 {
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+.social-media-icons {
+    position: absolute;
+    right: 52px;
+    top: 52px; }

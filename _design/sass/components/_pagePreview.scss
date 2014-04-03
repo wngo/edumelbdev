@@ -1,0 +1,44 @@
+.page-preview {
+  overflow:hidden; }
+
+.preview-img-wrap {
+height:160px;
+margin-bottom: 1em;
+overflow:hidden;
+position:relative;
+}
+
+#main-content .page-preview img {
+  height: auto; 
+  width: 100%;
+
+  		&:hover {
+  			box-shadow: -1px 2px 4px #323232;
+  		}
+}
+
+  #main-content .page-preview .project-img-wrap img {
+  width: 100%;
+  height: auto;
+}
+
+/*shorter height for images on project page: e4kids images cuts off*/
+#main-content .projects-page .page-preview .project-img-wrap img {
+ height:140px;
+}
+
+
+ .e4kids-preview img { 
+    margin-left: -25px;}
+
+#main-content .page-preview.tall img {
+  height:17.942em; }
+
+  .page-preview h2 {
+  bottom:0;
+  margin-bottom: 0;
+  background: #005596;
+  padding: 0.184em 0.618em;
+  position: absolute;
+  width:100%; 
+}

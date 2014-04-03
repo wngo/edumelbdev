@@ -1,0 +1,112 @@
+ 
+
+
+.article-title {
+    line-height: 28px 
+  }
+
+.label {
+        border-bottom-color:rgb(0, 85, 150);
+        border-bottom:1px solid rgba(0, 85, 150,0.2);
+        padding: 0.452em 0;
+        display:block;
+        cursor: pointer;
+        line-height:1.618em;
+        margin-bottom: 0.618em;
+        position:relative;
+        }
+/**reset margins in accorion content for smoother drop down**/
+
+.accordion-content h4 {
+  margin-top: 0; 
+}
+
+/**
+remove margin from accordion content to prevent jumping
+**/
+
+body #main-content .accordion ul, #main-content .accordion h5 {
+  margin-top:0;
+  margin-bottom:1.618em;}
+
+.accordion-content {
+  background: lighten($secondary-color, 2%);
+  margin-bottom: 1em; 
+  padding: 0.618em;
+}
+
+    
+dd .accordion-content {
+  margin-top: 0.732em;
+  margin-bottom: 1em; }
+
+.label.collapse-close:after {
+  color:#444;
+  content:url("http://web.education.unimelb.edu.au/images/arrow_right.png");
+  font-size:0.732em;
+  float:right;
+  margin-top:3px;
+  padding-right:7px;
+  /* Firefox */
+-moz-transform: rotate(90deg);
+/* Safari */
+-webkit-transform: rotate(90deg);
+
+/* IE */
+-ms-transform: rotate(90deg);
+
+/* Opera */
+-o-transform: rotate(90deg); }
+
+.collapsible:after {
+  color:#444;
+  content:url("http://web.education.unimelb.edu.au/images/arrow_right.png");
+  font-size:0.732em;
+  float:right;
+  margin-top:3px;
+  /*padding-right:7px;*/
+/* Safari */
+-webkit-transform: rotate(-90deg);
+
+/* Firefox */
+-moz-transform: rotate(-90deg);
+
+/* IE */
+-ms-transform: rotate(-90deg);
+
+/* Opera */
+-o-transform: rotate(-90deg); }
+  
+    
+h1 {   
+    font-size:3em; }    
+    
+.title {
+        color:#323232;
+        padding:0.382em 0;
+        text-shadow: 1px 1px 1px #fff; }  
+
+
+/**    accordion stuff
+    ================================================*/       
+        /*open close icon for accordion**/
+    .collapse-close span {
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #EFFAE8;
+        height:0;
+        width:0;
+        position:absolute;
+        bottom:-11px;
+        right: 20px; }
+    
+    .collapse-open span {
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #EFFAE8;
+        height:0;
+        width:0;
+        position:absolute;
+        bottom:-11px;
+        right: 20px; }
+

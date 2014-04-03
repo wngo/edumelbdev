@@ -1,0 +1,52 @@
+ 
+
+.block {
+    padding:10px;
+    background:#ECF7F7;
+	border: 1px solid #DDF0F8; 
+		
+		h2 {
+			color: #444;
+			margin-top: 1em;
+
+				&:first-child {
+					margin-top: 0;
+				}
+		}
+
+
+		h3 {
+			margin-top: 0;
+		}
+
+		a {
+			border-bottom: none;
+		}
+
+		.dls-speaker-container {
+			margin-top: 0;
+		}
+
+			@media all and (max-width:40em) {
+
+			img {
+				display: inline-block;
+				max-width: 50%;
+				text-align: center;
+			}
+
+			figcaption {
+				display: inline-block;
+				position: relative;
+				width: 100%;
+			}
+
+			.spotlight p {
+				display: inline-block;
+			}
+
+			.dls-speaker-container {
+				width: 100%;
+			}
+		}
+    }

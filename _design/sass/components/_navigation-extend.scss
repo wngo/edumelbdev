@@ -1,0 +1,259 @@
+ 
+
+ .flexnav {
+   padding:0 0 0 20px;
+  }
+  
+  
+  
+  .flexnav ul li, ol li {
+   margin: 0;
+   padding: 0; }
+  
+  .main_nav {
+   margin: 2em auto 0;
+   max-width: 1000px;
+   width:100%;
+
+     .flexnav .touch-button {
+      background: lighten ( $color-main, 10%);
+      color: #FFFFFF;
+      display: inline-block;
+      height: 40px;
+      line-height: 41px;
+      position: absolute;
+      padding-right: 2em;
+      right: 0;
+      text-align: center;
+      top: 0;
+      width: 30px;
+      z-index: 999;
+
+        @media screen and (min-width: 1000px ) {
+          background: none; 
+        } 
+
+        @media all and (max-width: 1000px) {
+          padding-right: 0;
+        }
+
+      }
+  
+    .flexnav > li {
+     height: 40px;
+     margin-right:0px;
+     width: auto;
+     /*width: 16.66666667%;*/
+
+       @media screen and (max-width: 1000px ) {
+        border-bottom: 1px solid darken ( $color-main, 4%);
+        margin: 0;
+        width: 33.33%;
+        height: auto;
+      }
+
+        
+
+    }
+
+    .flexnav .flexnav__sml {
+      width:12%;
+
+
+      @media screen and (max-width: 1000px ) {
+        width: 33.33%;
+      }
+
+     }
+   
+    
+    ul, ol {
+     padding-left:0;
+    }
+  
+    .flexnav li:hover {
+      background: lighten($color-main, 10%);
+    } 
+
+    .flexnav li  {
+       background:($color-main);
+
+       a {
+        
+         border-left: 1px solid #064889;
+         color: #FFFFFF;  
+         font-size: 90%;
+         line-height: 26px;
+         /*padding: 0.5em 1em;*/
+         /*padding:0.5em 2.96em 0.5em 2.96em;*/
+         padding: 0.5em 4.9em 0.5em 1em;
+
+          @media screen and (max-width: 1000px ) {
+            &:hover .touch-button {
+              @include navhover;
+            }
+          }
+
+       }
+      
+      ul li a {
+        background: lighten($color-main, 10%);
+
+        &:hover {
+         background: ($color-main);
+
+        }
+      }
+
+    }
+
+    .flexnav li ul li a {
+        background: ligthen ($color-main, 20%);
+        border-bottom: 1px solid darken($color-main, 10%);
+        padding: 0.6em 1em;
+        font-size: 80%;
+
+        @media screen and (max-width: 700px ) {
+
+          background: lighten($color-main, 6%);
+                }
+       
+    }
+
+
+
+    .flexnav li a.home {
+      padding-right: 1em;
+
+
+    }
+
+    
+    .flexnav li ul ul li a {
+     /*background: rgba(0, 85, 150, 0.5)!important;*/
+    } 
+
+    .text-home {
+    display:none;
+  }
+
+  .flexnav .current {
+      @include navhover;
+    }
+}
+  
+
+  @media all and (max-width: 705px) {
+
+    .main_nav {
+      margin-top: 0;
+
+    }
+
+    .menu-button {
+      background: #FFFFFF;
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      color: #323232;
+      display:inline-block;
+      text-align: left; 
+      width: 100%;
+    }
+
+    .main_nav .flexnav > li {
+      width:100%;
+      margin:0; 
+      padding: 0;
+    }
+
+    .menu-button .touch-button {
+      height: auto;
+      position: absolute;
+      right: 30px;
+      top: 25;
+      width:30px;
+    }
+
+  
+
+  }
+
+  @media all and (min-width: 701px) {
+
+     .menu-button .touch-button {
+      width: 20px;
+
+        ul li a {
+          padding-left: 0;
+        }
+    
+
+     .menu-button {
+      background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+      border-top: medium none;
+      color: #FFFFFF;
+      display: inline-block;
+      float: right;
+      margin-top: -80px;
+      text-align: center;
+  
+    }
+
+
+  }
+}
+
+  @media all and (max-width: 780px) {
+
+    .flex-nav ul li {
+      float:left;
+      font-size: 90%;
+    }
+
+    .main_nav {
+      padding-left: 0;
+    
+
+      .flexnav li a {
+        padding: 0.5em 2em 0.5em 1em;
+        text-align: left;
+        font-size: 80%;
+
+
+      }
+
+      .flexnav .touch-button {
+        line-height: 39px;
+        width: 30px;
+        height: auto;
+      }
+
+      .flexnav li ul li {
+
+        transition: all 2s ease;
+        width:100%;
+      
+
+        li > a {
+          line-height: 1.3em;
+          padding: 0.5em 1em 0.5em 1em;
+        }
+
+        .home {
+          padding-left: 1em;
+        }
+        
+      }
+  }
+
+ .flex-nav .touch-button {
+      position: absolute;
+      right:0;
+      top: 0;
+      height: auto;
+
+    }
+
+    }
+  
+
+    

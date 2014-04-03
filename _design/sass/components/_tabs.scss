@@ -1,0 +1,100 @@
+ 
+
+/* TABS
+    =====================================*/   
+    .tabs li a {
+            width:auto;
+            border-radius:2px 2px 0 0; 
+            
+            border-bottom: none;        }
+        
+        /* root element for tabs  */
+    .tabs { 
+        list-style:none;
+        margin:0 0 25px 0 !important; 
+        padding:0;
+        border-bottom:3px solid #005596;    
+    }
+#main-content ul.tabs li {
+  background:none;
+}
+
+  ul.tabs {
+  list-style: none; }
+
+    /* link inside the tab. uses a background image */
+    #main-content ul.tabs a { 
+        
+       
+        font-size:0.9em;
+        border-bottom: none;
+        display:block;
+        height: 38px;  
+        line-height:38px;
+        text-align:center;    
+        text-decoration:none;
+        color:#003366;
+        margin:0px;    
+        position:relative;
+        padding: 0.263em 1em;
+        /*top:1px;*/
+    }
+    
+
+
+    /* when mouse enters the tab move the background image */
+    #main-content ul.tabs a:hover {
+        background:#c4c4c5;
+    }
+
+    /* active tab uses a class name "current". it's highlight is also done by moving the background image. */
+    .tabs .current, .tabs .current:hover, .tabs li.current a {
+        background:#00376E;
+        border:none;   
+    }
+
+    ul.tabs li a.current {
+        background:#005596;
+        color:#fff; }
+        
+ #main-content ul.tabs a.current {
+        color:#fff;
+        border-bottom:none; 
+        background:#005596 !important;
+        transition: background 0.8s;
+    }
+    
+
+#main-content ul.tabs a:hover {
+    border-bottom:none;
+    /*transition: background 0.3s;*/}
+
+    /* Different widths for tabs: use a class name: w1, w2, w3 or w2 */
+
+
+    /* width 1 */
+    .tabs .w1             { background-position: -519px 0; width:134px; }
+    .tabs .w1:hover     { background-position: -519px -31px; }
+    .tabs .w1.current { background-position: -519px -62px; }
+
+    /* width 2 */
+    .tabs .w2             { background-position: -366px -0px; width:154px; }
+    .tabs .w2:hover     { background-position: -366px -31px; }
+    .tabs .w2.current { background-position: -366px -62px; }
+
+
+    /* width 3 */
+    .tabs .w3             { background-position: -193px -0px; width:174px; }
+    .tabs .w3:hover     { background-position: -193px -31px; }
+    .tabs .w3.current { background-position: -193px -62px; }
+
+    /* width 4 */
+    .tabs .w4             { background-position: -0px -0px; width:194px; }
+    .tabs .w4:hover     { background-position: -0px -31px; }
+    .tabs .w4.current { background-position: -0px -62px; }
+
+
+    /* initially all panes are hidden */ 
+    .panes .pane {
+        display:none;        
+    }

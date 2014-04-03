@@ -1,0 +1,67 @@
+/*==================================================================
+    COLUMN WIDTHS
+==================================================================*/
+.wrapper [class*="col"]:first-child {
+  margin-left: 0;
+}
+
+.col-8 {
+    width:100%; }
+
+.col-6,  .home #main-content .col-6 {
+ width: 72.9166667%; }
+
+#main-content .col-6 {
+margin-left: 0; }
+
+#main-content .col-3 {
+  width: 47%;
+}
+/*#main-content .col-6 
+{width:100%; }*/
+
+/*220/700*/
+#main-content .home .col-2 {
+  width:31.42857142%; 
+}
+
+.home .col-2 {
+  margin-left:2%;
+}
+
+#main-content .home .col-3 {
+  width:31%;
+}
+
+#main-content .col-4 {
+  width:62.85714286%;
+}
+
+#main-content .home .col-4 {
+  width:48%;
+}
+
+#main-content .col-2 {
+  width:31%;
+}
+
+.col-2 {
+  width:22%;
+}
+.tabs-wrap {
+  float:left;
+  width:100%;
+}
+
+
+.wrapper {
+    width: 96%;
+    max-width:1000px;
+    padding-right:0; /** reset complete.css **/
+    }
+
+.col-2, .col-3, .col-4 {
+  margin-left:2.857141%; 
+}
+
+ 

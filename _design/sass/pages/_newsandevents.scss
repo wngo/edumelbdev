@@ -1,0 +1,69 @@
+
+
+/*==========================================
+    NEWS AND EVENTS AND DEANS LECTURE
+    =======================================*/
+.dls-speaker-container {
+
+  float:left;
+  margin:0.452em 1.618em 0 0;
+}
+
+#main-content .dls-speaker-container img {
+   height:auto;}
+
+#main-content .news-item a.button {
+   float:right; }
+
+.news-item {
+    margin-bottom: 3em;
+    overflow:hidden;}
+
+.news-item h4 {
+    margin-top: 0; }
+
+.news-item .alert-info {
+  color:#009AD8;
+  font-weight: 700; }
+
+#feature-news-item {
+    clear:both;
+    overflow:hidden;  }
+
+#feature-news-item img.small {
+    float:left;
+    margin-right: 1.618em;
+    width:60%; }
+
+#feature-news-item p {
+   float:right; }
+
+#opinion-feed-content h4, #news-content h3, #experts-opinion h3 {
+  margin-top:0; 
+  margin-bottom: 0;
+}
+
+
+.opinion-name h4, .news-wrap h4 {
+  margin: 0; 
+}
+
+.opinion-wrap, .news-wrap {
+  margin:1em 0;
+  border-bottom: 1px solid #BFCCE2; 
+}
+
+.upcoming-events-list {
+  margin-bottom: 1em; 
+}
+  
+.project-team-tab h4 {
+  margin-top: 0; 
+}
+
+.events-all {
+  margin-bottom:1em;
+  padding-bottom:1em;
+  border-bottom:1px solid #BFCCE2;
+}
+

@@ -1,0 +1,83 @@
+#newsbanner #banner-wrapper img {
+  margin-top:0px; }
+
+.banner .banner-text {
+  background: url(../../fade.gif?a=649843) repeat-x;
+  background: rgb(0,0,0);
+  background: rgba(0,0,0,0.7);
+  padding:0.184em 0 .298em 0; 
+  width:100%;}
+
+#newsbanner .banner-text p {
+  color:#fff;
+  font-size: 0.452em;
+  margin-bottom: 0.452em;
+  margin-left: 5%; }
+
+#main-content #home-page.home #newsbanner .banner-text a {
+  color:#fff; 
+  border-bottom:none;}
+   
+#newsbanner{
+  background: #fff;
+  border: 1px solid #f2f2f2;
+  clear: both;
+  margin: 0 0 1em 0 !important;
+  overflow: hidden;
+  padding:5px;
+  width:100%; /*940px*/        }
+        
+#newsbanner #banner-clip {
+   width: 75% ;/*680/940*/ }
+        
+.banner .banner-text h2 {
+    font-size: 0.618em; }
+
+.banner .banner-text p a {
+   font-size: 1em; 
+}
+
+.home #newsbanner .banner {
+   /*height:332px;*/
+     height:auto;
+}
+
+#newsbanner .banner-text p {
+  color:#fff;
+  font-size: 0.452em;
+  margin-bottom: 0.452em;
+  margin-left: 3%; }
+
+  #main-content .home .banner-row .banner {
+    width: 32%; }
+
+#main-content .home #newsbanner .banner {
+height:350px; }
+html.js body.no-logo div.wrapper div#main-content.main div#home-page.home div#newsbanner div#banner-wrapper div.banner {
+  width: 100%;
+}
+.banner-row {
+float:left;
+margin-bottom:3em;
+padding:0; }
+
+.main #newsbanner {
+height: 350px !important;
+padding: 0 !important;}
+
+#main-content .banner .banner-text {
+  bottom: 30px;
+}
+.banner .banner-text h2 {
+    background: rgba(0,85,150,1);
+    border-radius: 2px;
+    margin: 0 auto;
+    padding: 1em 0.618em;
+    width: 200px;
+    transition: all 0.2s ease-out;
+}
+
+#main-content .banner-text {
+  background: none;
+}
+

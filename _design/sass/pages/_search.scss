@@ -1,0 +1,109 @@
+ 
+
+/*==================================================
+   SEARCH PAGE
+   ===============================================*/
+
+form fieldset {
+    position: relative;
+    padding-top: 40px;
+}
+form legend {
+    text-indent: 0;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-weight: bold;
+    font-size: 120%;
+    color: #789;
+}
+form .q {
+    clear: both;
+    padding: 10px 0 0 0 ;
+}
+form p {
+    font-weight: normal;
+    text-align: left;
+}
+form .submit {
+    background-color: #fafcff;
+    padding: 5px 0 20px;
+    border: 1px solid #b9cfe7;
+}
+form .submit input {
+    margin-left: 34%;
+}
+form .required {
+    color: #f00;
+}
+form .errors {
+    margin: 10px;
+    color:#f00;
+    font-size: 110%;
+}
+form .errors ul {
+    font-weight: bold;
+}
+/* @end */
+
+
+/* @end */
+
+/* @group Search form */
+
+#cse td.gsc-input {
+    width: 60%;
+}
+#cse td.gsc-input input {
+    font-size: 150%;
+}
+#cse input.gsc-search-button {
+    font-size: 150%;
+    margin: -0px 0 0 20px;
+    padding: 2px 15px;
+    color: #fff;
+    text-shadow: 0px 1px #999999;
+    height: auto;
+}
+#cse td.gsc-clear-button {
+    padding: 0px;
+}
+#cse div.gsc-clear-button {
+    display: none;
+}
+
+/* @end */
+
+/* @group search-results */
+
+#cse div, #cse table tr, #cse table td {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+#cse .gsc-result-info {
+    font-size: 80%;
+    font-style: italic;
+}
+#cse .gs-title .gs-title {
+    border-bottom: 1px dotted;
+}
+#cse .gs-title .gs-title:hover {
+    border-bottom: 1px solid;
+}
+#cse .gs-title .gs-title:hover, #cse .gs-title .gs-title:hover *, #cse .gs-title .gs-title:focus, #cse .gs-title .gs-title:focus * {
+    color: #c00;
+}
+#cse .gs-title .gs-title:visited, #cse .gs-title .gs-title:visited * {
+    color: #4C5E71;
+}
+#cse a.gcsc-branding-clickable {
+    border-bottom: none;
+}
+#cse .gs-title {
+    text-decoration: none;
+}
+/* @end */
+
+.gs-webResult {
+    margin-bottom: 10px; }

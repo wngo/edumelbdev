@@ -1,0 +1,35 @@
+ 
+
+.right-column.glance, .glance {
+    background:  url('http://education.unimelb.edu.au/__data/assets/image/0004/605515/MTeach2013.png') no-repeat 0 0 #ECF7F7;
+    background-size: 200% 5em;
+    border: 1px solid #DDF0F8;
+    overflow:hidden;
+    padding: 0 10px;    }
+    
+.right-column.glance h3, .glance h3 {
+    border-top:none;
+    color: #FFF;
+    font-size:1.618em;
+    margin-top:0.618em;
+    margin-bottom:1em;}    
+    
+.right-column.glance ul, .right-column.glance ol, .right-column.glance-clear ul, .right-column.glance-clear ol, .col-2.glance ul, .col-2.glance ol, .col-2.glance-clear ul, .col-2.glance-clear ol  {
+    margin-left: 0; }
+
+.right-column.glance-clear h3, .col-2.glance-clear h3 {
+   color: rgba (0,51,102,0.8);
+   margin-top: 0.732em;
+   margin-bottom: 0; }
+
+.glance-clear > h4:nth-child(2) { 
+  margin-top:0.732em;}
+
+
+
+
+.right-column.glance-clear, .col-2.glance-clear{
+    background: #ECF7F7;
+    border: 1px solid #DDF0F8;
+    padding: 0 10px;    }
+

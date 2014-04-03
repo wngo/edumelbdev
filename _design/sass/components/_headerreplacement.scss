@@ -1,0 +1,27 @@
+/*================================================
+    HEADER REPLACMENT
+    ===========================================*/    
+    .header .hgroup {
+        height:145px;
+        margin: -2px 0 0 0;    }
+        
+        
+     #g-global-menu a#g-global-menu-logo {
+        display:none;
+        /*height:126px;
+        width:126px; 
+        background-position: 15px 15px;       */} 
+        
+    .header .hgroup h1 {
+        height:145px; }
+
+    .header .hgroup  img{
+        height:160px;
+        margin-top:3px;
+        max-width:100%; }
+ 
+    .header {
+        position: relative; }
+        
+    #g-global-menu a#g-global-menu-logo { 
+        top: 60px; }

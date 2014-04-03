@@ -1,0 +1,28 @@
+ body .wrapper-header {
+  height: 145px !important;
+}
+
+html body, html body.home {
+background: url("../../../image/0010/815167/bg-left.gif") no-repeat left 50px !important;}
+
+body {
+ background: #ffffff;
+min-width:960px !important; }
+
+body #breadcrumbs {
+  max-width:980px; }
+
+.wrapper-header .header .hgroup img {
+ height:159px; }
+
+h1.title {
+ margin-left:-10px; }
+
+#main-content .page-preview h2 {
+margin-bottom: 0; }
+
+.banner .banner-text {
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; }
+
+#main-content .right-column.glance, .col-2.glance {
+    background:  url('../../../image/0006/637665/glance-small.png') no-repeat 0 0 #ECF7F7; }
