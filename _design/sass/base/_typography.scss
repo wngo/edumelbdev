@@ -4,11 +4,6 @@
 	font-size: 1em;
 }
 
-#main-content.main #home-page h3 a, #main-content h3 a  {
-  color:#005596;
-  border-bottom: 1px solid rgba(0, 85, 150, 0.2)
-}
-
 
 .block h2 {
 	font-size: 120%;
@@ -267,20 +262,6 @@ h1.title {
   text-shadow:none;
   line-height:1.5em;
   padding:0;
-}
-
-#breadcrumbs {
-  /*background-color: #fff;*/
-  margin: 0 auto;
-  padding: 0.482em 0;
-}
-
-.breadcrumbs, .title-wrap {
-  /*background:#fff;*/
-  display:block;
-  max-width:1000px;
-  margin: 0 auto 2em;
-  width:96%;
 }
 
 

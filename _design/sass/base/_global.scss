@@ -148,8 +148,9 @@ figcaption, .figcaption {
 .breadcrumbs, .title-wrap {
   /*background:#fff;*/
   display:block;
+  margin: 0 auto;
   max-width:1000px;
-    width:96%;
+  width:96%;
 }
 
 
@@ -225,13 +226,6 @@ body #g-header {
 .nav ul { margin-left: 0;}
 
 
-#main-content .page-preview .project-img-wrap img {
-  width:auto;
-  height:160px;}
-
-/*shorter height for images on project page: e4kids images cuts off*/
-#main-content .projects-page .page-preview .project-img-wrap img {
- height:140px;}
 
 p { display: block; margin: 0px; padding: 0px; }
 
@@ -468,12 +462,6 @@ li a.button:hover, li a.button:focus {
 /**complete.css file adds a right margin to .page-preview, need to reset to 0**/
   body #main-content .page-preview { 
     margin-right:0;
-  }
-  
-  /*project page adding height to the image container so it doesn't break the layout*/
-  .project-img-wrap { 
-    height:160px; 
-    overflow:hidden;
   }
   
 
