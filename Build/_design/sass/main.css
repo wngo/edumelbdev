@@ -1,18 +1,20 @@
 @charset "UTF-8";
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 /* Flexnav Base Styles */
 a[href$=".pdf"] {
-  background: url("//www.unimelb.edu.au/template-assets/07/images/tiny/tiny_pdf_icon.gif") no-repeat right center;
+  background: url("http://www.unimelb.edu.au/template-assets/07/images/tiny/tiny_pdf_icon.gif") no-repeat right center;
   padding-right: 14px; }
 
 a[href$=".doc"], a[href$=".docx"] {
-  background: url("//www.unimelb.edu.au/template-assets/07/images/tiny/tiny_doc_icon.gif") no-repeat right center;
+  background: url("http://www.unimelb.edu.au/template-assets/07/images/tiny/tiny_doc_icon.gif") no-repeat right center;
   padding-right: 14px; }
 
-.main a, .main a:active {
+a, a:active {
   color: #005596;
   border-bottom: 1px solid rgba(0, 85, 150, 0.2); }
 
@@ -47,7 +49,7 @@ figcaption, .figcaption {
   bottom: 6px;
   left: 0px; }
 
-.video-content {
+.video-content, .video-content__embed {
   margin-bottom: 1.618em; }
 
 .horizontal-line {
@@ -171,6 +173,10 @@ p {
   color: #333333;
   color: rgba(51, 51, 51, 0.7); }
 
+#main-content a.button:after {
+  content: '';
+  margin: 0; }
+
 /*removing border from linked images*/
 #main-content .a-img {
   border-bottom: none; }
@@ -198,15 +204,16 @@ p {
   color: #fff; }
 
 #main-content .button.btn {
-  background: #4DB200; }
+  background: #005596; }
 
 h1, h2, h3, h4, .pullquote {
   color: #005596; }
 
 #main-content p {
   font-size: 1em;
-  line-height: 1.618em;
+  line-height: 1.618;
   margin: 0 0 1.618em 0;
+  max-width: 35em;
   /*overflow:hidden;*/ }
 
 #main-content p.pullquote {
@@ -214,26 +221,6 @@ h1, h2, h3, h4, .pullquote {
   line-height: 28px;
   margin: 0;
   padding-left: 0.732em; }
-
-.page-preview h2 {
-  bottom: 0;
-  color: #fff;
-  font-size: 1em;
-  font-weight: 400;
-  font-family: 'Univers LT W01 55 Roman','Droid Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-  line-height: 1em;
-  margin-bottom: 0.732em;
-  background: #005596;
-  padding: 0.184em 0.618em;
-  position: absolute;
-  width: 100%; }
-
-.pullquote, #main-content .intro {
-  color: #20201e;
-  font-size: 1.1843em;
-  font-family: 'Univers LT W01 65 Bold', Helvetica, Arial, sans-serif;
-  line-height: 1.618em;
-  font-weight: 400; }
 
 /*===========================
     Home main content
@@ -269,10 +256,11 @@ li {
   margin-top: 0.732em; }
 
 #main-content ul li, #main-content li ul li, #main-content li li ul li {
-  background: url("//education.unimelb.edu.au/__data/assets/image/0019/815203/list-block-sml.gif") no-repeat 0px 10px;
+  background: url("http://www.education.unimelb.edu.au/__data/assets/image/0019/815203/list-block-sml.gif") no-repeat 0px 10px;
   padding-left: 1em;
   list-style-type: none;
-  margin-left: -1em; }
+  margin-left: -1em;
+  max-width: 35em; }
 
 /**bullet list style was overlaping due to hanging lists**/
 .col-3 ul {
@@ -351,10 +339,6 @@ li a.button:hover, li a.button:focus {
 /*===============================================
   MOVING THIS STUFF OUT OF min 530px
   =============================================*/
-/**complete.css file adds a right margin to .page-preview, need to reset to 0**/
-body #main-content .page-preview {
-  margin-right: 0; }
-
 .page-preview {
   position: relative;
   margin-bottom: 1.618em; }
@@ -656,9 +640,6 @@ ul.tabs {
     margin-bottom: 0.482em;
     width: 98%; }
 
-  #main-content .page-preview {
-    width: 100%; }
-
   .footer .col-2 {
     width: 100%; }
 
@@ -679,19 +660,6 @@ ul.tabs {
 
   .mgse-search, .social-media-icons {
     display: none; }
-
-  #main-content .home .col-2.page-preview {
-    width: 100%;
-    margin-left: 0; }
-
-  #main-content .col-4 {
-    width: 100%; }
-
-  #main-content .col-3 {
-    display: block;
-    margin-top: 1em;
-    margin-left: 0;
-    width: 100%; }
 
   #main-content .glance.col-2, #main-content .glance-clear {
     float: left;
@@ -815,7 +783,7 @@ ul.tabs {
 
   .right-column.glance, #main-content .col-2.glance {
     float: left;
-    background: url("http://education.unimelb.edu.au/_mappdesign/mapp_design.css/MTeach2013.png") no-repeat scroll 0 0/100% 5em #ecf7f7;
+    background: url("http://www.education.unimelb.edu.au/_mappdesign/mapp_design.css/MTeach2013.png") no-repeat scroll 0 0/100% 5em #ecf7f7;
     width: 100%; }
 
   .mgse #g-header #g-global-menu li a {
@@ -968,7 +936,7 @@ ol, ul {
   margin-top: 0;
   padding: 0 auto;
   margin-bottom: 1.5em;
-  margin-left: 1.5em; }
+  margin-left: 0; }
 
 ul {
   list-style: disc; }
@@ -1000,8 +968,8 @@ abbr[title]:hover {
     ========================================*/
 body {
   font-family: "Univers LT W01 45 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.618em;
-  font-size: 16px; }
+  line-height: 1.5;
+  font-size: 1em; }
 
 em, i {
   font-family: 'UniversLTW01-45LightObl', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -1088,33 +1056,40 @@ a.button {
   transition-duration: 0.5s;
   line-height: 1.618em; }
 
-#main-content a:hover, #main-content a:focus, .footer a:hover {
-  color: #1a4d80;
-  border-bottom: 1px solid #1a4d80;
+#main-content a:hover, a:focus, .footer a:hover {
+  color: #0072c9;
+  border-bottom: 1px solid #0072c9;
   background-color: #F4f4f4;
   transition-property: background-color;
   transition-timing: ease-out;
   transition-duration: 0.5s; }
 
 a:hover, a:focus {
-  color: #1a4d80;
+  color: #0072c9;
   transition-property: background-color;
   transition-timing: ease-out;
   transition-duration: 0.5s; }
 
-#main-content .preview-img-wrap h2 {
+.preview-img-wrap h2 {
   color: #fff;
   font-size: 1em;
   font-weight: 400;
   font-family: 'Univers LT W01 55 Roman','Droid Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
   line-height: 1em; }
-  #main-content .preview-img-wrap h2 a {
+  .preview-img-wrap h2 a {
     display: block;
     text-decoration: none;
     border-bottom: 0;
     color: #fff; }
-    #main-content .preview-img-wrap h2 a:hover, #main-content .preview-img-wrap h2 a:active {
+    .preview-img-wrap h2 a:hover, .preview-img-wrap h2 a:active {
       background: none; }
+
+.pullquote, #main-content .intro {
+  color: #20201e;
+  font-size: 1.1843em;
+  font-family: 'Univers LT W01 65 Bold', Helvetica, Arial, sans-serif;
+  line-height: 1.618em;
+  font-weight: 400; }
 
 /**overrighting document hover states*/
 #main-content a.document.large:hover, #main-content a.document.large:focus {
@@ -2071,22 +2046,41 @@ ul.tabs li a.current {
 .panes .pane {
   display: none; }
 
-.page-preview {
+.preview-img-wrap {
+  position: relative;
   overflow: hidden; }
+  .preview-img-wrap .preview-img-wrap__title {
+    bottom: 0;
+    margin-bottom: 0;
+    background: #005596;
+    padding: 0.184em 0.618em;
+    position: absolute;
+    width: 100%; }
+    .preview-img-wrap .preview-img-wrap__title a {
+      color: #fff; }
+      .preview-img-wrap .preview-img-wrap__title a:hover, .preview-img-wrap .preview-img-wrap__title a:focus {
+        background-color: none;
+        border-bottom: none; }
 
-.project-img-wrap a {
+#main-content .preview-img-wrap img:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90) 0.6;
+  opacity: 0.8; }
+
+.project-img-wrap, .preview-img-wrap {
+  color: #fff;
   display: block;
   height: 0;
   overflow: hidden;
-  padding-top: 56.25%;
+  padding-top: 197.775px;
   position: relative;
   width: 100%;
   border-bottom: none;
   background: white; }
 
-#main-content .page-preview .project-img-wrap {
-  margin-bottom: 2em; }
-  #main-content .page-preview .project-img-wrap img {
+#main-content .preview-img-wrap {
+  margin-bottom: 1em; }
+  #main-content .preview-img-wrap img {
     display: block;
     max-width: 100%;
     max-height: 100%;
@@ -2096,14 +2090,6 @@ ul.tabs li a.current {
     left: 0;
     right: 0;
     bottom: 0; }
-
-.page-preview h2 {
-  bottom: 0;
-  margin-bottom: 0;
-  background: #005596;
-  padding: 0.184em 0.618em;
-  position: absolute;
-  width: 100%; }
 
 /*==================================================================
     COLUMN WIDTHS
@@ -2190,32 +2176,98 @@ ul.tabs li a.current {
       width: 100%; } }
 
 /* Grids generated by Gridset: https://gridsetapp.com */
-@media only screen and (min-width: 1024px) {
-  /* Desktop grid: 4 column / gutter: 2.02020202% ---------------------------------------- */
-  [class*=" d1"], [class^=d1], [class*=" d2"], [class^=d2], [class*=" d3"], [class^=d3], [class*=" d4"], [class^=d4], .d-all {
+@media only screen and (min-width: 990px) {
+  /* Desktop grid: 8 column / gutter: 2.02020202% ---------------------------------------- */
+  [class*=" d1"], [class^=d1], [class*=" d2"], [class^=d2], [class*=" d3"], [class^=d3], [class*=" d4"], [class^=d4], [class*=" d5"], [class^=d5], [class*=" d6"], [class^=d6], [class*=" d7"], [class^=d7], [class*=" d8"], [class^=d8], .d-all {
     display: block;
     float: left;
     clear: none;
     margin-right: -100%; }
 
   /* Desktop grid spans ----- */
-  .d1, .d2, .d3, .d4 {
+  .d1, .d2, .d3, .d4, .d5, .d6, .d7, .d8 {
+    width: 10.73232323%; }
+
+  .d1-d7 .d1, .d1-d7 .d2, .d1-d7 .d3, .d1-d7 .d4, .d1-d7 .d5, .d1-d7 .d6, .d1-d7 .d7, .d2-d8 .d2, .d2-d8 .d3, .d2-d8 .d4, .d2-d8 .d5, .d2-d8 .d6, .d2-d8 .d7, .d2-d8 .d8 {
+    width: 12.30101302%; }
+
+  .d1-d6 .d1, .d1-d6 .d2, .d1-d6 .d3, .d1-d6 .d4, .d1-d6 .d5, .d1-d6 .d6, .d2-d7 .d2, .d2-d7 .d3, .d2-d7 .d4, .d2-d7 .d5, .d2-d7 .d6, .d2-d7 .d7, .d3-d8 .d3, .d3-d8 .d4, .d3-d8 .d5, .d3-d8 .d6, .d3-d8 .d7, .d3-d8 .d8 {
+    width: 14.40677966%; }
+
+  .d1-d5 .d1, .d1-d5 .d2, .d1-d5 .d3, .d1-d5 .d4, .d1-d5 .d5, .d2-d6 .d2, .d2-d6 .d3, .d2-d6 .d4, .d2-d6 .d5, .d2-d6 .d6, .d3-d7 .d3, .d3-d7 .d4, .d3-d7 .d5, .d3-d7 .d6, .d3-d7 .d7, .d4-d8 .d4, .d4-d8 .d5, .d4-d8 .d6, .d4-d8 .d7, .d4-d8 .d8 {
+    width: 17.38241309%; }
+
+  .d1-d4 .d1, .d1-d4 .d2, .d1-d4 .d3, .d1-d4 .d4, .d2-d5 .d2, .d2-d5 .d3, .d2-d5 .d4, .d2-d5 .d5, .d3-d6 .d3, .d3-d6 .d4, .d3-d6 .d5, .d3-d6 .d6, .d4-d7 .d4, .d4-d7 .d5, .d4-d7 .d6, .d4-d7 .d7, .d5-d8 .d5, .d5-d8 .d6, .d5-d8 .d7, .d5-d8 .d8 {
+    width: 21.90721649%; }
+
+  .d1-d2, .d2-d3, .d3-d4, .d4-d5, .d5-d6, .d6-d7, .d7-d8 {
     width: 23.48484848%; }
 
-  .d1-d3 .d1, .d1-d3 .d2, .d1-d3 .d3, .d2-d4 .d2, .d2-d4 .d3, .d2-d4 .d4 {
+  .d1-d7 .d1-d2, .d1-d7 .d2-d3, .d1-d7 .d3-d4, .d1-d7 .d4-d5, .d1-d7 .d5-d6, .d1-d7 .d6-d7, .d2-d8 .d2-d3, .d2-d8 .d3-d4, .d2-d8 .d4-d5, .d2-d8 .d5-d6, .d2-d8 .d6-d7, .d2-d8 .d7-d8 {
+    width: 26.91751085%; }
+
+  .d1-d3 .d1, .d1-d3 .d2, .d1-d3 .d3, .d2-d4 .d2, .d2-d4 .d3, .d2-d4 .d4, .d3-d5 .d3, .d3-d5 .d4, .d3-d5 .d5, .d4-d6 .d4, .d4-d6 .d5, .d4-d6 .d6, .d5-d7 .d5, .d5-d7 .d6, .d5-d7 .d7, .d6-d8 .d6, .d6-d8 .d7, .d6-d8 .d8 {
+    width: 29.61672474%; }
+
+  .d1-d6 .d1-d2, .d1-d6 .d2-d3, .d1-d6 .d3-d4, .d1-d6 .d4-d5, .d1-d6 .d5-d6, .d2-d7 .d2-d3, .d2-d7 .d3-d4, .d2-d7 .d4-d5, .d2-d7 .d5-d6, .d2-d7 .d6-d7, .d3-d8 .d3-d4, .d3-d8 .d4-d5, .d3-d8 .d5-d6, .d3-d8 .d6-d7, .d3-d8 .d7-d8 {
     width: 31.52542373%; }
 
-  .d1-d2 .d1, .d1-d2 .d2, .d2-d3 .d2, .d2-d3 .d3, .d3-d4 .d3, .d3-d4 .d4 {
+  .d1-d3, .d2-d4, .d3-d5, .d4-d6, .d5-d7, .d6-d8 {
+    width: 36.23737373%; }
+
+  .d1-d5 .d1-d2, .d1-d5 .d2-d3, .d1-d5 .d3-d4, .d1-d5 .d4-d5, .d2-d6 .d2-d3, .d2-d6 .d3-d4, .d2-d6 .d4-d5, .d2-d6 .d5-d6, .d3-d7 .d3-d4, .d3-d7 .d4-d5, .d3-d7 .d5-d6, .d3-d7 .d6-d7, .d4-d8 .d4-d5, .d4-d8 .d5-d6, .d4-d8 .d6-d7, .d4-d8 .d7-d8 {
+    width: 38.03680982%; }
+
+  .d1-d7 .d1-d3, .d1-d7 .d2-d4, .d1-d7 .d3-d5, .d1-d7 .d4-d6, .d1-d7 .d5-d7, .d2-d8 .d2-d4, .d2-d8 .d3-d5, .d2-d8 .d4-d6, .d2-d8 .d5-d7, .d2-d8 .d6-d8 {
+    width: 41.53400868%; }
+
+  .d1-d2 .d1, .d1-d2 .d2, .d2-d3 .d2, .d2-d3 .d3, .d3-d4 .d3, .d3-d4 .d4, .d4-d5 .d4, .d4-d5 .d5, .d5-d6 .d5, .d5-d6 .d6, .d6-d7 .d6, .d6-d7 .d7, .d7-d8 .d7, .d7-d8 .d8 {
+    width: 45.69892473%; }
+
+  .d1-d4 .d1-d2, .d1-d4 .d2-d3, .d1-d4 .d3-d4, .d2-d5 .d2-d3, .d2-d5 .d3-d4, .d2-d5 .d4-d5, .d3-d6 .d3-d4, .d3-d6 .d4-d5, .d3-d6 .d5-d6, .d4-d7 .d4-d5, .d4-d7 .d5-d6, .d4-d7 .d6-d7, .d5-d8 .d5-d6, .d5-d8 .d6-d7, .d5-d8 .d7-d8 {
     width: 47.93814433%; }
 
-  .d1-d2, .d2-d3, .d3-d4 {
+  .d1-d6 .d1-d3, .d1-d6 .d2-d4, .d1-d6 .d3-d5, .d1-d6 .d4-d6, .d2-d7 .d2-d4, .d2-d7 .d3-d5, .d2-d7 .d4-d6, .d2-d7 .d5-d7, .d3-d8 .d3-d5, .d3-d8 .d4-d6, .d3-d8 .d5-d7, .d3-d8 .d6-d8 {
+    width: 48.6440678%; }
+
+  .d1-d4, .d2-d5, .d3-d6, .d4-d7, .d5-d8 {
     width: 48.98989898%; }
 
-  .d1-d3 .d1-d2, .d1-d3 .d2-d3, .d2-d4 .d2-d3, .d2-d4 .d3-d4 {
+  .d1-d7 .d1-d4, .d1-d7 .d2-d5, .d1-d7 .d3-d6, .d1-d7 .d4-d7, .d2-d8 .d2-d5, .d2-d8 .d3-d6, .d2-d8 .d4-d7, .d2-d8 .d5-d8 {
+    width: 56.15050651%; }
+
+  .d1-d5 .d1-d3, .d1-d5 .d2-d4, .d1-d5 .d3-d5, .d2-d6 .d2-d4, .d2-d6 .d3-d5, .d2-d6 .d4-d6, .d3-d7 .d3-d5, .d3-d7 .d4-d6, .d3-d7 .d5-d7, .d4-d8 .d4-d6, .d4-d8 .d5-d7, .d4-d8 .d6-d8 {
+    width: 58.69120654%; }
+
+  .d1-d5, .d2-d6, .d3-d7, .d4-d8 {
+    width: 61.74242423%; }
+
+  .d1-d3 .d1-d2, .d1-d3 .d2-d3, .d2-d4 .d2-d3, .d2-d4 .d3-d4, .d3-d5 .d3-d4, .d3-d5 .d4-d5, .d4-d6 .d4-d5, .d4-d6 .d5-d6, .d5-d7 .d5-d6, .d5-d7 .d6-d7, .d6-d8 .d6-d7, .d6-d8 .d7-d8 {
+    width: 64.80836237%; }
+
+  .d1-d6 .d1-d4, .d1-d6 .d2-d5, .d1-d6 .d3-d6, .d2-d7 .d2-d5, .d2-d7 .d3-d6, .d2-d7 .d4-d7, .d3-d8 .d3-d6, .d3-d8 .d4-d7, .d3-d8 .d5-d8 {
     width: 65.76271186%; }
 
-  .d1-d3, .d2-d4 {
+  .d1-d7 .d1-d5, .d1-d7 .d2-d6, .d1-d7 .d3-d7, .d2-d8 .d2-d6, .d2-d8 .d3-d7, .d2-d8 .d4-d8 {
+    width: 70.76700434%; }
+
+  .d1-d4 .d1-d3, .d1-d4 .d2-d4, .d2-d5 .d2-d4, .d2-d5 .d3-d5, .d3-d6 .d3-d5, .d3-d6 .d4-d6, .d4-d7 .d4-d6, .d4-d7 .d5-d7, .d5-d8 .d5-d7, .d5-d8 .d6-d8 {
+    width: 73.96907216%; }
+
+  .d1-d6, .d2-d7, .d3-d8 {
     width: 74.49494948%; }
+
+  .d1-d5 .d1-d4, .d1-d5 .d2-d5, .d2-d6 .d2-d5, .d2-d6 .d3-d6, .d3-d7 .d3-d6, .d3-d7 .d4-d7, .d4-d8 .d4-d7, .d4-d8 .d5-d8 {
+    width: 79.34560327%; }
+
+  .d1-d6 .d1-d5, .d1-d6 .d2-d6, .d2-d7 .d2-d6, .d2-d7 .d3-d7, .d3-d8 .d3-d7, .d3-d8 .d4-d8 {
+    width: 82.88135593%; }
+
+  .d1-d7 .d1-d6, .d1-d7 .d2-d7, .d2-d8 .d2-d7, .d2-d8 .d3-d8 {
+    width: 85.38350217%; }
+
+  .d1-d7, .d2-d8 {
+    width: 87.24747473%; }
 
   .d-all {
     width: 100%;
@@ -2229,30 +2281,70 @@ ul.tabs li a.current {
     padding-right: 1.01010101%;
     left: -1.01010101%; }
 
-  .d1-d3 [class*=" d-pad"], .d1-d3 [class^=d-pad], .d2-d4 [class*=" d-pad"], .d2-d4 [class^=d-pad] {
+  .d1-d7 [class*=" d-pad"], .d1-d7 [class^=d-pad], .d2-d8 [class*=" d-pad"], .d2-d8 [class^=d-pad] {
+    padding-left: 1.1577424%;
+    padding-right: 1.1577424%;
+    left: -1.1577424%; }
+
+  .d1-d6 [class*=" d-pad"], .d1-d6 [class^=d-pad], .d2-d7 [class*=" d-pad"], .d2-d7 [class^=d-pad], .d3-d8 [class*=" d-pad"], .d3-d8 [class^=d-pad] {
     padding-left: 1.3559322%;
     padding-right: 1.3559322%;
     left: -1.3559322%; }
 
-  [class~=d-padfull], [class~=d-padinfull], [class~=d-padfull], [class~=d-padinfull], [class~=d-padfull], [class~=d-padinfull], [class~=d-padfull], [class~=d-padinfull] {
+  .d1-d5 [class*=" d-pad"], .d1-d5 [class^=d-pad], .d2-d6 [class*=" d-pad"], .d2-d6 [class^=d-pad], .d3-d7 [class*=" d-pad"], .d3-d7 [class^=d-pad], .d4-d8 [class*=" d-pad"], .d4-d8 [class^=d-pad] {
+    padding-left: 1.63599182%;
+    padding-right: 1.63599182%;
+    left: -1.63599182%; }
+
+  [class~=d-padfull], [class~=d-padinfull], [class~=d-padfull], [class~=d-padinfull], [class~=d-padfull], [class~=d-padinfull], [class~=d-padfull], [class~=d-padinfull], [class~=d-padfull], [class~=d-padinfull], [class~=d-padfull], [class~=d-padinfull], [class~=d-padfull], [class~=d-padinfull], [class~=d-padfull], [class~=d-padinfull] {
     padding-left: 2.02020202%;
     padding-right: 2.02020202%;
     left: -2.02020202%; }
 
-  .d1-d2 [class*=" d-pad"], .d1-d2 [class^=d-pad], .d2-d3 [class*=" d-pad"], .d2-d3 [class^=d-pad], .d3-d4 [class*=" d-pad"], .d3-d4 [class^=d-pad] {
+  .d1-d4 [class*=" d-pad"], .d1-d4 [class^=d-pad], .d2-d5 [class*=" d-pad"], .d2-d5 [class^=d-pad], .d3-d6 [class*=" d-pad"], .d3-d6 [class^=d-pad], .d4-d7 [class*=" d-pad"], .d4-d7 [class^=d-pad], .d5-d8 [class*=" d-pad"], .d5-d8 [class^=d-pad] {
     padding-left: 2.06185567%;
     padding-right: 2.06185567%;
     left: -2.06185567%; }
 
-  .d1-d3 [class~=d-padfull], .d1-d3 [class~=d-padinfull], .d1-d3 [class~=d-padfull], .d1-d3 [class~=d-padinfull], .d1-d3 [class~=d-padfull], .d1-d3 [class~=d-padinfull], .d2-d4 [class~=d-padfull], .d2-d4 [class~=d-padinfull], .d2-d4 [class~=d-padfull], .d2-d4 [class~=d-padinfull], .d2-d4 [class~=d-padfull], .d2-d4 [class~=d-padinfull] {
+  .d1-d7 [class~=d-padfull], .d1-d7 [class~=d-padinfull], .d1-d7 [class~=d-padfull], .d1-d7 [class~=d-padinfull], .d1-d7 [class~=d-padfull], .d1-d7 [class~=d-padinfull], .d1-d7 [class~=d-padfull], .d1-d7 [class~=d-padinfull], .d1-d7 [class~=d-padfull], .d1-d7 [class~=d-padinfull], .d1-d7 [class~=d-padfull], .d1-d7 [class~=d-padinfull], .d1-d7 [class~=d-padfull], .d1-d7 [class~=d-padinfull], .d2-d8 [class~=d-padfull], .d2-d8 [class~=d-padinfull], .d2-d8 [class~=d-padfull], .d2-d8 [class~=d-padinfull], .d2-d8 [class~=d-padfull], .d2-d8 [class~=d-padinfull], .d2-d8 [class~=d-padfull], .d2-d8 [class~=d-padinfull], .d2-d8 [class~=d-padfull], .d2-d8 [class~=d-padinfull], .d2-d8 [class~=d-padfull], .d2-d8 [class~=d-padinfull], .d2-d8 [class~=d-padfull], .d2-d8 [class~=d-padinfull] {
+    padding-left: 2.3154848%;
+    padding-right: 2.3154848%;
+    left: -2.3154848%; }
+
+  .d1-d6 [class~=d-padfull], .d1-d6 [class~=d-padinfull], .d1-d6 [class~=d-padfull], .d1-d6 [class~=d-padinfull], .d1-d6 [class~=d-padfull], .d1-d6 [class~=d-padinfull], .d1-d6 [class~=d-padfull], .d1-d6 [class~=d-padinfull], .d1-d6 [class~=d-padfull], .d1-d6 [class~=d-padinfull], .d1-d6 [class~=d-padfull], .d1-d6 [class~=d-padinfull], .d2-d7 [class~=d-padfull], .d2-d7 [class~=d-padinfull], .d2-d7 [class~=d-padfull], .d2-d7 [class~=d-padinfull], .d2-d7 [class~=d-padfull], .d2-d7 [class~=d-padinfull], .d2-d7 [class~=d-padfull], .d2-d7 [class~=d-padinfull], .d2-d7 [class~=d-padfull], .d2-d7 [class~=d-padinfull], .d2-d7 [class~=d-padfull], .d2-d7 [class~=d-padinfull], .d3-d8 [class~=d-padfull], .d3-d8 [class~=d-padinfull], .d3-d8 [class~=d-padfull], .d3-d8 [class~=d-padinfull], .d3-d8 [class~=d-padfull], .d3-d8 [class~=d-padinfull], .d3-d8 [class~=d-padfull], .d3-d8 [class~=d-padinfull], .d3-d8 [class~=d-padfull], .d3-d8 [class~=d-padinfull], .d3-d8 [class~=d-padfull], .d3-d8 [class~=d-padinfull] {
     padding-left: 2.71186441%;
     padding-right: 2.71186441%;
     left: -2.71186441%; }
 
-  .d1-d2 [class~=d-padfull], .d1-d2 [class~=d-padinfull], .d1-d2 [class~=d-padfull], .d1-d2 [class~=d-padinfull], .d2-d3 [class~=d-padfull], .d2-d3 [class~=d-padinfull], .d2-d3 [class~=d-padfull], .d2-d3 [class~=d-padinfull], .d3-d4 [class~=d-padfull], .d3-d4 [class~=d-padinfull], .d3-d4 [class~=d-padfull], .d3-d4 [class~=d-padinfull] {
+  .d1-d3 [class*=" d-pad"], .d1-d3 [class^=d-pad], .d2-d4 [class*=" d-pad"], .d2-d4 [class^=d-pad], .d3-d5 [class*=" d-pad"], .d3-d5 [class^=d-pad], .d4-d6 [class*=" d-pad"], .d4-d6 [class^=d-pad], .d5-d7 [class*=" d-pad"], .d5-d7 [class^=d-pad], .d6-d8 [class*=" d-pad"], .d6-d8 [class^=d-pad] {
+    padding-left: 2.78745645%;
+    padding-right: 2.78745645%;
+    left: -2.78745645%; }
+
+  .d1-d5 [class~=d-padfull], .d1-d5 [class~=d-padinfull], .d1-d5 [class~=d-padfull], .d1-d5 [class~=d-padinfull], .d1-d5 [class~=d-padfull], .d1-d5 [class~=d-padinfull], .d1-d5 [class~=d-padfull], .d1-d5 [class~=d-padinfull], .d1-d5 [class~=d-padfull], .d1-d5 [class~=d-padinfull], .d2-d6 [class~=d-padfull], .d2-d6 [class~=d-padinfull], .d2-d6 [class~=d-padfull], .d2-d6 [class~=d-padinfull], .d2-d6 [class~=d-padfull], .d2-d6 [class~=d-padinfull], .d2-d6 [class~=d-padfull], .d2-d6 [class~=d-padinfull], .d2-d6 [class~=d-padfull], .d2-d6 [class~=d-padinfull], .d3-d7 [class~=d-padfull], .d3-d7 [class~=d-padinfull], .d3-d7 [class~=d-padfull], .d3-d7 [class~=d-padinfull], .d3-d7 [class~=d-padfull], .d3-d7 [class~=d-padinfull], .d3-d7 [class~=d-padfull], .d3-d7 [class~=d-padinfull], .d3-d7 [class~=d-padfull], .d3-d7 [class~=d-padinfull], .d4-d8 [class~=d-padfull], .d4-d8 [class~=d-padinfull], .d4-d8 [class~=d-padfull], .d4-d8 [class~=d-padinfull], .d4-d8 [class~=d-padfull], .d4-d8 [class~=d-padinfull], .d4-d8 [class~=d-padfull], .d4-d8 [class~=d-padinfull], .d4-d8 [class~=d-padfull], .d4-d8 [class~=d-padinfull] {
+    padding-left: 3.27198364%;
+    padding-right: 3.27198364%;
+    left: -3.27198364%; }
+
+  .d1-d4 [class~=d-padfull], .d1-d4 [class~=d-padinfull], .d1-d4 [class~=d-padfull], .d1-d4 [class~=d-padinfull], .d1-d4 [class~=d-padfull], .d1-d4 [class~=d-padinfull], .d1-d4 [class~=d-padfull], .d1-d4 [class~=d-padinfull], .d2-d5 [class~=d-padfull], .d2-d5 [class~=d-padinfull], .d2-d5 [class~=d-padfull], .d2-d5 [class~=d-padinfull], .d2-d5 [class~=d-padfull], .d2-d5 [class~=d-padinfull], .d2-d5 [class~=d-padfull], .d2-d5 [class~=d-padinfull], .d3-d6 [class~=d-padfull], .d3-d6 [class~=d-padinfull], .d3-d6 [class~=d-padfull], .d3-d6 [class~=d-padinfull], .d3-d6 [class~=d-padfull], .d3-d6 [class~=d-padinfull], .d3-d6 [class~=d-padfull], .d3-d6 [class~=d-padinfull], .d4-d7 [class~=d-padfull], .d4-d7 [class~=d-padinfull], .d4-d7 [class~=d-padfull], .d4-d7 [class~=d-padinfull], .d4-d7 [class~=d-padfull], .d4-d7 [class~=d-padinfull], .d4-d7 [class~=d-padfull], .d4-d7 [class~=d-padinfull], .d5-d8 [class~=d-padfull], .d5-d8 [class~=d-padinfull], .d5-d8 [class~=d-padfull], .d5-d8 [class~=d-padinfull], .d5-d8 [class~=d-padfull], .d5-d8 [class~=d-padinfull], .d5-d8 [class~=d-padfull], .d5-d8 [class~=d-padinfull] {
     padding-left: 4.12371134%;
     padding-right: 4.12371134%;
     left: -4.12371134%; }
+
+  .d1-d2 [class*=" d-pad"], .d1-d2 [class^=d-pad], .d2-d3 [class*=" d-pad"], .d2-d3 [class^=d-pad], .d3-d4 [class*=" d-pad"], .d3-d4 [class^=d-pad], .d4-d5 [class*=" d-pad"], .d4-d5 [class^=d-pad], .d5-d6 [class*=" d-pad"], .d5-d6 [class^=d-pad], .d6-d7 [class*=" d-pad"], .d6-d7 [class^=d-pad], .d7-d8 [class*=" d-pad"], .d7-d8 [class^=d-pad] {
+    padding-left: 4.30107527%;
+    padding-right: 4.30107527%;
+    left: -4.30107527%; }
+
+  .d1-d3 [class~=d-padfull], .d1-d3 [class~=d-padinfull], .d1-d3 [class~=d-padfull], .d1-d3 [class~=d-padinfull], .d1-d3 [class~=d-padfull], .d1-d3 [class~=d-padinfull], .d2-d4 [class~=d-padfull], .d2-d4 [class~=d-padinfull], .d2-d4 [class~=d-padfull], .d2-d4 [class~=d-padinfull], .d2-d4 [class~=d-padfull], .d2-d4 [class~=d-padinfull], .d3-d5 [class~=d-padfull], .d3-d5 [class~=d-padinfull], .d3-d5 [class~=d-padfull], .d3-d5 [class~=d-padinfull], .d3-d5 [class~=d-padfull], .d3-d5 [class~=d-padinfull], .d4-d6 [class~=d-padfull], .d4-d6 [class~=d-padinfull], .d4-d6 [class~=d-padfull], .d4-d6 [class~=d-padinfull], .d4-d6 [class~=d-padfull], .d4-d6 [class~=d-padinfull], .d5-d7 [class~=d-padfull], .d5-d7 [class~=d-padinfull], .d5-d7 [class~=d-padfull], .d5-d7 [class~=d-padinfull], .d5-d7 [class~=d-padfull], .d5-d7 [class~=d-padinfull], .d6-d8 [class~=d-padfull], .d6-d8 [class~=d-padinfull], .d6-d8 [class~=d-padfull], .d6-d8 [class~=d-padinfull], .d6-d8 [class~=d-padfull], .d6-d8 [class~=d-padinfull] {
+    padding-left: 5.57491289%;
+    padding-right: 5.57491289%;
+    left: -5.57491289%; }
+
+  .d1-d2 [class~=d-padfull], .d1-d2 [class~=d-padinfull], .d1-d2 [class~=d-padfull], .d1-d2 [class~=d-padinfull], .d2-d3 [class~=d-padfull], .d2-d3 [class~=d-padinfull], .d2-d3 [class~=d-padfull], .d2-d3 [class~=d-padinfull], .d3-d4 [class~=d-padfull], .d3-d4 [class~=d-padinfull], .d3-d4 [class~=d-padfull], .d3-d4 [class~=d-padinfull], .d4-d5 [class~=d-padfull], .d4-d5 [class~=d-padinfull], .d4-d5 [class~=d-padfull], .d4-d5 [class~=d-padinfull], .d5-d6 [class~=d-padfull], .d5-d6 [class~=d-padinfull], .d5-d6 [class~=d-padfull], .d5-d6 [class~=d-padinfull], .d6-d7 [class~=d-padfull], .d6-d7 [class~=d-padinfull], .d6-d7 [class~=d-padfull], .d6-d7 [class~=d-padinfull], .d7-d8 [class~=d-padfull], .d7-d8 [class~=d-padinfull], .d7-d8 [class~=d-padfull], .d7-d8 [class~=d-padinfull] {
+    padding-left: 8.60215054%;
+    padding-right: 8.60215054%;
+    left: -8.60215054%; }
 
   .d-pad, .d-padfull {
     position: relative;
@@ -2267,48 +2359,286 @@ ul.tabs li a.current {
     left: 0; }
 
   /* Desktop grid relationships ----- */
-  [class*=" d4"], [class^=d4] {
+  [class*=" d8"], [class^=d8] {
+    margin-left: 89.26767675%; }
+
+  .d2-d8 [class*=" d8"], .d2-d8 [class^=d8] {
+    margin-left: 87.69898698%; }
+
+  .d2-d8 [class*=" d7"], .d2-d8 [class^=d7] {
+    margin-left: 73.08248915%; }
+
+  .d2-d8 [class*=" d6"], .d2-d8 [class^=d6] {
+    margin-left: 58.46599132%; }
+
+  .d2-d8 [class*=" d5"], .d2-d8 [class^=d5] {
+    margin-left: 43.84949349%; }
+
+  .d2-d8 [class*=" d4"], .d2-d8 [class^=d4] {
+    margin-left: 29.23299566%; }
+
+  .d2-d8 [class*=" d3"], .d2-d8 [class^=d3] {
+    margin-left: 14.61649783%; }
+
+  .d3-d8 [class*=" d8"], .d3-d8 [class^=d8] {
+    margin-left: 85.59322034%; }
+
+  .d3-d8 [class*=" d7"], .d3-d8 [class^=d7] {
+    margin-left: 68.47457627%; }
+
+  .d3-d8 [class*=" d6"], .d3-d8 [class^=d6] {
+    margin-left: 51.3559322%; }
+
+  .d3-d8 [class*=" d5"], .d3-d8 [class^=d5] {
+    margin-left: 34.23728814%; }
+
+  .d3-d8 [class*=" d4"], .d3-d8 [class^=d4] {
+    margin-left: 17.11864407%; }
+
+  .d4-d8 [class*=" d8"], .d4-d8 [class^=d8] {
+    margin-left: 82.61758691%; }
+
+  .d4-d8 [class*=" d7"], .d4-d8 [class^=d7] {
+    margin-left: 61.96319018%; }
+
+  .d4-d8 [class*=" d6"], .d4-d8 [class^=d6] {
+    margin-left: 41.30879346%; }
+
+  .d4-d8 [class*=" d5"], .d4-d8 [class^=d5] {
+    margin-left: 20.65439673%; }
+
+  .d5-d8 [class*=" d8"], .d5-d8 [class^=d8] {
+    margin-left: 78.09278351%; }
+
+  .d5-d8 [class*=" d7"], .d5-d8 [class^=d7] {
+    margin-left: 52.06185567%; }
+
+  .d5-d8 [class*=" d6"], .d5-d8 [class^=d6] {
+    margin-left: 26.03092784%; }
+
+  .d6-d8 [class*=" d8"], .d6-d8 [class^=d8] {
+    margin-left: 70.38327526%; }
+
+  .d6-d8 [class*=" d7"], .d6-d8 [class^=d7] {
+    margin-left: 35.19163763%; }
+
+  .d7-d8 [class*=" d8"], .d7-d8 [class^=d8] {
+    margin-left: 54.30107527%; }
+
+  [class*=" d7"], [class^=d7] {
     margin-left: 76.5151515%; }
 
-  .d2-d4 [class*=" d4"], .d2-d4 [class^=d4] {
+  .d1-d7 [class*=" d7"], .d1-d7 [class^=d7] {
+    margin-left: 87.69898698%; }
+
+  .d1-d7 [class*=" d6"], .d1-d7 [class^=d6] {
+    margin-left: 73.08248915%; }
+
+  .d1-d7 [class*=" d5"], .d1-d7 [class^=d5] {
+    margin-left: 58.46599132%; }
+
+  .d1-d7 [class*=" d4"], .d1-d7 [class^=d4] {
+    margin-left: 43.84949349%; }
+
+  .d1-d7 [class*=" d3"], .d1-d7 [class^=d3] {
+    margin-left: 29.23299566%; }
+
+  .d1-d7 [class*=" d2"], .d1-d7 [class^=d2] {
+    margin-left: 14.61649783%; }
+
+  .d2-d7 [class*=" d7"], .d2-d7 [class^=d7] {
+    margin-left: 85.59322034%; }
+
+  .d2-d7 [class*=" d6"], .d2-d7 [class^=d6] {
     margin-left: 68.47457627%; }
 
-  .d2-d4 [class*=" d3"], .d2-d4 [class^=d3] {
+  .d2-d7 [class*=" d5"], .d2-d7 [class^=d5] {
+    margin-left: 51.3559322%; }
+
+  .d2-d7 [class*=" d4"], .d2-d7 [class^=d4] {
     margin-left: 34.23728814%; }
 
-  .d3-d4 [class*=" d4"], .d3-d4 [class^=d4] {
+  .d2-d7 [class*=" d3"], .d2-d7 [class^=d3] {
+    margin-left: 17.11864407%; }
+
+  .d3-d7 [class*=" d7"], .d3-d7 [class^=d7] {
+    margin-left: 82.61758691%; }
+
+  .d3-d7 [class*=" d6"], .d3-d7 [class^=d6] {
+    margin-left: 61.96319018%; }
+
+  .d3-d7 [class*=" d5"], .d3-d7 [class^=d5] {
+    margin-left: 41.30879346%; }
+
+  .d3-d7 [class*=" d4"], .d3-d7 [class^=d4] {
+    margin-left: 20.65439673%; }
+
+  .d4-d7 [class*=" d7"], .d4-d7 [class^=d7] {
+    margin-left: 78.09278351%; }
+
+  .d4-d7 [class*=" d6"], .d4-d7 [class^=d6] {
     margin-left: 52.06185567%; }
 
-  [class*=" d3"], [class^=d3] {
+  .d4-d7 [class*=" d5"], .d4-d7 [class^=d5] {
+    margin-left: 26.03092784%; }
+
+  .d5-d7 [class*=" d7"], .d5-d7 [class^=d7] {
+    margin-left: 70.38327526%; }
+
+  .d5-d7 [class*=" d6"], .d5-d7 [class^=d6] {
+    margin-left: 35.19163763%; }
+
+  .d6-d7 [class*=" d7"], .d6-d7 [class^=d7] {
+    margin-left: 54.30107527%; }
+
+  [class*=" d6"], [class^=d6] {
+    margin-left: 63.76262625%; }
+
+  .d1-d6 [class*=" d6"], .d1-d6 [class^=d6] {
+    margin-left: 85.59322034%; }
+
+  .d1-d6 [class*=" d5"], .d1-d6 [class^=d5] {
+    margin-left: 68.47457627%; }
+
+  .d1-d6 [class*=" d4"], .d1-d6 [class^=d4] {
+    margin-left: 51.3559322%; }
+
+  .d1-d6 [class*=" d3"], .d1-d6 [class^=d3] {
+    margin-left: 34.23728814%; }
+
+  .d1-d6 [class*=" d2"], .d1-d6 [class^=d2] {
+    margin-left: 17.11864407%; }
+
+  .d2-d6 [class*=" d6"], .d2-d6 [class^=d6] {
+    margin-left: 82.61758691%; }
+
+  .d2-d6 [class*=" d5"], .d2-d6 [class^=d5] {
+    margin-left: 61.96319018%; }
+
+  .d2-d6 [class*=" d4"], .d2-d6 [class^=d4] {
+    margin-left: 41.30879346%; }
+
+  .d2-d6 [class*=" d3"], .d2-d6 [class^=d3] {
+    margin-left: 20.65439673%; }
+
+  .d3-d6 [class*=" d6"], .d3-d6 [class^=d6] {
+    margin-left: 78.09278351%; }
+
+  .d3-d6 [class*=" d5"], .d3-d6 [class^=d5] {
+    margin-left: 52.06185567%; }
+
+  .d3-d6 [class*=" d4"], .d3-d6 [class^=d4] {
+    margin-left: 26.03092784%; }
+
+  .d4-d6 [class*=" d6"], .d4-d6 [class^=d6] {
+    margin-left: 70.38327526%; }
+
+  .d4-d6 [class*=" d5"], .d4-d6 [class^=d5] {
+    margin-left: 35.19163763%; }
+
+  .d5-d6 [class*=" d6"], .d5-d6 [class^=d6] {
+    margin-left: 54.30107527%; }
+
+  [class*=" d5"], [class^=d5] {
     margin-left: 51.010101%; }
 
-  .d1-d3 [class*=" d3"], .d1-d3 [class^=d3] {
-    margin-left: 68.47457627%; }
+  .d1-d5 [class*=" d5"], .d1-d5 [class^=d5] {
+    margin-left: 82.61758691%; }
 
-  .d1-d3 [class*=" d2"], .d1-d3 [class^=d2] {
-    margin-left: 34.23728814%; }
+  .d1-d5 [class*=" d4"], .d1-d5 [class^=d4] {
+    margin-left: 61.96319018%; }
 
-  .d2-d3 [class*=" d3"], .d2-d3 [class^=d3] {
+  .d1-d5 [class*=" d3"], .d1-d5 [class^=d3] {
+    margin-left: 41.30879346%; }
+
+  .d1-d5 [class*=" d2"], .d1-d5 [class^=d2] {
+    margin-left: 20.65439673%; }
+
+  .d2-d5 [class*=" d5"], .d2-d5 [class^=d5] {
+    margin-left: 78.09278351%; }
+
+  .d2-d5 [class*=" d4"], .d2-d5 [class^=d4] {
     margin-left: 52.06185567%; }
 
-  [class*=" d2"], [class^=d2] {
+  .d2-d5 [class*=" d3"], .d2-d5 [class^=d3] {
+    margin-left: 26.03092784%; }
+
+  .d3-d5 [class*=" d5"], .d3-d5 [class^=d5] {
+    margin-left: 70.38327526%; }
+
+  .d3-d5 [class*=" d4"], .d3-d5 [class^=d4] {
+    margin-left: 35.19163763%; }
+
+  .d4-d5 [class*=" d5"], .d4-d5 [class^=d5] {
+    margin-left: 54.30107527%; }
+
+  [class*=" d4"], [class^=d4] {
+    margin-left: 38.25757575%; }
+
+  .d1-d4 [class*=" d4"], .d1-d4 [class^=d4] {
+    margin-left: 78.09278351%; }
+
+  .d1-d4 [class*=" d3"], .d1-d4 [class^=d3] {
+    margin-left: 52.06185567%; }
+
+  .d1-d4 [class*=" d2"], .d1-d4 [class^=d2] {
+    margin-left: 26.03092784%; }
+
+  .d2-d4 [class*=" d4"], .d2-d4 [class^=d4] {
+    margin-left: 70.38327526%; }
+
+  .d2-d4 [class*=" d3"], .d2-d4 [class^=d3] {
+    margin-left: 35.19163763%; }
+
+  .d3-d4 [class*=" d4"], .d3-d4 [class^=d4] {
+    margin-left: 54.30107527%; }
+
+  [class*=" d3"], [class^=d3] {
     margin-left: 25.5050505%; }
 
+  .d1-d3 [class*=" d3"], .d1-d3 [class^=d3] {
+    margin-left: 70.38327526%; }
+
+  .d1-d3 [class*=" d2"], .d1-d3 [class^=d2] {
+    margin-left: 35.19163763%; }
+
+  .d2-d3 [class*=" d3"], .d2-d3 [class^=d3] {
+    margin-left: 54.30107527%; }
+
+  [class*=" d2"], [class^=d2] {
+    margin-left: 12.75252525%; }
+
   .d1-d2 [class*=" d2"], .d1-d2 [class^=d2] {
-    margin-left: 52.06185567%; }
+    margin-left: 54.30107527%; }
 
   /* Desktop grid floats ----- */
-  [class*=" d-float"][class*=" d-float"], [class^=d-float][class^=d-float], [class*=" d-float"][class*=" d-float"], [class^=d-float][class^=d-float], [class*=" d-float"][class*=" d-float"], [class^=d-float][class^=d-float], [class*=" d-float"][class*=" d-float"], [class^=d-float][class^=d-float] {
+  [class*=" d-float"][class*=" d-float"], [class^=d-float][class^=d-float], [class*=" d-float"][class*=" d-float"], [class^=d-float][class^=d-float], [class*=" d-float"][class*=" d-float"], [class^=d-float][class^=d-float], [class*=" d-float"][class*=" d-float"], [class^=d-float][class^=d-float], [class*=" d-float"][class*=" d-float"], [class^=d-float][class^=d-float], [class*=" d-float"][class*=" d-float"], [class^=d-float][class^=d-float], [class*=" d-float"][class*=" d-float"], [class^=d-float][class^=d-float], [class*=" d-float"][class*=" d-float"], [class^=d-float][class^=d-float] {
     margin-left: 2.02020202%;
     margin-right: 2.02020202%; }
 
-  .d1-d3 [class*=" d-float"][class*=" d-float"], .d1-d3 [class^=d-float][class^=d-float], .d1-d3 [class*=" d-float"][class*=" d-float"], .d1-d3 [class^=d-float][class^=d-float], .d1-d3 [class*=" d-float"][class*=" d-float"], .d1-d3 [class^=d-float][class^=d-float], .d2-d4 [class*=" d-float"][class*=" d-float"], .d2-d4 [class^=d-float][class^=d-float], .d2-d4 [class*=" d-float"][class*=" d-float"], .d2-d4 [class^=d-float][class^=d-float], .d2-d4 [class*=" d-float"][class*=" d-float"], .d2-d4 [class^=d-float][class^=d-float] {
+  .d1-d7 [class*=" d-float"][class*=" d-float"], .d1-d7 [class^=d-float][class^=d-float], .d1-d7 [class*=" d-float"][class*=" d-float"], .d1-d7 [class^=d-float][class^=d-float], .d1-d7 [class*=" d-float"][class*=" d-float"], .d1-d7 [class^=d-float][class^=d-float], .d1-d7 [class*=" d-float"][class*=" d-float"], .d1-d7 [class^=d-float][class^=d-float], .d1-d7 [class*=" d-float"][class*=" d-float"], .d1-d7 [class^=d-float][class^=d-float], .d1-d7 [class*=" d-float"][class*=" d-float"], .d1-d7 [class^=d-float][class^=d-float], .d1-d7 [class*=" d-float"][class*=" d-float"], .d1-d7 [class^=d-float][class^=d-float], .d2-d8 [class*=" d-float"][class*=" d-float"], .d2-d8 [class^=d-float][class^=d-float], .d2-d8 [class*=" d-float"][class*=" d-float"], .d2-d8 [class^=d-float][class^=d-float], .d2-d8 [class*=" d-float"][class*=" d-float"], .d2-d8 [class^=d-float][class^=d-float], .d2-d8 [class*=" d-float"][class*=" d-float"], .d2-d8 [class^=d-float][class^=d-float], .d2-d8 [class*=" d-float"][class*=" d-float"], .d2-d8 [class^=d-float][class^=d-float], .d2-d8 [class*=" d-float"][class*=" d-float"], .d2-d8 [class^=d-float][class^=d-float], .d2-d8 [class*=" d-float"][class*=" d-float"], .d2-d8 [class^=d-float][class^=d-float] {
+    margin-left: 2.3154848048632%;
+    margin-right: 2.3154848048632%; }
+
+  .d1-d6 [class*=" d-float"][class*=" d-float"], .d1-d6 [class^=d-float][class^=d-float], .d1-d6 [class*=" d-float"][class*=" d-float"], .d1-d6 [class^=d-float][class^=d-float], .d1-d6 [class*=" d-float"][class*=" d-float"], .d1-d6 [class^=d-float][class^=d-float], .d1-d6 [class*=" d-float"][class*=" d-float"], .d1-d6 [class^=d-float][class^=d-float], .d1-d6 [class*=" d-float"][class*=" d-float"], .d1-d6 [class^=d-float][class^=d-float], .d1-d6 [class*=" d-float"][class*=" d-float"], .d1-d6 [class^=d-float][class^=d-float], .d2-d7 [class*=" d-float"][class*=" d-float"], .d2-d7 [class^=d-float][class^=d-float], .d2-d7 [class*=" d-float"][class*=" d-float"], .d2-d7 [class^=d-float][class^=d-float], .d2-d7 [class*=" d-float"][class*=" d-float"], .d2-d7 [class^=d-float][class^=d-float], .d2-d7 [class*=" d-float"][class*=" d-float"], .d2-d7 [class^=d-float][class^=d-float], .d2-d7 [class*=" d-float"][class*=" d-float"], .d2-d7 [class^=d-float][class^=d-float], .d2-d7 [class*=" d-float"][class*=" d-float"], .d2-d7 [class^=d-float][class^=d-float], .d3-d8 [class*=" d-float"][class*=" d-float"], .d3-d8 [class^=d-float][class^=d-float], .d3-d8 [class*=" d-float"][class*=" d-float"], .d3-d8 [class^=d-float][class^=d-float], .d3-d8 [class*=" d-float"][class*=" d-float"], .d3-d8 [class^=d-float][class^=d-float], .d3-d8 [class*=" d-float"][class*=" d-float"], .d3-d8 [class^=d-float][class^=d-float], .d3-d8 [class*=" d-float"][class*=" d-float"], .d3-d8 [class^=d-float][class^=d-float], .d3-d8 [class*=" d-float"][class*=" d-float"], .d3-d8 [class^=d-float][class^=d-float] {
     margin-left: 2.7118644070527%;
     margin-right: 2.7118644070527%; }
 
-  .d1-d2 [class*=" d-float"][class*=" d-float"], .d1-d2 [class^=d-float][class^=d-float], .d1-d2 [class*=" d-float"][class*=" d-float"], .d1-d2 [class^=d-float][class^=d-float], .d2-d3 [class*=" d-float"][class*=" d-float"], .d2-d3 [class^=d-float][class^=d-float], .d2-d3 [class*=" d-float"][class*=" d-float"], .d2-d3 [class^=d-float][class^=d-float], .d3-d4 [class*=" d-float"][class*=" d-float"], .d3-d4 [class^=d-float][class^=d-float], .d3-d4 [class*=" d-float"][class*=" d-float"], .d3-d4 [class^=d-float][class^=d-float] {
+  .d1-d5 [class*=" d-float"][class*=" d-float"], .d1-d5 [class^=d-float][class^=d-float], .d1-d5 [class*=" d-float"][class*=" d-float"], .d1-d5 [class^=d-float][class^=d-float], .d1-d5 [class*=" d-float"][class*=" d-float"], .d1-d5 [class^=d-float][class^=d-float], .d1-d5 [class*=" d-float"][class*=" d-float"], .d1-d5 [class^=d-float][class^=d-float], .d1-d5 [class*=" d-float"][class*=" d-float"], .d1-d5 [class^=d-float][class^=d-float], .d2-d6 [class*=" d-float"][class*=" d-float"], .d2-d6 [class^=d-float][class^=d-float], .d2-d6 [class*=" d-float"][class*=" d-float"], .d2-d6 [class^=d-float][class^=d-float], .d2-d6 [class*=" d-float"][class*=" d-float"], .d2-d6 [class^=d-float][class^=d-float], .d2-d6 [class*=" d-float"][class*=" d-float"], .d2-d6 [class^=d-float][class^=d-float], .d2-d6 [class*=" d-float"][class*=" d-float"], .d2-d6 [class^=d-float][class^=d-float], .d3-d7 [class*=" d-float"][class*=" d-float"], .d3-d7 [class^=d-float][class^=d-float], .d3-d7 [class*=" d-float"][class*=" d-float"], .d3-d7 [class^=d-float][class^=d-float], .d3-d7 [class*=" d-float"][class*=" d-float"], .d3-d7 [class^=d-float][class^=d-float], .d3-d7 [class*=" d-float"][class*=" d-float"], .d3-d7 [class^=d-float][class^=d-float], .d3-d7 [class*=" d-float"][class*=" d-float"], .d3-d7 [class^=d-float][class^=d-float], .d4-d8 [class*=" d-float"][class*=" d-float"], .d4-d8 [class^=d-float][class^=d-float], .d4-d8 [class*=" d-float"][class*=" d-float"], .d4-d8 [class^=d-float][class^=d-float], .d4-d8 [class*=" d-float"][class*=" d-float"], .d4-d8 [class^=d-float][class^=d-float], .d4-d8 [class*=" d-float"][class*=" d-float"], .d4-d8 [class^=d-float][class^=d-float], .d4-d8 [class*=" d-float"][class*=" d-float"], .d4-d8 [class^=d-float][class^=d-float] {
+    margin-left: 3.271983640413%;
+    margin-right: 3.271983640413%; }
+
+  .d1-d4 [class*=" d-float"][class*=" d-float"], .d1-d4 [class^=d-float][class^=d-float], .d1-d4 [class*=" d-float"][class*=" d-float"], .d1-d4 [class^=d-float][class^=d-float], .d1-d4 [class*=" d-float"][class*=" d-float"], .d1-d4 [class^=d-float][class^=d-float], .d1-d4 [class*=" d-float"][class*=" d-float"], .d1-d4 [class^=d-float][class^=d-float], .d2-d5 [class*=" d-float"][class*=" d-float"], .d2-d5 [class^=d-float][class^=d-float], .d2-d5 [class*=" d-float"][class*=" d-float"], .d2-d5 [class^=d-float][class^=d-float], .d2-d5 [class*=" d-float"][class*=" d-float"], .d2-d5 [class^=d-float][class^=d-float], .d2-d5 [class*=" d-float"][class*=" d-float"], .d2-d5 [class^=d-float][class^=d-float], .d3-d6 [class*=" d-float"][class*=" d-float"], .d3-d6 [class^=d-float][class^=d-float], .d3-d6 [class*=" d-float"][class*=" d-float"], .d3-d6 [class^=d-float][class^=d-float], .d3-d6 [class*=" d-float"][class*=" d-float"], .d3-d6 [class^=d-float][class^=d-float], .d3-d6 [class*=" d-float"][class*=" d-float"], .d3-d6 [class^=d-float][class^=d-float], .d4-d7 [class*=" d-float"][class*=" d-float"], .d4-d7 [class^=d-float][class^=d-float], .d4-d7 [class*=" d-float"][class*=" d-float"], .d4-d7 [class^=d-float][class^=d-float], .d4-d7 [class*=" d-float"][class*=" d-float"], .d4-d7 [class^=d-float][class^=d-float], .d4-d7 [class*=" d-float"][class*=" d-float"], .d4-d7 [class^=d-float][class^=d-float], .d5-d8 [class*=" d-float"][class*=" d-float"], .d5-d8 [class^=d-float][class^=d-float], .d5-d8 [class*=" d-float"][class*=" d-float"], .d5-d8 [class^=d-float][class^=d-float], .d5-d8 [class*=" d-float"][class*=" d-float"], .d5-d8 [class^=d-float][class^=d-float], .d5-d8 [class*=" d-float"][class*=" d-float"], .d5-d8 [class^=d-float][class^=d-float] {
     margin-left: 4.1237113406271%;
     margin-right: 4.1237113406271%; }
+
+  .d1-d3 [class*=" d-float"][class*=" d-float"], .d1-d3 [class^=d-float][class^=d-float], .d1-d3 [class*=" d-float"][class*=" d-float"], .d1-d3 [class^=d-float][class^=d-float], .d1-d3 [class*=" d-float"][class*=" d-float"], .d1-d3 [class^=d-float][class^=d-float], .d2-d4 [class*=" d-float"][class*=" d-float"], .d2-d4 [class^=d-float][class^=d-float], .d2-d4 [class*=" d-float"][class*=" d-float"], .d2-d4 [class^=d-float][class^=d-float], .d2-d4 [class*=" d-float"][class*=" d-float"], .d2-d4 [class^=d-float][class^=d-float], .d3-d5 [class*=" d-float"][class*=" d-float"], .d3-d5 [class^=d-float][class^=d-float], .d3-d5 [class*=" d-float"][class*=" d-float"], .d3-d5 [class^=d-float][class^=d-float], .d3-d5 [class*=" d-float"][class*=" d-float"], .d3-d5 [class^=d-float][class^=d-float], .d4-d6 [class*=" d-float"][class*=" d-float"], .d4-d6 [class^=d-float][class^=d-float], .d4-d6 [class*=" d-float"][class*=" d-float"], .d4-d6 [class^=d-float][class^=d-float], .d4-d6 [class*=" d-float"][class*=" d-float"], .d4-d6 [class^=d-float][class^=d-float], .d5-d7 [class*=" d-float"][class*=" d-float"], .d5-d7 [class^=d-float][class^=d-float], .d5-d7 [class*=" d-float"][class*=" d-float"], .d5-d7 [class^=d-float][class^=d-float], .d5-d7 [class*=" d-float"][class*=" d-float"], .d5-d7 [class^=d-float][class^=d-float], .d6-d8 [class*=" d-float"][class*=" d-float"], .d6-d8 [class^=d-float][class^=d-float], .d6-d8 [class*=" d-float"][class*=" d-float"], .d6-d8 [class^=d-float][class^=d-float], .d6-d8 [class*=" d-float"][class*=" d-float"], .d6-d8 [class^=d-float][class^=d-float] {
+    margin-left: 5.574912892563%;
+    margin-right: 5.574912892563%; }
+
+  .d1-d2 [class*=" d-float"][class*=" d-float"], .d1-d2 [class^=d-float][class^=d-float], .d1-d2 [class*=" d-float"][class*=" d-float"], .d1-d2 [class^=d-float][class^=d-float], .d2-d3 [class*=" d-float"][class*=" d-float"], .d2-d3 [class^=d-float][class^=d-float], .d2-d3 [class*=" d-float"][class*=" d-float"], .d2-d3 [class^=d-float][class^=d-float], .d3-d4 [class*=" d-float"][class*=" d-float"], .d3-d4 [class^=d-float][class^=d-float], .d3-d4 [class*=" d-float"][class*=" d-float"], .d3-d4 [class^=d-float][class^=d-float], .d4-d5 [class*=" d-float"][class*=" d-float"], .d4-d5 [class^=d-float][class^=d-float], .d4-d5 [class*=" d-float"][class*=" d-float"], .d4-d5 [class^=d-float][class^=d-float], .d5-d6 [class*=" d-float"][class*=" d-float"], .d5-d6 [class^=d-float][class^=d-float], .d5-d6 [class*=" d-float"][class*=" d-float"], .d5-d6 [class^=d-float][class^=d-float], .d6-d7 [class*=" d-float"][class*=" d-float"], .d6-d7 [class^=d-float][class^=d-float], .d6-d7 [class*=" d-float"][class*=" d-float"], .d6-d7 [class^=d-float][class^=d-float], .d7-d8 [class*=" d-float"][class*=" d-float"], .d7-d8 [class^=d-float][class^=d-float], .d7-d8 [class*=" d-float"][class*=" d-float"], .d7-d8 [class^=d-float][class^=d-float] {
+    margin-left: 8.6021505385501%;
+    margin-right: 8.6021505385501%; }
 
   .d-floatright {
     float: right;
@@ -2319,11 +2649,11 @@ ul.tabs li a.current {
     margin-left: 0 !important; }
 
   /* Desktop clearing ----- */
-  .d1, [class*=d1-], .d-all, [class*=" d1-"], [class^=d1-], .d1, [class*=" d1-"] [class*=" d1-"], [class^=d1-] [class*=" d1-"], [class*=" d1-"] [class^=d1-], [class^=d1-] [class^=d1-], [class*=" d1-"] .d1, [class^=d1-] .d1, [class*=" d2-"] [class*=" d2-"], [class^=d2-] [class*=" d2-"], [class*=" d2-"] [class^=d2-], [class^=d2-] [class^=d2-], [class*=" d2-"] .d2, [class^=d2-] .d2, [class*=" d3-"] [class*=" d3-"], [class^=d3-] [class*=" d3-"], [class*=" d3-"] [class^=d3-], [class^=d3-] [class^=d3-], [class*=" d3-"] .d3, [class^=d3-] .d3, [class*=" d4-"] [class*=" d4-"], [class^=d4-] [class*=" d4-"], [class*=" d4-"] [class^=d4-], [class^=d4-] [class^=d4-], [class*=" d4-"] .d4, [class^=d4-] .d4 {
+  .d1, [class*=d1-], .d-all, [class*=" d1-"], [class^=d1-], .d1, [class*=" d1-"] [class*=" d1-"], [class^=d1-] [class*=" d1-"], [class*=" d1-"] [class^=d1-], [class^=d1-] [class^=d1-], [class*=" d1-"] .d1, [class^=d1-] .d1, [class*=" d2-"] [class*=" d2-"], [class^=d2-] [class*=" d2-"], [class*=" d2-"] [class^=d2-], [class^=d2-] [class^=d2-], [class*=" d2-"] .d2, [class^=d2-] .d2, [class*=" d3-"] [class*=" d3-"], [class^=d3-] [class*=" d3-"], [class*=" d3-"] [class^=d3-], [class^=d3-] [class^=d3-], [class*=" d3-"] .d3, [class^=d3-] .d3, [class*=" d4-"] [class*=" d4-"], [class^=d4-] [class*=" d4-"], [class*=" d4-"] [class^=d4-], [class^=d4-] [class^=d4-], [class*=" d4-"] .d4, [class^=d4-] .d4, [class*=" d5-"] [class*=" d5-"], [class^=d5-] [class*=" d5-"], [class*=" d5-"] [class^=d5-], [class^=d5-] [class^=d5-], [class*=" d5-"] .d5, [class^=d5-] .d5, [class*=" d6-"] [class*=" d6-"], [class^=d6-] [class*=" d6-"], [class*=" d6-"] [class^=d6-], [class^=d6-] [class^=d6-], [class*=" d6-"] .d6, [class^=d6-] .d6, [class*=" d7-"] [class*=" d7-"], [class^=d7-] [class*=" d7-"], [class*=" d7-"] [class^=d7-], [class^=d7-] [class^=d7-], [class*=" d7-"] .d7, [class^=d7-] .d7, [class*=" d8-"] [class*=" d8-"], [class^=d8-] [class*=" d8-"], [class*=" d8-"] [class^=d8-], [class^=d8-] [class^=d8-], [class*=" d8-"] .d8, [class^=d8-] .d8 {
     margin-left: 0;
     clear: left; }
 
-  .d2 + [class*=" d2"], .d2 + [class^=d2], [class*=-d2] + [class*=" d2"], [class*=-d2] + [class^=d2], .d3 + [class*=" d3"], .d3 + [class^=d3], [class*=-d3] + [class*=" d3"], [class*=-d3] + [class^=d3], .d3 + [class*=" d2"], .d3 + [class^=d2], [class*=-d3] + [class*=" d2"], [class*=-d3] + [class^=d2], .d4 + [class*=" d4"], .d4 + [class^=d4], [class*=-d4] + [class*=" d4"], [class*=-d4] + [class^=d4], .d4 + [class*=" d3"], .d4 + [class^=d3], [class*=-d4] + [class*=" d3"], [class*=-d4] + [class^=d3], .d4 + [class*=" d2"], .d4 + [class^=d2], [class*=-d4] + [class*=" d2"], [class*=-d4] + [class^=d2], .d-clear {
+  .d2 + [class*=" d2"], .d2 + [class^=d2], [class*=-d2] + [class*=" d2"], [class*=-d2] + [class^=d2], .d3 + [class*=" d3"], .d3 + [class^=d3], [class*=-d3] + [class*=" d3"], [class*=-d3] + [class^=d3], .d3 + [class*=" d2"], .d3 + [class^=d2], [class*=-d3] + [class*=" d2"], [class*=-d3] + [class^=d2], .d4 + [class*=" d4"], .d4 + [class^=d4], [class*=-d4] + [class*=" d4"], [class*=-d4] + [class^=d4], .d4 + [class*=" d3"], .d4 + [class^=d3], [class*=-d4] + [class*=" d3"], [class*=-d4] + [class^=d3], .d4 + [class*=" d2"], .d4 + [class^=d2], [class*=-d4] + [class*=" d2"], [class*=-d4] + [class^=d2], .d5 + [class*=" d5"], .d5 + [class^=d5], [class*=-d5] + [class*=" d5"], [class*=-d5] + [class^=d5], .d5 + [class*=" d4"], .d5 + [class^=d4], [class*=-d5] + [class*=" d4"], [class*=-d5] + [class^=d4], .d5 + [class*=" d3"], .d5 + [class^=d3], [class*=-d5] + [class*=" d3"], [class*=-d5] + [class^=d3], .d5 + [class*=" d2"], .d5 + [class^=d2], [class*=-d5] + [class*=" d2"], [class*=-d5] + [class^=d2], .d6 + [class*=" d6"], .d6 + [class^=d6], [class*=-d6] + [class*=" d6"], [class*=-d6] + [class^=d6], .d6 + [class*=" d5"], .d6 + [class^=d5], [class*=-d6] + [class*=" d5"], [class*=-d6] + [class^=d5], .d6 + [class*=" d4"], .d6 + [class^=d4], [class*=-d6] + [class*=" d4"], [class*=-d6] + [class^=d4], .d6 + [class*=" d3"], .d6 + [class^=d3], [class*=-d6] + [class*=" d3"], [class*=-d6] + [class^=d3], .d6 + [class*=" d2"], .d6 + [class^=d2], [class*=-d6] + [class*=" d2"], [class*=-d6] + [class^=d2], .d7 + [class*=" d7"], .d7 + [class^=d7], [class*=-d7] + [class*=" d7"], [class*=-d7] + [class^=d7], .d7 + [class*=" d6"], .d7 + [class^=d6], [class*=-d7] + [class*=" d6"], [class*=-d7] + [class^=d6], .d7 + [class*=" d5"], .d7 + [class^=d5], [class*=-d7] + [class*=" d5"], [class*=-d7] + [class^=d5], .d7 + [class*=" d4"], .d7 + [class^=d4], [class*=-d7] + [class*=" d4"], [class*=-d7] + [class^=d4], .d7 + [class*=" d3"], .d7 + [class^=d3], [class*=-d7] + [class*=" d3"], [class*=-d7] + [class^=d3], .d7 + [class*=" d2"], .d7 + [class^=d2], [class*=-d7] + [class*=" d2"], [class*=-d7] + [class^=d2], .d8 + [class*=" d8"], .d8 + [class^=d8], [class*=-d8] + [class*=" d8"], [class*=-d8] + [class^=d8], .d8 + [class*=" d7"], .d8 + [class^=d7], [class*=-d8] + [class*=" d7"], [class*=-d8] + [class^=d7], .d8 + [class*=" d6"], .d8 + [class^=d6], [class*=-d8] + [class*=" d6"], [class*=-d8] + [class^=d6], .d8 + [class*=" d5"], .d8 + [class^=d5], [class*=-d8] + [class*=" d5"], [class*=-d8] + [class^=d5], .d8 + [class*=" d4"], .d8 + [class^=d4], [class*=-d8] + [class*=" d4"], [class*=-d8] + [class^=d4], .d8 + [class*=" d3"], .d8 + [class^=d3], [class*=-d8] + [class*=" d3"], [class*=-d8] + [class^=d3], .d8 + [class*=" d2"], .d8 + [class^=d2], [class*=-d8] + [class*=" d2"], [class*=-d8] + [class^=d2], .d-clear {
     clear: left; }
 
   .d-overlap[class*=overlap] {
@@ -2338,7 +2668,7 @@ ul.tabs li a.current {
 
   .d-showgrid .d-show, .d-showgrid.d-show, .gridsetnoareas .d-show {
     display: block !important; } }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 990px) {
   /* Tablet grid: 2 column / gutter: 2.60416667% ---------------------------------------- */
   [class*=" t1"], [class^=t1], [class*=" t2"], [class^=t2], .t-all {
     display: block;
@@ -2419,7 +2749,7 @@ ul.tabs li a.current {
 
   .t-showgrid .t-show, .t-showgrid.t-show, .gridsetnoareas .t-show {
     display: block !important; } }
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 320px) {
   /* Mobile grid: 1 column / gutter: 6.25% ---------------------------------------- */
   [class*=" m1"], [class^=m1], .m-all {
     display: block;

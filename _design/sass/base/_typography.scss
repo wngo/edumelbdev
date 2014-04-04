@@ -14,8 +14,8 @@
     ========================================*/
 body {
 	font-family: $body-font-family;
-    line-height: 1.618em;
-    font-size: 16px; 
+    line-height: $base-line-height;
+    font-size: $base-em-font-size; 
 }
 
 em, i {
@@ -114,9 +114,9 @@ a.button {
     transition-duration: 0.5s;
     line-height:1.618em; }
 
-#main-content a:hover,#main-content a:focus, .footer a:hover {
-    color: #1a4d80;
-    border-bottom:1px solid #1a4d80;
+#main-content a:hover, a:focus, .footer a:hover {
+    color: lighten($color-main,10%);
+    border-bottom:1px solid lighten($color-main,10%);
     background-color:#F4f4f4;
     transition-property: background-color;
     transition-timing: ease-out;
@@ -124,13 +124,13 @@ a.button {
     }
 
 a:hover, a:focus {
-    color: #1a4d80;
+    color: lighten($color-main,10%);
     transition-property: background-color;
     transition-timing: ease-out;
     transition-duration: 0.5s;
 }
 
-#main-content .preview-img-wrap h2 {
+.preview-img-wrap h2 {
   color: #fff;
   font-size: 1em;
   font-weight: 400;
@@ -150,6 +150,14 @@ a:hover, a:focus {
    }
 
  }
+
+        
+.pullquote, #main-content .intro {
+  color: #20201e;
+  font-size:1.1843em;
+  font-family: 'Univers LT W01 65 Bold', Helvetica, Arial, sans-serif;
+  line-height: 1.618em;
+  font-weight: 400; }
 
 /**overrighting document hover states*/
 #main-content a.document.large:hover, #main-content a.document.large:focus {
