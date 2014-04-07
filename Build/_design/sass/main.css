@@ -145,13 +145,6 @@ p {
   margin: 0px;
   padding: 0px; }
 
-/**quick for e4kids images**/
-#main-content .e4kids .preview-img-wrap img {
-  width: 50%; }
-
-.e4kids-preview img {
-  margin-left: -25px; }
-
 #main-content .page-preview.tall img {
   height: 17.942em; }
 
@@ -176,6 +169,9 @@ p {
 #main-content a.button:after {
   content: '';
   margin: 0; }
+
+a.button {
+  cursor: pointer; }
 
 /*removing border from linked images*/
 #main-content .a-img {
@@ -358,20 +354,6 @@ li a.button:hover, li a.button:focus {
   width: 27%;
   float: left; }
 
-.tabs li {
-  float: left;
-  margin-right: 0.173em; }
-
-ul.tabs li a {
-  padding: 0.184em 0.6em;
-  width: auto; }
-
-ul.tabs {
-  height: 45px; }
-
-#main-content .e4kids .staff-tab img {
-  *width: 24%; }
-
 #main-content img {
   margin-top: 0.382em;
   width: 100%; }
@@ -526,8 +508,10 @@ ul.tabs {
     width: 96%; }
 
   body {
-    background: url("//education.unimelb.edu.au/__data/assets/image/0010/832186/mgseBg-l.jpg") -13.5em 12em no-repeat, url("//education.unimelb.edu.au/__data/assets/image/0011/832187/mgseBg-r.jpg") 101% 35em no-repeat !important;
-    background-color: #fff;
+    /*background: url("//education.unimelb.edu.au/__data/assets/image/0010/832186/mgseBg-l.jpg") -13.5em 12em no-repeat,
+    url("//education.unimelb.edu.au/__data/assets/image/0011/832187/mgseBg-r.jpg") 101% 35em no-repeat !important;
+    background-color:#fff;*/
+    background: -moz-linear-gradient white 20%, #005596;
     transition: 0s; }
 
   #main-content #home-banners .home-banner .summary {
@@ -717,12 +701,6 @@ ul.tabs {
   /** very low % of users searchign on mobile **/
   .mgse-search {
     display: none; }
-
-  .tabs li {
-    float: none; }
-
-  ul.tabs {
-    height: auto; }
 
   .col-2 {
     width: 100%; }
@@ -999,7 +977,7 @@ h2 {
   font-size: 1em; }
 
 h3 {
-  font-family: 'Univers LT W01 65 Bold', 'Droid Sans', Helvetica, Arial, sans-serif;
+  font-family: "Univers LT W01 55 Roman", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 1.263em;
   line-height: 1.184em;
@@ -1086,8 +1064,8 @@ a:hover, a:focus {
 
 .pullquote, #main-content .intro {
   color: #20201e;
-  font-size: 1.1843em;
-  font-family: 'Univers LT W01 65 Bold', Helvetica, Arial, sans-serif;
+  font-size: 1.263em;
+  font-family: "Univers LT W01 45 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.618em;
   font-weight: 400; }
 
@@ -1160,12 +1138,9 @@ h1.title {
   font-size: 0.5em; }
 
 .tabs li {
-  font-family: 'Univers LT W01 55 Roman', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
-  float: none;
-  text-indent: 0;
-  padding: 0;
-  list-style-image: none;
-  border-bottom: none; }
+  /*font-family: 'Univers LT W01 55 Roman', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif; */
+  font-family: 'Univers LT W01 45 Light', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
+  list-style-image: none; }
 
 blockquote {
   font-family: 'Univers LT W01 55 Roman','Droid Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -1467,7 +1442,7 @@ ul li, ol li {
   .main_nav .flexnav li {
     background: #005596; }
     .main_nav .flexnav li a {
-      border-left: 1px solid #064889;
+      border-left: 1px solid #00477d;
       color: #FFFFFF;
       font-size: 90%;
       line-height: 26px;
@@ -1941,56 +1916,86 @@ form button, input[type="submit"] {
 
 /* TABS
     =====================================*/
-.tabs li a {
-  width: auto;
-  border-radius: 2px 2px 0 0;
-  border-bottom: none; }
-
 /* root element for tabs  */
-.tabs {
+#main-content ul.tabs {
+  border-bottom: 3px solid #005596;
   list-style: none;
+  display: inline-block;
   margin: 0 0 25px 0 !important;
   padding: 0;
-  border-bottom: 3px solid #005596; }
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+  width: 100%; }
+  @media all and (max-width: 45em) {
+    #main-content ul.tabs {
+      height: auto; } }
+  #main-content ul.tabs li {
+    background: none;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    float: left;
+    text-indent: 0;
+    border-bottom: none; }
+    @media all and (max-width: 44em) {
+      #main-content ul.tabs li {
+        float: none; } }
+    #main-content ul.tabs li a {
+      background: #005596;
+      border-bottom: none;
+      border-right: 1px solid #00477d;
+      color: #fff;
+      height: 3em;
+      line-height: 38px;
+      padding: 0.618em 2em;
+      width: auto; }
+      #main-content ul.tabs li a .current {
+        background: #0072c9;
+        color: #fff; }
+      @media all and (max-width: 45em) {
+        #main-content ul.tabs li a {
+          /* link inside the tab. uses a background image */
+          border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+          font-size: 0.9em;
+          display: block;
+          text-align: center;
+          text-decoration: none;
+          margin: 0;
+          position: relative;
+          padding: 0.263em 1em;
+          /*top:1px;*/ } }
 
-#main-content ul.tabs li {
-  background: none; }
+#main-content .projects .button {
+  float: none;
+  font-size: 1em;
+  width: auto; }
 
-ul.tabs {
-  list-style: none; }
+#main-content .abstract p {
+  font-size: 95%; }
 
-/* link inside the tab. uses a background image */
-#main-content ul.tabs a {
-  font-size: 0.9em;
-  border-bottom: none;
-  display: block;
-  height: 38px;
-  line-height: 38px;
-  text-align: center;
-  text-decoration: none;
-  color: #003366;
-  margin: 0px;
-  position: relative;
-  padding: 0.263em 1em;
-  /*top:1px;*/ }
+#main-content .e4kids .staff-tab img {
+  *width: 24%; }
+
+/**quick for e4kids images**/
+#main-content .e4kids .preview-img-wrap img {
+  width: 50%; }
+
+.e4kids-preview img {
+  margin-left: -25px; }
 
 /* when mouse enters the tab move the background image */
 #main-content ul.tabs a:hover {
-  background: #c4c4c5; }
+  background: #0072c9; }
 
 /* active tab uses a class name "current". it's highlight is also done by moving the background image. */
 .tabs .current, .tabs .current:hover, .tabs li.current a {
-  background: #00376E;
+  background: #0072c9;
   border: none; }
-
-ul.tabs li a.current {
-  background: #005596;
-  color: #fff; }
 
 #main-content ul.tabs a.current {
   color: #fff;
   border-bottom: none;
-  background: #005596 !important;
+  background: #0072c9;
   transition: background 0.8s; }
 
 #main-content ul.tabs a:hover {
@@ -1998,50 +2003,6 @@ ul.tabs li a.current {
   /*transition: background 0.3s;*/ }
 
 /* Different widths for tabs: use a class name: w1, w2, w3 or w2 */
-/* width 1 */
-.tabs .w1 {
-  background-position: -519px 0;
-  width: 134px; }
-
-.tabs .w1:hover {
-  background-position: -519px -31px; }
-
-.tabs .w1.current {
-  background-position: -519px -62px; }
-
-/* width 2 */
-.tabs .w2 {
-  background-position: -366px -0px;
-  width: 154px; }
-
-.tabs .w2:hover {
-  background-position: -366px -31px; }
-
-.tabs .w2.current {
-  background-position: -366px -62px; }
-
-/* width 3 */
-.tabs .w3 {
-  background-position: -193px -0px;
-  width: 174px; }
-
-.tabs .w3:hover {
-  background-position: -193px -31px; }
-
-.tabs .w3.current {
-  background-position: -193px -62px; }
-
-/* width 4 */
-.tabs .w4 {
-  background-position: -0px -0px;
-  width: 194px; }
-
-.tabs .w4:hover {
-  background-position: -0px -31px; }
-
-.tabs .w4.current {
-  background-position: -0px -62px; }
-
 /* initially all panes are hidden */
 .panes .pane {
   display: none; }
@@ -2668,6 +2629,644 @@ ul.tabs li a.current {
 
   .d-showgrid .d-show, .d-showgrid.d-show, .gridsetnoareas .d-show {
     display: block !important; } }
+@media only screen and (min-width: 1000px) {
+  /* Landing page grid: 9 column / gutter: 2.02020202% ---------------------------------------- */
+  [class*=" l1"], [class^=l1], [class*=" l2"], [class^=l2], [class*=" l3"], [class^=l3], [class*=" l4"], [class^=l4], [class*=" l5"], [class^=l5], [class*=" l6"], [class^=l6], [class*=" l7"], [class^=l7], [class*=" l8"], [class^=l8], [class*=" l9"], [class^=l9], .l-all {
+    display: block;
+    float: left;
+    clear: none;
+    margin-right: -100%; }
+
+  /* Landing page grid spans ----- */
+  .l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9 {
+    width: 9.31537598%; }
+
+  .l1-l8 .l1, .l1-l8 .l2, .l1-l8 .l3, .l1-l8 .l4, .l1-l8 .l5, .l1-l8 .l6, .l1-l8 .l7, .l1-l8 .l8, .l2-l9 .l2, .l2-l9 .l3, .l2-l9 .l4, .l2-l9 .l5, .l2-l9 .l6, .l2-l9 .l7, .l2-l9 .l8, .l2-l9 .l9 {
+    width: 10.50632911%; }
+
+  .l1-l7 .l1, .l1-l7 .l2, .l1-l7 .l3, .l1-l7 .l4, .l1-l7 .l5, .l1-l7 .l6, .l1-l7 .l7, .l2-l8 .l2, .l2-l8 .l3, .l2-l8 .l4, .l2-l8 .l5, .l2-l8 .l6, .l2-l8 .l7, .l2-l8 .l8, .l3-l9 .l3, .l3-l9 .l4, .l3-l9 .l5, .l3-l9 .l6, .l3-l9 .l7, .l3-l9 .l8, .l3-l9 .l9 {
+    width: 12.04644412%; }
+
+  .l1-l6 .l1, .l1-l6 .l2, .l1-l6 .l3, .l1-l6 .l4, .l1-l6 .l5, .l1-l6 .l6, .l2-l7 .l2, .l2-l7 .l3, .l2-l7 .l4, .l2-l7 .l5, .l2-l7 .l6, .l2-l7 .l7, .l3-l8 .l3, .l3-l8 .l4, .l3-l8 .l5, .l3-l8 .l6, .l3-l8 .l7, .l3-l8 .l8, .l4-l9 .l4, .l4-l9 .l5, .l4-l9 .l6, .l4-l9 .l7, .l4-l9 .l8, .l4-l9 .l9 {
+    width: 14.11564626%; }
+
+  .l1-l5 .l1, .l1-l5 .l2, .l1-l5 .l3, .l1-l5 .l4, .l1-l5 .l5, .l2-l6 .l2, .l2-l6 .l3, .l2-l6 .l4, .l2-l6 .l5, .l2-l6 .l6, .l3-l7 .l3, .l3-l7 .l4, .l3-l7 .l5, .l3-l7 .l6, .l3-l7 .l7, .l4-l8 .l4, .l4-l8 .l5, .l4-l8 .l6, .l4-l8 .l7, .l4-l8 .l8, .l5-l9 .l5, .l5-l9 .l6, .l5-l9 .l7, .l5-l9 .l8, .l5-l9 .l9 {
+    width: 17.04312115%; }
+
+  .l1-l2, .l2-l3, .l3-l4, .l4-l5, .l5-l6, .l6-l7, .l7-l8, .l8-l9 {
+    width: 20.65095398%; }
+
+  .l1-l4 .l1, .l1-l4 .l2, .l1-l4 .l3, .l1-l4 .l4, .l2-l5 .l2, .l2-l5 .l3, .l2-l5 .l4, .l2-l5 .l5, .l3-l6 .l3, .l3-l6 .l4, .l3-l6 .l5, .l3-l6 .l6, .l4-l7 .l4, .l4-l7 .l5, .l4-l7 .l6, .l4-l7 .l7, .l5-l8 .l5, .l5-l8 .l6, .l5-l8 .l7, .l5-l8 .l8, .l6-l9 .l6, .l6-l9 .l7, .l6-l9 .l8, .l6-l9 .l9 {
+    width: 21.50259067%; }
+
+  .l1-l8 .l1-l2, .l1-l8 .l2-l3, .l1-l8 .l3-l4, .l1-l8 .l4-l5, .l1-l8 .l5-l6, .l1-l8 .l6-l7, .l1-l8 .l7-l8, .l2-l9 .l2-l3, .l2-l9 .l3-l4, .l2-l9 .l4-l5, .l2-l9 .l5-l6, .l2-l9 .l6-l7, .l2-l9 .l7-l8, .l2-l9 .l8-l9 {
+    width: 23.29113924%; }
+
+  .l1-l7 .l1-l2, .l1-l7 .l2-l3, .l1-l7 .l3-l4, .l1-l7 .l4-l5, .l1-l7 .l5-l6, .l1-l7 .l6-l7, .l2-l8 .l2-l3, .l2-l8 .l3-l4, .l2-l8 .l4-l5, .l2-l8 .l5-l6, .l2-l8 .l6-l7, .l2-l8 .l7-l8, .l3-l9 .l3-l4, .l3-l9 .l4-l5, .l3-l9 .l5-l6, .l3-l9 .l6-l7, .l3-l9 .l7-l8, .l3-l9 .l8-l9 {
+    width: 26.7053701%; }
+
+  .l1-l3 .l1, .l1-l3 .l2, .l1-l3 .l3, .l2-l4 .l2, .l2-l4 .l3, .l2-l4 .l4, .l3-l5 .l3, .l3-l5 .l4, .l3-l5 .l5, .l4-l6 .l4, .l4-l6 .l5, .l4-l6 .l6, .l5-l7 .l5, .l5-l7 .l6, .l5-l7 .l7, .l6-l8 .l6, .l6-l8 .l7, .l6-l8 .l8, .l7-l9 .l7, .l7-l9 .l8, .l7-l9 .l9 {
+    width: 29.12280702%; }
+
+  .l1-l6 .l1-l2, .l1-l6 .l2-l3, .l1-l6 .l3-l4, .l1-l6 .l4-l5, .l1-l6 .l5-l6, .l2-l7 .l2-l3, .l2-l7 .l3-l4, .l2-l7 .l4-l5, .l2-l7 .l5-l6, .l2-l7 .l6-l7, .l3-l8 .l3-l4, .l3-l8 .l4-l5, .l3-l8 .l5-l6, .l3-l8 .l6-l7, .l3-l8 .l7-l8, .l4-l9 .l4-l5, .l4-l9 .l5-l6, .l4-l9 .l6-l7, .l4-l9 .l7-l8, .l4-l9 .l8-l9 {
+    width: 31.29251701%; }
+
+  .l1-l3, .l2-l4, .l3-l5, .l4-l6, .l5-l7, .l6-l8, .l7-l9 {
+    width: 31.98653198%; }
+
+  .l1-l8 .l1-l3, .l1-l8 .l2-l4, .l1-l8 .l3-l5, .l1-l8 .l4-l6, .l1-l8 .l5-l7, .l1-l8 .l6-l8, .l2-l9 .l2-l4, .l2-l9 .l3-l5, .l2-l9 .l4-l6, .l2-l9 .l5-l7, .l2-l9 .l6-l8, .l2-l9 .l7-l9 {
+    width: 36.07594937%; }
+
+  .l1-l5 .l1-l2, .l1-l5 .l2-l3, .l1-l5 .l3-l4, .l1-l5 .l4-l5, .l2-l6 .l2-l3, .l2-l6 .l3-l4, .l2-l6 .l4-l5, .l2-l6 .l5-l6, .l3-l7 .l3-l4, .l3-l7 .l4-l5, .l3-l7 .l5-l6, .l3-l7 .l6-l7, .l4-l8 .l4-l5, .l4-l8 .l5-l6, .l4-l8 .l6-l7, .l4-l8 .l7-l8, .l5-l9 .l5-l6, .l5-l9 .l6-l7, .l5-l9 .l7-l8, .l5-l9 .l8-l9 {
+    width: 37.78234086%; }
+
+  .l1-l7 .l1-l3, .l1-l7 .l2-l4, .l1-l7 .l3-l5, .l1-l7 .l4-l6, .l1-l7 .l5-l7, .l2-l8 .l2-l4, .l2-l8 .l3-l5, .l2-l8 .l4-l6, .l2-l8 .l5-l7, .l2-l8 .l6-l8, .l3-l9 .l3-l5, .l3-l9 .l4-l6, .l3-l9 .l5-l7, .l3-l9 .l6-l8, .l3-l9 .l7-l9 {
+    width: 41.36429608%; }
+
+  .l1-l4, .l2-l5, .l3-l6, .l4-l7, .l5-l8, .l6-l9 {
+    width: 43.32210998%; }
+
+  .l1-l2 .l1, .l1-l2 .l2, .l2-l3 .l2, .l2-l3 .l3, .l3-l4 .l3, .l3-l4 .l4, .l4-l5 .l4, .l4-l5 .l5, .l5-l6 .l5, .l5-l6 .l6, .l6-l7 .l6, .l6-l7 .l7, .l7-l8 .l7, .l7-l8 .l8, .l8-l9 .l8, .l8-l9 .l9 {
+    width: 45.10869565%; }
+
+  .l1-l4 .l1-l2, .l1-l4 .l2-l3, .l1-l4 .l3-l4, .l2-l5 .l2-l3, .l2-l5 .l3-l4, .l2-l5 .l4-l5, .l3-l6 .l3-l4, .l3-l6 .l4-l5, .l3-l6 .l5-l6, .l4-l7 .l4-l5, .l4-l7 .l5-l6, .l4-l7 .l6-l7, .l5-l8 .l5-l6, .l5-l8 .l6-l7, .l5-l8 .l7-l8, .l6-l9 .l6-l7, .l6-l9 .l7-l8, .l6-l9 .l8-l9 {
+    width: 47.66839378%; }
+
+  .l1-l6 .l1-l3, .l1-l6 .l2-l4, .l1-l6 .l3-l5, .l1-l6 .l4-l6, .l2-l7 .l2-l4, .l2-l7 .l3-l5, .l2-l7 .l4-l6, .l2-l7 .l5-l7, .l3-l8 .l3-l5, .l3-l8 .l4-l6, .l3-l8 .l5-l7, .l3-l8 .l6-l8, .l4-l9 .l4-l6, .l4-l9 .l5-l7, .l4-l9 .l6-l8, .l4-l9 .l7-l9 {
+    width: 48.46938775%; }
+
+  .l1-l8 .l1-l4, .l1-l8 .l2-l5, .l1-l8 .l3-l6, .l1-l8 .l4-l7, .l1-l8 .l5-l8, .l2-l9 .l2-l5, .l2-l9 .l3-l6, .l2-l9 .l4-l7, .l2-l9 .l5-l8, .l2-l9 .l6-l9 {
+    width: 48.86075949%; }
+
+  .l1-l5, .l2-l6, .l3-l7, .l4-l8, .l5-l9 {
+    width: 54.65768798%; }
+
+  .l1-l7 .l1-l4, .l1-l7 .l2-l5, .l1-l7 .l3-l6, .l1-l7 .l4-l7, .l2-l8 .l2-l5, .l2-l8 .l3-l6, .l2-l8 .l4-l7, .l2-l8 .l5-l8, .l3-l9 .l3-l6, .l3-l9 .l4-l7, .l3-l9 .l5-l8, .l3-l9 .l6-l9 {
+    width: 56.02322206%; }
+
+  .l1-l5 .l1-l3, .l1-l5 .l2-l4, .l1-l5 .l3-l5, .l2-l6 .l2-l4, .l2-l6 .l3-l5, .l2-l6 .l4-l6, .l3-l7 .l3-l5, .l3-l7 .l4-l6, .l3-l7 .l5-l7, .l4-l8 .l4-l6, .l4-l8 .l5-l7, .l4-l8 .l6-l8, .l5-l9 .l5-l7, .l5-l9 .l6-l8, .l5-l9 .l7-l9 {
+    width: 58.52156057%; }
+
+  .l1-l8 .l1-l5, .l1-l8 .l2-l6, .l1-l8 .l3-l7, .l1-l8 .l4-l8, .l2-l9 .l2-l6, .l2-l9 .l3-l7, .l2-l9 .l4-l8, .l2-l9 .l5-l9 {
+    width: 61.64556962%; }
+
+  .l1-l3 .l1-l2, .l1-l3 .l2-l3, .l2-l4 .l2-l3, .l2-l4 .l3-l4, .l3-l5 .l3-l4, .l3-l5 .l4-l5, .l4-l6 .l4-l5, .l4-l6 .l5-l6, .l5-l7 .l5-l6, .l5-l7 .l6-l7, .l6-l8 .l6-l7, .l6-l8 .l7-l8, .l7-l9 .l7-l8, .l7-l9 .l8-l9 {
+    width: 64.56140351%; }
+
+  .l1-l6 .l1-l4, .l1-l6 .l2-l5, .l1-l6 .l3-l6, .l2-l7 .l2-l5, .l2-l7 .l3-l6, .l2-l7 .l4-l7, .l3-l8 .l3-l6, .l3-l8 .l4-l7, .l3-l8 .l5-l8, .l4-l9 .l4-l7, .l4-l9 .l5-l8, .l4-l9 .l6-l9 {
+    width: 65.6462585%; }
+
+  .l1-l6, .l2-l7, .l3-l8, .l4-l9 {
+    width: 65.99326598%; }
+
+  .l1-l7 .l1-l5, .l1-l7 .l2-l6, .l1-l7 .l3-l7, .l2-l8 .l2-l6, .l2-l8 .l3-l7, .l2-l8 .l4-l8, .l3-l9 .l3-l7, .l3-l9 .l4-l8, .l3-l9 .l5-l9 {
+    width: 70.68214804%; }
+
+  .l1-l4 .l1-l3, .l1-l4 .l2-l4, .l2-l5 .l2-l4, .l2-l5 .l3-l5, .l3-l6 .l3-l5, .l3-l6 .l4-l6, .l4-l7 .l4-l6, .l4-l7 .l5-l7, .l5-l8 .l5-l7, .l5-l8 .l6-l8, .l6-l9 .l6-l8, .l6-l9 .l7-l9 {
+    width: 73.83419689%; }
+
+  .l1-l8 .l1-l6, .l1-l8 .l2-l7, .l1-l8 .l3-l8, .l2-l9 .l2-l7, .l2-l9 .l3-l8, .l2-l9 .l4-l9 {
+    width: 74.43037975%; }
+
+  .l1-l7, .l2-l8, .l3-l9 {
+    width: 77.32884398%; }
+
+  .l1-l5 .l1-l4, .l1-l5 .l2-l5, .l2-l6 .l2-l5, .l2-l6 .l3-l6, .l3-l7 .l3-l6, .l3-l7 .l4-l7, .l4-l8 .l4-l7, .l4-l8 .l5-l8, .l5-l9 .l5-l8, .l5-l9 .l6-l9 {
+    width: 79.26078029%; }
+
+  .l1-l6 .l1-l5, .l1-l6 .l2-l6, .l2-l7 .l2-l6, .l2-l7 .l3-l7, .l3-l8 .l3-l7, .l3-l8 .l4-l8, .l4-l9 .l4-l8, .l4-l9 .l5-l9 {
+    width: 82.82312925%; }
+
+  .l1-l7 .l1-l6, .l1-l7 .l2-l7, .l2-l8 .l2-l7, .l2-l8 .l3-l8, .l3-l9 .l3-l8, .l3-l9 .l4-l9 {
+    width: 85.34107402%; }
+
+  .l1-l8 .l1-l7, .l1-l8 .l2-l8, .l2-l9 .l2-l8, .l2-l9 .l3-l9 {
+    width: 87.21518987%; }
+
+  .l1-l8, .l2-l9 {
+    width: 88.66442198%; }
+
+  .l-all {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    clear: left; }
+
+  /* Landing page grid padding ----- */
+  [class*=" l-pad"], [class^=l-pad] {
+    padding-left: 1.01010101%;
+    padding-right: 1.01010101%;
+    left: -1.01010101%; }
+
+  .l1-l8 [class*=" l-pad"], .l1-l8 [class^=l-pad], .l2-l9 [class*=" l-pad"], .l2-l9 [class^=l-pad] {
+    padding-left: 1.13924051%;
+    padding-right: 1.13924051%;
+    left: -1.13924051%; }
+
+  .l1-l7 [class*=" l-pad"], .l1-l7 [class^=l-pad], .l2-l8 [class*=" l-pad"], .l2-l8 [class^=l-pad], .l3-l9 [class*=" l-pad"], .l3-l9 [class^=l-pad] {
+    padding-left: 1.30624093%;
+    padding-right: 1.30624093%;
+    left: -1.30624093%; }
+
+  .l1-l6 [class*=" l-pad"], .l1-l6 [class^=l-pad], .l2-l7 [class*=" l-pad"], .l2-l7 [class^=l-pad], .l3-l8 [class*=" l-pad"], .l3-l8 [class^=l-pad], .l4-l9 [class*=" l-pad"], .l4-l9 [class^=l-pad] {
+    padding-left: 1.53061225%;
+    padding-right: 1.53061225%;
+    left: -1.53061225%; }
+
+  .l1-l5 [class*=" l-pad"], .l1-l5 [class^=l-pad], .l2-l6 [class*=" l-pad"], .l2-l6 [class^=l-pad], .l3-l7 [class*=" l-pad"], .l3-l7 [class^=l-pad], .l4-l8 [class*=" l-pad"], .l4-l8 [class^=l-pad], .l5-l9 [class*=" l-pad"], .l5-l9 [class^=l-pad] {
+    padding-left: 1.84804928%;
+    padding-right: 1.84804928%;
+    left: -1.84804928%; }
+
+  [class~=l-padfull], [class~=l-padinfull], [class~=l-padfull], [class~=l-padinfull], [class~=l-padfull], [class~=l-padinfull], [class~=l-padfull], [class~=l-padinfull], [class~=l-padfull], [class~=l-padinfull], [class~=l-padfull], [class~=l-padinfull], [class~=l-padfull], [class~=l-padinfull], [class~=l-padfull], [class~=l-padinfull], [class~=l-padfull], [class~=l-padinfull] {
+    padding-left: 2.02020202%;
+    padding-right: 2.02020202%;
+    left: -2.02020202%; }
+
+  .l1-l8 [class~=l-padfull], .l1-l8 [class~=l-padinfull], .l1-l8 [class~=l-padfull], .l1-l8 [class~=l-padinfull], .l1-l8 [class~=l-padfull], .l1-l8 [class~=l-padinfull], .l1-l8 [class~=l-padfull], .l1-l8 [class~=l-padinfull], .l1-l8 [class~=l-padfull], .l1-l8 [class~=l-padinfull], .l1-l8 [class~=l-padfull], .l1-l8 [class~=l-padinfull], .l1-l8 [class~=l-padfull], .l1-l8 [class~=l-padinfull], .l1-l8 [class~=l-padfull], .l1-l8 [class~=l-padinfull], .l2-l9 [class~=l-padfull], .l2-l9 [class~=l-padinfull], .l2-l9 [class~=l-padfull], .l2-l9 [class~=l-padinfull], .l2-l9 [class~=l-padfull], .l2-l9 [class~=l-padinfull], .l2-l9 [class~=l-padfull], .l2-l9 [class~=l-padinfull], .l2-l9 [class~=l-padfull], .l2-l9 [class~=l-padinfull], .l2-l9 [class~=l-padfull], .l2-l9 [class~=l-padinfull], .l2-l9 [class~=l-padfull], .l2-l9 [class~=l-padinfull], .l2-l9 [class~=l-padfull], .l2-l9 [class~=l-padinfull] {
+    padding-left: 2.27848101%;
+    padding-right: 2.27848101%;
+    left: -2.27848101%; }
+
+  .l1-l4 [class*=" l-pad"], .l1-l4 [class^=l-pad], .l2-l5 [class*=" l-pad"], .l2-l5 [class^=l-pad], .l3-l6 [class*=" l-pad"], .l3-l6 [class^=l-pad], .l4-l7 [class*=" l-pad"], .l4-l7 [class^=l-pad], .l5-l8 [class*=" l-pad"], .l5-l8 [class^=l-pad], .l6-l9 [class*=" l-pad"], .l6-l9 [class^=l-pad] {
+    padding-left: 2.33160622%;
+    padding-right: 2.33160622%;
+    left: -2.33160622%; }
+
+  .l1-l7 [class~=l-padfull], .l1-l7 [class~=l-padinfull], .l1-l7 [class~=l-padfull], .l1-l7 [class~=l-padinfull], .l1-l7 [class~=l-padfull], .l1-l7 [class~=l-padinfull], .l1-l7 [class~=l-padfull], .l1-l7 [class~=l-padinfull], .l1-l7 [class~=l-padfull], .l1-l7 [class~=l-padinfull], .l1-l7 [class~=l-padfull], .l1-l7 [class~=l-padinfull], .l1-l7 [class~=l-padfull], .l1-l7 [class~=l-padinfull], .l2-l8 [class~=l-padfull], .l2-l8 [class~=l-padinfull], .l2-l8 [class~=l-padfull], .l2-l8 [class~=l-padinfull], .l2-l8 [class~=l-padfull], .l2-l8 [class~=l-padinfull], .l2-l8 [class~=l-padfull], .l2-l8 [class~=l-padinfull], .l2-l8 [class~=l-padfull], .l2-l8 [class~=l-padinfull], .l2-l8 [class~=l-padfull], .l2-l8 [class~=l-padinfull], .l2-l8 [class~=l-padfull], .l2-l8 [class~=l-padinfull], .l3-l9 [class~=l-padfull], .l3-l9 [class~=l-padinfull], .l3-l9 [class~=l-padfull], .l3-l9 [class~=l-padinfull], .l3-l9 [class~=l-padfull], .l3-l9 [class~=l-padinfull], .l3-l9 [class~=l-padfull], .l3-l9 [class~=l-padinfull], .l3-l9 [class~=l-padfull], .l3-l9 [class~=l-padinfull], .l3-l9 [class~=l-padfull], .l3-l9 [class~=l-padinfull], .l3-l9 [class~=l-padfull], .l3-l9 [class~=l-padinfull] {
+    padding-left: 2.61248186%;
+    padding-right: 2.61248186%;
+    left: -2.61248186%; }
+
+  .l1-l6 [class~=l-padfull], .l1-l6 [class~=l-padinfull], .l1-l6 [class~=l-padfull], .l1-l6 [class~=l-padinfull], .l1-l6 [class~=l-padfull], .l1-l6 [class~=l-padinfull], .l1-l6 [class~=l-padfull], .l1-l6 [class~=l-padinfull], .l1-l6 [class~=l-padfull], .l1-l6 [class~=l-padinfull], .l1-l6 [class~=l-padfull], .l1-l6 [class~=l-padinfull], .l2-l7 [class~=l-padfull], .l2-l7 [class~=l-padinfull], .l2-l7 [class~=l-padfull], .l2-l7 [class~=l-padinfull], .l2-l7 [class~=l-padfull], .l2-l7 [class~=l-padinfull], .l2-l7 [class~=l-padfull], .l2-l7 [class~=l-padinfull], .l2-l7 [class~=l-padfull], .l2-l7 [class~=l-padinfull], .l2-l7 [class~=l-padfull], .l2-l7 [class~=l-padinfull], .l3-l8 [class~=l-padfull], .l3-l8 [class~=l-padinfull], .l3-l8 [class~=l-padfull], .l3-l8 [class~=l-padinfull], .l3-l8 [class~=l-padfull], .l3-l8 [class~=l-padinfull], .l3-l8 [class~=l-padfull], .l3-l8 [class~=l-padinfull], .l3-l8 [class~=l-padfull], .l3-l8 [class~=l-padinfull], .l3-l8 [class~=l-padfull], .l3-l8 [class~=l-padinfull], .l4-l9 [class~=l-padfull], .l4-l9 [class~=l-padinfull], .l4-l9 [class~=l-padfull], .l4-l9 [class~=l-padinfull], .l4-l9 [class~=l-padfull], .l4-l9 [class~=l-padinfull], .l4-l9 [class~=l-padfull], .l4-l9 [class~=l-padinfull], .l4-l9 [class~=l-padfull], .l4-l9 [class~=l-padinfull], .l4-l9 [class~=l-padfull], .l4-l9 [class~=l-padinfull] {
+    padding-left: 3.06122449%;
+    padding-right: 3.06122449%;
+    left: -3.06122449%; }
+
+  .l1-l3 [class*=" l-pad"], .l1-l3 [class^=l-pad], .l2-l4 [class*=" l-pad"], .l2-l4 [class^=l-pad], .l3-l5 [class*=" l-pad"], .l3-l5 [class^=l-pad], .l4-l6 [class*=" l-pad"], .l4-l6 [class^=l-pad], .l5-l7 [class*=" l-pad"], .l5-l7 [class^=l-pad], .l6-l8 [class*=" l-pad"], .l6-l8 [class^=l-pad], .l7-l9 [class*=" l-pad"], .l7-l9 [class^=l-pad] {
+    padding-left: 3.15789474%;
+    padding-right: 3.15789474%;
+    left: -3.15789474%; }
+
+  .l1-l5 [class~=l-padfull], .l1-l5 [class~=l-padinfull], .l1-l5 [class~=l-padfull], .l1-l5 [class~=l-padinfull], .l1-l5 [class~=l-padfull], .l1-l5 [class~=l-padinfull], .l1-l5 [class~=l-padfull], .l1-l5 [class~=l-padinfull], .l1-l5 [class~=l-padfull], .l1-l5 [class~=l-padinfull], .l2-l6 [class~=l-padfull], .l2-l6 [class~=l-padinfull], .l2-l6 [class~=l-padfull], .l2-l6 [class~=l-padinfull], .l2-l6 [class~=l-padfull], .l2-l6 [class~=l-padinfull], .l2-l6 [class~=l-padfull], .l2-l6 [class~=l-padinfull], .l2-l6 [class~=l-padfull], .l2-l6 [class~=l-padinfull], .l3-l7 [class~=l-padfull], .l3-l7 [class~=l-padinfull], .l3-l7 [class~=l-padfull], .l3-l7 [class~=l-padinfull], .l3-l7 [class~=l-padfull], .l3-l7 [class~=l-padinfull], .l3-l7 [class~=l-padfull], .l3-l7 [class~=l-padinfull], .l3-l7 [class~=l-padfull], .l3-l7 [class~=l-padinfull], .l4-l8 [class~=l-padfull], .l4-l8 [class~=l-padinfull], .l4-l8 [class~=l-padfull], .l4-l8 [class~=l-padinfull], .l4-l8 [class~=l-padfull], .l4-l8 [class~=l-padinfull], .l4-l8 [class~=l-padfull], .l4-l8 [class~=l-padinfull], .l4-l8 [class~=l-padfull], .l4-l8 [class~=l-padinfull], .l5-l9 [class~=l-padfull], .l5-l9 [class~=l-padinfull], .l5-l9 [class~=l-padfull], .l5-l9 [class~=l-padinfull], .l5-l9 [class~=l-padfull], .l5-l9 [class~=l-padinfull], .l5-l9 [class~=l-padfull], .l5-l9 [class~=l-padinfull], .l5-l9 [class~=l-padfull], .l5-l9 [class~=l-padinfull] {
+    padding-left: 3.69609856%;
+    padding-right: 3.69609856%;
+    left: -3.69609856%; }
+
+  .l1-l4 [class~=l-padfull], .l1-l4 [class~=l-padinfull], .l1-l4 [class~=l-padfull], .l1-l4 [class~=l-padinfull], .l1-l4 [class~=l-padfull], .l1-l4 [class~=l-padinfull], .l1-l4 [class~=l-padfull], .l1-l4 [class~=l-padinfull], .l2-l5 [class~=l-padfull], .l2-l5 [class~=l-padinfull], .l2-l5 [class~=l-padfull], .l2-l5 [class~=l-padinfull], .l2-l5 [class~=l-padfull], .l2-l5 [class~=l-padinfull], .l2-l5 [class~=l-padfull], .l2-l5 [class~=l-padinfull], .l3-l6 [class~=l-padfull], .l3-l6 [class~=l-padinfull], .l3-l6 [class~=l-padfull], .l3-l6 [class~=l-padinfull], .l3-l6 [class~=l-padfull], .l3-l6 [class~=l-padinfull], .l3-l6 [class~=l-padfull], .l3-l6 [class~=l-padinfull], .l4-l7 [class~=l-padfull], .l4-l7 [class~=l-padinfull], .l4-l7 [class~=l-padfull], .l4-l7 [class~=l-padinfull], .l4-l7 [class~=l-padfull], .l4-l7 [class~=l-padinfull], .l4-l7 [class~=l-padfull], .l4-l7 [class~=l-padinfull], .l5-l8 [class~=l-padfull], .l5-l8 [class~=l-padinfull], .l5-l8 [class~=l-padfull], .l5-l8 [class~=l-padinfull], .l5-l8 [class~=l-padfull], .l5-l8 [class~=l-padinfull], .l5-l8 [class~=l-padfull], .l5-l8 [class~=l-padinfull], .l6-l9 [class~=l-padfull], .l6-l9 [class~=l-padinfull], .l6-l9 [class~=l-padfull], .l6-l9 [class~=l-padinfull], .l6-l9 [class~=l-padfull], .l6-l9 [class~=l-padinfull], .l6-l9 [class~=l-padfull], .l6-l9 [class~=l-padinfull] {
+    padding-left: 4.66321244%;
+    padding-right: 4.66321244%;
+    left: -4.66321244%; }
+
+  .l1-l2 [class*=" l-pad"], .l1-l2 [class^=l-pad], .l2-l3 [class*=" l-pad"], .l2-l3 [class^=l-pad], .l3-l4 [class*=" l-pad"], .l3-l4 [class^=l-pad], .l4-l5 [class*=" l-pad"], .l4-l5 [class^=l-pad], .l5-l6 [class*=" l-pad"], .l5-l6 [class^=l-pad], .l6-l7 [class*=" l-pad"], .l6-l7 [class^=l-pad], .l7-l8 [class*=" l-pad"], .l7-l8 [class^=l-pad], .l8-l9 [class*=" l-pad"], .l8-l9 [class^=l-pad] {
+    padding-left: 4.89130435%;
+    padding-right: 4.89130435%;
+    left: -4.89130435%; }
+
+  .l1-l3 [class~=l-padfull], .l1-l3 [class~=l-padinfull], .l1-l3 [class~=l-padfull], .l1-l3 [class~=l-padinfull], .l1-l3 [class~=l-padfull], .l1-l3 [class~=l-padinfull], .l2-l4 [class~=l-padfull], .l2-l4 [class~=l-padinfull], .l2-l4 [class~=l-padfull], .l2-l4 [class~=l-padinfull], .l2-l4 [class~=l-padfull], .l2-l4 [class~=l-padinfull], .l3-l5 [class~=l-padfull], .l3-l5 [class~=l-padinfull], .l3-l5 [class~=l-padfull], .l3-l5 [class~=l-padinfull], .l3-l5 [class~=l-padfull], .l3-l5 [class~=l-padinfull], .l4-l6 [class~=l-padfull], .l4-l6 [class~=l-padinfull], .l4-l6 [class~=l-padfull], .l4-l6 [class~=l-padinfull], .l4-l6 [class~=l-padfull], .l4-l6 [class~=l-padinfull], .l5-l7 [class~=l-padfull], .l5-l7 [class~=l-padinfull], .l5-l7 [class~=l-padfull], .l5-l7 [class~=l-padinfull], .l5-l7 [class~=l-padfull], .l5-l7 [class~=l-padinfull], .l6-l8 [class~=l-padfull], .l6-l8 [class~=l-padinfull], .l6-l8 [class~=l-padfull], .l6-l8 [class~=l-padinfull], .l6-l8 [class~=l-padfull], .l6-l8 [class~=l-padinfull], .l7-l9 [class~=l-padfull], .l7-l9 [class~=l-padinfull], .l7-l9 [class~=l-padfull], .l7-l9 [class~=l-padinfull], .l7-l9 [class~=l-padfull], .l7-l9 [class~=l-padinfull] {
+    padding-left: 6.31578947%;
+    padding-right: 6.31578947%;
+    left: -6.31578947%; }
+
+  .l1-l2 [class~=l-padfull], .l1-l2 [class~=l-padinfull], .l1-l2 [class~=l-padfull], .l1-l2 [class~=l-padinfull], .l2-l3 [class~=l-padfull], .l2-l3 [class~=l-padinfull], .l2-l3 [class~=l-padfull], .l2-l3 [class~=l-padinfull], .l3-l4 [class~=l-padfull], .l3-l4 [class~=l-padinfull], .l3-l4 [class~=l-padfull], .l3-l4 [class~=l-padinfull], .l4-l5 [class~=l-padfull], .l4-l5 [class~=l-padinfull], .l4-l5 [class~=l-padfull], .l4-l5 [class~=l-padinfull], .l5-l6 [class~=l-padfull], .l5-l6 [class~=l-padinfull], .l5-l6 [class~=l-padfull], .l5-l6 [class~=l-padinfull], .l6-l7 [class~=l-padfull], .l6-l7 [class~=l-padinfull], .l6-l7 [class~=l-padfull], .l6-l7 [class~=l-padinfull], .l7-l8 [class~=l-padfull], .l7-l8 [class~=l-padinfull], .l7-l8 [class~=l-padfull], .l7-l8 [class~=l-padinfull], .l8-l9 [class~=l-padfull], .l8-l9 [class~=l-padinfull], .l8-l9 [class~=l-padfull], .l8-l9 [class~=l-padinfull] {
+    padding-left: 9.7826087%;
+    padding-right: 9.7826087%;
+    left: -9.7826087%; }
+
+  .l-pad, .l-padfull {
+    position: relative;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box; }
+
+  .l-padin[class~=l-padin], .l-padinfull[class~=l-padinfull] {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    left: 0; }
+
+  /* Landing page grid relationships ----- */
+  [class*=" l9"], [class^=l9] {
+    margin-left: 90.684624%; }
+
+  .l2-l9 [class*=" l9"], .l2-l9 [class^=l9] {
+    margin-left: 89.49367089%; }
+
+  .l2-l9 [class*=" l8"], .l2-l9 [class^=l8] {
+    margin-left: 76.70886076%; }
+
+  .l2-l9 [class*=" l7"], .l2-l9 [class^=l7] {
+    margin-left: 63.92405063%; }
+
+  .l2-l9 [class*=" l6"], .l2-l9 [class^=l6] {
+    margin-left: 51.13924051%; }
+
+  .l2-l9 [class*=" l5"], .l2-l9 [class^=l5] {
+    margin-left: 38.35443038%; }
+
+  .l2-l9 [class*=" l4"], .l2-l9 [class^=l4] {
+    margin-left: 25.56962025%; }
+
+  .l2-l9 [class*=" l3"], .l2-l9 [class^=l3] {
+    margin-left: 12.78481013%; }
+
+  .l3-l9 [class*=" l9"], .l3-l9 [class^=l9] {
+    margin-left: 87.95355588%; }
+
+  .l3-l9 [class*=" l8"], .l3-l9 [class^=l8] {
+    margin-left: 73.2946299%; }
+
+  .l3-l9 [class*=" l7"], .l3-l9 [class^=l7] {
+    margin-left: 58.63570392%; }
+
+  .l3-l9 [class*=" l6"], .l3-l9 [class^=l6] {
+    margin-left: 43.97677794%; }
+
+  .l3-l9 [class*=" l5"], .l3-l9 [class^=l5] {
+    margin-left: 29.31785196%; }
+
+  .l3-l9 [class*=" l4"], .l3-l9 [class^=l4] {
+    margin-left: 14.65892598%; }
+
+  .l4-l9 [class*=" l9"], .l4-l9 [class^=l9] {
+    margin-left: 85.88435374%; }
+
+  .l4-l9 [class*=" l8"], .l4-l9 [class^=l8] {
+    margin-left: 68.70748299%; }
+
+  .l4-l9 [class*=" l7"], .l4-l9 [class^=l7] {
+    margin-left: 51.53061225%; }
+
+  .l4-l9 [class*=" l6"], .l4-l9 [class^=l6] {
+    margin-left: 34.3537415%; }
+
+  .l4-l9 [class*=" l5"], .l4-l9 [class^=l5] {
+    margin-left: 17.17687075%; }
+
+  .l5-l9 [class*=" l9"], .l5-l9 [class^=l9] {
+    margin-left: 82.95687885%; }
+
+  .l5-l9 [class*=" l8"], .l5-l9 [class^=l8] {
+    margin-left: 62.21765914%; }
+
+  .l5-l9 [class*=" l7"], .l5-l9 [class^=l7] {
+    margin-left: 41.47843943%; }
+
+  .l5-l9 [class*=" l6"], .l5-l9 [class^=l6] {
+    margin-left: 20.73921971%; }
+
+  .l6-l9 [class*=" l9"], .l6-l9 [class^=l9] {
+    margin-left: 78.49740933%; }
+
+  .l6-l9 [class*=" l8"], .l6-l9 [class^=l8] {
+    margin-left: 52.33160622%; }
+
+  .l6-l9 [class*=" l7"], .l6-l9 [class^=l7] {
+    margin-left: 26.16580311%; }
+
+  .l7-l9 [class*=" l9"], .l7-l9 [class^=l9] {
+    margin-left: 70.87719298%; }
+
+  .l7-l9 [class*=" l8"], .l7-l9 [class^=l8] {
+    margin-left: 35.43859649%; }
+
+  .l8-l9 [class*=" l9"], .l8-l9 [class^=l9] {
+    margin-left: 54.89130435%; }
+
+  [class*=" l8"], [class^=l8] {
+    margin-left: 79.349046%; }
+
+  .l1-l8 [class*=" l8"], .l1-l8 [class^=l8] {
+    margin-left: 89.49367089%; }
+
+  .l1-l8 [class*=" l7"], .l1-l8 [class^=l7] {
+    margin-left: 76.70886076%; }
+
+  .l1-l8 [class*=" l6"], .l1-l8 [class^=l6] {
+    margin-left: 63.92405063%; }
+
+  .l1-l8 [class*=" l5"], .l1-l8 [class^=l5] {
+    margin-left: 51.13924051%; }
+
+  .l1-l8 [class*=" l4"], .l1-l8 [class^=l4] {
+    margin-left: 38.35443038%; }
+
+  .l1-l8 [class*=" l3"], .l1-l8 [class^=l3] {
+    margin-left: 25.56962025%; }
+
+  .l1-l8 [class*=" l2"], .l1-l8 [class^=l2] {
+    margin-left: 12.78481013%; }
+
+  .l2-l8 [class*=" l8"], .l2-l8 [class^=l8] {
+    margin-left: 87.95355588%; }
+
+  .l2-l8 [class*=" l7"], .l2-l8 [class^=l7] {
+    margin-left: 73.2946299%; }
+
+  .l2-l8 [class*=" l6"], .l2-l8 [class^=l6] {
+    margin-left: 58.63570392%; }
+
+  .l2-l8 [class*=" l5"], .l2-l8 [class^=l5] {
+    margin-left: 43.97677794%; }
+
+  .l2-l8 [class*=" l4"], .l2-l8 [class^=l4] {
+    margin-left: 29.31785196%; }
+
+  .l2-l8 [class*=" l3"], .l2-l8 [class^=l3] {
+    margin-left: 14.65892598%; }
+
+  .l3-l8 [class*=" l8"], .l3-l8 [class^=l8] {
+    margin-left: 85.88435374%; }
+
+  .l3-l8 [class*=" l7"], .l3-l8 [class^=l7] {
+    margin-left: 68.70748299%; }
+
+  .l3-l8 [class*=" l6"], .l3-l8 [class^=l6] {
+    margin-left: 51.53061225%; }
+
+  .l3-l8 [class*=" l5"], .l3-l8 [class^=l5] {
+    margin-left: 34.3537415%; }
+
+  .l3-l8 [class*=" l4"], .l3-l8 [class^=l4] {
+    margin-left: 17.17687075%; }
+
+  .l4-l8 [class*=" l8"], .l4-l8 [class^=l8] {
+    margin-left: 82.95687885%; }
+
+  .l4-l8 [class*=" l7"], .l4-l8 [class^=l7] {
+    margin-left: 62.21765914%; }
+
+  .l4-l8 [class*=" l6"], .l4-l8 [class^=l6] {
+    margin-left: 41.47843943%; }
+
+  .l4-l8 [class*=" l5"], .l4-l8 [class^=l5] {
+    margin-left: 20.73921971%; }
+
+  .l5-l8 [class*=" l8"], .l5-l8 [class^=l8] {
+    margin-left: 78.49740933%; }
+
+  .l5-l8 [class*=" l7"], .l5-l8 [class^=l7] {
+    margin-left: 52.33160622%; }
+
+  .l5-l8 [class*=" l6"], .l5-l8 [class^=l6] {
+    margin-left: 26.16580311%; }
+
+  .l6-l8 [class*=" l8"], .l6-l8 [class^=l8] {
+    margin-left: 70.87719298%; }
+
+  .l6-l8 [class*=" l7"], .l6-l8 [class^=l7] {
+    margin-left: 35.43859649%; }
+
+  .l7-l8 [class*=" l8"], .l7-l8 [class^=l8] {
+    margin-left: 54.89130435%; }
+
+  [class*=" l7"], [class^=l7] {
+    margin-left: 68.013468%; }
+
+  .l1-l7 [class*=" l7"], .l1-l7 [class^=l7] {
+    margin-left: 87.95355588%; }
+
+  .l1-l7 [class*=" l6"], .l1-l7 [class^=l6] {
+    margin-left: 73.2946299%; }
+
+  .l1-l7 [class*=" l5"], .l1-l7 [class^=l5] {
+    margin-left: 58.63570392%; }
+
+  .l1-l7 [class*=" l4"], .l1-l7 [class^=l4] {
+    margin-left: 43.97677794%; }
+
+  .l1-l7 [class*=" l3"], .l1-l7 [class^=l3] {
+    margin-left: 29.31785196%; }
+
+  .l1-l7 [class*=" l2"], .l1-l7 [class^=l2] {
+    margin-left: 14.65892598%; }
+
+  .l2-l7 [class*=" l7"], .l2-l7 [class^=l7] {
+    margin-left: 85.88435374%; }
+
+  .l2-l7 [class*=" l6"], .l2-l7 [class^=l6] {
+    margin-left: 68.70748299%; }
+
+  .l2-l7 [class*=" l5"], .l2-l7 [class^=l5] {
+    margin-left: 51.53061225%; }
+
+  .l2-l7 [class*=" l4"], .l2-l7 [class^=l4] {
+    margin-left: 34.3537415%; }
+
+  .l2-l7 [class*=" l3"], .l2-l7 [class^=l3] {
+    margin-left: 17.17687075%; }
+
+  .l3-l7 [class*=" l7"], .l3-l7 [class^=l7] {
+    margin-left: 82.95687885%; }
+
+  .l3-l7 [class*=" l6"], .l3-l7 [class^=l6] {
+    margin-left: 62.21765914%; }
+
+  .l3-l7 [class*=" l5"], .l3-l7 [class^=l5] {
+    margin-left: 41.47843943%; }
+
+  .l3-l7 [class*=" l4"], .l3-l7 [class^=l4] {
+    margin-left: 20.73921971%; }
+
+  .l4-l7 [class*=" l7"], .l4-l7 [class^=l7] {
+    margin-left: 78.49740933%; }
+
+  .l4-l7 [class*=" l6"], .l4-l7 [class^=l6] {
+    margin-left: 52.33160622%; }
+
+  .l4-l7 [class*=" l5"], .l4-l7 [class^=l5] {
+    margin-left: 26.16580311%; }
+
+  .l5-l7 [class*=" l7"], .l5-l7 [class^=l7] {
+    margin-left: 70.87719298%; }
+
+  .l5-l7 [class*=" l6"], .l5-l7 [class^=l6] {
+    margin-left: 35.43859649%; }
+
+  .l6-l7 [class*=" l7"], .l6-l7 [class^=l7] {
+    margin-left: 54.89130435%; }
+
+  [class*=" l6"], [class^=l6] {
+    margin-left: 56.67789%; }
+
+  .l1-l6 [class*=" l6"], .l1-l6 [class^=l6] {
+    margin-left: 85.88435374%; }
+
+  .l1-l6 [class*=" l5"], .l1-l6 [class^=l5] {
+    margin-left: 68.70748299%; }
+
+  .l1-l6 [class*=" l4"], .l1-l6 [class^=l4] {
+    margin-left: 51.53061225%; }
+
+  .l1-l6 [class*=" l3"], .l1-l6 [class^=l3] {
+    margin-left: 34.3537415%; }
+
+  .l1-l6 [class*=" l2"], .l1-l6 [class^=l2] {
+    margin-left: 17.17687075%; }
+
+  .l2-l6 [class*=" l6"], .l2-l6 [class^=l6] {
+    margin-left: 82.95687885%; }
+
+  .l2-l6 [class*=" l5"], .l2-l6 [class^=l5] {
+    margin-left: 62.21765914%; }
+
+  .l2-l6 [class*=" l4"], .l2-l6 [class^=l4] {
+    margin-left: 41.47843943%; }
+
+  .l2-l6 [class*=" l3"], .l2-l6 [class^=l3] {
+    margin-left: 20.73921971%; }
+
+  .l3-l6 [class*=" l6"], .l3-l6 [class^=l6] {
+    margin-left: 78.49740933%; }
+
+  .l3-l6 [class*=" l5"], .l3-l6 [class^=l5] {
+    margin-left: 52.33160622%; }
+
+  .l3-l6 [class*=" l4"], .l3-l6 [class^=l4] {
+    margin-left: 26.16580311%; }
+
+  .l4-l6 [class*=" l6"], .l4-l6 [class^=l6] {
+    margin-left: 70.87719298%; }
+
+  .l4-l6 [class*=" l5"], .l4-l6 [class^=l5] {
+    margin-left: 35.43859649%; }
+
+  .l5-l6 [class*=" l6"], .l5-l6 [class^=l6] {
+    margin-left: 54.89130435%; }
+
+  [class*=" l5"], [class^=l5] {
+    margin-left: 45.342312%; }
+
+  .l1-l5 [class*=" l5"], .l1-l5 [class^=l5] {
+    margin-left: 82.95687885%; }
+
+  .l1-l5 [class*=" l4"], .l1-l5 [class^=l4] {
+    margin-left: 62.21765914%; }
+
+  .l1-l5 [class*=" l3"], .l1-l5 [class^=l3] {
+    margin-left: 41.47843943%; }
+
+  .l1-l5 [class*=" l2"], .l1-l5 [class^=l2] {
+    margin-left: 20.73921971%; }
+
+  .l2-l5 [class*=" l5"], .l2-l5 [class^=l5] {
+    margin-left: 78.49740933%; }
+
+  .l2-l5 [class*=" l4"], .l2-l5 [class^=l4] {
+    margin-left: 52.33160622%; }
+
+  .l2-l5 [class*=" l3"], .l2-l5 [class^=l3] {
+    margin-left: 26.16580311%; }
+
+  .l3-l5 [class*=" l5"], .l3-l5 [class^=l5] {
+    margin-left: 70.87719298%; }
+
+  .l3-l5 [class*=" l4"], .l3-l5 [class^=l4] {
+    margin-left: 35.43859649%; }
+
+  .l4-l5 [class*=" l5"], .l4-l5 [class^=l5] {
+    margin-left: 54.89130435%; }
+
+  [class*=" l4"], [class^=l4] {
+    margin-left: 34.006734%; }
+
+  .l1-l4 [class*=" l4"], .l1-l4 [class^=l4] {
+    margin-left: 78.49740933%; }
+
+  .l1-l4 [class*=" l3"], .l1-l4 [class^=l3] {
+    margin-left: 52.33160622%; }
+
+  .l1-l4 [class*=" l2"], .l1-l4 [class^=l2] {
+    margin-left: 26.16580311%; }
+
+  .l2-l4 [class*=" l4"], .l2-l4 [class^=l4] {
+    margin-left: 70.87719298%; }
+
+  .l2-l4 [class*=" l3"], .l2-l4 [class^=l3] {
+    margin-left: 35.43859649%; }
+
+  .l3-l4 [class*=" l4"], .l3-l4 [class^=l4] {
+    margin-left: 54.89130435%; }
+
+  [class*=" l3"], [class^=l3] {
+    margin-left: 22.671156%; }
+
+  .l1-l3 [class*=" l3"], .l1-l3 [class^=l3] {
+    margin-left: 70.87719298%; }
+
+  .l1-l3 [class*=" l2"], .l1-l3 [class^=l2] {
+    margin-left: 35.43859649%; }
+
+  .l2-l3 [class*=" l3"], .l2-l3 [class^=l3] {
+    margin-left: 54.89130435%; }
+
+  [class*=" l2"], [class^=l2] {
+    margin-left: 11.335578%; }
+
+  .l1-l2 [class*=" l2"], .l1-l2 [class^=l2] {
+    margin-left: 54.89130435%; }
+
+  /* Landing page grid floats ----- */
+  [class*=" l-float"][class*=" l-float"], [class^=l-float][class^=l-float], [class*=" l-float"][class*=" l-float"], [class^=l-float][class^=l-float], [class*=" l-float"][class*=" l-float"], [class^=l-float][class^=l-float], [class*=" l-float"][class*=" l-float"], [class^=l-float][class^=l-float], [class*=" l-float"][class*=" l-float"], [class^=l-float][class^=l-float], [class*=" l-float"][class*=" l-float"], [class^=l-float][class^=l-float], [class*=" l-float"][class*=" l-float"], [class^=l-float][class^=l-float], [class*=" l-float"][class*=" l-float"], [class^=l-float][class^=l-float], [class*=" l-float"][class*=" l-float"], [class^=l-float][class^=l-float] {
+    margin-left: 2.02020202%;
+    margin-right: 2.02020202%; }
+
+  .l1-l8 [class*=" l-float"][class*=" l-float"], .l1-l8 [class^=l-float][class^=l-float], .l1-l8 [class*=" l-float"][class*=" l-float"], .l1-l8 [class^=l-float][class^=l-float], .l1-l8 [class*=" l-float"][class*=" l-float"], .l1-l8 [class^=l-float][class^=l-float], .l1-l8 [class*=" l-float"][class*=" l-float"], .l1-l8 [class^=l-float][class^=l-float], .l1-l8 [class*=" l-float"][class*=" l-float"], .l1-l8 [class^=l-float][class^=l-float], .l1-l8 [class*=" l-float"][class*=" l-float"], .l1-l8 [class^=l-float][class^=l-float], .l1-l8 [class*=" l-float"][class*=" l-float"], .l1-l8 [class^=l-float][class^=l-float], .l1-l8 [class*=" l-float"][class*=" l-float"], .l1-l8 [class^=l-float][class^=l-float], .l2-l9 [class*=" l-float"][class*=" l-float"], .l2-l9 [class^=l-float][class^=l-float], .l2-l9 [class*=" l-float"][class*=" l-float"], .l2-l9 [class^=l-float][class^=l-float], .l2-l9 [class*=" l-float"][class*=" l-float"], .l2-l9 [class^=l-float][class^=l-float], .l2-l9 [class*=" l-float"][class*=" l-float"], .l2-l9 [class^=l-float][class^=l-float], .l2-l9 [class*=" l-float"][class*=" l-float"], .l2-l9 [class^=l-float][class^=l-float], .l2-l9 [class*=" l-float"][class*=" l-float"], .l2-l9 [class^=l-float][class^=l-float], .l2-l9 [class*=" l-float"][class*=" l-float"], .l2-l9 [class^=l-float][class^=l-float], .l2-l9 [class*=" l-float"][class*=" l-float"], .l2-l9 [class^=l-float][class^=l-float] {
+    margin-left: 2.2784810128867%;
+    margin-right: 2.2784810128867%; }
+
+  .l1-l7 [class*=" l-float"][class*=" l-float"], .l1-l7 [class^=l-float][class^=l-float], .l1-l7 [class*=" l-float"][class*=" l-float"], .l1-l7 [class^=l-float][class^=l-float], .l1-l7 [class*=" l-float"][class*=" l-float"], .l1-l7 [class^=l-float][class^=l-float], .l1-l7 [class*=" l-float"][class*=" l-float"], .l1-l7 [class^=l-float][class^=l-float], .l1-l7 [class*=" l-float"][class*=" l-float"], .l1-l7 [class^=l-float][class^=l-float], .l1-l7 [class*=" l-float"][class*=" l-float"], .l1-l7 [class^=l-float][class^=l-float], .l1-l7 [class*=" l-float"][class*=" l-float"], .l1-l7 [class^=l-float][class^=l-float], .l2-l8 [class*=" l-float"][class*=" l-float"], .l2-l8 [class^=l-float][class^=l-float], .l2-l8 [class*=" l-float"][class*=" l-float"], .l2-l8 [class^=l-float][class^=l-float], .l2-l8 [class*=" l-float"][class*=" l-float"], .l2-l8 [class^=l-float][class^=l-float], .l2-l8 [class*=" l-float"][class*=" l-float"], .l2-l8 [class^=l-float][class^=l-float], .l2-l8 [class*=" l-float"][class*=" l-float"], .l2-l8 [class^=l-float][class^=l-float], .l2-l8 [class*=" l-float"][class*=" l-float"], .l2-l8 [class^=l-float][class^=l-float], .l2-l8 [class*=" l-float"][class*=" l-float"], .l2-l8 [class^=l-float][class^=l-float], .l3-l9 [class*=" l-float"][class*=" l-float"], .l3-l9 [class^=l-float][class^=l-float], .l3-l9 [class*=" l-float"][class*=" l-float"], .l3-l9 [class^=l-float][class^=l-float], .l3-l9 [class*=" l-float"][class*=" l-float"], .l3-l9 [class^=l-float][class^=l-float], .l3-l9 [class*=" l-float"][class*=" l-float"], .l3-l9 [class^=l-float][class^=l-float], .l3-l9 [class*=" l-float"][class*=" l-float"], .l3-l9 [class^=l-float][class^=l-float], .l3-l9 [class*=" l-float"][class*=" l-float"], .l3-l9 [class^=l-float][class^=l-float], .l3-l9 [class*=" l-float"][class*=" l-float"], .l3-l9 [class^=l-float][class^=l-float] {
+    margin-left: 2.6124818580276%;
+    margin-right: 2.6124818580276%; }
+
+  .l1-l6 [class*=" l-float"][class*=" l-float"], .l1-l6 [class^=l-float][class^=l-float], .l1-l6 [class*=" l-float"][class*=" l-float"], .l1-l6 [class^=l-float][class^=l-float], .l1-l6 [class*=" l-float"][class*=" l-float"], .l1-l6 [class^=l-float][class^=l-float], .l1-l6 [class*=" l-float"][class*=" l-float"], .l1-l6 [class^=l-float][class^=l-float], .l1-l6 [class*=" l-float"][class*=" l-float"], .l1-l6 [class^=l-float][class^=l-float], .l1-l6 [class*=" l-float"][class*=" l-float"], .l1-l6 [class^=l-float][class^=l-float], .l2-l7 [class*=" l-float"][class*=" l-float"], .l2-l7 [class^=l-float][class^=l-float], .l2-l7 [class*=" l-float"][class*=" l-float"], .l2-l7 [class^=l-float][class^=l-float], .l2-l7 [class*=" l-float"][class*=" l-float"], .l2-l7 [class^=l-float][class^=l-float], .l2-l7 [class*=" l-float"][class*=" l-float"], .l2-l7 [class^=l-float][class^=l-float], .l2-l7 [class*=" l-float"][class*=" l-float"], .l2-l7 [class^=l-float][class^=l-float], .l2-l7 [class*=" l-float"][class*=" l-float"], .l2-l7 [class^=l-float][class^=l-float], .l3-l8 [class*=" l-float"][class*=" l-float"], .l3-l8 [class^=l-float][class^=l-float], .l3-l8 [class*=" l-float"][class*=" l-float"], .l3-l8 [class^=l-float][class^=l-float], .l3-l8 [class*=" l-float"][class*=" l-float"], .l3-l8 [class^=l-float][class^=l-float], .l3-l8 [class*=" l-float"][class*=" l-float"], .l3-l8 [class^=l-float][class^=l-float], .l3-l8 [class*=" l-float"][class*=" l-float"], .l3-l8 [class^=l-float][class^=l-float], .l3-l8 [class*=" l-float"][class*=" l-float"], .l3-l8 [class^=l-float][class^=l-float], .l4-l9 [class*=" l-float"][class*=" l-float"], .l4-l9 [class^=l-float][class^=l-float], .l4-l9 [class*=" l-float"][class*=" l-float"], .l4-l9 [class^=l-float][class^=l-float], .l4-l9 [class*=" l-float"][class*=" l-float"], .l4-l9 [class^=l-float][class^=l-float], .l4-l9 [class*=" l-float"][class*=" l-float"], .l4-l9 [class^=l-float][class^=l-float], .l4-l9 [class*=" l-float"][class*=" l-float"], .l4-l9 [class^=l-float][class^=l-float], .l4-l9 [class*=" l-float"][class*=" l-float"], .l4-l9 [class^=l-float][class^=l-float] {
+    margin-left: 3.0612244901052%;
+    margin-right: 3.0612244901052%; }
+
+  .l1-l5 [class*=" l-float"][class*=" l-float"], .l1-l5 [class^=l-float][class^=l-float], .l1-l5 [class*=" l-float"][class*=" l-float"], .l1-l5 [class^=l-float][class^=l-float], .l1-l5 [class*=" l-float"][class*=" l-float"], .l1-l5 [class^=l-float][class^=l-float], .l1-l5 [class*=" l-float"][class*=" l-float"], .l1-l5 [class^=l-float][class^=l-float], .l1-l5 [class*=" l-float"][class*=" l-float"], .l1-l5 [class^=l-float][class^=l-float], .l2-l6 [class*=" l-float"][class*=" l-float"], .l2-l6 [class^=l-float][class^=l-float], .l2-l6 [class*=" l-float"][class*=" l-float"], .l2-l6 [class^=l-float][class^=l-float], .l2-l6 [class*=" l-float"][class*=" l-float"], .l2-l6 [class^=l-float][class^=l-float], .l2-l6 [class*=" l-float"][class*=" l-float"], .l2-l6 [class^=l-float][class^=l-float], .l2-l6 [class*=" l-float"][class*=" l-float"], .l2-l6 [class^=l-float][class^=l-float], .l3-l7 [class*=" l-float"][class*=" l-float"], .l3-l7 [class^=l-float][class^=l-float], .l3-l7 [class*=" l-float"][class*=" l-float"], .l3-l7 [class^=l-float][class^=l-float], .l3-l7 [class*=" l-float"][class*=" l-float"], .l3-l7 [class^=l-float][class^=l-float], .l3-l7 [class*=" l-float"][class*=" l-float"], .l3-l7 [class^=l-float][class^=l-float], .l3-l7 [class*=" l-float"][class*=" l-float"], .l3-l7 [class^=l-float][class^=l-float], .l4-l8 [class*=" l-float"][class*=" l-float"], .l4-l8 [class^=l-float][class^=l-float], .l4-l8 [class*=" l-float"][class*=" l-float"], .l4-l8 [class^=l-float][class^=l-float], .l4-l8 [class*=" l-float"][class*=" l-float"], .l4-l8 [class^=l-float][class^=l-float], .l4-l8 [class*=" l-float"][class*=" l-float"], .l4-l8 [class^=l-float][class^=l-float], .l4-l8 [class*=" l-float"][class*=" l-float"], .l4-l8 [class^=l-float][class^=l-float], .l5-l9 [class*=" l-float"][class*=" l-float"], .l5-l9 [class^=l-float][class^=l-float], .l5-l9 [class*=" l-float"][class*=" l-float"], .l5-l9 [class^=l-float][class^=l-float], .l5-l9 [class*=" l-float"][class*=" l-float"], .l5-l9 [class^=l-float][class^=l-float], .l5-l9 [class*=" l-float"][class*=" l-float"], .l5-l9 [class^=l-float][class^=l-float], .l5-l9 [class*=" l-float"][class*=" l-float"], .l5-l9 [class^=l-float][class^=l-float] {
+    margin-left: 3.696098563004%;
+    margin-right: 3.696098563004%; }
+
+  .l1-l4 [class*=" l-float"][class*=" l-float"], .l1-l4 [class^=l-float][class^=l-float], .l1-l4 [class*=" l-float"][class*=" l-float"], .l1-l4 [class^=l-float][class^=l-float], .l1-l4 [class*=" l-float"][class*=" l-float"], .l1-l4 [class^=l-float][class^=l-float], .l1-l4 [class*=" l-float"][class*=" l-float"], .l1-l4 [class^=l-float][class^=l-float], .l2-l5 [class*=" l-float"][class*=" l-float"], .l2-l5 [class^=l-float][class^=l-float], .l2-l5 [class*=" l-float"][class*=" l-float"], .l2-l5 [class^=l-float][class^=l-float], .l2-l5 [class*=" l-float"][class*=" l-float"], .l2-l5 [class^=l-float][class^=l-float], .l2-l5 [class*=" l-float"][class*=" l-float"], .l2-l5 [class^=l-float][class^=l-float], .l3-l6 [class*=" l-float"][class*=" l-float"], .l3-l6 [class^=l-float][class^=l-float], .l3-l6 [class*=" l-float"][class*=" l-float"], .l3-l6 [class^=l-float][class^=l-float], .l3-l6 [class*=" l-float"][class*=" l-float"], .l3-l6 [class^=l-float][class^=l-float], .l3-l6 [class*=" l-float"][class*=" l-float"], .l3-l6 [class^=l-float][class^=l-float], .l4-l7 [class*=" l-float"][class*=" l-float"], .l4-l7 [class^=l-float][class^=l-float], .l4-l7 [class*=" l-float"][class*=" l-float"], .l4-l7 [class^=l-float][class^=l-float], .l4-l7 [class*=" l-float"][class*=" l-float"], .l4-l7 [class^=l-float][class^=l-float], .l4-l7 [class*=" l-float"][class*=" l-float"], .l4-l7 [class^=l-float][class^=l-float], .l5-l8 [class*=" l-float"][class*=" l-float"], .l5-l8 [class^=l-float][class^=l-float], .l5-l8 [class*=" l-float"][class*=" l-float"], .l5-l8 [class^=l-float][class^=l-float], .l5-l8 [class*=" l-float"][class*=" l-float"], .l5-l8 [class^=l-float][class^=l-float], .l5-l8 [class*=" l-float"][class*=" l-float"], .l5-l8 [class^=l-float][class^=l-float], .l6-l9 [class*=" l-float"][class*=" l-float"], .l6-l9 [class^=l-float][class^=l-float], .l6-l9 [class*=" l-float"][class*=" l-float"], .l6-l9 [class^=l-float][class^=l-float], .l6-l9 [class*=" l-float"][class*=" l-float"], .l6-l9 [class^=l-float][class^=l-float], .l6-l9 [class*=" l-float"][class*=" l-float"], .l6-l9 [class^=l-float][class^=l-float] {
+    margin-left: 4.6632124357116%;
+    margin-right: 4.6632124357116%; }
+
+  .l1-l3 [class*=" l-float"][class*=" l-float"], .l1-l3 [class^=l-float][class^=l-float], .l1-l3 [class*=" l-float"][class*=" l-float"], .l1-l3 [class^=l-float][class^=l-float], .l1-l3 [class*=" l-float"][class*=" l-float"], .l1-l3 [class^=l-float][class^=l-float], .l2-l4 [class*=" l-float"][class*=" l-float"], .l2-l4 [class^=l-float][class^=l-float], .l2-l4 [class*=" l-float"][class*=" l-float"], .l2-l4 [class^=l-float][class^=l-float], .l2-l4 [class*=" l-float"][class*=" l-float"], .l2-l4 [class^=l-float][class^=l-float], .l3-l5 [class*=" l-float"][class*=" l-float"], .l3-l5 [class^=l-float][class^=l-float], .l3-l5 [class*=" l-float"][class*=" l-float"], .l3-l5 [class^=l-float][class^=l-float], .l3-l5 [class*=" l-float"][class*=" l-float"], .l3-l5 [class^=l-float][class^=l-float], .l4-l6 [class*=" l-float"][class*=" l-float"], .l4-l6 [class^=l-float][class^=l-float], .l4-l6 [class*=" l-float"][class*=" l-float"], .l4-l6 [class^=l-float][class^=l-float], .l4-l6 [class*=" l-float"][class*=" l-float"], .l4-l6 [class^=l-float][class^=l-float], .l5-l7 [class*=" l-float"][class*=" l-float"], .l5-l7 [class^=l-float][class^=l-float], .l5-l7 [class*=" l-float"][class*=" l-float"], .l5-l7 [class^=l-float][class^=l-float], .l5-l7 [class*=" l-float"][class*=" l-float"], .l5-l7 [class^=l-float][class^=l-float], .l6-l8 [class*=" l-float"][class*=" l-float"], .l6-l8 [class^=l-float][class^=l-float], .l6-l8 [class*=" l-float"][class*=" l-float"], .l6-l8 [class^=l-float][class^=l-float], .l6-l8 [class*=" l-float"][class*=" l-float"], .l6-l8 [class^=l-float][class^=l-float], .l7-l9 [class*=" l-float"][class*=" l-float"], .l7-l9 [class^=l-float][class^=l-float], .l7-l9 [class*=" l-float"][class*=" l-float"], .l7-l9 [class^=l-float][class^=l-float], .l7-l9 [class*=" l-float"][class*=" l-float"], .l7-l9 [class^=l-float][class^=l-float] {
+    margin-left: 6.3157894743424%;
+    margin-right: 6.3157894743424%; }
+
+  .l1-l2 [class*=" l-float"][class*=" l-float"], .l1-l2 [class^=l-float][class^=l-float], .l1-l2 [class*=" l-float"][class*=" l-float"], .l1-l2 [class^=l-float][class^=l-float], .l2-l3 [class*=" l-float"][class*=" l-float"], .l2-l3 [class^=l-float][class^=l-float], .l2-l3 [class*=" l-float"][class*=" l-float"], .l2-l3 [class^=l-float][class^=l-float], .l3-l4 [class*=" l-float"][class*=" l-float"], .l3-l4 [class^=l-float][class^=l-float], .l3-l4 [class*=" l-float"][class*=" l-float"], .l3-l4 [class^=l-float][class^=l-float], .l4-l5 [class*=" l-float"][class*=" l-float"], .l4-l5 [class^=l-float][class^=l-float], .l4-l5 [class*=" l-float"][class*=" l-float"], .l4-l5 [class^=l-float][class^=l-float], .l5-l6 [class*=" l-float"][class*=" l-float"], .l5-l6 [class^=l-float][class^=l-float], .l5-l6 [class*=" l-float"][class*=" l-float"], .l5-l6 [class^=l-float][class^=l-float], .l6-l7 [class*=" l-float"][class*=" l-float"], .l6-l7 [class^=l-float][class^=l-float], .l6-l7 [class*=" l-float"][class*=" l-float"], .l6-l7 [class^=l-float][class^=l-float], .l7-l8 [class*=" l-float"][class*=" l-float"], .l7-l8 [class^=l-float][class^=l-float], .l7-l8 [class*=" l-float"][class*=" l-float"], .l7-l8 [class^=l-float][class^=l-float], .l8-l9 [class*=" l-float"][class*=" l-float"], .l8-l9 [class^=l-float][class^=l-float], .l8-l9 [class*=" l-float"][class*=" l-float"], .l8-l9 [class^=l-float][class^=l-float] {
+    margin-left: 9.7826086967049%;
+    margin-right: 9.7826086967049%; }
+
+  .l-floatright {
+    float: right;
+    margin-right: 0 !important; }
+
+  .l-floatleft {
+    float: left;
+    margin-left: 0 !important; }
+
+  /* Landing page clearing ----- */
+  .l1, [class*=l1-], .l-all, [class*=" l1-"], [class^=l1-], .l1, [class*=" l1-"] [class*=" l1-"], [class^=l1-] [class*=" l1-"], [class*=" l1-"] [class^=l1-], [class^=l1-] [class^=l1-], [class*=" l1-"] .l1, [class^=l1-] .l1, [class*=" l2-"] [class*=" l2-"], [class^=l2-] [class*=" l2-"], [class*=" l2-"] [class^=l2-], [class^=l2-] [class^=l2-], [class*=" l2-"] .l2, [class^=l2-] .l2, [class*=" l3-"] [class*=" l3-"], [class^=l3-] [class*=" l3-"], [class*=" l3-"] [class^=l3-], [class^=l3-] [class^=l3-], [class*=" l3-"] .l3, [class^=l3-] .l3, [class*=" l4-"] [class*=" l4-"], [class^=l4-] [class*=" l4-"], [class*=" l4-"] [class^=l4-], [class^=l4-] [class^=l4-], [class*=" l4-"] .l4, [class^=l4-] .l4, [class*=" l5-"] [class*=" l5-"], [class^=l5-] [class*=" l5-"], [class*=" l5-"] [class^=l5-], [class^=l5-] [class^=l5-], [class*=" l5-"] .l5, [class^=l5-] .l5, [class*=" l6-"] [class*=" l6-"], [class^=l6-] [class*=" l6-"], [class*=" l6-"] [class^=l6-], [class^=l6-] [class^=l6-], [class*=" l6-"] .l6, [class^=l6-] .l6, [class*=" l7-"] [class*=" l7-"], [class^=l7-] [class*=" l7-"], [class*=" l7-"] [class^=l7-], [class^=l7-] [class^=l7-], [class*=" l7-"] .l7, [class^=l7-] .l7, [class*=" l8-"] [class*=" l8-"], [class^=l8-] [class*=" l8-"], [class*=" l8-"] [class^=l8-], [class^=l8-] [class^=l8-], [class*=" l8-"] .l8, [class^=l8-] .l8, [class*=" l9-"] [class*=" l9-"], [class^=l9-] [class*=" l9-"], [class*=" l9-"] [class^=l9-], [class^=l9-] [class^=l9-], [class*=" l9-"] .l9, [class^=l9-] .l9 {
+    margin-left: 0;
+    clear: left; }
+
+  .l2 + [class*=" l2"], .l2 + [class^=l2], [class*=-l2] + [class*=" l2"], [class*=-l2] + [class^=l2], .l3 + [class*=" l3"], .l3 + [class^=l3], [class*=-l3] + [class*=" l3"], [class*=-l3] + [class^=l3], .l3 + [class*=" l2"], .l3 + [class^=l2], [class*=-l3] + [class*=" l2"], [class*=-l3] + [class^=l2], .l4 + [class*=" l4"], .l4 + [class^=l4], [class*=-l4] + [class*=" l4"], [class*=-l4] + [class^=l4], .l4 + [class*=" l3"], .l4 + [class^=l3], [class*=-l4] + [class*=" l3"], [class*=-l4] + [class^=l3], .l4 + [class*=" l2"], .l4 + [class^=l2], [class*=-l4] + [class*=" l2"], [class*=-l4] + [class^=l2], .l5 + [class*=" l5"], .l5 + [class^=l5], [class*=-l5] + [class*=" l5"], [class*=-l5] + [class^=l5], .l5 + [class*=" l4"], .l5 + [class^=l4], [class*=-l5] + [class*=" l4"], [class*=-l5] + [class^=l4], .l5 + [class*=" l3"], .l5 + [class^=l3], [class*=-l5] + [class*=" l3"], [class*=-l5] + [class^=l3], .l5 + [class*=" l2"], .l5 + [class^=l2], [class*=-l5] + [class*=" l2"], [class*=-l5] + [class^=l2], .l6 + [class*=" l6"], .l6 + [class^=l6], [class*=-l6] + [class*=" l6"], [class*=-l6] + [class^=l6], .l6 + [class*=" l5"], .l6 + [class^=l5], [class*=-l6] + [class*=" l5"], [class*=-l6] + [class^=l5], .l6 + [class*=" l4"], .l6 + [class^=l4], [class*=-l6] + [class*=" l4"], [class*=-l6] + [class^=l4], .l6 + [class*=" l3"], .l6 + [class^=l3], [class*=-l6] + [class*=" l3"], [class*=-l6] + [class^=l3], .l6 + [class*=" l2"], .l6 + [class^=l2], [class*=-l6] + [class*=" l2"], [class*=-l6] + [class^=l2], .l7 + [class*=" l7"], .l7 + [class^=l7], [class*=-l7] + [class*=" l7"], [class*=-l7] + [class^=l7], .l7 + [class*=" l6"], .l7 + [class^=l6], [class*=-l7] + [class*=" l6"], [class*=-l7] + [class^=l6], .l7 + [class*=" l5"], .l7 + [class^=l5], [class*=-l7] + [class*=" l5"], [class*=-l7] + [class^=l5], .l7 + [class*=" l4"], .l7 + [class^=l4], [class*=-l7] + [class*=" l4"], [class*=-l7] + [class^=l4], .l7 + [class*=" l3"], .l7 + [class^=l3], [class*=-l7] + [class*=" l3"], [class*=-l7] + [class^=l3], .l7 + [class*=" l2"], .l7 + [class^=l2], [class*=-l7] + [class*=" l2"], [class*=-l7] + [class^=l2], .l8 + [class*=" l8"], .l8 + [class^=l8], [class*=-l8] + [class*=" l8"], [class*=-l8] + [class^=l8], .l8 + [class*=" l7"], .l8 + [class^=l7], [class*=-l8] + [class*=" l7"], [class*=-l8] + [class^=l7], .l8 + [class*=" l6"], .l8 + [class^=l6], [class*=-l8] + [class*=" l6"], [class*=-l8] + [class^=l6], .l8 + [class*=" l5"], .l8 + [class^=l5], [class*=-l8] + [class*=" l5"], [class*=-l8] + [class^=l5], .l8 + [class*=" l4"], .l8 + [class^=l4], [class*=-l8] + [class*=" l4"], [class*=-l8] + [class^=l4], .l8 + [class*=" l3"], .l8 + [class^=l3], [class*=-l8] + [class*=" l3"], [class*=-l8] + [class^=l3], .l8 + [class*=" l2"], .l8 + [class^=l2], [class*=-l8] + [class*=" l2"], [class*=-l8] + [class^=l2], .l9 + [class*=" l9"], .l9 + [class^=l9], [class*=-l9] + [class*=" l9"], [class*=-l9] + [class^=l9], .l9 + [class*=" l8"], .l9 + [class^=l8], [class*=-l9] + [class*=" l8"], [class*=-l9] + [class^=l8], .l9 + [class*=" l7"], .l9 + [class^=l7], [class*=-l9] + [class*=" l7"], [class*=-l9] + [class^=l7], .l9 + [class*=" l6"], .l9 + [class^=l6], [class*=-l9] + [class*=" l6"], [class*=-l9] + [class^=l6], .l9 + [class*=" l5"], .l9 + [class^=l5], [class*=-l9] + [class*=" l5"], [class*=-l9] + [class^=l5], .l9 + [class*=" l4"], .l9 + [class^=l4], [class*=-l9] + [class*=" l4"], [class*=-l9] + [class^=l4], .l9 + [class*=" l3"], .l9 + [class^=l3], [class*=-l9] + [class*=" l3"], [class*=-l9] + [class^=l3], .l9 + [class*=" l2"], .l9 + [class^=l2], [class*=-l9] + [class*=" l2"], [class*=-l9] + [class^=l2], .l-clear {
+    clear: left; }
+
+  .l-overlap[class*=overlap] {
+    clear: none; }
+
+  /* Landing page hiding ----- */
+  .l-hide, .gridoverlay .l-hide.l-hide {
+    display: none; }
+
+  .l-show, .gridoverlay .l-show.l-show {
+    display: block; }
+
+  .l-showgrid .l-show, .l-showgrid.l-show, .gridsetnoareas .l-show {
+    display: block !important; } }
 @media only screen and (min-width: 768px) and (max-width: 990px) {
   /* Tablet grid: 2 column / gutter: 2.60416667% ---------------------------------------- */
   [class*=" t1"], [class^=t1], [class*=" t2"], [class^=t2], .t-all {
@@ -2873,8 +3472,7 @@ img.portal-img {
     background: rgba(255, 255, 255, 0.9); }
 
 body {
-  background: none !important;
-  background-color: #fff; }
+  background-color: linear-gradient white 50%, #005596; }
   body img.geometry {
     width: 100%;
     position: absolute;

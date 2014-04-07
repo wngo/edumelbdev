@@ -9,6 +9,8 @@
 $body-bg: #fff !default;
 $body-font-color: #444 !default;
 $body-font-family: 'Univers LT W01 45 Light', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$body-font-bold: 'Univers LT W01 65 Bold', Helvetica, Arial, sans-serif;
+$body-font-roman: 'Univers LT W01 55 Roman','Droid Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 $body-font-weight: normal !default;
 $body-font-style: normal !default;
 
@@ -230,13 +232,6 @@ body #g-header {
 
 p { display: block; margin: 0px; padding: 0px; }
 
-/**quick for e4kids images**/
-#main-content .e4kids .preview-img-wrap img {
-  width:50%; }
-
- 
- .e4kids-preview img { 
-    margin-left: -25px;}
 
 #main-content .page-preview.tall img {
   height:17.942em; }
@@ -265,6 +260,9 @@ color:rgba(51, 51, 51, 0.7);}
   margin: 0;
 }
 
+a.button {
+  cursor: pointer;
+}
 /*removing border from linked images*/
 #main-content .a-img { border-bottom: none; }
 
@@ -478,20 +476,6 @@ li a.button:hover, li a.button:focus {
  
 
 
-.tabs li {
-        float:left;
-        margin-right: 0.173em;    }
-  
-     ul.tabs li a {
-        padding: 0.184em 0.6em;
-        width:auto;    }    
-  
-    ul.tabs {
-        height:45px;
-        }
-
-#main-content .e4kids .staff-tab img {
-  *width:24%;} 
 
 #main-content img {
 
@@ -671,9 +655,10 @@ margin: 0 }
 
 body {
   
-  background: url("//education.unimelb.edu.au/__data/assets/image/0010/832186/mgseBg-l.jpg") -13.5em 12em no-repeat,
+  /*background: url("//education.unimelb.edu.au/__data/assets/image/0010/832186/mgseBg-l.jpg") -13.5em 12em no-repeat,
   url("//education.unimelb.edu.au/__data/assets/image/0011/832187/mgseBg-r.jpg") 101% 35em no-repeat !important;
-  background-color:#fff;
+  background-color:#fff;*/
+  background: -moz-linear-gradient (#fff 20%, #005596);
   transition: 0s;
 }
 
@@ -900,13 +885,7 @@ margin-top:1.263em; }
  /** very low % of users searchign on mobile **/
   .mgse-search {
   display:none; }
-  
-  .tabs li {
-  float:none; 
-  }
-  
-  ul.tabs {
-  height: auto;}
+
   
   .col-2 {
   width:100%;}

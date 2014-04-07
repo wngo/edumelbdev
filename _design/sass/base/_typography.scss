@@ -13,7 +13,7 @@
     TYPOGRAPHY
     ========================================*/
 body {
-	font-family: $body-font-family;
+	 font-family: $body-font-family;
     line-height: $base-line-height;
     font-size: $base-em-font-size; 
 }
@@ -51,12 +51,13 @@ h2 {
     font-size:1em; }
 
 h3 { 
-    font-family: 'Univers LT W01 65 Bold', 'Droid Sans', Helvetica, Arial, sans-serif;
+    font-family: $body-font-roman;
     font-weight: 400;
     font-size:1.263em;
     line-height: 1.184em;
     margin: 0 0 0.732em 0;
     padding: 0; 
+
 	
 	&:hover {
 		background: none;
@@ -154,8 +155,8 @@ a:hover, a:focus {
         
 .pullquote, #main-content .intro {
   color: #20201e;
-  font-size:1.1843em;
-  font-family: 'Univers LT W01 65 Bold', Helvetica, Arial, sans-serif;
+  font-size:1.263em;
+  font-family: $body-font-family;
   line-height: 1.618em;
   font-weight: 400; }
 
@@ -233,12 +234,9 @@ h1.title {
         font-size:0.5em;    }
         
 .tabs li {     
-    font-family: 'Univers LT W01 55 Roman', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif; 
-    float:none;
-    text-indent:0;
-    padding:0;
-    list-style-image:none; 
-    border-bottom: none;
+    /*font-family: 'Univers LT W01 55 Roman', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif; */
+    font-family: 'Univers LT W01 45 Light', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
+    list-style-image: none; 
 }
 
 blockquote {
