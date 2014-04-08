@@ -48,9 +48,9 @@
   }
 
 
-#home-banners  a {
-  color: #fff;
-  border: 0px;
+.home #home-banners  a {
+  color: $color-main;
+  border-bottom: 1px solid $color-main;
 
 }
 
