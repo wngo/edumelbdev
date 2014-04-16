@@ -61,7 +61,8 @@ h3 {
 	
 	&:hover {
 		background: none;
-	}}
+	}
+}
 
 h5 {
     color:$color-main;
@@ -72,12 +73,7 @@ h5 {
     margin: 0 0 0.732em 0;
     padding: 0; }
 
-a, a:active {
-    line-height:1.618em;
-    transition-property: background-color;
-    transition-timing: ease-out;
-    transition-duration: 0.5s;
-     }
+
 
 strong, b {
   font-family: 'Univers LT W01 65 Bold','Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -112,44 +108,28 @@ a.button {
     transition-duration: 0.5s;
     line-height:1.618em; }
 
-#main-content a:hover, a:focus, .footer a:hover,   {
-    color: lighten($color-main,10%);
-    border-bottom:1px solid lighten($color-main,10%);
-    background-color:#F4f4f4;
+
+
+
+#main-content {
+    a, a:active, a:visited {
+
+    border-bottom: 1px solid $color-main;
+    color: $color-main;
+    transition-property: background-color;
+    transition-timing: ease-out;
+    transition-duration: 0.5s;
+    line-height: 1.618em;
     transition-property: background-color;
     transition-timing: ease-out;
     transition-duration: 0.5s;
     }
-#main-content a:visited {
-    color: lighten($color-main,10%);
 }
-a:hover, a:focus {
-    color: lighten($color-main,10%);
-    transition-property: background-color;
-    transition-timing: ease-out;
-    transition-duration: 0.5s;
+#main-content a:hover, #main-content a:active, #main-content a:focus {
+  color: lighten($color-main,10%);
+  border-bottom: none;
+ 
 }
-
-.preview-img-wrap h2 {
-  color: #fff;
-  font-size: 1em;
-  font-weight: 400;
-  font-family: 'Univers LT W01 55 Roman','Droid Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-  line-height: 1em;
-
-      a {
-       display: block;
-       text-decoration: none;
-       border-bottom: 0;
-       color: #fff; 
-     
-       
-       &:hover, &:active {
-       background: none;
-     }
-   }
-
- }
 
         
 .pullquote, #main-content .intro {
@@ -159,31 +139,7 @@ a:hover, a:focus {
   line-height: 1.618em;
   font-weight: 400; }
 
-/**overrighting document hover states*/
-#main-content a.document.large:hover, #main-content a.document.large:focus {
-  background-color: lighten($color-main,10%);
-   }
 
-a.document.large {
-background-color:$color-main; }
-
-#main-content a.document strong {
-  color: #fff; }
-    
-#main-content a.button, .footer a.button {
-    background:$color-main;
-    border-bottom: none;
-    color:#ffffff;
-    font-family:'Univers LT W01 45 Light','Helvetica Neue',Helvetica,Arial,sans-serif; }
-
-.footer a.button {
- font-size: 0.78em; }
-
-#main-content a.button:after, .footer a.button:after {
-  color:#fff; }
-
-a.button:hover, a.button:focus {
-  box-shadow: 0 0 4px #444; }
 
 table th {
   font-family: 'Univers LT W01 55 Roman','Helvetica Neue', Arial, sans-serif;

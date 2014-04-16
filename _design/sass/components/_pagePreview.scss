@@ -1,30 +1,43 @@
-  .preview-img-wrap {
+  .preview-img-wrap h2 {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: 'Univers LT W01 55 Roman','Droid Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  line-height: 1em;
+
+ 
+ }
+
+  #main-content .preview-img-wrap {
     position:relative;
     overflow:hidden; 
 
 
-   .preview-img-wrap__title {
-    bottom:0;
-    margin-bottom: 0;
-    background: #005596;
-    padding: 0.184em 0.618em;
-    position: absolute;
-    width:100%; 
+       .preview-img-wrap__title {
+        bottom:0;
+        margin-bottom: 0;
+        /*background: #005596;*/
+        /*padding: 0.184em 0.618em;*/
+        position: absolute;
+        width:100%; 
 
-    
-    a {
-      color: #fff;
-      
-    &:hover, &:focus {
-        background-color: none;
-        border-bottom:none
-    }
-  
-    
-     
+        
+          a {
+            background: $color-main;
+            color: #ffffff;
+            display: block;
+            padding: 0.184em 0.618em;
+
+            &:hover, &:focus {
+                background-color: $color-light-main;
+                border-bottom:none;
+                color: #fff;
+                padding: 0.184em 0.618em;
+                } 
+            }
+        }
   }
-}
-}
+
 
 #main-content .preview-img-wrap img:hover {
    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";

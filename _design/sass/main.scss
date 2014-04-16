@@ -2,6 +2,7 @@
 @import "base/typesettings";
 @import "base/typography";
 @import "base/resets";
+@import "base/_buttons";
 
 
 @import "components/navigation";
@@ -16,6 +17,8 @@
 @import "components/tabs";
 @import "components/pagePreview";
 @import "components/bannerRoller";
+@import "components/footer";
+
 
 @import "layout/grid";
 @import "layout/sidebar";
