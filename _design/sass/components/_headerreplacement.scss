@@ -5,7 +5,17 @@
         height:145px;
         margin: -2px 0 0 0;    }
         
-        
+      .wrapper-header {
+  background-color: #00457C;
+  width:100%;
+  height: 190px;
+}
+
+.header {
+  margin:0 auto;
+  width:1000px;
+}
+
      #g-global-menu a#g-global-menu-logo {
         display:none;
         /*height:126px;
@@ -16,7 +26,7 @@
         height:145px; }
 
     .header .hgroup  img{
-        height:160px;
+        height: auto;
         margin-top:3px;
         max-width:100%; }
  

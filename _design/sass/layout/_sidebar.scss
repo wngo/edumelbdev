@@ -1,9 +1,11 @@
- 
+ @mixin color-box ($background: lighten($color-main, 70%), $border: #ECF7F7) {
+ 	padding: 10px;
+    background: $background;
+	border: 1px solid $border; 
+ }
 
 .block {
-    padding:10px;
-    background:#ECF7F7;
-	border: 1px solid #DDF0F8; 
+    @include color-box;
 		
 		h2 {
 			color: #444;
@@ -50,3 +52,7 @@
 			}
 		}
     }
+
+  .block__sidebar {
+			@include color-box;
+		}

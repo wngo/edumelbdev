@@ -11,12 +11,12 @@
    padding: 0; }
   
   .main_nav {
-   margin: 2em auto 0;
+   margin: -2.5em auto 0;
    max-width: 1000px;
    width:100%;
 
      .flexnav .touch-button {
-      background: lighten ( $color-main, 10%);
+      background: lighten ( $primary-color-nav, 10%);
       color: #FFFFFF;
       display: inline-block;
       height: 40px;
@@ -41,12 +41,13 @@
   
     .flexnav > li {
      height: 40px;
+     margin-bottom: 0;
      margin-right:0px;
      width: auto;
      /*width: 16.66666667%;*/
 
        @media screen and (max-width: 1000px ) {
-        border-bottom: 1px solid darken ( $color-main, 4%);
+        border-bottom: 1px solid darken ( $primary-color-nav, 4%);
         margin: 0;
         width: 33.33%;
         height: auto;
@@ -68,19 +69,20 @@
    
     
     ul, ol {
-     padding-left:0;
+     padding-left: 0;
+     margin-bottom: 0;
     }
   
     .flexnav li:hover {
-      background: lighten($color-main, 10%);
+      background: lighten($primary-color-nav, 10%);
     } 
 
     .flexnav li  {
-       background:($color-main);
+       background:($primary-color-nav);
 
        a {
         
-         border-left: 1px solid darken($color-main, 5%);
+         border-left: 1px solid darken($primary-color-nav, 5%);
          color: #FFFFFF;  
          font-size: 90%;
          line-height: 26px;
@@ -97,10 +99,10 @@
        }
       
       ul li a {
-        background: lighten($color-main, 10%);
+        background: lighten($primary-color-nav, 10%);
 
         &:hover {
-         background: ($color-main);
+         background: ($primary-color-nav);
 
         }
       }
@@ -108,14 +110,14 @@
     }
 
     .flexnav li ul li a {
-        background: ligthen ($color-main, 20%);
-        border-bottom: 1px solid darken($color-main, 10%);
+        background: ligthen ($primary-color-nav, 20%);
+        border-bottom: 1px solid darken($primary-color-nav, 10%);
         padding: 0.6em 1em;
         font-size: 80%;
 
         @media screen and (max-width: 700px ) {
 
-          background: lighten($color-main, 6%);
+          background: lighten($primary-color-nav, 6%);
                 }
        
     }

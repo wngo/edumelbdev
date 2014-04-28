@@ -114,7 +114,7 @@ a.button {
 #main-content {
     a, a:active, a:visited {
 
-    border-bottom: 1px solid $color-main;
+    border-bottom: none;
     color: $color-main;
     transition-property: background-color;
     transition-timing: ease-out;
@@ -127,7 +127,7 @@ a.button {
 }
 #main-content a:hover, #main-content a:active, #main-content a:focus {
   color: lighten($color-main,10%);
-  border-bottom: none;
+  border-bottom: 1px solid lighten($color-main, 10%);
  
 }
 
@@ -180,7 +180,7 @@ h1, .nav h2, .aside h2, body.home .main > h2, body.home #main-content > h2 {
 h1.title {
     font-family:'Univers LT W01 65 Bold', Helvetica, Arial, sans-serif;
     font-weight: 400;
-    font-size: 2.043em;
+    font-size: 2.6em;
     line-height: 1.263em;  }
     
  #newsbanner ol {
