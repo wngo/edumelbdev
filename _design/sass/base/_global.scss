@@ -589,11 +589,7 @@ margin: 0 }
 
 /*1000px*/
 @media all and (max-width:64em) {
-.row.breadcrumbs, .title-wrap, #breadcrumbs {
-    padding-left: 10px;
-    float:left;
-    width: 100%;
-    }
+
 
 body {
   
@@ -731,11 +727,16 @@ width:100%;
     padding:1em 0;
     margin:2em 0 1em 1em;
   }
+
   h1.title {
   display:inline-block;
   margin-top: 1em;
   margin-bottom:0.482em;
-  width:98%;
+
+  @include breakpoint (baby-bear) {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
    }
   
   .footer .col-2 {

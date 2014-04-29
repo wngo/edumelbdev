@@ -11,7 +11,7 @@
    padding: 0; }
   
   .main_nav {
-   margin: -2.5em auto 0;
+   margin: -2.7em auto 0;
    max-width: 1000px;
    width:100%;
 
@@ -95,7 +95,10 @@
               @include navhover;
             }
           }
-
+       }
+       
+       &:first-child a{
+          border-left: none;
        }
       
       ul li a {

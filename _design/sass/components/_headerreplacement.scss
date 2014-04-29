@@ -6,15 +6,19 @@
         margin: -2px 0 0 0;    }
         
       .wrapper-header {
-  background-color: #00457C;
-  width:100%;
-  height: 190px;
-}
+        background-color: #00457C;
+        width:100%;
+        height: 190px;
 
-.header {
-  margin:0 auto;
-  width:1000px;
-}
+        @include breakpoint (baby-bear) {
+          height: 115px;
+        }
+      }
+
+      .header {
+        margin:0 auto;
+        width:1000px;
+      }
 
      #g-global-menu a#g-global-menu-logo {
         display:none;
@@ -23,12 +27,19 @@
         background-position: 15px 15px;       */} 
         
     .header .hgroup h1 {
-        height:145px; }
+        height:145px; 
+      }
 
-    .header .hgroup  img{
+    .header .hgroup  img {
         height: auto;
         margin-top:3px;
-        max-width:100%; }
+        max-width:100%; 
+      
+        @include breakpoint (baby-bear) {
+         width: 450px;
+        }
+      }
+    
  
     .header {
         position: relative; }

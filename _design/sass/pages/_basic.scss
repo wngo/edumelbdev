@@ -15,6 +15,12 @@
         background: #fff;
         margin-top: -8em;
         padding: 1em;
+
+        @include breakpoint (baby-bear) {
+            float: left;
+            margin-top: 0;
+            padding-top: 0;
+        }
     }
 
 body { 
@@ -45,10 +51,13 @@ body {
         clear: both;
          }
 .breadcrumbs {
-    padding-bottom: 1em;
+    padding-bottom: 1.6em;
 }
 
- 
+/** if no hero image on landing page push wrapper down **/
+.wrapper.no-landing, .main-content-wrapper.no-landing {
+    margin-top: 4em;
+}
 
 .content-img-left{
     width: 25.3464%;
