@@ -57,7 +57,7 @@ form button, input[type="submit"] {
     border-bottom: none;
     color:#fff;
     border: 0 none;
-    border-radius: 4px 4px 4px 4px;
+    border-radius: 3px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     color: #FFFFFF;
     line-height: 16px;
@@ -70,11 +70,11 @@ form button, input[type="submit"] {
 .mgse-search form input { 
   -moz-box-sizing: border-box;
     border: 1px solid #CCCCCC;
-    border-radius: 4px 4px 4px 4px;
+    border-radius: 3px;
     box-shadow: 0 1px 3px #DDDDDD inset;
     display: inline-block;
     font-size: 0.8em;
-    padding: 0.618em 0.6em;
+    padding: 0.5em 0.6em;
     transition: border 0.3s linear 0s;
     margin: 0 0 0 5px;}
 
@@ -85,6 +85,14 @@ form button, input[type="submit"] {
   border:1px solid #20201e;
   transition: border 0.3s linear 0s;
 }
+
+.mgse-search {
+   margin-top: -90px;
+    position:absolute;
+  right:0px; }
+  
+.home .mgse-search {
+    right:50px; }
 
 /**local search container*/
 

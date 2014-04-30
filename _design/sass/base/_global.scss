@@ -187,15 +187,6 @@ body #g-header {
   height: 66px; 
 }
 
-.header {
-  margin:0 auto;
-  margin-bottom: 0;
-  overflow:visible;
-  width:100%;
-  max-width:1000px; 
-}
-
-
 .nav ul { margin-left: 0;}
 
 
@@ -379,9 +370,6 @@ html.pointerevents body.no-logo div.wrapper div.aside {
     border-radius: 3px;
     margin-top: 0.732em; }
 
-.header .hgroup h1 a {
-    color: #003366;
-    }
 
 
 
@@ -424,15 +412,6 @@ html.pointerevents body.no-logo div.wrapper div.aside {
    margin-top:0.382em;
    width: 100%; }
 
-.mgse-search {
-   margin-top: -66px;
-    position:absolute;
-  right:0px; }
-  
-.home .mgse-search {
-    right:50px; }
-
-
 
  
 /*================================================
@@ -458,26 +437,15 @@ body{
 }
 }
 
+
 /*iphone portrait
 345px*/
 @media all and (max-width: 23em) {
 
-  .header .hgroup img {
-    height: auto;
-  }
-
-  .header .hgroup, .header {
-    height:auto
-  }
-
-  .header {
-    background-color: #fff;
-    float:left;
-    width:100%;
-  }
 
   .home #breadcrumbs, .home .mgse-search  {
     display:none; }
+    
   .home .header .hgroup {
     height:103px;
   }

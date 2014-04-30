@@ -1,9 +1,19 @@
 .hero-img {
+	background: lighten($color-main,40%);
+	height: 22em;
 	margin-bottom: 1em;
 	margin-top: 0;
+	overflow: hidden;
 	z-index:10;
+
+	@include breakpoint (baby-bear) {
+		height: auto;
+	}
 	
 	img {
+		display: block;
+		margin: auto;
+		max-width: 1600px;
 		width: 100%;
 	}
 }

@@ -8,7 +8,7 @@
       .wrapper-header {
         background-color: #00457C;
         width:100%;
-        height: 190px;
+        height: 166px;
 
         @include breakpoint (baby-bear) {
           height: 115px;
@@ -17,7 +17,7 @@
 
       .header {
         margin:0 auto;
-        width:1000px;
+        width:1600px;
       }
 
      #g-global-menu a#g-global-menu-logo {
@@ -28,6 +28,10 @@
         
     .header .hgroup h1 {
         height:145px; 
+
+        a {
+          color: #003366;
+          }
       }
 
     .header .hgroup  img {
@@ -46,3 +50,23 @@
         
     #g-global-menu a#g-global-menu-logo { 
         top: 60px; }
+
+
+/*iphone portrait
+345px*/
+@media all and (max-width: 23em) {
+
+  .header .hgroup img {
+    height: auto;
+  }
+
+  .header .hgroup, .header {
+    height:auto
+  }
+
+  .header {
+    background-color: #fff;
+    float:left;
+    width:100%;
+  }
+}

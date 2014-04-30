@@ -10,3 +10,8 @@ h1, h2, h3, h4 {
 
 ul li, ol li {
   margin-bottom: 0.618em; }
+
+/** reset border bottom **/
+.main a {
+	border-bottom: none;
+}
