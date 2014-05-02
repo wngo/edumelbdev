@@ -76,7 +76,7 @@ form button, input[type="submit"] {
     font-size: 0.8em;
     padding: 0.5em 0.6em;
     transition: border 0.3s linear 0s;
-    margin: 0 0 0 5px;}
+    margin: 0 0 0 0px;}
 
 .mgse-search form {width:100%;}
 
@@ -87,18 +87,21 @@ form button, input[type="submit"] {
 }
 
 .mgse-search {
-   margin-top: -90px;
+    margin-top: -90px;
     position:absolute;
-  right:0px; }
+    right:0px; 
+    width: 20%; 
+    }
   
 .home .mgse-search {
-    right:50px; }
+    right:50px; 
+}
 
 /**local search container*/
 
-.mgse-search form input#s{
-  width:98%;}
+@include breakpoint (small) {
+  .mgse-search, .social-media-icons {
+  display:none;
+    }
+}
 
-.mgse-search form input[type="submit"] {
-  float:right;
-  padding: 5px; }

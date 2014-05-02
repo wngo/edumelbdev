@@ -13,10 +13,11 @@
 
     .main-content-wrapper {
         background: #fff;
-        margin-top: -8em;
+        margin-top: -9.3em;
+        @include max-width;
         padding: 1em;
 
-        @include breakpoint (baby-bear) {
+        @include breakpoint (small) {
             float: left;
             margin-top: 0;
             padding-top: 0;

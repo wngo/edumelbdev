@@ -1,3 +1,12 @@
+  .preview-box {
+    max-width: 75%;
+    text-align: center; 
+
+    @include breakpoint (large) {
+      text-align: left;
+    }
+  }
+
   .preview-img-wrap h2 {
   color: #fff;
   font-size: 1em;
@@ -51,7 +60,7 @@
     display: block;
     height: 0;
     overflow:hidden;
-    padding-top: 197.775px; //golden ratio 320px/1.618 = 197.775px 
+    padding-top: 11em; //golden ratio 320px/1.618 = 197.775px prevents gap with header and img when resizing
     position:relative;
     width: 100%;
     border-bottom: none;
@@ -72,5 +81,9 @@
     left: 0;
     right: 0;
     bottom: 0;
+
+    @include breakpoint (small) {
+      height: auto;
+    }
   }
 }

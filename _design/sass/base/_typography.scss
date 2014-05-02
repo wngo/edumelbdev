@@ -96,7 +96,7 @@ strong, b {
 .hgroup a, .breadcrumbs a {
 	border-bottom: none;
 
-  @include breakpoint (baby-bear) {
+  @include breakpoint (small) {
     font-size: 0.732em;
   }
 }
@@ -190,7 +190,7 @@ h1.title {
     font-size: 2.6em;
     line-height: 1.263em;
 
-    @include breakpoint (baby-bear) {
+    @include breakpoint (small) {
       font-size: 2em;
     }  
   }

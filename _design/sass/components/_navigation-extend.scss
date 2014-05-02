@@ -11,9 +11,16 @@
    padding: 0; }
   
   .main_nav {
+   background: $color-main;
+   display:b lock;
    margin: -2.7em auto 0;
    max-width: 1000px;
-   width:100%;
+   width: 100%;
+  
+
+   @include breakpoint (medium) {
+          margin-top: -13em;
+        }
 
      .flexnav .touch-button {
       background: lighten ( $primary-color-nav, 10%);
@@ -94,6 +101,10 @@
             &:hover .touch-button {
               @include navhover;
             }
+          }
+
+          @include breakpoint (small) {
+            border-left: none;
           }
        }
        

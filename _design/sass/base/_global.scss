@@ -48,6 +48,13 @@ $second_level: #fff;
 $third_level: #bfbfbc;
 $fourth_level: #cbcbc9;
 
+
+ /* Max page width */
+ @mixin max-width {
+ max-width: 1200px;
+}
+
+
 // @mixins
 //
 // Makes an element visually hidden, but accessible.
@@ -445,7 +452,7 @@ body{
 
   .home #breadcrumbs, .home .mgse-search  {
     display:none; }
-    
+
   .home .header .hgroup {
     height:103px;
   }
@@ -676,9 +683,6 @@ height: auto; }
 width:100%;
 }
 
- .mgse-search {
-    display:block;
-  }
   
   .mobile-nav {
     display:block !important;
@@ -701,7 +705,7 @@ width:100%;
   margin-top: 1em;
   margin-bottom:0.482em;
 
-  @include breakpoint (baby-bear) {
+  @include breakpoint (small) {
       margin-bottom: 0;
       margin-top: 0;
     }
@@ -722,16 +726,7 @@ width:100%;
 }
 /**672px**/
 @media all and (max-width:45em) {
-  .header .hgroup img {
-  height:auto;
-  width:100%;
-  }
   
-  .mgse-search, .social-media-icons {
-  display:none;}
-
-
-
  #main-content .glance.col-2, #main-content .glance-clear {
  float:left;
  margin-left:0;
@@ -785,12 +780,7 @@ margin-top:1.263em; }
  
  .wrapper {
  padding: 0; }
-  
- /** very low % of users searchign on mobile **/
-  .mgse-search {
-  display:none; }
-
-  
+   
   .col-2 {
   width:100%;}
   

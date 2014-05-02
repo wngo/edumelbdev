@@ -49,10 +49,22 @@
 
 			.dls-speaker-container {
 				width: 100%;
+
 			}
 		}
     }
 
   .block__sidebar {
-			@include color-box;
+		@include color-box;
+ 	}
+
+  .block__download {
+  	@include breakpoint (small) {
+  			margin: 1em 0;
+			max-width: 75%;
 		}
+	@include breakpoint (medium) {
+		max-width: 50%;
+	}
+  }
+   
