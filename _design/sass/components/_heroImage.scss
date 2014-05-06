@@ -15,12 +15,10 @@
 	img {
 		display: block;
 		margin: auto;
-		width: 100%;
 	}
 
 	@media all and (min-width: 65em) { 
 		background: none;
-		height: 22em;
 		margin-top: 0;
 	}
 }
