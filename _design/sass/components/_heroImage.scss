@@ -1,25 +1,27 @@
 .hero-img {
 	/*background: lighten($color-main,60%);*/
-	height: 22em;
+	height: 8em;
 	margin-bottom: 1em;
 	margin-top: 0;
 	overflow: hidden;
 	z-index:10;
 
-	@include breakpoint (small) {
-		background: none;
-		height: 8em;
-	}
-
-	@include breakpoint (medium) {
+	@media all and (min-width: 45em) { 
 		background: none;
 		height: 10em;
+		margin-top: 5em;
 	}	
 	
 	img {
 		display: block;
 		margin: auto;
 		width: 100%;
+	}
+
+	@media all and (min-width: 65em) { 
+		background: none;
+		height: 22em;
+		margin-top: 0;
 	}
 }
 
