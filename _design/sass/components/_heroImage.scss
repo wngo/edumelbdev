@@ -20,7 +20,7 @@
 
 	@media all and (min-width: 65em) { 
 		background: none;
-		height: 22em;
+		height: 300px; /** fixed height so page title aligns with bottom of image **/
 		margin-top: 0;
 	}
 }
