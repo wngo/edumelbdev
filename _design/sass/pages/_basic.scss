@@ -84,7 +84,11 @@ body {
     width: 100%; 
   }
 
-figure {position:relative;}
+figure {
+    position:relative;
+margin: 0;
+padding: 0;
+width: 100%;}
 
 figcaption, .figcaption { 
      position: absolute;

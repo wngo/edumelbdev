@@ -28,45 +28,63 @@
    
       <div class='main d-all' id='main-content' role='main'>
     
-           <dl class="sub-nav">
-          <dt>Filter events:</dt>
-          <dd class="active"><a href="#">All</a></dd>
-          <dd><a href="#">Conferences</a></dd>
-          <dd><a href="#">Free lectures</a></dd>
-          <dd><a href="#">Seminars</a></dd>
-          <dd><a href="#">Welcome/Orientation</a></dd>
-          <dd><a href="#">Future student events</a></dd>
-          <dd><a href="#">Other</a></dd>
-        </dl>
+                  <div id="filters"><dl class="sub-nav">
+                     <dt>Filter events:</dt>
+                     <dd class="active">
+                      <a href="#">All</a>
+                    </dd>
+                     <dd>
+                      <a href="#" id="conferences">Conferences</a>
+                    </dd>
+                     <dd>
+                      <a href="#" id="lectures">Free lectures</a>
+                    </dd>
+                     <dd>
+                      <a href="#" id="seminars">Seminars</a>
+                    </dd>
+                     <dd>
+                      <a href="#" id="orientation">Welcome/Orientation</a>
+                    </dd>
+                     <dd>
+                      <a href="#" id="future">Future student events</a>
+                    </dd>
+                     <dd>
+                      <a href="#" id="other">Other</a>
+                    </dd>
+                   </dl>
+                 </div>
           
         <hr>
 <!--news item -->
   
     <div class="d2-d5">
-      <div class="news-item h-event">
+      <div class="news-item h-event conferences seminars">
     
-          <div class="d1-d2">
-            <div class="meta dt-start"><i class="icon-calendar"></i> 7 - 9 Feb 2014</div>
-            <div class="meta dt-start"><i class="icon-time"></i> See program</div>
-            <div class="meta dt-start"><i class="icon-tag"></i> Seminar</div>
-          </div>
-    
-          <div class="d3-d5">
-            <h3>
-              <a href="http://education.unimelb.edu.au/mgse-test/home2/events/fourth_australian_positive_psychology_and_well-being_conference_developing_a_sustained_impact">A History of Australian Schooling: Craig Campbell & Helen Proctor
-              </a>
-           </h3>
-            <div class="description">
-        
-              <span>A History of Australian Schooling: Craig Campbell & Helen Proctor</span>
-            </div>
-          </div>
+          <div class="news-item__item">
+            <div class="d1-d2">
+                      <div class="meta dt-start"><i class="icon-calendar"></i> 7 - 9 Feb 2014</div>
+                      <div class="meta dt-start"><i class="icon-time"></i> See program</div>
+                      <div class="meta dt-start"><i class="icon-tag"></i> Seminar</div>
+                    </div>
+              
+                    <div class="d3-d5">
+                      <h3>
+                        <a href="http://education.unimelb.edu.au/mgse-test/home2/events/fourth_australian_positive_psychology_and_well-being_conference_developing_a_sustained_impact">A History of Australian Schooling: Craig Campbell & Helen Proctor
+                        </a>
+                     </h3>
+                      <div class="description">
+                  
+                        <span>A History of Australian Schooling: Craig Campbell & Helen Proctor</span>
+                      </div>
+                    </div>
+                </div>
+
         </div>
         
     
     <!--news item -->
-      <div class="news-item h-event">
-    
+      <div class="news-item h-event lectures other">
+    <div class="news-item__item">
       <div class="d1-d2">
         <div class="meta dt-start"><i class="icon-calendar"></i> 6 Feb - 1 March</div>
         <div class="meta dt-start"><i class="icon-time"></i> 10am – 1pm</div>
@@ -82,10 +100,11 @@
           </div>
         </div>
       </div>
+    </div>
       <!--news item -->
     
-      <div class="news-item h-event">
-    
+      <div class="news-item h-event seminars">
+    <div class="news-item__item">
         <div class="d1-d2">
           <div class="meta dt-start"><i class="icon-calendar"></i> 6 Feb - 1 March</div>
           <div class="meta dt-start"><i class="icon-time"></i> 10am – 1pm</div>
@@ -102,28 +121,30 @@
           </div>
         </div>
       </div>
-    
+    </div>
     <!--news item -->
      
-        <div class="news-item h-event">
+        <div class="news-item h-event other">
     
-        <div class="d1-d2">
-          <div class="meta dt-start"><i class="icon-calendar"></i> 30 Jan 2014</div>
-          <div class="meta dt-start"><i class="icon-time"></i> 9:00am - 12:00pm</div>
-          <div class="meta dt-start"><i class="icon-tag"></i> Seminar</div>
-        </div>
-    
-          <div class="d3-d5">
-            <h3>
-              <a href="http://gradexpo.unimelb.edu.au/?utm_source=oa_oa_mgse_mgseeventlist&utm_medium=school%20homepage&utm_campaign=oa-2013126-oa_mgse_mgseeventlist-5909&utm_term=owned,pros,pg,mgse,%20general&utm_content=register%20for%20event">A History of Australian Schooling: Craig Campbell & Helen Proctor
-              </a>
-            </h3>
-            <div class="description">
-              <p>Graduate study is an investment in your future. Join us at our Graduate Study Expo and find out how a graduate degree from Australia’s number one university* will give you the chance to pursue your passion and develop your career.</p>
-              <a class="button right">Register</a>
-            </div>
-          </div>
-        </div>
+        <div class="news-item__item">
+          <div class="d1-d2">
+                  <div class="meta dt-start"><i class="icon-calendar"></i> 30 Jan 2014</div>
+                  <div class="meta dt-start"><i class="icon-time"></i> 9:00am - 12:00pm</div>
+                  <div class="meta dt-start"><i class="icon-tag"></i> Seminar</div>
+                </div>
+            
+                  <div class="d3-d5">
+                    <h3>
+                      <a href="http://gradexpo.unimelb.edu.au/?utm_source=oa_oa_mgse_mgseeventlist&utm_medium=school%20homepage&utm_campaign=oa-2013126-oa_mgse_mgseeventlist-5909&utm_term=owned,pros,pg,mgse,%20general&utm_content=register%20for%20event">A History of Australian Schooling: Craig Campbell & Helen Proctor
+                      </a>
+                    </h3>
+                    <div class="description">
+                      <p>Graduate study is an investment in your future. Join us at our Graduate Study Expo and find out how a graduate degree from Australia’s number one university* will give you the chance to pursue your passion and develop your career.</p>
+                      <a class="button right">Register</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
         <!--news item -->
       </div>
 
@@ -182,7 +203,7 @@
       </div>
 
 
-     
+  
     
 
 
@@ -271,6 +292,26 @@ $(".fancybox").fancybox();
     'hoverIntentTimeout': 200,
     'hover': true
  });
+
+  //when a link in the filters div is clicked...  
+    $('#filters a').click(function(e){  
+  
+        //prevent the default behaviour of the link  
+        e.preventDefault();  
+  
+        //get the id of the clicked link(which is equal to classes of our content  
+        var ID = $(this).attr('id');  
+        
+
+        //show all the list items(this is needed to get the hidden ones shown)  
+        $('.news-item .news-item__item').hide();  
+  
+        /*using the :not attribute and the filter class in it we are selecting 
+        only the list items that don't have that class and hide them '*/  
+        $('.news-item .news-item__item:not(.' + ID + ')').show();  
+  
+    });  
+
 
             });
  

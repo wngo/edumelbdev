@@ -3,7 +3,7 @@
 	height: 8em;
 	margin-bottom: 1em;
 	margin-top: 0;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	z-index:10;
 
 	@media all and (min-width: 45em) { 
@@ -21,9 +21,15 @@
 
 	@media all and (min-width: 65em) { 
 		background: none;
-		height: 300px; /** fixed height so page title aligns with bottom of image **/
+		height: 320px; /** fixed height so page title aligns with bottom of image **/
 		margin-top: 0;
 		overflow: hidden;
 	}
 }
+/**
+.hero-shapes {
+	  @include triangle(left, 50px, red);
+	  position: absolute;
+	  top: 150px;
+}**/
 
