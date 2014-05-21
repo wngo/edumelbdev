@@ -3,10 +3,97 @@
 <!-- @include _mainNavigation -->
 
    
-        
+<style>
+
+.rn_Hide {
+    display: none;
+}
+.rn_Show {
+    display: block;
+}
+.KnowledgeSyndication {
+    padding: 5px;
+}
+.KnowledgeSyndication h3, #content .KnowledgeSyndication h3 {
+    font-size: 1.2em;
+}
+#content .KnowledgeSyndication div {
+    padding-top: 0;
+}
+.rn_SearchArea {
+    padding-bottom: 5px;
+}
+.rn_SearchBox {
+    display: inline;
+}
+.rn_Query {
+    border: 1px solid #999999;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    float: left;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    padding: 6px 70px 6px 4px;
+    width: 90%;
+}
+.rn_Query:focus {
+    box-shadow: 2px 2px 7px #789FBF inset;
+    outline: medium none;
+}
+.rn_SearchButton input:hover {
+    color: #036EAB;
+}
+.rn_SearchButton {
+    padding-top: 0;
+}
+.rn_SearchButton input {
+    background-color: rgba(0, 0, 0, 0);
+    border: medium none;
+    color: #333333;
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-left: -75px;
+    margin-top: 2px;
+    padding-top: 6px;
+    width: auto;
+}
+.rn_SearchButton input[type="button"], .rn_SearchButton input[type="submit"] {
+    cursor: pointer;
+}
+.rn_Corrections, .rn_Suggestions {
+    font-weight: normal;
+    padding-bottom: 5px;
+}
+.rn_Documents {
+    background-color: #F5F5F5;
+    border: 1px solid #DCDCDC;
+    border-radius: 3px;
+    margin-top: 2px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+    width: 95%;
+}
+.rn_Documents h3 {
+    font-size: 1em;
+}
+.rn_Content {
+    clear: left;
+    padding-bottom: 5px;
+}
+.rn_screen_reader_only {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}
+
+  </style>
     
 <div class="title-image hero-img d-all t-all m-all" id="new_div_612396">
-  <img src="<!-- @path content_page-modified.jpg -->" />
+  <img src="<!-- @path insta-cafe_hero.jpg -->" />
 </div>
 
  
@@ -36,7 +123,7 @@
 
 <div class="general-enq d-all">
   
-  <div class="d1-d4">
+  <div class="d2-d3">
     <h4>Future Students</h4>
 
     <p><a href="https://enquiry.app.unimelb.edu.au/?cc=MGSE-ALL&amp;fn=MGSE" class="button fancybox fancybox.iframe">Enquire online</a></p><hr>
@@ -45,14 +132,11 @@
     +61 3 9035 5511</p>
 
   </div>
-  <div class="d4-d8">
+  <div class="d4-d5">
   <h4>Current Students</h4>
   <p>Search our current student FAQs:</p>
      <div id="askunimelbWidget1"><div class="KnowledgeSyndication">
-    <div class="rn_SearchArea">
-        <div class="rn_SearchBox" id="rn_SearchBoxaskunimelbWidget1"><div class="rn_screen_reader_only"><label for="rn_QueryaskunimelbWidget1">Search</label></div><input type="text" class="rn_Query" name="q" id="rn_QueryaskunimelbWidget1" autocomplete="on"></div>
-        <div class="rn_SearchButton"><input type="button" class="rn_ButtonInput" name="rn_ButtonInput" value="Search" id="rn_SearchButtonaskunimelbWidget1"></div>
-    </div>
+   
     <div class="rn_Corrections rn_Hide" id="rn_CorrectionsaskunimelbWidget1">
         <h3>Did You Mean:</h3>
         <span id="rn_WordCorrectionaskunimelbWidget1" class="rn_WordCorrection">
@@ -90,12 +174,12 @@
 <p>Can't find what you're looking for?<br>
 Call 13MELB or +61 3 9035 5511</p>
 
-    <div class="d1-d4 big-button">
+  </div>
+
+    <div class="d6-d7 big-button">
       <h4>Book an Adviser</h4>
       <a href="http://student-advising-system.unimelb.edu.au/" class="anchor-nostyle"><img src="http://education.unimelb.edu.au/__data/assets/image/0006/834972/SAS_Login_normal_state.png"></a>
     </div>
-  </div>
-
 <hr class="visible">
 
 <div class="d1-d4">
@@ -226,6 +310,43 @@ $(".fancybox").fancybox();
  
                            
 </script>
+<script type="text/javascript" src="http://studentadmin-unimelb.widget.custhelp.com/euf/rightnow/RightNow.Client.js"></script>
+<script type="text/javascript">
+    RightNow.Client.Controller.addComponent(
+        {
+            div_id: "askunimelbWidget1",
+            instance_id: "askunimelbWidget1",
+          // customised options go here
+            module: "KnowledgeSyndication",
+            type: 3,
+          p: '1308,1310;1294,1296;1294,1299;1308,1311;1289,1293',
+          searchbox: true,
+          number_answers: 3,
+          description: false,
+          navigation: false,
+          persist_prodcat: true
+        },
+        "http://studentadmin-unimelb.widget.custhelp.com/ci/ws/get"
+        );
+
+        RightNow.Client.Controller.addComponent(
+        {
+            div_id: "askunimelbWidget2",
+            instance_id: "askunimelbWidget2",
+          // customised options go here
+            module: "KnowledgeSyndication",
+            type: 3,
+          p: '1308,1310;1294,1296;1294,1299;1308,1311;1289,1293',
+          searchbox: true,
+          number_answers: 5,
+          description: false,
+          navigation: false,
+          persist_prodcat: true
+        },
+        "//studentadmin-unimelb.widget.custhelp.com/ci/ws/get"
+
+    );
+  </script>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 
 <!--[if lte IE 8]>

@@ -179,50 +179,7 @@ $(".fancybox").fancybox();
  
                            
 </script>
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-<script type="text/javascript"> 
-  google.load('search', '1', {language : 'en', style : google.loader.themes.V2_DEFAULT});
-  google.setOnLoadCallback(function() {
-    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
-      '010626520995356427609:quos3ex_5tm', customSearchOptions);
-    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-    var options = new google.search.DrawOptions();
-    options.enableSearchResultsOnly(); 
-    customSearchControl.draw('cse', options);
-    function parseParamsFromUrl() {
-      var params = {};
-      var parts = window.location.search.substr(1).split('\x26');
-      for (var i = 0; i < parts.length; i++) {
-        var keyValuePair = parts[i].split('=');
-        var key = decodeURIComponent(keyValuePair[0]);
-        params[key] = keyValuePair[1] ?
-            decodeURIComponent(keyValuePair[1].replace(/\+/g, ' ')) :
-            keyValuePair[1];
-      }
-      return params;
-    }
 
-    var urlParams = parseParamsFromUrl();
-    var queryParamName = "s";
-    if (urlParams[queryParamName]) {
-      customSearchControl.execute(urlParams[queryParamName]);
-    }
-  }, true);
-</script>
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-5900383-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 <!--[if lte IE 8]>
 <script>
 $('[placeholder]').focus(function() {

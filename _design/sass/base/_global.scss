@@ -434,13 +434,14 @@ html.pointerevents body.no-logo div.wrapper div.aside {
 /*
 1185px
 */
-@media all and (max-width: 100em) {
+@media all and (min-width: 45em) {
 body{
   
-  /**background: url("http://www.education.unimelb.edu.au/__data/assets/image/0010/832186/mgseBg-l.jpg") -7em 12em no-repeat,
-  url("http://www.education.unimelb.edu.au/__data/assets/image/0011/832187/mgseBg-r.jpg") 101% 35em no-repeat !important;
+  background: url("mgseBg-l_small.png") 0em 30em no-repeat,
+  url("mgseBg-r.png") 101% 35em no-repeat !important;
+  background-color:#fff;
+ /**background: url("mgseBg-r.png") 101% 35em no-repeat !important;
   background-color:#fff;**/
- 
 }
 }
 
@@ -568,9 +569,9 @@ margin: 0 }
 
 body {
   
-  /*background: url("//education.unimelb.edu.au/__data/assets/image/0010/832186/mgseBg-l.jpg") -13.5em 12em no-repeat,
-  url("//education.unimelb.edu.au/__data/assets/image/0011/832187/mgseBg-r.jpg") 101% 35em no-repeat !important;
-  background-color:#fff;*/
+  background: url("mgseBg-l.png") -13.5em 12em no-repeat,
+  url("mgseBg-r.png") 101% 35em no-repeat !important;
+  background-color:#fff;
   background: -moz-linear-gradient (#fff 20%, #005596);
   transition: 0s;
 }
@@ -631,6 +632,7 @@ margin: 0 }
   width:96%; }
   
  .title-wrap {
+    margin-bottom: 2em;
     width:100%;
     /*padding: 1em 10px;*/
     /*float:left; */} 
@@ -683,6 +685,9 @@ height: auto; }
 width:100%;
 }
 
+.title-wrap {
+  margin-bottom: 2em;
+}
   
   .mobile-nav {
     display:block !important;
