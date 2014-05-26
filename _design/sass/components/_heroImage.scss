@@ -6,17 +6,22 @@
 	/*overflow: hidden;*/
 	z-index:10;
 	
-	@media all and (min-width: 45em) { 
+	@include breakpoint (small) { 
 		background: none;
-		height: 10em;
-		margin-top: 5em;
+		height: 8em;
+		overflow: hidden;
 	}	
 	
 	img {
 		display: block;
 		margin: 0;
-		width: 100%;
+		width: 120%;
+		
+	
+	}
 
+	@media all and (min-width: 1300px){
+		width: 100%;
 	}
 
 	@media all and (min-width: 65em) { 
@@ -24,6 +29,13 @@
 		height: 320px; /** fixed height so page title aligns with bottom of image **/
 		margin-top: 0;
 		overflow: hidden;
+	}
+
+	@include breakpoint (large) {
+		img {
+			min-height: 320px;
+			min-width: 100%;
+		}
 	}
 }
 /**

@@ -437,7 +437,7 @@ html.pointerevents body.no-logo div.wrapper div.aside {
 @media all and (min-width: 45em) {
 body{
   
-  background: url("mgseBg-l_small.png") 0em 30em no-repeat,
+  background: url("mgseBg-l-alt.png") 0em 34em no-repeat,
   url("mgseBg-r.png") 101% 35em no-repeat !important;
   background-color:#fff;
  /**background: url("mgseBg-r.png") 101% 35em no-repeat !important;
@@ -569,7 +569,7 @@ margin: 0 }
 
 body {
   
-  background: url("mgseBg-l.png") -13.5em 12em no-repeat,
+  background: url("mgseBg-l-alt.png") -13.5em 12em no-repeat,
   url("mgseBg-r.png") 101% 35em no-repeat !important;
   background-color:#fff;
   background: -moz-linear-gradient (#fff 20%, #005596);
@@ -613,9 +613,6 @@ margin: 0 }
     background:#fff !important;
   }
 
-  .wrapper {
-    width:96%;
-  }
   
   .wrapper-header {
   background: #00457C;}
@@ -634,8 +631,12 @@ margin: 0 }
  .title-wrap {
     margin-bottom: 2em;
     width:100%;
-    /*padding: 1em 10px;*/
-    /*float:left; */} 
+
+    @include breakpoint (small) {
+      margin-bottom: 0; 
+    }
+
+    } 
     
   .col-6 {
   width: 72.9166667%;}
@@ -683,10 +684,6 @@ height: auto; }
 
 .breadcrumbs, .title-wrap {
 width:100%;
-}
-
-.title-wrap {
-  margin-bottom: 2em;
 }
   
   .mobile-nav {
@@ -776,16 +773,10 @@ width:100%;
   height:auto;
   float:left; }
 
-    
-  #main-content {
-margin-top:1.263em; }
 
     #main-content .col-3.page-preview { 
     width:100%; }
- 
- .wrapper {
- padding: 0; }
-   
+
   .col-2 {
   width:100%;}
   

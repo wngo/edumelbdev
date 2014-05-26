@@ -14,7 +14,7 @@
     .main-content-wrapper {
         background: #fff;
         margin-top: -7.7em;
-        @include max-width;
+        /*@include max-width;*/
         padding: 1em;
 
         @include breakpoint (small) {
