@@ -1,9 +1,11 @@
- 
+ @mixin color-box ($background: lighten($color-main, 70%), $border: #ECF7F7) {
+ 	padding: 10px;
+    background: $background;
+	border: 1px solid $border; 
+ }
 
 .block {
-    padding:10px;
-    background:#ECF7F7;
-	border: 1px solid #DDF0F8; 
+    @include color-box;
 		
 		h2 {
 			color: #444;
@@ -27,12 +29,10 @@
 			margin-top: 0;
 		}
 
-			@media all and (max-width:40em) {
+		@include breakpoint (small) {
 
 			img {
-				display: inline-block;
-				max-width: 50%;
-				text-align: center;
+				display: none;
 			}
 
 			figcaption {
@@ -47,6 +47,27 @@
 
 			.dls-speaker-container {
 				width: 100%;
+
 			}
 		}
     }
+
+  .block__sidebar {
+		@include color-box;
+ 	}
+
+  .block__download {
+  	@include breakpoint (small) {
+  			margin: 1em 0;
+			max-width: 75%;
+		}
+	@include breakpoint (medium) {
+		max-width: 50%;
+	}
+
+	img {
+		@include breakpoint (small) {
+			display: none; }
+	}
+  }
+   

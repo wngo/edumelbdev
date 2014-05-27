@@ -55,13 +55,15 @@ h3 {
     font-weight: 400;
     font-size:1.263em;
     line-height: 1.184em;
-    margin: 0 0 0.732em 0;
+    margin: o 0 0.732em 0;
     padding: 0; 
 
 	
 	&:hover {
 		background: none;
 	}
+
+
 }
 
 h5 {
@@ -95,6 +97,10 @@ strong, b {
 
 .hgroup a, .breadcrumbs a {
 	border-bottom: none;
+
+  @include breakpoint (small) {
+    font-size: 0.732em;
+  }
 }
 
 a.button {
@@ -111,10 +117,9 @@ a.button {
 
 
 
-#main-content {
     a, a:active, a:visited {
 
-    border-bottom: 1px solid $color-main;
+    border-bottom: none;
     color: $color-main;
     transition-property: background-color;
     transition-timing: ease-out;
@@ -124,10 +129,14 @@ a.button {
     transition-timing: ease-out;
     transition-duration: 0.5s;
     }
-}
+    
+    a:hover {
+      color: lighten($color-main,10%);
+    }
+
 #main-content a:hover, #main-content a:active, #main-content a:focus {
   color: lighten($color-main,10%);
-  border-bottom: none;
+  border-bottom: 1px solid lighten($color-main, 10%);
  
 }
 
@@ -180,8 +189,13 @@ h1, .nav h2, .aside h2, body.home .main > h2, body.home #main-content > h2 {
 h1.title {
     font-family:'Univers LT W01 65 Bold', Helvetica, Arial, sans-serif;
     font-weight: 400;
-    font-size: 2.043em;
-    line-height: 1.263em;  }
+    font-size: 2.6em;
+    line-height: 1.263em;
+
+    @include breakpoint (small) {
+      font-size: 2em;
+    }  
+  }
     
  #newsbanner ol {
         font-family: 'Univers LT W01 45 Light', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;    }

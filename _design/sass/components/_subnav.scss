@@ -26,16 +26,20 @@
       text-decoration: none;
       border-bottom: none;
       color: #999999;
+      font-variant: small-caps;
       padding: 0.16667rem 0.88889rem; }
 
        dt a:hover,  dd a:hover,  li a:hover {
-        color: #737373; }
+        color: #fff;
+        background-color: lighten($color-main, 10%);
+        -webkit-border-radius: 3px;
+        border-radius: 3px; }
 
      dt.active a,  dd.active a,  li.active a {
       -webkit-border-radius: 3px;
       border-radius: 3px;
       font-weight: normal;
-      background: rgb(0,157,220);
+      background: $color-main;
       padding: 0.16667rem 0.88889rem;
       cursor: default;
       color: #fff; }
@@ -54,7 +58,7 @@
 .social-media-icons {
     position: absolute;
     right: 0px !important;
-    top: 52px; }
+    top: 25px; }
 
 .social-media-icons a:first-child {
     margin-right: 1em;
@@ -73,6 +77,8 @@
     color: #ffffff; 
 
     &:hover {
-      color: lighten ($color-main, 10%);
+      color: lighten($color-main, 10%);
      }
     }
+
+ 

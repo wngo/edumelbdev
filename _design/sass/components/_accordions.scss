@@ -18,9 +18,13 @@
 /**reset margins in accorion content for smoother drop down**/
 
 .accordion-content h4 {
-  margin-top: 0; 
-}
+  margin-top: 0;
 
+
+}
+.accordion {
+    margin-bottom: 2em;
+  } 
 /**
 remove margin from accordion content to prevent jumping
 **/
@@ -30,9 +34,11 @@ body #main-content .accordion ul, #main-content .accordion h5 {
   margin-bottom:1.618em;}
 
 .accordion-content {
-  background: lighten($secondary-color, 2%);
+  background: lighten($secondary-color, 8%);
   margin-bottom: 1em; 
   padding: 0.618em;
+
+  
 }
 
     

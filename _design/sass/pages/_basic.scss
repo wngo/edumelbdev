@@ -8,8 +8,21 @@
 		background: rgba(255,255,255,0.9);
 		
 	}
+
 }
 
+    .main-content-wrapper {
+        background: #fff;
+        margin-top: -7.7em;
+        /*@include max-width;*/
+        padding: 1em;
+
+        @include breakpoint (small) {
+            float: left;
+            margin-top: 0;
+            padding-top: 0;
+        }
+    }
 
 body { 
   
@@ -38,7 +51,15 @@ body {
  #content { 
         clear: both;
          }
-    
+.breadcrumbs {
+    padding-bottom: 1.6em; 
+}
+
+/** if no hero image on landing page push wrapper down **/
+.wrapper.no-landing, .main-content-wrapper.no-landing {
+    margin-top: 4em;
+}
+
 .content-img-left{
     width: 25.3464%;
     float: left;
@@ -55,7 +76,11 @@ body {
     width: 100%; 
   }
 
-figure {position:relative;}
+figure {
+    position:relative;
+margin: 0;
+padding: 0;
+width: 100%;}
 
 figcaption, .figcaption { 
      position: absolute;

@@ -32,6 +32,7 @@ $opposite-direction: right !default;
 $color-main: #005596 !default;
 $color-light-main: lighten($color-main,10%);
 $primary-color: #008CBA !default;
+$primary-color-nav: #00457c !default;
 $secondary-color: #e7e7e7 !default;
 $alert-color: #f04124 !default;
 $success-color: #43AC6A !default;
@@ -46,6 +47,13 @@ $top_level: #005596;
 $second_level: #fff;
 $third_level: #bfbfbc;
 $fourth_level: #cbcbc9;
+
+
+ /* Max page width */
+ @mixin max-width {
+ max-width: 1000px;
+}
+
 
 // @mixins
 //
@@ -151,27 +159,11 @@ figcaption, .figcaption {
   display:block;
   margin: 0 auto;
   max-width:1000px;
-  width:96%;
-}
-
-
-    
-
-
-
-/** 
-  NEED TO REVIEW OLD CSS STYLE SHEET BELOW THIS
-  **/
-  .wrapper-header {
-  background-color: #00457C;
   width:100%;
-  height: 145px;
 }
 
-.header {
-  margin:0 auto;
-  width:1000px;
-}
+
+  
 /*.title-wrap {
   background-color: rgb(0,85,150);
   width:100%;
@@ -180,7 +172,7 @@ figcaption, .figcaption {
 
 #breadcrumbs {
   max-width:1000px;
-  width:96%;
+  width:100%;
 }
 
 .home #breadcrumbs {
@@ -189,9 +181,6 @@ figcaption, .figcaption {
 .home #main-content {
  margin-top: 0; }
 
-.row {
-  clear: both;
-}
 
 /*==================================================================*/
 /*=======================>> GLOBAL <<===============================*/
@@ -204,15 +193,6 @@ figcaption, .figcaption {
 body #g-header { 
   height: 66px; 
 }
-
-.header {
-  margin:0 auto;
-  margin-bottom: 0;
-  overflow:visible;
-  width:100%;
-  max-width:1000px; 
-}
-
 
 .nav ul { margin-left: 0;}
 
@@ -269,7 +249,7 @@ h1, h2, h3, h4, .pullquote {
     font-size: 1em;
     line-height: 1.618;
     margin: 0 0 1.618em 0;
-    max-width: 35em;
+    max-width: 37em;
     /*overflow:hidden;*/
     }
 #main-content p.pullquote {
@@ -397,9 +377,6 @@ html.pointerevents body.no-logo div.wrapper div.aside {
     border-radius: 3px;
     margin-top: 0.732em; }
 
-.header .hgroup h1 a {
-    color: #003366;
-    }
 
 
 
@@ -442,15 +419,6 @@ html.pointerevents body.no-logo div.wrapper div.aside {
    margin-top:0.382em;
    width: 100%; }
 
-.mgse-search {
-   margin-top: -66px;
-    position:absolute;
-  right:0px; }
-  
-.home .mgse-search {
-    right:50px; }
-
-
 
  
 /*================================================
@@ -466,36 +434,26 @@ html.pointerevents body.no-logo div.wrapper div.aside {
 /*
 1185px
 */
-@media all and (max-width: 100em) {
+@media all and (min-width: 45em) {
 body{
   
-  background: url("http://www.education.unimelb.edu.au/__data/assets/image/0010/832186/mgseBg-l.jpg") -7em 12em no-repeat,
-  url("http://www.education.unimelb.edu.au/__data/assets/image/0011/832187/mgseBg-r.jpg") 101% 35em no-repeat !important;
+  background: url("mgseBg-l-alt.png") 0em 34em no-repeat,
+  url("mgseBg-r.png") 101% 35em no-repeat !important;
   background-color:#fff;
- 
+ /**background: url("mgseBg-r.png") 101% 35em no-repeat !important;
+  background-color:#fff;**/
 }
 }
+
 
 /*iphone portrait
 345px*/
 @media all and (max-width: 23em) {
 
-  .header .hgroup img {
-    height: auto;
-  }
-
-  .header .hgroup, .header {
-    height:auto
-  }
-
-  .header {
-    background-color: #fff;
-    float:left;
-    width:100%;
-  }
 
   .home #breadcrumbs, .home .mgse-search  {
     display:none; }
+
   .home .header .hgroup {
     height:103px;
   }
@@ -607,17 +565,13 @@ margin: 0 }
 
 /*1000px*/
 @media all and (max-width:64em) {
-.row.breadcrumbs, .title-wrap, #breadcrumbs {
-    padding-left: 10px;
-    float:left;
-    width: 96%;
-    }
+
 
 body {
   
-  /*background: url("//education.unimelb.edu.au/__data/assets/image/0010/832186/mgseBg-l.jpg") -13.5em 12em no-repeat,
-  url("//education.unimelb.edu.au/__data/assets/image/0011/832187/mgseBg-r.jpg") 101% 35em no-repeat !important;
-  background-color:#fff;*/
+  background: url("mgseBg-l-alt.png") -13.5em 12em no-repeat,
+  url("mgseBg-r.png") 101% 35em no-repeat !important;
+  background-color:#fff;
   background: -moz-linear-gradient (#fff 20%, #005596);
   transition: 0s;
 }
@@ -659,9 +613,6 @@ margin: 0 }
     background:#fff !important;
   }
 
-  .wrapper {
-    width:96%;
-  }
   
   .wrapper-header {
   background: #00457C;}
@@ -678,9 +629,14 @@ margin: 0 }
   width:96%; }
   
  .title-wrap {
-    width:96%;
-    /*padding: 1em 10px;*/
-    /*float:left; */} 
+    margin-bottom: 2em;
+    width:100%;
+
+    @include breakpoint (small) {
+      margin-bottom: 0; 
+    }
+
+    } 
     
   .col-6 {
   width: 72.9166667%;}
@@ -726,13 +682,9 @@ margin: 0 }
 .header .hgroup {
 height: auto; }
 
-.row.breadcrumbs, .title-wrap {
-width:96%;
+.breadcrumbs, .title-wrap {
+width:100%;
 }
-
- .mgse-search {
-    display:block;
-  }
   
   .mobile-nav {
     display:block !important;
@@ -749,11 +701,16 @@ width:96%;
     padding:1em 0;
     margin:2em 0 1em 1em;
   }
+
   h1.title {
   display:inline-block;
   margin-top: 1em;
   margin-bottom:0.482em;
-  width:98%;
+
+  @include breakpoint (small) {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
    }
   
   .footer .col-2 {
@@ -771,16 +728,7 @@ width:96%;
 }
 /**672px**/
 @media all and (max-width:45em) {
-  .header .hgroup img {
-  height:auto;
-  width:100%;
-  }
   
-  .mgse-search, .social-media-icons {
-  display:none;}
-
-
-
  #main-content .glance.col-2, #main-content .glance-clear {
  float:left;
  margin-left:0;
@@ -818,35 +766,17 @@ width:96%;
  body {
   background: none !important;
   background-color:#fff;
-font-size:16px;  }
+  font-size:16px;  }
 
  .wrapper-header {
   background: #ffffff;
   height:auto;
   float:left; }
 
- h1.title {
-    font-size:1.618em; }
-    
-    .title-wrap {
-    width:96%;
-    /*padding: 1em 10px;
-    float:left;*/} 
-    
-  #main-content {
-margin-top:1.263em; }
 
     #main-content .col-3.page-preview { 
     width:100%; }
- 
- .wrapper {
- padding: 0; }
-  
- /** very low % of users searchign on mobile **/
-  .mgse-search {
-  display:none; }
 
-  
   .col-2 {
   width:100%;}
   
