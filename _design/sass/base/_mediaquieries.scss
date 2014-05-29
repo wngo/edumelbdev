@@ -6,6 +6,6 @@
     @media all and (max-width: 62em) { @content; }
   }
   @else if $point == small {
-    @media all and (max-width: 43em)  { @content; }
+    @media all and (max-width: 45em)  { @content; }
   }
 }
