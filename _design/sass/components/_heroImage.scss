@@ -1,42 +1,38 @@
 .hero-img {
-	/*background: lighten($color-main,60%);*/
-	height: 8em;
-	margin-bottom: 1em;
+	float: left;
 	margin-top: 0;
-	/*overflow: hidden;*/
-	z-index:10;
+	margin-bottom: 0.618em;
+	overflow: hidden;
+	z-index: 10;
+	height: 6em;
 	
-	@include breakpoint (small) { 
+	@include breakpoint (medium) { 
+		margin-bottom: 1em;
 		background: none;
-		height: 5em;
+		height: 10em;
+		float: none !important;
 		overflow: hidden;
+
+		img {
+			min-height: 320px;
+			width: 100%;
+		}
 	}	
-	
-	img {
-		display: block;
-		margin: 0;
-		width: 100%;
-		
-	
-	}
-
-	@media all and (min-width: 1300px){
-		width: 100%;
-	}
-
-	@media all and (min-width: 65em) { 
-		background: none;
-		height: 320px; /** fixed height so page title aligns with bottom of image **/
-		margin-top: 0;
-		overflow: hidden;
-	}
 
 	@include breakpoint (large) {
+		height: 320px;
+
 		img {
 			min-height: 320px;
 			min-width: 100%;
 		}
 	}
+
+	img {
+		width: 100%;
+		min-height: 0;
+	}
+	
 }
 /**
 .hero-shapes {

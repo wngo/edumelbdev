@@ -13,7 +13,6 @@
 
     .main-content-wrapper {
         background: #fff;
-        margin-top: -7.7em;
         /*@include max-width;*/
         padding: 1em;
 
@@ -22,6 +21,11 @@
             margin-top: 0;
             padding-top: 0;
         }
+
+        @include breakpoint (large) {
+            margin-top: -7.7em;
+        }
+
     }
 
 body { 

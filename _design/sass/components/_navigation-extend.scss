@@ -106,11 +106,11 @@
          
 
        
-         &:first-child a {
+         &:first-child + a {
             border-left: none;
          }
       
-      ul li a {
+          ul li a {
           background: lighten($primary-color-nav, 10%);
 
           &:hover {
@@ -124,6 +124,7 @@
     .flexnav li ul li a {
         background: ligthen ($primary-color-nav, 20%);
         border-bottom: 1px solid darken($primary-color-nav, 10%);
+        border-left: 1px solid darken($primary-color-nav, 5%);
         padding: 0.6em 1em;
         font-size: 80%;
 
@@ -182,7 +183,7 @@
     .menu-button .touch-button {
       height: auto;
       position: absolute;
-      right: 30px;
+      right: -3px;
       top: 25;
       width:30px;
     }
@@ -237,7 +238,7 @@
 
       .flexnav .touch-button {
         line-height: 39px;
-        width: 30px;
+        width: 40px;
         height: auto;
       }
 
