@@ -7,6 +7,7 @@
 @import "base/buttons";
 @import "helpers/shapes.scss";
 
+@import "vendors/fontawesome/scss/font-awesome";
 
 
 @import "components/navigation";
@@ -39,6 +40,5 @@
 @import "pages/stream";
 
 
-@import "vendors/fontawesome/scss/font-awesome";
 
 @import "helpers/emCalc";

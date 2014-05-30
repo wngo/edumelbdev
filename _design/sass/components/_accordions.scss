@@ -1,5 +1,7 @@
  
-
+.accordion-wrapper {
+  max-width: 40em;
+}
 
 .article-title {
     line-height: 28px 
@@ -15,6 +17,16 @@
         margin-bottom: 0.618em;
         position:relative;
         }
+
+h2.label:hover, .collapse-close:hover:after  {
+  color: lighten($color-main, 10%);
+}
+
+
+.label:focus, .label:active {
+  outline: 1px dotted #003366;
+}
+        
 /**reset margins in accorion content for smoother drop down**/
 
 .accordion-content h4 {
@@ -24,6 +36,7 @@
 }
 .accordion {
     margin-bottom: 2em;
+    max-width: 36em;
   } 
 /**
 remove margin from accordion content to prevent jumping
@@ -46,44 +59,27 @@ dd .accordion-content {
   margin-top: 0.732em;
   margin-bottom: 1em; }
 
-.label.collapse-close:after {
-  color:#444;
-  content:url("http://web.education.unimelb.edu.au/images/arrow_right.png");
+.collapse-close:after {
+  font-family: FontAwesome;
+  color: $color-main;
+  content: $fa-var-chevron-down; 
   font-size:0.732em;
   float:right;
   margin-top:3px;
   padding-right:7px;
-  /* Firefox */
--moz-transform: rotate(90deg);
-/* Safari */
--webkit-transform: rotate(90deg);
+}
 
-/* IE */
--ms-transform: rotate(90deg);
 
-/* Opera */
--o-transform: rotate(90deg); }
+h2.collapse-open {
+  color: lighten($color-main, 10%);
+}
 
-.collapsible:after {
-  color:#444;
-  content:url("http://web.education.unimelb.edu.au/images/arrow_right.png");
-  font-size:0.732em;
-  float:right;
-  margin-top:3px;
-  /*padding-right:7px;*/
-/* Safari */
--webkit-transform: rotate(-90deg);
-
-/* Firefox */
--moz-transform: rotate(-90deg);
-
-/* IE */
--ms-transform: rotate(-90deg);
-
-/* Opera */
--o-transform: rotate(-90deg); }
-   
-    
+ .collapse-open:after {
+  @extend .collapse-close:after;
+    content: $fa-var-chevron-up;
+    color: lighten($color-main, 10%); 
+}
+      
 .title {
         color:#323232;
         padding:0.382em 0;
@@ -112,4 +108,6 @@ dd .accordion-content {
         position:absolute;
         bottom:-11px;
         right: 20px; }
+
+
 
