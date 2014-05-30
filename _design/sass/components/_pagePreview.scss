@@ -1,26 +1,49 @@
+@mixin page-preview-title {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: 'Univers LT W01 55 Roman','Droid Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  line-height: 1em;
+ }
+
+
   .preview-box {
-    max-width: 75%;
-    text-align: center; 
+    max-width: 100%;
+    text-align: left;
+    margin-bottom: 2em; 
 
     @include breakpoint (large) {
       text-align: left;
     }
   }
 
-  .preview-img-wrap h2 {
-  color: #fff;
-  font-size: 1em;
-  font-weight: 400;
-  font-family: 'Univers LT W01 55 Roman','Droid Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-  line-height: 1em;
-
- 
- }
-
-  #main-content .preview-img-wrap {
+  .preview-img-wrap { 
+    color: #fff;
+    border-bottom: none;
+    background: lighten($color-main, 85%);
+    display: block;
+    height: 0;
+    margin-bottom: 1em;
+    overflow:hidden;
+    padding-top: 56.25%; //golden ratio 320px/1.618 = 197.775px prevents gap with header and img when resizing
     position:relative;
-    overflow:hidden; 
+    width: 100%;
+        
 
+
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      @include breakpoint (small) {
+        height: auto;
+      }
+    }
 
        .preview-img-wrap__title {
         bottom:0;
@@ -29,6 +52,7 @@
         /*padding: 0.184em 0.618em;*/
         position: absolute;
         width:100%; 
+        @include page-preview-title;
 
         
           a {
@@ -45,45 +69,17 @@
                 } 
             }
         }
+
+        img:hover {
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90)0.6;
+          opacity: 0.8;
+        }
   }
 
 
-#main-content .preview-img-wrap img:hover {
-   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90)0.6;
-      opacity: 0.8;
-    }
-
-
-.project-img-wrap, .preview-img-wrap {
-    color: #fff;
-    display: block;
-    height: 0;
-    overflow:hidden;
-    padding-top: 11em; //golden ratio 320px/1.618 = 197.775px prevents gap with header and img when resizing
-    position:relative;
-    width: 100%;
-    border-bottom: none;
-    background: lighten($color-main, 85%);
+.project-img-wrap  {
+    @extend .preview-img-wrap
 }
 
-#main-content .preview-img-wrap{
-  margin-bottom: 1em;    
 
-
-  img {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    @include breakpoint (small) {
-      height: auto;
-    }
-  }
-}
