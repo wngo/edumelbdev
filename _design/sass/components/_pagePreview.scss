@@ -2,7 +2,7 @@
   color: #fff;
   font-size: 1em;
   font-weight: 400;
-  font-family: 'Univers LT W01 55 Roman','Droid Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Univers LT W01 55 Roman','Helvetica Neue',Helvetica,Arial,sans-serif;
   line-height: 1em;
  }
 
@@ -46,9 +46,11 @@ http://www.sitepoint.com/maintain-image-aspect-ratios-responsive-web-design/
       bottom: 0;
 
       @include breakpoint (small) {
-        height: auto;
+        height: auto; }  
       }
-    }
+
+    &:hover h2 a {
+            background-color: lighten($color-main, 10%); }
 
        .preview-img-wrap__title {
         bottom:0;
@@ -70,16 +72,15 @@ http://www.sitepoint.com/maintain-image-aspect-ratios-responsive-web-design/
                 background-color: $color-light-main;
                 border-bottom:none;
                 color: #fff;
-                padding: 0.184em 0.618em;
+
                 } 
             }
+          h2 a:hover {
+            color: #fff;
+          }
         }
 
-        img:hover {
-          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90)0.6;
-          opacity: 0.8;
-        }
+        
   }
 
 

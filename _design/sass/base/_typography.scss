@@ -25,16 +25,6 @@ em, i {
 }
 
 
-h4{
-    color: #20201e;
-    font-size:1.184em;
-    font-family:'Univers LT W01 65 Bold','Droid Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    line-height: 1.6em;
-    margin-bottom:1.184em;
- 
-}
-
 h2 {
   font-family: 'Univers LT W01 65 Bold', 'Droid Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 400;
@@ -53,18 +43,23 @@ h2 {
 h3 { 
     font-family: $body-font-roman;
     font-weight: 400;
-    font-size:1.263em;
+    font-size:1.618em;
     line-height: 1.184em;
-    margin: o 0 0.732em 0;
+    margin: 0 0 1em 0;
     padding: 0; 
 
 	
-	&:hover {
-		background: none;
-	}
+	     &:hover {
+		      background: none; } 
+  }
 
-
-}
+h4{
+    color: #20201e;
+    font-size:1.184em;
+    font-family:'Univers LT W01 65 Bold','Droid Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.6em;
+    margin-bottom:1.184em; }
 
 h5 {
     color:$color-main;
@@ -118,29 +113,27 @@ a.button {
 
 
     a, a:active, a:visited {
-
     border-bottom: none;
     color: $color-main;
-    transition-property: background-color;
+    transition-property: color;
     transition-timing: ease-out;
-    transition-duration: 0.5s;
+    transition-duration: 1s;
     line-height: 1.618em;
-    transition-property: background-color;
+    transition-property: color;
     transition-timing: ease-out;
-    transition-duration: 0.5s;
+    transition-duration: 1s;
+    text-decoration: none;
     }
     
     a:hover {
       color: lighten($color-main,10%);
+      border-bottom: 1px solid lighten($color-main, 10%);
+      transition-property: color;
+      transition-timing: ease-out;
+      transition-duration: 1s;
     }
 
-#main-content a:hover, #main-content a:active, #main-content a:focus {
-  color: lighten($color-main,10%);
-  border-bottom: 1px solid lighten($color-main, 10%);
- 
-}
-
-        
+  
 .pullquote, #main-content .intro {
   color: #20201e;
   font-size:1.263em;

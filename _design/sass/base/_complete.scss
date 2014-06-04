@@ -71,15 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 html {
     overflow-y: scroll;
 }
-a:hover, a:active {
-    outline: none;
-}
-a, a:active, a:visited {
-    color: #4c5e71;
-}
-a:hover {
-    color: #036;
-}
+
 ul, ol {
     margin-left: 1.8em;
 }
@@ -292,27 +284,7 @@ button {
     -webkit-background-size: 120px;
     background-image: -moz-repeating-linear-gradient(center left, transparent, transparent 20.0px, rgba(255, 0, 0, 0.2) 20.0px, rgba(255, 0, 0, 0.2) 120px);
 }
-@font-face {
-    font-family: 'droid sans';
-    font-weight: normal;
-    font-style: normal;
-    src: url("../fonts/DroidSans-webfont.eot");
-    src: url("../fonts/DroidSans-webfont.eot?#iefix") format("eot"), url("../fonts/DroidSans-webfont.woff") format("woff"), url("../fonts/DroidSans-webfont.ttf") format("truetype"), url("../fonts/DroidSans-webfont.svg#webfontw7zqO19G") format("svg");
-}
-@font-face {
-    font-family: 'droid sans';
-    font-weight: bold;
-    font-style: normal;
-    src: url("../fonts/DroidSans-Bold-webfont.eot");
-    src: url("../fonts/DroidSans-Bold-webfont.eot?#iefix") format("eot"), url("../fonts/DroidSans-Bold-webfont.woff") format("woff"), url("../fonts/DroidSans-Bold-webfont.ttf") format("truetype"), url("../fonts/DroidSans-Bold-webfont.svg#webfontSOhoM6aS") format("svg");
-}
-@font-face {
-    font-family: 'droid sans mono';
-    font-weight: normal;
-    font-style: normal;
-    src: url("../fonts/droidsansmono-webfont.eot");
-    src: url("../fonts/droidsansmono-webfont.eot?#iefix") format("eot"), url("../fonts/droidsansmono-webfont.woff") format("woff"), url("../fonts/droidsansmono-webfont.ttf") format("truetype"), url("../fonts/droidsansmono-webfont.svg#webfontcbE9jlbh") format("svg");
-}
+
 @media screen and (max-width:630px) {
     .mobile-nav {
     margin-top: 30px;
@@ -576,26 +548,7 @@ pre::-webkit-scrollbar-thumb:horizontal {
 pre::-webkit-scrollbar-corner {
     background: #56738f;
 }
-a {
-    text-decoration: none;
-}
-a:hover, a:focus {
-    -webkit-transition: color 150ms linear;
-    -moz-transition: color 150ms linear;
-    transition: color 150ms linear;
-    color: #c33;
-}
-.main a {
-    border-bottom: 1px solid;
-}
-.main a:visited {
-    color: #4d476b;
-    border-bottom: 1px solid #4d476b;
-}
-.main a:visited:hover {
-    color: #c33;
-    border-bottom: 1px solid #c33;
-}
+
 ul, ol {
     margin: 10px 0 10px 0;
     padding: 0 0 0 20px;

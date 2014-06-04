@@ -1,0 +1,36 @@
+
+
+
+/** social media header **/
+#main-content .anchor-nostyle {
+ 
+ border-bottom:none; 
+ color:#005596; }
+
+.social-media-icons {
+    position: absolute;
+    right: 0px !important;
+    top: 25px; }
+
+.social-media-icons a:first-child {
+    margin-right: 1em;
+}
+
+.social-media-icons a, .social-media-icons a:active {
+    border-bottom: none;
+    color: #ffffff; 
+  }
+
+.social-media-icons a:first-child {
+    margin-right: 1em;
+}
+
+.social-media-icons a {
+    color: #ffffff; 
+
+    &:hover {
+      color: lighten($color-main, 10%);
+     }
+    }
+
+ 

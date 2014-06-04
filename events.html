@@ -28,7 +28,8 @@
    
       <div class='main d-all' id='main-content' role='main'>
     
-                  <div id="filters"><dl class="sub-nav">
+                  <div id="filters-nav">
+                    <dl class="fileters-nav__list">
                      <dt>Filter events:</dt>
                      <dd class="active">
                       <a href="#">All</a>
@@ -196,7 +197,7 @@
       <hr>
         <div class="right">
         <a href="http://education.unimelb.edu.au/news_and_activities/events/events_calendar" class="button">
-          Full Event Calendar
+          Full Event Calendar <i class="fa fa-calendar-o fa-lg"></i> 
         </a>
         </div>
         <hr>
@@ -269,7 +270,7 @@ $(".fancybox").fancybox();
  });
 
   //when a link in the filters div is clicked...  
-    $('#filters a').click(function(e){  
+    $('#filters-nav a').click(function(e){  
   
         //prevent the default behaviour of the link  
         e.preventDefault();  
