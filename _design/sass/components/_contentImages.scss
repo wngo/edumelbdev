@@ -1,3 +1,20 @@
 .image-wrapper {
 	margin-bottom: 1.618em;
 }
+
+    
+.content-img-left{
+    width: 25.3464%;
+    float: left;
+    margin-right: 1.184em;}
+            
+.content-img-right{
+    width: 25.3464%;
+    float: right;
+    margin-left: 1.184em;    }    
+            
+.content-img-right img, .content-img-left img , .content-img {
+    padding: 3px;
+    margin-top: 0.382em;
+    width: 100%; 
+  }
