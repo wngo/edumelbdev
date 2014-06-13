@@ -1,39 +1,76 @@
+.main-carousel {
+  max-width: 960px;
+}
+
+.home-banner-wrapper {
+  margin: 0 auto;
+}
+
 #main-content #home-banners .banner-navigation {
 background: #005596;
 bottom: 0;
 right: 10px;
-top: auto;}
+top: auto; }
 
 
 .banner-img-wrapper {
+
    float:left;
    height: 300px;
-   width:60%;
-overflow:hidden
+   width: 100%;
+   overflow: hidden;
+
+   @include breakpoint(medium) {
+    width: 60%; }
+
+    @include breakpoint(large) {
+    width: 60%; }
 }
+
 #home-banners .home-banner img {
- height:300px;
- }
+ height: 300px;
+ width: auto; 
+
+  @include breakpoint(medium) {
+    width: 100%; }
+
+    @include breakpoint(large) {
+    width: 100%; }
+}
 
 #main-content #home-banners .home-banner .summary {
+  background: rgba(255,255,255,0.9);
   float:left;
-  position: relative;
-  height:300px;
-  width:40%;
+  bottom: 0px; 
+  left: 0px; 
+  position: absolute;
+  padding: 1em;
+  height: 300px;
+  width: 100%;
+
+  @include breakpoint(large) {
+    background: none;
+    position: relative;
+    width:40%; }
 }
-.summary h2{
+
+
+
+.summary h2 {
 color: #005596;
 margin-bottom: 0;
-padding: 0 10px;
 font-size:176%;
-text-align: left;
-margin-top:2em;}
+text-align: left; }
 
 .summary h4 {
  margin-bottom: 0; }
 
 #home-banners .home-banner .summary .hero-heading {
-font-size: 220%; }
+font-size: 160%; 
+  
+  @include breakpoint(large) {
+    font-size: 200%; }
+}
 
 #home-banners .home-banner .summary .hero-heading a {
   line-height:1.263em; }
@@ -42,8 +79,27 @@ h2.reset-m {
  margin: 0; }
 
 #home-banners .home-banner .subheading {
-  font-size:180%;  
-  margin-top:0; }
+  font-size: 100%;  
+  margin-top: 0; 
+    
+
+    @include breakpoint(medium) {
+      font-size: 120%;
+    }
+
+    @include breakpoint(large) {
+      font-size: 180%;
+    }
+}
+
+#home-banners .home-banner .subheading-sm {
+  font-size: 90%;  
+  margin-top: 0; 
+    
+  @include breakpoint(large) {
+    font-size: 100%; 
+  }
+}
 
 #home-banners .home-banner .summary p, #home-banners .home-banner .summary strong, .summary h4 {
   color:#005596;
@@ -54,13 +110,190 @@ h2.reset-m {
   margin-bottom: 2em;
 }
 
-#main-content #home-banners .home-banner .summary {
-background-color: #ffffff;
- background: rgba(255,255,255,1); }
-
-
+#home-banners .summary__sm {
+  font-size: 90%;
+}
 
 .banner:hover .banner-text h2 {
   opacity: 1;
   transition: all 0.5s ease-in;
 }
+
+ 
+
+/*******************************
+
+  BANNER ROLLER
+
+************************************/
+.banners {
+  padding: 0px 0px 5px 0px; 
+  width: 100% !important; 
+  max-width: 100% !important; 
+  background: transparent; 
+  overflow: hidden; 
+}
+
+#home-banners {
+  margin: 0px auto 0px; width: 940px
+}
+
+
+#home-banners {
+  z-index: 2; 
+  position: relative; 
+  margin-bottom: 5px; 
+  height: 300px;
+  width:100%;
+}
+
+#home-banners .home-banner {
+  position: absolute;
+  height: 300px;
+  overflow: hidden;
+  TOP: 0px; 
+  left: 0px; 
+  width:100%;
+}
+
+
+
+#home-banners .home-banner p, .home-banner h4{
+  margin: 1em 0;
+  }
+
+
+.home #home-banners  a {
+  color: $color-main;
+  border-bottom: 1px solid $color-main;
+
+}
+
+#home-banners .banner-navigation a {
+line-height:1.618em !important; }
+
+
+#home-banners .home-banner P.title {
+  font-family: "Droid Sans", "Helvetica Neue", Arial, sans-serif; margin-bottom: -10px; font-size: 25px; font-weight: bold
+}
+#home-banners .home-banner P.button-container {
+  position: absolute; width: auto; bottom: 2px; left: 730px
+}
+#home-banners .home-banner A.button {
+    background: none repeat scroll 0 0 #134272;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+    font-family: "Droid Sans","Helvetica Neue",Arial,sans-serif;
+    font-weight: bold;
+    padding: 3px 12px;
+}
+
+
+#home-banners .banner-navigation {
+    background: none repeat scroll 0 0 #003366;
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px 0 5px 5px;
+    position: absolute;
+    right: 10px;
+    bottom: -17px;
+    z-index: 10;
+}
+
+#home-banners .next-banner {
+  text-indent: -300px; margin: 0px 5px 0px 0px; width: 25px; display: block; float: left; overflow: hidden; -webkit-transition: opacity 300ms linear
+}
+#home-banners .previous-banner {
+  text-indent: -300px; margin: 0px 5px 0px 0px; width: 25px; display: block; float: left; overflow: hidden; -webkit-transition: opacity 300ms linear
+}
+#home-banners .play-pause-banner {
+  text-indent: -300px; margin: 0px 5px 0px 0px; width: 25px; display: block; float: left; overflow: hidden; -webkit-transition: opacity 300ms linear
+}
+#home-banners .next-banner:hover {
+  opacity: 0.6
+}
+#home-banners .next-banner:active {
+  opacity: 0.6
+}
+#home-banners .previous-banner:hover {
+  opacity: 0.6
+}
+#home-banners .previous-banner:active {
+  opacity: 0.6
+}
+#home-banners .play-pause-banner:hover {
+  opacity: 0.6
+}
+#home-banners .play-pause-banner:active {
+  opacity: 0.6
+}
+#home-banners .previous-banner {
+  background: url(data:image/gif;base64,R0lGODlhCQAJAKIFAOXq71Z4mtff5ytVgI+lvAAzZgAAAAAAACH5BAEAAAUALAAAAAAJAAkAAAMZWFohsyoAIKCcYV2Q1wQExHydRopXhTpKAgA7) no-repeat 50% 50%
+}
+#home-banners .next-banner {
+  background: url(data:image/gif;base64,R0lGODlhCQAJAPIFAOXq71Z4mtff5ytVgI+lvAAzZgAAAAAAACH5BAUAAAUALAAAAAAJAAkAQAMXWDUS+qtBSIB9wQKHNVeC9XUilJUgWiQAOw==) no-repeat 50% 50%; margin-RIGHT: 0px
+}
+#home-banners .play-pause-banner {
+  background: url(data:image/gif;base64,R0lGODlhCQAJAJECAOXq73OPqwAzZgAAACH5BAEAAAIALAAAAAAJAAkAAAIVFBASJ4bKXFqgnRkvrHLbR30Yp4UFADs=) no-repeat 50% 50%
+}
+.paused#home-banners .play-pause-banner {
+  background: url(data:image/gif;base64,R0lGODlhCQAJAPMIAI+lvLrI1itVgOXq71Z4mg4+btff58jT3gAzZgAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAUAAAgALAAAAAAJAAkAQAQaEKEgpJX02sH52RxQXJ1IGoSGdEMmse6KXhEAOw==) no-repeat 50% 50%
+}
+#home-banners .previous-banner {
+  
+}
+#home-banners .next-banner {
+  margin-RIGHT: 0px
+}
+#home-banners .play-pause-banner {
+  
+}
+.paused#home-banners .play-pause-banner {
+  
+}
+#home-banners .banner-count {
+  padding: 1px 8px; 
+  letter-spacing: 3px; 
+  color: rgb(165,195,222); 
+  font-size: 11px; 
+}
+
+#home-banners .banner-count em {
+  font-style: normal
+}
+#home-banners-alt {
+  position: relative; margin: 0px auto; width: 1000px; height: auto; left: 10px
+}
+#home-banners-alt .home-banner {
+  position: relative; float: left; overflow: hidden; TOP: auto; box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3); -o-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3)
+}
+#home-banners-alt .home-banner .summary {
+  position: absolute; width: 100%; bottom: 0px; background: rgb(0,51,102); left: 0px; pointer-events: none
+}
+#home-banners-alt .home-banner p {
+  margin: 10px; color: #fff
+}
+
+#home-banners-alt .first {
+  width: 460px; height: 380px
+}
+#home-banners-alt .second {
+  margin: 0px 0px 20px 20px; width: 460px; height: 180px
+}
+#home-banners-alt .second img {
+  margin-top: -160px
+}
+#home-banners-alt .third {
+  margin: 0px 0px 0px 20px; width: 220px; height: 180px
+}
+#home-banners-alt .third img {
+  width: 100%
+}
+#home-banners-alt .third p {
+  display: none
+}
+#home-banners-alt .third p.title {
+  display: block; font-family: helvetica, arial, sans-serif; margin-bottom: 10px; font-size: 12px}
+
+
+
+
+

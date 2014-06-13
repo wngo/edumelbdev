@@ -1,8 +1,6 @@
  
 
 .wrapper {
-	position: relative;
-	
 
 	.main {
 		background: rgba(255,255,255,0.9);
@@ -63,39 +61,6 @@ body {
 .wrapper.no-landing, .main-content-wrapper.no-landing {
     margin-top: 4em;
 }
-
-.content-img-left{
-    width: 25.3464%;
-    float: left;
-    margin-right: 1.184em;}
-            
-.content-img-right{
-    width: 25.3464%;
-    float: right;
-    margin-left: 1.184em;    }    
-            
-.content-img-right img, .content-img-left img , .content-img {
-    padding: 3px;
-    margin-top: 0.382em;
-    width: 100%; 
-  }
-
-figure {
-    position:relative;
-margin: 0;
-padding: 0;
-width: 100%;}
-
-figcaption, .figcaption { 
-     position: absolute;
-     background: black;
-     background: rgba(0,0,0,0.75);
-     color: #FFFFFF;
-     font-size: 0.732em;
-     padding: 5px;
-     bottom:6px;
-     left: 0px;
- }
 
           
 #video-content {

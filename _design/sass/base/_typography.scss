@@ -16,6 +16,7 @@ body {
 	 font-family: $body-font-family;
     line-height: $base-line-height;
     font-size: $base-em-font-size; 
+
 }
 
 em, i {
@@ -136,10 +137,15 @@ a.button {
   
 .pullquote, #main-content .intro {
   color: #20201e;
-  font-size:1.263em;
+  font-size: $ms-up1;
   font-family: $body-font-family;
-  line-height: 1.618em;
-  font-weight: 400; }
+  line-height: $base-line-height;
+  font-weight: 400; 
+    
+    @include breakpoint(small) {
+      font-size: 1em; }
+
+  }
 
 
 
@@ -219,12 +225,6 @@ i {
 	margin-left: 0.1em;
 }
 
-.event-date {
-	color : #999999;
-	display: block;
-	font-size: 90%;
-	margin: 0.25em 0;
-}
 
 h1.title {
   color:$color-main;

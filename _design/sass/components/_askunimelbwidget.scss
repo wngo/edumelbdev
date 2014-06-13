@@ -30,4 +30,87 @@ display:block;
 }
 
   
- 
+ .rn_Hide {
+    display: none;
+}
+.rn_Show {
+    display: block;
+}
+.KnowledgeSyndication {
+    padding: 5px;
+}
+.KnowledgeSyndication h3, #content .KnowledgeSyndication h3 {
+    font-size: 1.2em;
+}
+#content .KnowledgeSyndication div {
+    padding-top: 0;
+}
+.rn_SearchArea {
+    padding-bottom: 5px;
+}
+.rn_SearchBox {
+    display: inline;
+}
+.rn_Query {
+    border: 1px solid #999999;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    float: left;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    padding: 6px 70px 6px 4px;
+    width: 90%;
+}
+.rn_Query:focus {
+    box-shadow: 2px 2px 7px #789FBF inset;
+    outline: medium none;
+}
+.rn_SearchButton input:hover {
+    color: #036EAB;
+}
+.rn_SearchButton {
+    padding-top: 0;
+}
+.rn_SearchButton input {
+    background-color: rgba(0, 0, 0, 0);
+    border: medium none;
+    color: #333333;
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-left: -75px;
+    margin-top: 2px;
+    padding-top: 6px;
+    width: auto;
+}
+.rn_SearchButton input[type="button"], .rn_SearchButton input[type="submit"] {
+    cursor: pointer;
+}
+.rn_Corrections, .rn_Suggestions {
+    font-weight: normal;
+    padding-bottom: 5px;
+}
+.rn_Documents {
+    background-color: #F5F5F5;
+    border: 1px solid #DCDCDC;
+    border-radius: 3px;
+    margin-top: 2px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+    width: 95%;
+}
+.rn_Documents h3 {
+    font-size: 1em;
+}
+.rn_Content {
+    clear: left;
+    padding-bottom: 5px;
+}
+.rn_screen_reader_only {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}

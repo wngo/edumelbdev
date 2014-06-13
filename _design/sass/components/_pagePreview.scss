@@ -88,4 +88,11 @@ http://www.sitepoint.com/maintain-image-aspect-ratios-responsive-web-design/
     @extend .preview-img-wrap
 }
 
+.page-preview-wrap {
+  padding: 0 10px;
+}
 
+.page-preview {
+  @include breakpoint(small) {
+    margin-bottom: 2em; }
+}
