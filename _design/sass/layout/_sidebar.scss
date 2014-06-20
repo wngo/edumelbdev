@@ -1,4 +1,4 @@
- @mixin color-box ($background: lighten($color-main, 70%), $border: #ECF7F7) {
+ @mixin color-box ($background: lighten($color-main, 68%), $border: lighten($color-main, 60%)) {
  	padding: 10px;
     background: $background;
 	border: 1px solid $border; 
@@ -34,7 +34,7 @@
 			}
 
 			figcaption {
-				display: inline-block;
+				display: none;
 				position: relative;
 				width: 100%;
 			}
@@ -47,6 +47,14 @@
 				width: 100%;
 
 			}
+		}
+
+		@include breakpoint (medium) {
+			img {
+				max-width: 50%;
+			}
+
+			max-width: 75%;
 		}
     }
 
@@ -68,4 +76,7 @@
 			display: none; }
 	}
   }
+
+
+
    
