@@ -1,37 +1,35 @@
  
 /** Events page filtering **/
 
-#main-content .fileters-nav__list {
+#main-content .filters-nav__list {
   display: block;
   width: auto;
   overflow: hidden;
-  margin: -0.22222rem 0 2rem 0;
-  padding-top: 0.22222rem;
-  margin-right: 0;
-  margin-left: -0.66667rem; 
 
    dt {
-    text-transform: uppercase; }
+    text-transform: none; }
 
    dt,  dd,  li {
     float: left;
     display: inline;
-    margin-left: 0.88889rem;
-    margin-bottom: 0.55556rem;
+    
+    margin: 0.8em 0.4em;
     font-weight: normal;
-    font-size: 0.77778rem;
+    font-size: 0.8em;
     color: #999999; }
 
      dt a,  dd a,  li a {
       text-decoration: none;
       border-bottom: none;
       color: #999999;
-      font-variant: small-caps;
-      padding: 0.16667rem 0.88889rem; }
+      font-size: 0.9em;
+      text-transform: uppercase;
+      padding: 0.4em 0.6em; }
 
        dt a:hover,  dd a:hover,  li a:hover {
         color: #fff;
         background-color: lighten($color-main, 10%);
+        cursor: pointer;
         -webkit-border-radius: 3px;
         border-radius: 3px; }
 
@@ -40,11 +38,46 @@
       border-radius: 3px;
       font-weight: normal;
       background: $color-main;
-      padding: 0.16667rem 0.88889rem;
+      padding: 0.4em;
       cursor: default;
       color: #fff; }
 
        dt.active a:hover,  dd.active a:hover,  li.active a:hover {
         background: #999; }
         
+      
+
+/** filter nav button styles **/
+      button{
+        display: inline-block;
+        padding: .4em .8em;
+        background: lighten($color-main, 20%);
+        border: 0;
+        color: #ddd;
+        font-size: 16px;
+        font-weight: 300;
+        border-radius: 4px;
+        cursor: pointer;
       }
+
+      button.active{
+        background: #68b8c4;
+      }
+
+      button:focus{
+        outline: 0 none;
+      }
+}
+
+/* initiate events sorting*/
+#container .mix {
+  display: none;
+}
+
+/* hide div for when no events */
+.no-event {
+  display: none;
+}
+.fail .no-event {
+  display: block;
+}

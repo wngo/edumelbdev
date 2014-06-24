@@ -68,7 +68,11 @@
 }
 
 .event-date {
-  color : #999999;
+  color : #323232;
+  font-family: $font-sans-bold;
+  float: left;
+  font-size: 80%;
+  text-transform: uppercase;
   margin: 0.25em 0;
 }
 
