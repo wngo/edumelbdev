@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title><MySource_PRINT id_name="__global__" var="asset_name" /> : <MySource_PRINT id_name="__global__" var="site_name" /></title>  
+    
+<!--
+  Page Maintained by: %asset_metadata_UM.Maintainer.Name%, %asset_metadata_UM.Maintainer.Department%
+  Content Authorised by: %asset_metadata_UM.Authoriser.Title%, %asset_metadata_UM.Organisational.Unit%
+  Asset ID: %globals_asset_assetid%
+-->
+    <MySource_AREA id_name="metadata" design_area="metadata"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!--web fonts-->
+ <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/e1b5bbd4-cc9e-4a38-9263-a789865e3356.css"/>
+
+
+ <MySource_AREA id_name="head" design_area="head" />
+
+    <!-- GLOBAL RESOURCES -->
+    
+    <!-- SIMPLE EDIT -->
+    <MySource_AREA id_name="simple_edit" design_area="show_if">
+    <MySource_SET name="condition"  value="simple_edit_mode" />
+    <MySource_THEN>
+    <!-- In simple edit mode, load an extra 'reset' CSS to fix problems
+    caused by template styles and disable the injection javascript -->
+    <link rel="stylesheet" type="text/css" href="//a1.unimelb.edu.au/css/matrix/simple_edit_2011.css" />
+    
+    </MySource_THEN>
+    <MySource_ELSE>
+  
+ <script src="//brand.unimelb.edu.au/global-header/js/injection.js"></script>
+    </MySource_ELSE>
+    </MySource_AREA>
+    <!-- /SIMPLE EDIT -->
+
+  <!-- SITE-SPECIFIC RESOURCES -->
+    <MySource_AREA id_name="custom_css" design_area="linked_css" print="no">
+        <MySource_SET name="tag_type" value="link_tag" /> 
+        <MySource_SET name="media" value="all" />
+    </MySource_AREA>
+
+
+<!--[if lte IE 8]>
+  <link rel="stylesheet" type="text/css" href="mysource_files/ie8-and-down.css" />
+<![endif]-->
+
+<!-- fancybox css-->
+<link rel="stylesheet" type="text/css" href="mysource_files/jquery.fancybox.css" />
+
+ <link rel="stylesheet" href="http://brand.unimelb.edu.au/global-header/css/style.css">
+    
+    <!-- HEAD EXTRAS : additional scripts and css -->
+    <MySource_AREA id_name="head_extras" design_area="nest_content" >
+<MySource_SET name="type_codes" value="page" />
+      </MySource_AREA>
+    <!-- /HEAD EXTRAS -->
+
+    <MySource_AREA id_name="side_bar_before" design_area="nest_content"  print="no"><MySource_SET name="type_codes" value="page" />
+</MySource_AREA>
+
+    <MySource_AREA id_name="side_bar_after" design_area="nest_content"  print="no"><MySource_SET name="type_codes" value="page" />
+</MySource_AREA>
+
+    <!-- /SITE-SPECIFIC RESOURCES -->
+    
+    <MySource_AREA id_name="template_vars" design_area="declared_vars" print="no">
+    <MySource_DECLARE name="body_class" value="no-logo mgse" type="text" description="Classes that are added to the body element to control header images etc."/>
+    <MySource_DECLARE name="content_classes" value="main col-6 first" type="text" description="Classes to add to the main-content div. At a minimum, you should include the width, in columns, of the main content area."/>
+   </MySource_AREA>
+
+  
+</head>
+<body class="<MySource_PRINT id_name='template_vars' var='body_class' />">
+
+<map name="MGSE-logo" id="MGSE-logo">
+<area shape="rect" alt="University of Melbourne" title="" coords="0,0,130,126" href="http://www.unimelb.edu.au/" target="">
+<area shape="rect" alt="MGSE" title="" coords="130,0,575,126" href="http://education.unimelb.edu.au/" target="">
+</map>
+
+<div class="wrapper-header">
+    <div class="header d2-d7 m1 t-all">
+        <div class="hgroup">
+            <MySource_AREA id_name="branding_space" design_area="nest_content" ><MySource_SET name="type_codes" value="page" />
+            </MySource_AREA>
+        </div>
+
+<div class="social-media-icons">
+<a href="#"><i class="fa fa-twitter fa-2"></i></a>
+<a href="#"><i class="fa fa-youtube-play fa-2"></i></a>
+</div>
+
+         <div class="mgse-search">
+            
+                    <form id="searchbox_010626520995356427609:quos3ex_5tm" action="/search"> 
+                      <input id="s" name="s" size="120" type="search" placeholder="Search MGSE" />
+                 
+                   </form> 
+        </div>
+        <hr>
+   
+    </div>
+</div>
+
+
+
+<MySource_AREA id_name="standard_menu" design_area="menu_normal"> 
+<MySource_SET name="show_subs" value="always" /> 
+<!-- set navigation to ignore a range of asset types -->
+<MySource_SET name="unwanted_asset_types" value="image, news_item, calendar_event, file" />
+
+<MySource_SET name="settings.class.normal" value="" />
+<MySource_SET name="settings.class.current" value="current" />
+<MySource_SET name="settings.class.hierarchy" value="hierarchy" />
+
+<div class="menu-button">Menu</div>
+    <div class="main_nav d2-d8" role="navigation"><!-- sidebar -->
+        <MySource_PRINT id_name="side_bar_before" />
+    
+       
+            
+           <ul class="flexnav" data-breakpoint="700">
+          <MySource_ASSET> 
+          <li class="<MySource_PRINT var="settings.class" />">
+            <a href="<MySource_PRINT var='asset_link' />"> <MySource_PRINT var="asset_short_name" /> </a> 
+              <MySource_SUB design_area="menu_normal"> 
+              <MySource_SET name="show_subs" value="always" />
+              <MySource_SET name="settings.class.normal" value="" />
+              <MySource_SET name="settings.class.current" value="current" />
+              <MySource_SET name="settings.class.hierarchy" value="hierarchy" />
+              <ul> 
+              <MySource_ASSET> 
+              <li class="<MySource_PRINT var="settings.class" />"><a href="<MySource_PRINT var='asset_link' />"> <MySource_PRINT var="asset_short_name" /> </a> 
+                  <MySource_SUB design_area="menu_normal">
+                  <MySource_SET name="show_subs" value="always" />
+                  <MySource_SET name="settings.class.normal" value="" />
+                  <MySource_SET name="settings.class.current" value="current" />
+                  <MySource_SET name="settings.class.hierarchy" value="hierarchy" />
+          <ul> 
+                  <MySource_ASSET> 
+                  <li class="<MySource_PRINT var="settings.class" />"><a href="<MySource_PRINT var='asset_link' />"> <MySource_PRINT var="asset_short_name" /> </a> 
+                      <MySource_SUB design_area="menu_normal"> 
+                      <MySource_SET name="show_subs" value="always" />
+                      <MySource_SET name="settings.class.normal" value="" />
+                      <MySource_SET name="settings.class.current" value="current" />
+                      <MySource_SET name="settings.class.hierarchy" value="hierarchy" />
+                      <ul> 
+                      <MySource_ASSET> 
+                      <li><a class="<MySource_PRINT var="settings.class" />" href="<MySource_PRINT var='asset_link' />"> <MySource_PRINT var="asset_short_name" /> </a></li> 
+                      </MySource_ASSET> 
+                      </ul>
+                      </MySource_SUB> 
+                  </li> 
+                  </MySource_ASSET> 
+                  </ul> 
+                  </MySource_SUB> 
+              </li> 
+              </MySource_ASSET> 
+              </ul>
+              </MySource_SUB> 
+          </li> 
+          </MySource_ASSET> 
+
+            </ul>
+        
+        <hr>
+        <MySource_PRINT id_name="side_bar_after" />
+   </div><!-- /navigation -->
+    <hr>
+</MySource_AREA>
+
+ <!-- PROJECT PAGE EXTRAS : customising header area 
+       REMOVE WHEN PROJECT PAGES HAVE BEEN UDPATED WITH HERO IMAGES-->
+    <MySource_AREA id_name="project_extras" design_area="nest_content" >
+        <MySource_SET name="type_codes" value="page" />
+    </MySource_AREA>
+
+<!-- HERO IMAGES FOR ALL PAGES -->
+<div class="title-image hero-img d-all t-all m-all">
+  <MySource_AREA id_name="landingPage_hero" design_area="nest_content" >
+        <MySource_SET name="type_codes" value="page" />
+    </MySource_AREA>
+</div>
+
+<div class="d-all">
+
+<div class="d2-d7 main-content-wrapper">
+
+<!-- Breadcrumbs -->
+<div role="navigation" class="d-all t-all breadcrumbs">
+ <MySource_AREA id_name="page_lineage" design_area="asset_lineage">
+ <a href="<MySource_PRINT id_name='__global__' var='site_link' full_url='true'/>" rel="home"><MySource_PRINT id_name="__global__" var="site_name" /></a>
+
+ <MySource_SET name="levels_to_print" value="0" />
+ <MySource_SET name="prefix_with_home_link" value="false" />
+ <MySource_SET name="suffix_with_current_link" value="true" />
+ <MySource_SET name="prefix_with_divider" value="true" />
+ <MySource_SET name="suffix_with_divider" value="false" />
+ <MySource_SET name="show_hidden_links" value="false" />
+ <MySource_DIVIDER>  <span class="divider"><i class="fa fa-angle-right"></i></span></MySource_DIVIDER> 
+ <MySource_ASSET>
+ <a href="<MySource_PRINT var='asset_link' />"><MySource_PRINT var='asset_short_name' /></a>
+ </MySource_ASSET>
+ </MySource_AREA>
+</div>
+<!-- End breadcrumbs -->
+
+
+<MySource_AREA id_name="auto_heading" design_area="asset_lineage">
+
+  <div class="title-wrap d-all t-all m-ll">
+          <h1 class="title"><MySource_PRINT id_name="__global__" var="asset_name" /></h1>
+  </div>
+</MySource_AREA>
+
+
+
+
+    <div class='<MySource_PRINT id_name="template_vars" var="content_classes" />' id='main-content' class="d-all t-all m-all" role='main'>
+    
+        <MySource_AREA id_name="body" design_area="body" />
+
+    </div>
+    <!-- /main-content -->
+    
+  </div>
+
+</div><!-- /wrapper -->
+<hr>
+<div class="footer d-all">
+    <div id="local" class="wrapper d2-d7">
+        <p class="footertitle">
+<MySource_PRINT id_name="__global__" var="site_name" /></p>
+        <MySource_AREA id_name="footer" design_area="nest_content" print="no"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+
+<MySource_AREA id_name="footer_extras" design_area="nest_content" ><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+
+      <MySource_AREA id_name="simple_edit_footer" design_area="show_if">
+          <MySource_SET name="condition"  value="simple_edit_mode" />
+          <MySource_ELSE>
+
+        <ul class="d2-d3">
+            <li><strong>Authoriser:</strong><br>%asset_metadata_UM.Authoriser.Title%</li>
+            <li><strong>Maintainer:</strong><br>%asset_metadata_UM.Maintainer.Name%</li>
+        </ul>
+        <MySource_PRINT id_name="footer" />
+        
+        <ul class="d4-d5">
+            <li><strong>Date created:</strong><br>
+            %asset_created_j% %asset_created_F% %asset_created_Y%</li>
+            <li><strong>Last modified:</strong><br>
+            %asset_updated_j% %asset_updated_F% %asset_updated_Y%</li>
+        </ul>
+        <hr>
+          </MySource_ELSE>
+      </MySource_AREA>
+    </div><!-- /local -->
+</div><!-- /footer -->
+
+ <!-- GLOBAL RESOURCES -->
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    
+    <!-- GLOBAL RESOURCES -->
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script src="http://education.unimelb.edu.au/__data/assets/js_file/0008/948383/jquery.flexnav.min.js"></script>
+<!-- mixitup -->
+<script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+   
+ $(".flexnav").flexNav({
+    'animationSpeed': 250,
+ });
+
+  //when a link in the filters div is clicked...  
+    $('#filters-nav a').click(function(e){  
+  
+        //prevent the default behaviour of the link  
+        e.preventDefault();  
+  
+        //get the id of the clicked link(which is equal to classes of our content  
+        var ID = $(this).attr('id');  
+        
+
+        //show all the list items(this is needed to get the hidden ones shown)  
+        $('.news-item .news-item__item').hide();  
+  
+        /*using the :not attribute and the filter class in it we are selecting 
+        only the list items that don't have that class and hide them '*/  
+        $('.news-item .news-item__item:not(.' + ID + ')').show();  
+  
+    });  
+
+// Instantiate MixItUp:
+
+  $('#container').mixItUp({
+      animation: {
+          effects: 'fade translateZ(500px)',
+          duration: 300
+      }
+
+  });
+
+  $('#container').mixItUp({
+  layout: {
+    containerClassFail: 'none-found'
+  }
+});
+
+$('#container').mixItUp('insert', 5, $('<div class="no-event" aria-hidden="true"><p>Sorry no events to show for this category.</p></div>'), {filter: 'all'})
+
+});
+                            
+</script>
+
+<MySource_AREA id_name="after_body" design_area="nest_content" ><MySource_SET name="type_codes" value="page" />
+  
+</MySource_AREA>
+
+</body>
+</html>

@@ -16,12 +16,12 @@
         line-height:1.618em;
         margin-bottom: 0.618em;
         position:relative;
-        }
+        
 
-h2.label:hover, .collapse-close:hover:after  {
-  color: lighten($color-main, 10%);
+          &:hover, .collapse-close:hover:after  {
+            color: lighten($color-main, 10%);
+          }
 }
-
 
 .label:focus, .label:active {
   outline: 1px dotted #003366;
@@ -34,10 +34,7 @@ h2.label:hover, .collapse-close:hover:after  {
 
 
 }
-.accordion {
-    margin-bottom: 2em;
-    max-width: 36em;
-  } 
+
 /**
 remove margin from accordion content to prevent jumping
 **/
@@ -46,11 +43,11 @@ body #main-content .accordion ul, #main-content .accordion h5 {
   margin-top:0;
   margin-bottom:1.618em;}
 
-.accordion-content {
+.accordion-content, .accordion {
   background: lighten($secondary-color, 8%);
-  margin-bottom: 1em; 
+  margin-bottom: 2em; 
   padding: 0.618em;
-
+  max-width: 36em;
   
 }
 
@@ -70,7 +67,7 @@ dd .accordion-content {
 }
 
 
-h2.collapse-open {
+.collapse-open {
   color: lighten($color-main, 10%);
 }
 

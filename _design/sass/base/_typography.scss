@@ -2,10 +2,22 @@
 /*===========================================
     TYPOGRAPHY
     ========================================*/
+
+    /* Modular Scale
+  ----------------------
+  16px @ 1:1.618  
+220px @ 1:1.618 
+  ----------------------*/
+
+
 body {
 	 font-family: $body-font-family;
     line-height: $base-line-height;
     font-size: $base-em-font-size; 
+
+    @include breakpoint (small) {
+      font-size: 90%;
+    }
 
 }
 
@@ -19,9 +31,9 @@ em, i {
 h2 {
   font-family: 'Univers LT W01 65 Bold', 'Droid Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 400;
-    font-size:1.618em;
-    line-height: 1.263em;
-    margin-bottom: 0.732em;
+    font-size:2.006em;
+    line-height: 2.618em;
+    margin-bottom: 1.618em;
     padding: 0; }
   
 
@@ -29,7 +41,8 @@ h2 {
     color:#20201e;
     font-family:'Univers LT W01 65 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
     font-weight: 400;
-    font-size:1em; }
+    font-size:1em;
+    line-height: 1.618em; }
 
 h3 { 
     font-family: $body-font-roman;
@@ -90,7 +103,7 @@ strong, b {
 }
 
 a.button {
-    margin-bottom: 1em; }
+    margin-bottom: 3em; }
 
 .home a, #main-content .home a:active, .footer a, .home h3 {
     /*color:#009a49;*/

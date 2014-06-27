@@ -56,18 +56,14 @@ body {
     font: 13px/1.231 sans-serif;
     *font-size: small;
 }
-select, input, textarea, button {
-    font: 99% sans-serif;
-}
+
 pre, code, kbd, samp {
     font-family: monospace, sans-serif;
 }
 body, select, input, textarea {
     color: #444;
 }
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-}
+
 html {
     overflow-y: scroll;
 }
@@ -297,10 +293,7 @@ button {
 .nav {
     display: none;
 }
-h1, h2, h3, h4 {
-    margin-top: 2em;
-    margin-bottom: .5em;
-}
+
 .header .hgroup h1, .header .hgroup h2 {
     margin-top: 0;
 }
@@ -428,32 +421,11 @@ h1, .nav h2, .aside h2, body.home .main>h2, body.home #main-content>h2 {
     color: #4e4e4e;
     font-family: 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
 }
-h2, h3, h4, .pullquote {
-    font-size: 24px;
-    color: #036;
-    clear: both;
-    padding: 10px 0 3px;
-    font-family: 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
-    font-weight: normal;
-}
+
 .pullquote {
     font-size: 24px;
 }
-h2 {
-    font-size: 24px;
-    font-weight: bold;
-}
-h3 {
-    font-size: 18px;
-    font-weight: bold;
-}
-h4 {
-    font-size: 16px;
-    font-weight: normal;
-}
-p {
-    margin-bottom: 8px;
-}
+
 small {
     color: #666;
     line-height: 1.4;
@@ -548,9 +520,7 @@ table caption {
 table td {
     padding: 10px;
 }
-table th {
-    font-family: "Droid Sans", Sans-serif;
-}
+
 table tr, table th {
     border: 1px solid #b9cfe7;
     padding: 10px;
@@ -570,16 +540,7 @@ form fieldset {
     padding: 5px 0 20px;
     border: 1px solid #b9cfe7;
 }
-form h3, form h4, form h5 {
-    font-family: "Droid Sans", sans-serif;
-    font-weight: bold;
-    font-size: 14px;
-    margin: 0 15px 15px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid #dfe9f4;
-    display: block;
-    text-align: center;
-}
+
 form p {
     text-align: center;
     padding: 1px 80px;
@@ -595,15 +556,7 @@ form select {
 form textarea {
     -webkit-appearance: textfield;
 }
-form label, form p {
-    line-height: 1.3;
-    padding: 5px 0;
-    font-family: "Droid Sans", sans-serif;
-    font-weight: bold;
-    margin-top: 0;
-    text-align: right;
-    clear: both;
-}
+
 form .follower {
     margin: 0;
 }
@@ -690,6 +643,7 @@ form button:active, input[type=submit]:active, .button:active {
     -moz-box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
     -o-box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 .message {
     display: block;
     background: #f9f9f9 url("../images/message-bg.png") 2% 50% no-repeat;
@@ -734,15 +688,7 @@ form button:active, input[type=submit]:active, .button:active {
     margin: 0 0 0 10px;
     padding: 0;
 }
-.nav ul li {
-    zoom: 1;
-    margin: 12px 0 0;
-    font-size: 14px;
-    font-weight: bold;
-    font-family: 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
-    color: #4e4e4e;
-    line-height: 1.3;
-}
+
 .nav ul li a {
     color: #3e658e;
     border-bottom: none;
@@ -1002,16 +948,7 @@ ul.news li {
     padding: 6px 0;
     float: left;
 }
-ul.news a {
-    font-family: 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
-    color: #13435c;
-    font-weight: bold;
-    font-size: 14px;
-    width: 105px;
-    padding-right: 10px;
-    float: left;
-    border: 0;
-}
+
 ul.news .timestamp {
     width: 75px;
     float: right;
@@ -1042,138 +979,7 @@ ul.inline, ul.inline li {
     float: left;
     position: relative;
 }
-a.button {
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -o-border-radius: 4px;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
-    -webkit-text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
-    -moz-text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
-    -o-text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
-    -webkit-transition: all 150ms linear;
-    -moz-transition: all 150ms linear;
-    transition: all 150ms linear;
-    background-color: #164682;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#446791), to(#164682));
-    background-image: -moz-linear-gradient(top, #446791, #164682);
-    display: inline-block;
-    padding: 5px 14px 4px;
-    margin: 5px 5px 10px 0;
-    color: #fff;
-    border: 0;
-    vertical-align: middle;
-    float: left;
-}
-a.button, a.button:visited {
-    color: #fff;
-    border: 0;
-    border: 0;
-}
-a.button:hover, a.button:visited:hover {
-    color: #fff;
-}
-a.button:after {
-    content: "â€º";
-    font-family: trebuchet;
-    font-size: 1.7em;
-    font-weight: bold;
-    margin: 0 0 0 12px;
-    line-height: .5;
-    color: #56738f;
-}
-a.button:hover, a.button:focus {
-    box-shadow: 0 0 10px #446791;
-    -webkit-box-shadow: 0 0 10px #446791;
-    -moz-box-shadow: 0 0 10px #446791;
-    -o-box-shadow: 0 0 10px #446791;
-}
-a.icon {
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -o-border-radius: 4px;
-    -webkit-transition: background 100ms linear;
-    -moz-transition: background 100ms linear;
-    transition: background 100ms linear;
-    display: inline-block;
-    background: #036;
-    border: 0;
-    padding: 8px 14px 8px 36px;
-    margin: 12px 0;
-    color: #fff;
-    font-family: 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-}
-a.icon:hover, a.icon:focus {
-    background-color: #3e658e;
-}
-a.icon:visited {
-    color: #fff;
-    border: none;
-}
-a.icon:visited:hover {
-    color: #fff;
-}
-a.document {
-    position: relative;
-    background: #036 url("../images/icon-document-small.png") center left no-repeat;
-}
-a.document:before {
-    content: attr(rel);
-    position: absolute;
-    top: 50%;
-    left: 21px;
-    font-size: 8px;
-    margin-top: 4px;
-    line-height: 8px;
-    text-transform: uppercase;
-}
-a.media {
-    background: #036 url("../images/icon-media-small.png") center left no-repeat;
-}
-a.rss {
-    background: #036 url("../images/icon-rss-small.png") center left no-repeat;
-}
-a.twitter {
-    background: #036 url("../images/icon-twitter-small.png") center left no-repeat;
-}
-a.facebook {
-    background: #036 url("../images/icon-facebook-small.png") center left no-repeat;
-}
-a.large {
-    font-size: 16px;
-    padding: 18px 22px 18px 68px;
-}
-a.media.large {
-    background: #036 url("../images/icon-media.png") center left no-repeat;
-}
-a.media.large:hover, a.media.large:focus {
-    background-color: #3e658e;
-}
-a.document.large {
-    background: #036 url("../images/icon-document.png") center left no-repeat;
-}
-a.document.large:hover, a.document.large:focus {
-    background-color: #3e658e;
-}
-a.media em, a.document em, a.media strong, a.document strong {
-    display: block;
-    color: #dfe9f4;
-    text-transform: uppercase;
-    font-size: 10px;
-    letter-spacing: 1px;
-}
-a.media em, a.document em {
-    display: inline;
-    color: #dfe9f4;
-    padding-left: 7px;
-    font-size: 12px;
-    font-style: normal;
-    letter-spacing: 0;
-    text-transform: lowercase;
-}
+
 .header {
     margin: 0 0 26px;
     overflow: hidden;
@@ -1218,14 +1024,7 @@ a.media em, a.document em {
 .header .hgroup h1 a {
     color: #fff;
 }
-.header .hgroup p {
-    font-family: 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
-    position: absolute;
-    top: 8px;
-    font-size: 17px;
-    font-weight: bold;
-    white-space: nowrap;
-}
+
 .header .hgroup p a, .header .hgroup p a:hover, .header .hgroup p a:focus, .header .hgroup p a:visited {
     text-shadow: 1px 1px 2px #036;
     -webkit-text-shadow: 1px 1px 2px #036;
@@ -1242,17 +1041,7 @@ a.media em, a.document em {
     padding-top: 20px;
     margin-top: 20px;
 }
-.header #headingtext p {
-    text-shadow: 1px 1px 2px #036;
-    -webkit-text-shadow: 1px 1px 2px #036;
-    -moz-text-shadow: 1px 1px 2px #036;
-    -o-text-shadow: 1px 1px 2px #036;
-    font-family: 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
-    color: #fff;
-    font-size: 21px;
-    line-height: 1.3;
-    margin-left: 20px;
-}
+
 .header #headingtext p.title {
     text-shadow: 1px 1px 2px #036;
     -webkit-text-shadow: 1px 1px 2px #036;
@@ -1286,16 +1075,7 @@ a.media em, a.document em {
     position: relative;
     float: left;
 }
-#newsbanner ol {
-    counter-reset: section;
-    font-family: 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
-    padding-left: 0;
-    margin: 0;
-    color: #686868;
-    width: 25%;
-    float: right;
-    list-style: none;
-}
+
 #newsbanner ol li {
     border-bottom: 1px solid #ededed;
     line-height: 1.4;
@@ -1383,9 +1163,8 @@ blockquote {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -o-border-radius: 3px;
-    font-family: 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
-    background: #dfe9f4;
-    color: #3e658e;
+    background: lighten($color-main, 10%);
+    color: $color-main;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 0 0 0 7px;
@@ -1414,9 +1193,7 @@ blockquote {
 body .main-block, body.headingblock .main-block {
     *background: #fff;
 }
-a.button:hover, a.button:focus {
-    *background: #446791;
-}
+
 table td {
     *border: 1px solid #b9cfe7;
 }

@@ -16,7 +16,7 @@
   /** next closed**/
   
   .main_nav {
-   background: $color-main;
+   /*background: $color-main;*/
    display: block;
    float: left;
    margin-top: -2.5em;
@@ -30,7 +30,7 @@
       height: 40px;
       line-height: 41px;
       position: absolute;
-      padding-right: 2em;
+      padding-right: 3.5em;
       right: 0;
       text-align: center;
       top: 0;
@@ -49,7 +49,7 @@
 
   
     .flexnav > li {
-     height: 40px;
+     // removed due to nexsted list not apeearing on mobile  height: 40px;
      margin-bottom: 0;
      margin-right:0px;
      width: auto;

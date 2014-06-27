@@ -33,7 +33,7 @@
         -webkit-border-radius: 3px;
         border-radius: 3px; }
 
-     dt.active a,  dd.active a,  li.active a {
+     dt a.active,  dd a.active,  li a.active {
       -webkit-border-radius: 3px;
       border-radius: 3px;
       font-weight: normal;
@@ -42,8 +42,8 @@
       cursor: default;
       color: #fff; }
 
-       dt.active a:hover,  dd.active a:hover,  li.active a:hover {
-        background: #999; }
+       dt a.active:hover,  dd a.active:hover,  li a.active:hover {
+        background: ligthen($color-main,10%); }
         
       
 
@@ -60,8 +60,8 @@
         cursor: pointer;
       }
 
-      button.active{
-        background: #68b8c4;
+      button.active {
+       background: #68b8c4;
       }
 
       button:focus{
@@ -75,9 +75,9 @@
 }
 
 /* hide div for when no events */
-.no-event {
+.hide {
   display: none;
 }
-.fail .no-event {
+.fail .hide {
   display: block;
 }
