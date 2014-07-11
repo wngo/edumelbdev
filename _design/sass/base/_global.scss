@@ -179,14 +179,15 @@ h1, h2, h3, h4, .pullquote {
 }
 
 
-#main-content p {
+p {
     font-size: 1em;
     line-height: 1.618;
     margin: 0 0 1.618em 0;
     max-width: 37em;
     /*overflow:hidden;*/
     }
-#main-content p.pullquote {
+    
+p.pullquote {
     border-left: 2px solid #009A49;
     line-height: 28px;
     margin: 0;
@@ -287,18 +288,7 @@ html.pointerevents body.no-logo div.wrapper div.aside {
   float:left;
 }
 
-/*===========================================
-    LIBRARY
-    =======================================*/
 
-.right {
-    float:right; }    
-  
-.clear {
-    clear:both; }
-
-.float-clear {
-    float:none !important; }
 
  
 /* 
