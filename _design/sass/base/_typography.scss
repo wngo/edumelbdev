@@ -29,20 +29,13 @@ em, i {
 
 
 h2 {
-  font-family: 'Univers LT W01 65 Bold', 'Droid Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: $font-sans-bold;
     font-weight: 400;
     font-size:2.006em;
     line-height: 2.618em;
     margin-bottom: 1.618em;
     padding: 0; }
   
-
-#main-content strong, b { 
-    color:#20201e;
-    font-family:'Univers LT W01 65 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-    font-weight: 400;
-    font-size:1em;
-    line-height: 1.618em; }
 
 h3 { 
     font-family: $body-font-roman;
@@ -59,17 +52,17 @@ h3 {
 
 h4{
     color: #20201e;
-    font-size:1.184em;
-    font-family:'Univers LT W01 65 Bold','Droid Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.184em;
+    font-family: $font-sans-bold;
     font-weight: 400;
     line-height: 1.6em;
     margin-bottom:1.184em; }
 
 h5 {
-    color:$color-main;
-    font-family: 'Univers LT W01 65 Bold','Droid Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: $color-main;
+    font-family: $font-sans-bold;
     font-weight: 400;
-    font-size:1em;
+    font-size: 1em;
     line-height: 1.184em;
     margin: 0 0 0.732em 0;
     padding: 0; }
@@ -77,21 +70,24 @@ h5 {
 
 
 strong, b {
-  font-family: 'Univers LT W01 65 Bold','Helvetica Neue',Helvetica,Arial,sans-serif;
-  font-weight:400; }
+  color: #20201e;
+  font-family: $body-font-roman;
+  font-weight: 400;
+  font-size:1em;
+  line-height: 1.618em; }
 
 .date { 
   font-family: 'UniversLTW01-67BoldCn', Helvetica Nueue, Arial, sans-serif;
-  color:#444; 
+  color: #444; 
   display:block;
   font-weight: 400; 
-  font-size:1em; }
+  font-size: 1em; }
 
 
 .opinion-name, .time-stamp, .source-name {
-  font-family:'UniversLTW01-57Condense 723821',Helvetica Nueue, Arial, sans-serif;
+  font-family:'UniversLTW01-67BoldCn',Helvetica Nueue, Arial, sans-serif;
   text-transform: uppercase;
-  font-size:0.732em; }
+  font-size: 0.732em; }
 
 
 .hgroup a, .breadcrumbs a {
@@ -105,13 +101,13 @@ strong, b {
 a.button {
     margin-bottom: 3em; }
 
-.home a, #main-content .home a:active, .footer a, .home h3 {
+.home a, .home a:active, .footer a, .home h3 {
     /*color:#009a49;*/
-    color:#00447C;
+    color: #00447C;
     transition-property: background-color;
     transition-timing: ease-out;
     transition-duration: 0.5s;
-    line-height:1.618em; }
+    line-height:1 .618em; }
 
 
 
@@ -138,7 +134,7 @@ a.button {
     }
 
   
-.pullquote, #main-content .intro {
+.pullquote, .intro {
   color: #20201e;
   font-size: $ms-up1;
   font-family: $body-font-family;
@@ -153,7 +149,7 @@ a.button {
 
 
 table th {
-  font-family: 'Univers LT W01 55 Roman','Helvetica Neue', Arial, sans-serif;
+  font-family: $body-font-roman;
   font-weight: 700; }
   
 /*====================================
@@ -162,11 +158,11 @@ table th {
 /*resets*/
 
 #main-content form label, #main-content form p {
-  font-family: 'Univers LT W01 45 Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: $font-sans;
   font-weight:400;}
 
 #main-content form h3, #main-content form h4, #main-content form h5 {
-  font-family: 'Univers LT W01 65 Bold','Helvetica Neue',Arial,sans-serif;
+  font-family: $body-font-roman;
   font-size:1.618em;
   font-weight:normal;
   text-align: left;
@@ -175,7 +171,7 @@ table th {
   padding:0;}
 
 a.icon {
-font-family:'Univers LT W01 45 Light','Helvetica Neue',Helvetica,Arial,sans-serif; }
+font-family: $font-sans;  }
 
 
 #main-content a.document, #main-content a.facebook {
@@ -183,16 +179,20 @@ font-family:'Univers LT W01 45 Light','Helvetica Neue',Helvetica,Arial,sans-seri
     
 
 h1, .nav h2, .aside h2, body.home .main > h2, body.home #main-content > h2 {
-    font-family: 'Univers LT W01 55 Roman',Helvetica,Arial,sans-serif;
+    font-family: $font-sans;
     font-weight:400;
 }
    
 
-h1.title {
-    font-family:'Univers LT W01 65 Bold', Helvetica, Arial, sans-serif;
+.title {
+    font-family: $font-sans-bold;
     font-weight: 400;
     font-size: 2.6em;
     line-height: 1.263em;
+    color:$color-main;
+    text-shadow:none;
+    line-height:1.618em;
+    padding:0;
 
     @include breakpoint (small) {
       font-size: 2em;
@@ -200,40 +200,28 @@ h1.title {
   }
     
  #newsbanner ol {
-        font-family: 'Univers LT W01 45 Light', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;    }
+        font-family: $font-sans;    }
         
  #newsbanner ol li a {
         font-size:0.5em;    }
         
 .tabs li {     
     /*font-family: 'Univers LT W01 55 Roman', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif; */
-    font-family: 'Univers LT W01 45 Light', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-family: $font-sans;
     list-style-image: none; 
 }
 
 blockquote {
-        font-family:'Univers LT W01 55 Roman','Droid Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
-        font-weight:400;
-        margin-top:0.732em;
+        font-family: $font-sans-roman;
+        font-weight: 400;
+        margin-top: 0.732em;
         }
  
-
-
-#main-content p.content-intro{
-    font-size:1.184em;
-    line-height:1.618em;
-    font-family: 'Univers LT W01 65 Bold';}
 
 i {
 	margin-left: 0.1em;
 }
 
 
-h1.title {
-  color:$color-main;
-  text-shadow:none;
-  line-height:1.5em;
-  padding:0;
-}
 
 

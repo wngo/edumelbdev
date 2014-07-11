@@ -22,6 +22,8 @@
             color: lighten($color-main, 10%);
           }
 }
+.label:hover:after  {
+            color: lighten($color-main, 10%); }
 
 .label:focus, .label:active {
   outline: 1px dotted #003366;
