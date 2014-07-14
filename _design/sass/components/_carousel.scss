@@ -1,9 +1,26 @@
+/**
+VARIABLES
+**/
+
+$banner-height: 350px;
+
+
+
+
+
 .main-carousel {
-  max-width: 960px;
+  /*max-width: 960px;*/
 }
 
-.home-banner-wrapper {
+ .home-banner-wrapper {
   margin: 0 auto;
+
+}
+
+#home-banners {
+  @include breakpoint(medium) {
+    max-width: 75%;
+  }
 }
 
 #main-content #home-banners .banner-navigation {
@@ -16,50 +33,61 @@ top: auto; }
 .banner-img-wrapper {
 
    float:left;
-   height: 300px;
+   /*height: $banner-height;*/
    width: 100%;
    overflow: hidden;
 
    @include breakpoint(medium) {
-    width: 60%; }
+    width: 100%; }
 
     @include breakpoint(large) {
     width: 60%; }
+}
+
+@media all and (min-width: 990px) and (max-width: 1150px) { 
+    .banner-img-wrapper {
+      width: 50%;
+    } 
+
+    #main-content #home-banners .home-banner .summary {
+      width: 50%;
+    } 
 }
 
 #home-banners .home-banner img {
- height: 300px;
+ /*height: $banner-height;*/
  width: auto; 
 
   @include breakpoint(medium) {
-    width: 100%; }
+    width: auto; }
 
     @include breakpoint(large) {
     width: 100%; }
 }
 
-#main-content #home-banners .home-banner .summary {
+.home-banner .summary {
   background: rgba(255,255,255,0.9);
   float:left;
   bottom: 0px; 
   left: 0px; 
   position: absolute;
   padding: 1em;
-  height: 300px;
+  height: $banner-height;
   width: 100%;
 
   @include breakpoint(large) {
     background: none;
     position: relative;
-    width:40%; }
+    width: 40%; }
 }
 
 
 
 .summary h2 {
-color: #005596;
+color: $color-main;
 margin-bottom: 0;
-font-size:176%;
+font-size: 176%;
+line-height: 1.618em;
 text-align: left; }
 
 .summary h4 {
@@ -106,7 +134,7 @@ h2.reset-m {
 }
 
 #main-content #home-banners {
-  box-shadow: 2px 2px 2px rgba(0,85,150,0.2);
+  /*box-shadow: 2px 2px 2px rgba(0,85,150,0.2);*/
   margin-bottom: 2em;
 }
 
@@ -135,21 +163,24 @@ h2.reset-m {
 }
 
 #home-banners {
-  margin: 0px auto 0px; width: 940px
-}
+  margin: 0px auto 0px;
+
+  @include breakpoint(small) {
+    width: 90%;
+  }
+} 
 
 
 #home-banners {
   z-index: 2; 
   position: relative; 
   margin-bottom: 5px; 
-  height: 300px;
-  width:100%;
+  height: $banner-height;
 }
 
 #home-banners .home-banner {
   position: absolute;
-  height: 300px;
+  height: $banner-height;
   overflow: hidden;
   TOP: 0px; 
   left: 0px; 
@@ -165,7 +196,7 @@ h2.reset-m {
 
 .home #home-banners  a {
   color: $color-main;
-  border-bottom: 1px solid $color-main;
+  /*border-bottom: 1px solid $color-main;*/
 
 }
 
@@ -199,13 +230,13 @@ line-height:1.618em !important; }
 }
 
 #home-banners .next-banner {
-  text-indent: -300px; margin: 0px 5px 0px 0px; width: 25px; display: block; float: left; overflow: hidden; -webkit-transition: opacity 300ms linear
+  text-indent: -$banner-height; margin: 0px 5px 0px 0px; width: 25px; display: block; float: left; overflow: hidden; -webkit-transition: opacity 300ms linear
 }
 #home-banners .previous-banner {
-  text-indent: -300px; margin: 0px 5px 0px 0px; width: 25px; display: block; float: left; overflow: hidden; -webkit-transition: opacity 300ms linear
+  text-indent: -$banner-height; margin: 0px 5px 0px 0px; width: 25px; display: block; float: left; overflow: hidden; -webkit-transition: opacity 300ms linear
 }
 #home-banners .play-pause-banner {
-  text-indent: -300px; margin: 0px 5px 0px 0px; width: 25px; display: block; float: left; overflow: hidden; -webkit-transition: opacity 300ms linear
+  text-indent: -$banner-height; margin: 0px 5px 0px 0px; width: 25px; display: block; float: left; overflow: hidden; -webkit-transition: opacity 300ms linear
 }
 #home-banners .next-banner:hover {
   opacity: 0.6

@@ -168,9 +168,7 @@ color:rgba(51, 51, 51, 0.7);}
 
 .mobile-nav select {width:96%;}
 
-/*remove underline from home page anchors*/
-#main-content .home a {
-  border-bottom: none; }
+
 
 
 
@@ -377,6 +375,13 @@ body {
   background: -moz-linear-gradient (#fff 20%, #005596);
   transition: 0s;
 }
+
+body.home {
+    background: url("mgseBg-l-alt.png") -13.5em 12em no-repeat,
+  url("mgseBg-r.png") 101% 13em no-repeat !important;
+  }
+
+
 
  
 
