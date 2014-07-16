@@ -11,7 +11,7 @@
     max-width: 100%;
     text-align: left;
     margin-bottom: 2em; 
-
+  
     @include breakpoint (large) {
       text-align: left;
     }
@@ -24,7 +24,7 @@ http://www.sitepoint.com/maintain-image-aspect-ratios-responsive-web-design/
 
   .preview-img-wrap { 
     color: #fff;
-    border-bottom: none;
+    border: none;
     background: lighten($color-main, 85%);
     display: block;
     height: 0;
@@ -95,4 +95,5 @@ http://www.sitepoint.com/maintain-image-aspect-ratios-responsive-web-design/
 .page-preview {
   @include breakpoint(small) {
     margin-bottom: 2em; }
+
 }

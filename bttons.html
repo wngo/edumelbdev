@@ -1,0 +1,121 @@
+<!-- @include _header -->
+
+<!-- @include _mainNavigation -->
+
+<div class="title-image hero-img d-all" id="new_div_612396">
+  <img src="<!-- @path eye_hero-alt.jpg -->" />
+  
+</div>
+
+<div class="d-all">
+  <div class="d2-d7 main-content-wrapper">
+
+
+  <!-- Breadcrumbs -->
+
+<div class="breadcrumbs d-all" role="navigation">
+ 
+ <a href="http://education.unimelb.edu.au" rel="home">MGSE</a>
+  <span class="divider">&rsaquo;</span> <a href="http://education.unimelb.edu.au/study_with_us">Study With Us</a>
+  <span class="divider">&rsaquo;</span> <a href="http://education.unimelb.edu.au/study_with_us/professional_development">Courses for Educational Professionals</a>
+ </div>
+
+<!-- End breadcrumbs -->
+<div class="title-wrap  d-all">
+        <h1 class="title">Typography</h1>
+</div>
+ 
+    <div class='d-all' id='main-content' role='main'>
+   
+<div class="d2-d7">
+    <div class="bs-docs-section">
+      <h3>Button styles</h3>
+      <p>Default button</p>
+      <button class="button">button</button>
+      <hr>
+      <p>Read more</p>
+      <a class="read-more">Read more</a>
+      <hr>
+      <p>button with pdf icon</p>
+      <a class="pdf">This is a pdf</a>
+  <hr>
+  <p>button with media icon</p>
+      <a class="button media"><i class="fa fa-play-circle-o"></i>  This is media</a>
+      <hr>
+      <ul class="visual">
+        <li>lorum ipsum</li>
+        <li>lorum ipsum</li>
+        <li>lorum ipsum</li>
+      </ul>
+    </div><!-- /main-content -->
+    
+    </div>
+
+  </div>
+
+</div><!-- /wrapper -->
+
+
+
+<!-- @include _footer.html -->
+
+ <!-- GLOBAL RESOURCES -->
+
+ <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<!--carousel for testimonials-->
+  <!-- @javascript jquery.flexnav -->
+  <!-- @javascript jquery.hoverIntent -->
+
+
+<script src="http://education.unimelb.edu.au/__data/assets/js_file/0010/744706/unoSlider-1.0.1.min.js"></script>
+ <!--collapsible-->
+<script type="text/javascript" src="http://education.unimelb.edu.au/_design/js/jquery.collapsible.min.js"></script>
+ <!--js expander-->
+<script type="text/javascript" src="http://education.unimelb.edu.au/__data/assets/js_file/0011/590906/jquery.expander.min.js"></script>
+
+<!--fancybox-->
+<script type="text/javascript" src="http://education.unimelb.edu.au/__data/assets/js_file/0020/705332/jquery.fancybox.pack.js"></script>
+     
+   
+     
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    // My Uno Slider
+    window.unoSlider = $('#slider1').unoSlider(
+                   {animSpeed:  250,
+                   easing:'linear',
+                   
+                   bullets:true, auto: false});
+
+
+ $('.collapsible').collapsible({
+                defaultOpen: 'content1,content2',
+          speed: 'fast'
+            });
+      
+                           
+    $('.abstract').expander({
+        slicePoint:       100,  // default is 100
+        expandPrefix:     '...', // default is '... '
+        detailClass: 'more-details',
+        summaryClass: 'summary',
+        expandText: 'read more'
+                                });
+$(".fancybox").fancybox();
+
+ $(".flexnav").flexNav({
+    'animationSpeed': 250,
+    'hoverIntent': true,
+    'hoverIntentTimeout': 200,
+    'hover': true
+ });
+
+            });
+ 
+                           
+</script>
+
+
+</body>
+</html>
