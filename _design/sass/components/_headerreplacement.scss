@@ -75,10 +75,7 @@
   }
 }
 
-.header {
-    margin: 0 0 26px;
-    overflow: hidden;
-}
+
 .header hr {
     visibility: hidden;
     margin: 0;
@@ -102,7 +99,6 @@
     display: block;
 }
 .header .hgroup {
-    margin: -2px 0 0 145px;
     display: block;
     position: relative;
 }
@@ -151,4 +147,8 @@
 .header #headingtext img {
     width: 210px;
     margin: -60px 0 0;
+}
+
+.icon-2x {
+  font-size: 2em;
 }

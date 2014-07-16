@@ -1,4 +1,4 @@
- 
+ $header-color: #00457c;
 
  .flexnav {
    background: $primary-color-nav;
@@ -16,12 +16,9 @@
   /** next closed**/
   
   .main_nav {
-   /*background: $color-main;*/
-   display: block;
-   float: left;
+   background: $header-color;
    margin-top: -2.5em;
-   max-width: 1140px;
-   width: 100%;
+
   
      .flexnav .touch-button {
       background: lighten ( $primary-color-nav, 10%);
@@ -70,22 +67,20 @@
      margin-bottom: 0;
     }
   
-    .flexnav li:hover {
+    .flexnav li a:hover {
       background: lighten($primary-color-nav, 10%);
     } 
 
-    .flexnav li  {
-       background:($primary-color-nav);
+    .flexnav li {
+       
       
       
        a {
-        
+         background:($primary-color-nav);
          border-left: 1px solid darken($primary-color-nav, 5%);
          color: #FFFFFF;  
          font-size: 90%;
          line-height: 26px;
-         /*padding: 0.5em 1em;*/
-         /*padding:0.5em 2.96em 0.5em 2.96em;*/
          padding: 0.5em 4.9em 0.5em 1em;
 
             @media all and (max-width: 1140px ) {

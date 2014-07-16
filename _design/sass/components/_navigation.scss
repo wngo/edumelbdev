@@ -4,10 +4,9 @@
   	
 	-webkit-transform-style: preserve-3d; // stop webkit flicker
   	float:left;
-	margin: 0 auto;
   	overflow: hidden;
   	transition: none;
-  	width: 100%;
+
   
   &.opacity {
     opacity: 0;
@@ -82,7 +81,6 @@
 		width: 50px;
 		height: 50px;
 		display: inline-block;
-		background: #acaca1;
 		background: rgba(0,0,0,.075);
 		&:hover {
 			cursor: pointer;
@@ -152,12 +150,10 @@
 			list-style: none;
 			float: left;
 			display: block;	
-			background-color: #a6a6a2;
 			overflow: visible;
       width: 20%;
 		}
 		li a {
-			border-left: 1px solid #acaca1;
 			border-bottom: none;
 		}
 		li > ul {
@@ -217,8 +213,7 @@
 			position: relative;
 			list-style: none;
 			float: left;
-			display: block;	
-			background-color: #a6a6a2;	
+			display: block;		
       width: 20%;
 			min-height: 50px;
 			overflow: visible;
@@ -233,7 +228,6 @@
 			}
 		}
 		li a {
-			border-left: 1px solid #acaca1;
 			border-bottom: none;
 			overflow: visible;	
 		}
