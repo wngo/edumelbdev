@@ -82,19 +82,6 @@ $fourth_level: #cbcbc9;
   background: lighten($color-main, 10%);
 }
 
- a[href$=".pdf"] {
-    background: url('http://www.unimelb.edu.au/template-assets/07/images/tiny/tiny_pdf_icon.gif') no-repeat right center;
-    padding-right: 14px;
-}
-
-
- a[href$=".doc"],  a[href$=".docx"] {
-    background: url('http://www.unimelb.edu.au/template-assets/07/images/tiny/tiny_doc_icon.gif') no-repeat right center;
-    padding-right: 14px;
-}
-
-
-
  #content { 
         clear: both;
          }

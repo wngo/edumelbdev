@@ -34,7 +34,6 @@ h1, .h1, .title {
     line-height: 1.263em;
     color: $color-main;
     text-shadow: none;
-    line-height: 1.618em;
     padding: 0;
 
     @include breakpoint (small) {
@@ -43,19 +42,19 @@ h1, .h1, .title {
   }
 
 h2, .h2 {
-  font-family: $font-sans-bold;
+    font-family: $font-sans-bold;
     font-weight: 400;
     font-size:2.006em;
-    line-height: 2.618em;
-    margin-bottom: 1.618em;
+    line-height: 1.618em;
+    margin-bottom: 1em;
     padding: 0; }
   
 
 h3, .h3 { 
     font-family: $body-font-roman;
     font-weight: 400;
-    font-size:1.618em;
-    line-height: 1.184em;
+    font-size: 1.618em;
+    line-height: 1.618em;
     margin: 0 0 1em 0;
     padding: 0; 
 
@@ -69,7 +68,7 @@ h4, .h4{
     font-size: 1.24em;
     font-family: $font-sans-bold;
     font-weight: 400;
-    line-height: 1.6em;
+    line-height: 1.618em;
     margin-bottom:1.184em; }
 
 h5, .h5 {
@@ -86,12 +85,16 @@ h5, .h5 {
 strong, b {
   color: #20201e;
   font-family: $body-font-roman;
-  font-weight: 400;
+  font-weight: 700;
   font-size:1em;
   line-height: 1.618em; }
 
+footer strong, footer b {
+  color: #fff;
+}
+
 .date { 
-  font-family: 'UniversLTW01-67BoldCn', Helvetica Nueue, Arial, sans-serif;
+  //font-family: 'UniversLTW01-67BoldCn', Helvetica Nueue, Arial, sans-serif;
   color: #444; 
   display:block;
   font-weight: 400; 
@@ -99,7 +102,7 @@ strong, b {
 
 
 .opinion-name, .time-stamp, .source-name {
-  font-family:'UniversLTW01-67BoldCn',Helvetica Nueue, Arial, sans-serif;
+  //font-family:'UniversLTW01-67BoldCn',Helvetica Nueue, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 0.732em; }
 

@@ -47,7 +47,8 @@ body #main-content .accordion ul, #main-content .accordion h5 {
 
 .accordion-content, .accordion {
   background: lighten($secondary-color, 5%);
-  margin-bottom: 2em; 
+  margin-bottom: 2em;
+  float: left; 
   padding: 0.618em;
   max-width: 36em;
   
