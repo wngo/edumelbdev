@@ -516,11 +516,11 @@ table td {
 }
 
 table tr, table th {
-    border: 1px solid #b9cfe7;
+    border: 1px solid lighten($color-main, 60%);
     padding: 10px;
 }
 table tbody tr:nth-child(2n+1) {
-    background: #eef7ff;
+    background: lighten($color-main, 60%);
 }
 form {
     overflow: hidden;
@@ -532,7 +532,7 @@ form fieldset {
     margin-bottom: 10px;
     background: #fafcff;
     padding: 5px 0 20px;
-    border: 1px solid #b9cfe7;
+    border: 1px solid lighten($color-main, 60%);
 }
 
 form p {
