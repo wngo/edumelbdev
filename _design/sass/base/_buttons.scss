@@ -137,7 +137,7 @@ background-color:$color-main; }
             font-family: FontAwesome;
             content: $fa-var-file-pdf-o;
             color: inherit;
-            font-size: 1.618em;
+            font-size: 1.213em;
             padding-right: 14px;
         }
         strong {
@@ -153,11 +153,19 @@ background-color:$color-main; }
         }
 }
 
+.button--document {
+    @extend .button--pdf;
+
+    &:before {
+        content: $fa-var-file-word-o;
+    }
+}
+
 .media {
     background: $color-main;
         &:before {
             content: $fa-var-play-circle-o;
-            font-size: 1.618em;
+            font-size: 1.213em;
 
             padding-right: 14px;
         }
@@ -181,12 +189,8 @@ background-color:$color-main; }
 .medi.large:hover, .medi.large:focus {
     background-color: #3e658e;
 }
-.document.large {
-    background: #036 url("../images/icon-document.png") center left no-repeat;
-}
-.document.large:hover, .document.large:focus {
-    background-color: #3e658e;
-}
+
+
 .media em, .document em, .media strong, .document strong {
     display: block;
     color: #dfe9f4;

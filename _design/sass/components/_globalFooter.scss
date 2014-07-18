@@ -1,7 +1,4 @@
 
-.footer #org-details, .footer ul {
-  margin-left: 0;
-  padding-right:2% }
 
 .footer p.footertitle {
   color: #fff;
@@ -16,3 +13,48 @@
  .footer strong {
  	color: #fff;
  }
+
+ .footer {
+    display: block;
+    margin: 30px 0 -24px;
+    padding: 30px;
+    clear: both;
+    background: #f2f2f2;
+    line-height: 1.6em;
+}
+
+.footer h2, .footer h3, .footer h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer #org-details, .footer ul {
+    padding: 0;
+}
+.footer ul li {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+}
+.footer li strong {
+    margin: 0;
+    padding: 0;
+}
+.footer a.facebook, .footer a.twitter {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    color: #f2f2f2;
+    background-color: #686868;
+    padding: 3px 9px 3px 36px;
+    float: left;
+    text-decoration: none;
+    margin: 6px 2px 0;
+}

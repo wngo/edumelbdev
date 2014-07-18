@@ -150,7 +150,6 @@ body {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 0;
   padding: 0 auto;
-  font-family: $font-sans;
   font-weight: normal;
   text-transform: normal;
   color: $heading-color;
@@ -245,16 +244,6 @@ strong {
   font-weight: bold;
 }
 
-blockquote {
-  padding: 0 auto;
-  font-family: $font-mono;
-  font-weight: bold;
-  margin-top: emRhythm(4);
-  margin-bottom: emRhythm(4);
-  padding-left: emRhythm(4);
-  margin-left: emRhythm(-5);
-  border-left: $base-vertical-unit solid lighten(#000, 50%);
-
   footer {
     cite {
       &:before {
@@ -262,7 +251,6 @@ blockquote {
       }
     }
   }
-}
 
 pre, code {
   font-family: $font-mono;

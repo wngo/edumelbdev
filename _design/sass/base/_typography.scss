@@ -208,17 +208,55 @@ h1, .nav h2, .aside h2, body.home .main > h2, body.home #main-content > h2 {
         font-size:0.5em;    }
         
 .tabs li {     
-    /*font-family: 'Univers LT W01 55 Roman', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif; */
     font-family: $font-sans;
     list-style-image: none; 
 }
 
 blockquote {
-        font-family: $font-sans-roman;
-        font-weight: 400;
-        margin-top: 0.732em;
-        }
- 
+    color: $color-main;
+    font-family: $font-sans;
+    font-weight: 400;
+    margin: 20px 0 20px;
+    padding: 0 0 0 7px;
+    position: relative;
+    left: -5px;
+    font-size: 1em; 
+
+
+}
+blockquote p {
+    padding: 14px 28px 14px 18px;
+    margin: 0 0 10px;
+
+     &:before {
+      color: lighten($color-main, 50%);
+      content: $fa-var-quote-left;
+      font-family: FontAwesome;
+      margin-left: -2em;
+      padding-right: 1em;
+    }
+     &:after {
+      color: lighten($color-main, 50%);
+      content: $fa-var-quote-right;
+      float: right;
+      font-family: FontAwesome;
+      margin-right: -2em;
+
+    }
+}
+
+blockquote a {
+    float: right;
+    position: relative;
+    top: -15px;
+    right: 15px;
+    font-weight: normal;
+    font-size: 14px;
+    clear: both;
+    margin-top: 10px;
+    border: 0;
+}
+
 
 i {
 	margin-left: 0.1em;

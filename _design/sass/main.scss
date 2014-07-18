@@ -1,6 +1,7 @@
 @import "base/mediaquieries";
 
 @import "base/global";
+@import "vendors/fontawesome/scss/font-awesome";
 @import "base/complete";
 @import "base/typesettings";
 @import "base/typography";
@@ -9,7 +10,7 @@
 
 @import "helpers/utility.scss";
 
-@import "vendors/fontawesome/scss/font-awesome";
+
 
 @import "base/buttons";
 @import "components/navigation";

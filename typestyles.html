@@ -10,17 +10,6 @@
 <div class="d-all">
   <div class="d2-d7 main-content-wrapper">
 
-
-  <!-- Breadcrumbs -->
-
-<div class="breadcrumbs d-all" role="navigation">
- 
- <a href="http://education.unimelb.edu.au" rel="home">MGSE</a>
-  <span class="divider">&rsaquo;</span> <a href="http://education.unimelb.edu.au/study_with_us">Study With Us</a>
-  <span class="divider">&rsaquo;</span> <a href="http://education.unimelb.edu.au/study_with_us/professional_development">Courses for Educational Professionals</a>
- </div>
-
-<!-- End breadcrumbs -->
 <div class="title-wrap  d-all">
         <h1 class="title">Typography</h1>
 </div>
@@ -28,423 +17,366 @@
     <div class='d-all' id='main-content' role='main'>
    
 <div class="d2-d7">
-    <div class="bs-docs-section">
+    <div class="container">
+      <h2>Sections <a href="#">Linked</a></h2>
+      <p>The main page header of this guide is an <code>h1</code> element. Any header elements may include links, as depicted in the example.</p>
+      <p>The secondary header above is an <code>h2</code> element, which may be used for any form of important page-level header. More than one may be used per page. Consider using an <code>h2</code> unless you need a header level of less importance, or as a sub-header to an existing <code>h2</code> element.</p>
+      <h3>Third-Level Header <a href="#">Linked</a></h3>
+      <p>The header above is an <code>h3</code> element, which may be used for any form of page-level header which falls below the <code>h2</code> header in a document hierarchy.</p>
+      <h4>Fourth-Level Header <a href="#">Linked</a></h4>
+      <p>The header above is an <code>h4</code> element, which may be used for any form of page-level header which falls below the <code>h3</code> header in a document hierarchy.</p>
+      <h5>Fifth-Level Header <a href="#">Linked</a></h5>
+      <p>The header above is an <code>h5</code> element, which may be used for any form of page-level header which falls below the <code>h4</code> header in a document hierarchy.</p>
+      <h6>Sixth-Level Header <a href="#">Linked</a></h6>
+      <p>The header above is an <code>h6</code> element, which may be used for any form of page-level header which falls below the <code>h5</code> header in a document hierarchy.</p>
+
+      <h2 id="grouping">Grouping content</h2>
+      <h3>Paragraphs</h3>
+      <p>All paragraphs are wrapped in <code>p</code> tags. Additionally, <code>p</code> elements can be wrapped with a <code>blockquote</code> element <em>if the <code>p</code> element is indeed a quote</em>. Historically, <code>blockquote</code> has been used purely to force indents, but this is now achieved using CSS. Reserve <code>blockquote</code> for quotes.</p>
+
+      <h3>Horizontal rule</h3>
+      <p>The <code>hr</code> element represents a paragraph-level thematic break, e.g. a scene change in a story, or a transition to another topic within a section of a reference book. The following extract from <cite>Pandora’s Star</cite> by Peter F. Hamilton shows two paragraphs that precede a scene change and the paragraph that follows it:</p>
+      <div class="example">
+        <p>Dudley was ninety-two, in his second life, and fast approaching time for another rejuvenation. Despite his body having the physical age of a standard fifty-year-old, the prospect of a long degrading campaign within academia was one he regarded with dread. For a supposedly advanced civilization, the Intersolar Commonwearth could be appallingly backward at times, not to mention cruel.</p>
+        <p><i>Maybe it won’t be that bad</i>, he told himself. The lie was comforting enough to get him through the rest of the night’s shift.</p>
+        <hr class="visible">
+        <p>The Carlton AllLander drove Dudley home just after dawn. Like the astronomer, the vehicle was old and worn, but perfectly capable of doing its job. It had a cheap diesel engine, common enough on a semi-frontier world like Gralmond, although its drive array was a thoroughly modern photoneural processor. With its high suspension and deep-tread tyres it could plough along the dirt track to the observatory in all weather and seasons, including the metre-deep snow of Gralmond’s winters.</p>
+      </div>
   
+      <h3>Pre-formatted text</h3>
+      <p>The <code>pre</code> element represents a block of pre-formatted text, in which structure is represented by typographic conventions rather than by elements. Such examples are an e-mail (with paragraphs indicated by blank lines, lists indicated by lines prefixed with a bullet), fragments of computer code (with structure indicated according to the conventions of that language) or displaying <abbr title="American Standard Code for Information Interchange">ASCII</abbr> art. Here’s an example showing the printable characters of <abbr>ASCII</abbr>:</p>
+      <div class="example">
+<pre><samp>  ! " # $ % &amp; ' ( ) * + , - . /
+0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+@ A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z [ \ ] ^ _
+` a b c d e f g h i j k l m n o
+p q r s t u v w x y z { | } ~</samp></pre>
+      </div>
 
-  <!-- Headings -->
-  <h2 id="type-headings">Headings</h2>
-  <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example bs-example-type">
-    <table class="table">
-      <tbody>
-        <tr>
-          <td><h1>h1. heading</h1></td>
-          <td class="type-info">Semibold 36px</td>
-        </tr>
-        <tr>
-          <td><h2>h2. heading</h2></td>
-          <td class="type-info">Semibold 30px</td>
-        </tr>
-        <tr>
-          <td><h3>h3. heading</h3></td>
-          <td class="type-info">Semibold 24px</td>
-        </tr>
-        <tr>
-          <td><h4>h4. heading</h4></td>
-          <td class="type-info">Semibold 18px</td>
-        </tr>
-        <tr>
-          <td><h5>h5. heading</h5></td>
-          <td class="type-info">Semibold 14px</td>
-        </tr>
-        <tr>
-          <td><h6>h6. heading</h6></td>
-          <td class="type-info">Semibold 12px</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;h1&gt;</span>h1. heading<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;h2&gt;</span>h2. heading<span class="nt">&lt;/h2&gt;</span>
-<span class="nt">&lt;h3&gt;</span>h3. heading<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;h4&gt;</span>h4. heading<span class="nt">&lt;/h4&gt;</span>
-<span class="nt">&lt;h5&gt;</span>h5. heading<span class="nt">&lt;/h5&gt;</span>
-<span class="nt">&lt;h6&gt;</span>h6. heading<span class="nt">&lt;/h6&gt;</span></code></pre></div>
+      <h3>Blockquotes</h3>
+      <p>The <code>blockquote</code> element represents a section that is being quoted from another source.</p>
+      <div class="example">
+        <blockquote cite="http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206">
+          <p>Many forms of Government have been tried, and will be tried in this world of sin and woe. No one pretends that democracy is perfect or all-wise. Indeed, it has been said that democracy is the worst form of government except all those other forms that have been tried from time to time.</p>
+        </blockquote>
+      </div>
 
-  <p>Create lighter, secondary text in any heading with a generic <code>&lt;small&gt;</code> tag or the <code>.small</code> class.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example bs-example-type">
-    <table class="table">
-      <tbody>
-        <tr>
-          <td><h1>h1. heading <small>Secondary text</small></h1></td>
-        </tr>
-        <tr>
-          <td><h2>h2. heading <small>Secondary text</small></h2></td>
-        </tr>
-        <tr>
-          <td><h3>h3. heading <small>Secondary text</small></h3></td>
-        </tr>
-        <tr>
-          <td><h4>h4. heading <small>Secondary text</small></h4></td>
-        </tr>
-        <tr>
-          <td><h5>h5. heading <small>Secondary text</small></h5></td>
-        </tr>
-        <tr>
-          <td><h6>h6. heading <small>Secondary text</small></h6></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;h1&gt;</span>h1. heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h1&gt;</span>
-<span class="nt">&lt;h2&gt;</span>h2. heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h2&gt;</span>
-<span class="nt">&lt;h3&gt;</span>h3. heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h3&gt;</span>
-<span class="nt">&lt;h4&gt;</span>h4. heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h4&gt;</span>
-<span class="nt">&lt;h5&gt;</span>h5. heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h5&gt;</span>
-<span class="nt">&lt;h6&gt;</span>h6. heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h6&gt;</span></code></pre></div>
+      <h3>Ordered list</h3>
+      <p>The <code>ol</code> element denotes an ordered list, and various numbering schemes are available through the CSS (including 1,2,3… a,b,c… i,ii,iii… and so on). Each item requires a surrounding <code>&lt;li&gt;</code> and <code>&lt;/li&gt;</code> tag, to denote individual items within the list (as you may have guessed, <code>li</code> stands for list item).</p>
+      <div class="example">
+        <ol>
+          <li>This is an ordered list.</li>
+          <li>
+            This is the second item, which contains a sub list
+            <ol>
+              <li>This is the sub list, which is also ordered.</li>
+              <li>It has two items.</li>
+            </ol>
+          </li>
+          <li>This is the final item on this list.</li>
+        </ol>
+      </div>
 
-
-  <!-- Body copy -->
-  <h2 id="type-body-copy">Body copy</h2>
-  <p s global default <code>font-size</code> is <strong>14px</strong>, with a <code>line-height</code> of <strong>1.428</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their computed line-height (10px by default).</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
-    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
-    <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span></code></pre></div>
-
-  <!-- Body copy .lead -->
-  <h3>Lead body copy</h3>
-  <p>Make a paragraph stand out by adding <code>.lead</code>.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span></code></pre></div>
-
-  <!-- Using Less -->
-  <h3>Built with Less</h3>
-  <p>The typographic scale is based on two Less variables in <strong>variables.less</strong>: <code>@font-size-base</code> and <code>@line-height-base</code>. The first is the base font-size used throughout and the second is the base line-height. We use those variables and some simple math to create the margins, paddings, and line-heights of all our type and more. Customize them and adapts.</p>
-
-  <!-- Inline text elements -->
-  <h2 id="type-inline-text">Inline text elements</h2>
-  <h3>Marked text</h3>
-  <p>For highlighting a run of text due to its relevance in another context, use the <code>&lt;mark&gt;</code> tag.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <p>You can use the mark tag to <mark>highlight</mark> text.</p>
-  </div>
-<div class="highlight"><pre><code class="html">You can use the mark tag to <span class="nt">&lt;mark&gt;</span>highlight<span class="nt">&lt;/mark&gt;</span> text.</code></pre></div>
-
-
-  <h3>Deleted text</h3>
-  <p>For indicating blocks of text that have been deleted use the <code>&lt;del&gt;</code> tag.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <p><del>This line of text is meant to be treated as deleted text.</del></p>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;del&gt;</span>This line of text is meant to be treated as deleted text.<span class="nt">&lt;/del&gt;</span></code></pre></div>
-
-  <h3>Strikethrough text</h3>
-  <p>For indicating blocks of text that are no longer relevant use the <code>&lt;s&gt;</code> tag.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;s&gt;</span>This line of text is meant to be treated as no longer accurate.<span class="nt">&lt;/s&gt;</span></code></pre></div>
-
-  <h3>Inserted text</h3>
-  <p>For indicating additions to the document use the <code>&lt;ins&gt;</code> tag.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;ins&gt;</span>This line of text is meant to be treated as an addition to the document.<span class="nt">&lt;/ins&gt;</span></code></pre></div>
-
-  <h3>Underlined text</h3>
-  <p>To underline text use the <code>&lt;u&gt;</code> tag.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <p><u>This line of text will render as underlined</u></p>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;u&gt;</span>This line of text will render as underlined<span class="nt">&lt;/u&gt;</span></code></pre></div>
-
-  <p>Make use of HTML's default emphasis tags with lightweight styles.</p>
-
-  <h3>Small text</h3>
-  <p>For de-emphasizing inline or blocks of text, use the <code>&lt;small&gt;</code> tag to set text at 85% the size of the parent. Heading elements receive their own <code>font-size</code> for nested <code>&lt;small&gt;</code> elements.</p>
-  <p>You may alternatively use an inline element with <code>.small</code> in place of any <code>&lt;small&gt;</code>.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <p><small>This line of text is meant to be treated as fine print.</small></p>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;small&gt;</span>This line of text is meant to be treated as fine print.<span class="nt">&lt;/small&gt;</span></code></pre></div>
-
-
-  <h3>Bold</h3>
-  <p>For emphasizing a snippet of text with a heavier font-weight.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;strong&gt;</span>rendered as bold text<span class="nt">&lt;/strong&gt;</span></code></pre></div>
-
-  <h3>Italics</h3>
-  <p>For emphasizing a snippet of text with italics.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;em&gt;</span>rendered as italicized text<span class="nt">&lt;/em&gt;</span></code></pre></div>
-
-  <div class="bs-callout bs-callout-info">
-    <h4>Alternate elements</h4>
-    <p>Feel free to use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> in HTML5. <code>&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance while <code>&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p>
-  </div>
-
-  <h2 id="type-alignment">Alignment classes</h2>
-  <p>Easily realign text to components with text alignment classes.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <p class="text-left">Left aligned text.</p>
-    <p class="text-center">Center aligned text.</p>
-    <p class="text-right">Right aligned text.</p>
-    <p class="text-justify">Justified text.</p>
-    <p class="text-nowrap">No wrap text.</p>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-left"</span><span class="nt">&gt;</span>Left aligned text.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>Center aligned text.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-right"</span><span class="nt">&gt;</span>Right aligned text.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-justify"</span><span class="nt">&gt;</span>Justified text.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-nowrap"</span><span class="nt">&gt;</span>No wrap text.<span class="nt">&lt;/p&gt;</span></code></pre></div>
-
-  <h2 id="type-transformation">Transformation classes</h2>
-  <p>Transform text in components with text capitalization classes.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <p class="text-lowercase">Lowercased text.</p>
-    <p class="text-uppercase">Uppercased text.</p>
-    <p class="text-capitalize">Capitalized text.</p>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-lowercase"</span><span class="nt">&gt;</span>Lowercased text.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-uppercase"</span><span class="nt">&gt;</span>Uppercased text.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-capitalize"</span><span class="nt">&gt;</span>Capitalized text.<span class="nt">&lt;/p&gt;</span></code></pre></div>
-
-  <!-- Abbreviations -->
-  <h2 id="type-abbreviations">Abbreviations</h2>
-  <p>Stylized implementation of HTML's <code>&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a <code>title</code> attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover.</p>
-
-  <h3>Basic abbreviation</h3>
-  <p>For expanded text on long hover of an abbreviation, include the <code>title</code> attribute with the <code>&lt;abbr&gt;</code> element.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"attribute"</span><span class="nt">&gt;</span>attr<span class="nt">&lt;/abbr&gt;</span></code></pre></div>
-
-  <h3>Initialism</h3>
-  <p>Add <code>.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <p><abbr class="initialism" title="HyperText Markup Language">HTML</abbr> is the best thing since sliced bread.</p>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"HyperText Markup Language"</span> <span class="na">class=</span><span class="s">"initialism"</span><span class="nt">&gt;</span>HTML<span class="nt">&lt;/abbr&gt;</span></code></pre></div>
-
-
-  <!-- Addresses -->
-  <h2 id="type-addresses">Addresses</h2>
-  <p>Present contact information for the nearest ancestor or the entire body of work. Preserve formatting by ending all lines with <code>&lt;br&gt;</code>.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <address>
-      <strong>Twitter, Inc.</strong><br>
-      795 Folsom Ave, Suite 600<br>
-      San Francisco, CA 94107<br>
-      <abbr title="Phone">P:</abbr> (123) 456-7890
-    </address>
-    <address>
-      <strong>Full Name</strong><br>
-      <a href="mailto:#">first.last@example.com</a>
-    </address>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;address&gt;</span>
-  <span class="nt">&lt;strong&gt;</span>Twitter, Inc.<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
-  795 Folsom Ave, Suite 600<span class="nt">&lt;br&gt;</span>
-  San Francisco, CA 94107<span class="nt">&lt;br&gt;</span>
-  <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"Phone"</span><span class="nt">&gt;</span>P:<span class="nt">&lt;/abbr&gt;</span> (123) 456-7890
-<span class="nt">&lt;/address&gt;</span>
-
-<span class="nt">&lt;address&gt;</span>
-  <span class="nt">&lt;strong&gt;</span>Full Name<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"mailto:#"</span><span class="nt">&gt;</span>first.last@example.com<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;/address&gt;</span></code></pre></div>
-
-
-  <!-- Blockquotes -->
-  <h2 id="type-blockquotes">Blockquotes</h2>
-  <p>For quoting blocks of content from another source within your document.</p>
-
-  <h3>Default blockquote</h3>
-  <p>Wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes, we recommend a <code>&lt;p&gt;</code>.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <blockquote>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-    </blockquote>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;blockquote&gt;</span>
-  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/blockquote&gt;</span></code></pre></div>
-
-  <h3>Blockquote options</h3>
-  <p>Style and content changes for simple variations on a standard <code>&lt;blockquote&gt;</code>.</p>
-
-  <h4>Naming a source</h4>
-  <p>Add a <code>&lt;footer&gt;</code> for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <blockquote>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;blockquote&gt;</span>
-  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
-<span class="nt">&lt;/blockquote&gt;</span></code></pre></div>
-
-  <h4>Alternate displays</h4>
-  <p>Add <code>.blockquote-reverse</code> for a blockquote with right-aligned content.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div style="overflow: hidden;" class="bs-example">
-    <blockquote class="blockquote-reverse">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote-reverse"</span><span class="nt">&gt;</span>
-  ...
-<span class="nt">&lt;/blockquote&gt;</span></code></pre></div>
-
-
-  <!-- Lists -->
-  <h2 id="type-lists">Lists</h2>
-
-  <h3>Unordered</h3>
-  <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <ul>
-      <li>Lorem ipsum dolor sit amet</li>
-      <li>Consectetur adipiscing elit</li>
-      <li>Integer molestie lorem at massa</li>
-      <li>Facilisis in pretium nisl aliquet</li>
-      <li>Nulla volutpat aliquam velit
+      <h3>Unordered list</h3>
+      <p>The <code>ul</code> element denotes an unordered list (ie. a list of loose items that don’t require numbering, or a bulleted list). Again, each item requires a surrounding <code>&lt;li&gt;</code> and <code>&lt;/li&gt;</code> tag, to denote individual items. Here is an example list showing the constituent parts of the British Isles:</p>
+      <div class="example">
         <ul>
-          <li>Phasellus iaculis neque</li>
-          <li>Purus sodales ultricies</li>
-          <li>Vestibulum laoreet porttitor sem</li>
-          <li>Ac tristique libero volutpat at</li>
+          <li>
+            United Kingdom of Great Britain and Northern Ireland:
+            <ul>
+              <li>England</li>
+              <li>Scotland</li>
+              <li>Wales</li>
+              <li>Northern Ireland</li>
+            </ul>
+          </li>
+          <li>Republic of Ireland</li>
+          <li>Isle of Man</li>
+          <li>
+            Channel Islands:
+            <ul>
+              <li>Bailiwick of Guernsey</li>
+              <li>Bailiwick of Jersey</li>
+            </ul>
+          </li>
         </ul>
-      </li>
-      <li>Faucibus porta lacus fringilla vel</li>
-      <li>Aenean sit amet erat nunc</li>
-      <li>Eget porttitor lorem</li>
-    </ul>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul&gt;</span>
-  <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span></code></pre></div>
-
-  <h3>Ordered</h3>
-  <p>A list of items in which the order <em>does</em> explicitly matter.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <ol>
-      <li>Lorem ipsum dolor sit amet</li>
-      <li>Consectetur adipiscing elit</li>
-      <li>Integer molestie lorem at massa</li>
-      <li>Facilisis in pretium nisl aliquet</li>
-      <li>Nulla volutpat aliquam velit</li>
-      <li>Faucibus porta lacus fringilla vel</li>
-      <li>Aenean sit amet erat nunc</li>
-      <li>Eget porttitor lorem</li>
-    </ol>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;ol&gt;</span>
-  <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ol&gt;</span></code></pre></div>
-
-  <h3>Unstyled</h3>
-  <p>Remove the default <code>list-style</code> and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <ul class="list-unstyled">
-      <li>Lorem ipsum dolor sit amet</li>
-      <li>Consectetur adipiscing elit</li>
-      <li>Integer molestie lorem at massa</li>
-      <li>Facilisis in pretium nisl aliquet</li>
-      <li>Nulla volutpat aliquam velit
+      </div>
+      <p>Sometimes we may want each list item to contain block elements, typically a paragraph or two.</p>
+      <div class="example">
         <ul>
-          <li>Phasellus iaculis neque</li>
-          <li>Purus sodales ultricies</li>
-          <li>Vestibulum laoreet porttitor sem</li>
-          <li>Ac tristique libero volutpat at</li>
+          <li>
+            <p>The British Isles is an archipelago consisting of the two large islands of Great Britain and Ireland, and many smaller surrounding islands.</p>
+          </li>
+          <li>
+            <p>Great Britain is the largest island of the archipelago. Ireland is the second largest island of the archipelago and lies directly to the west of Great Britain.</p>
+          </li>
+          <li>
+            <p>The full list of islands in the British Isles includes over 1,000 islands, of which 51 have an area larger than 20 km<sup>2</sup>.</p>
+          </li>
         </ul>
-      </li>
-      <li>Faucibus porta lacus fringilla vel</li>
-      <li>Aenean sit amet erat nunc</li>
-      <li>Eget porttitor lorem</li>
-    </ul>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-unstyled"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+      </div>
 
-  <h3>Inline</h3>
-  <p>Place all list items on a single line with <code>display: inline-block;</code> and some light padding.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <ul class="list-inline">
-      <li>Lorem ipsum</li>
-      <li>Phasellus iaculis</li>
-      <li>Nulla volutpat</li>
-    </ul>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-inline"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+      <h3>Definition list</h3>
+      <p>The <code>dl</code> element is for another type of list called a definition list. Instead of list items, the content of a <code>dl</code> consists of <code>dt</code> (Definition Term) and <code>dd</code> (Definition description) pairs. Though it may be called a “definition list”, <code>dl</code> can apply to other scenarios where a parent/child relationship is applicable. For example, it may be used for marking up dialogues, with each <code>dt</code> naming a speaker, and each <code>dd</code> containing his or her words.</p>
+      <div class="example">
+        <dl>
+          <dt>This is a term.</dt>
+          <dd>This is the definition of that term, which both live in a <code>dl</code>.</dd>
+          <dt>Here is another term.</dt>
+          <dd>And it gets a definition too, which is this line.</dd>
+          <dt>Here is term that shares a definition with the term below.</dt>
+          <dt>Here is a defined term.</dt>
+          <dd><code>dt</code> terms may stand on their own without an accompanying <code>dd</code>, but in that case they <em>share</em> descriptions with the next available <code>dt</code>. You may not have a <code>dd</code> without a parent <code>dt</code>.</dd>
+        </dl>
+      </div>
 
-  <h3>Description</h3>
-  <p>A list of terms with their associated descriptions.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <dl>
-      <dt>Description lists</dt>
-      <dd>A description list is perfect for defining terms.</dd>
-      <dt>Euismod</dt>
-      <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-      <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-      <dt>Malesuada porta</dt>
-      <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-    </dl>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;dl&gt;</span>
-  <span class="nt">&lt;dt&gt;</span>...<span class="nt">&lt;/dt&gt;</span>
-  <span class="nt">&lt;dd&gt;</span>...<span class="nt">&lt;/dd&gt;</span>
-<span class="nt">&lt;/dl&gt;</span></code></pre></div>
+      <h3>Figures</h3>
+      <p>Figures are usually used to refer to images:</p>
+      <div class="example">
+        <figure>
+          <img alt="Example image" src="http://lorempixum.com/680/400/abstract">
+          <figcaption>
+            This is a placeholder image, with supporting caption.
+          </figcaption>
+        </figure>
+      </div>
+      <p>Here, a part of a poem is marked up using figure:</p>
+      <div class="example">
+        <figure>
+          <p>‘Twas brillig, and the slithy toves<br>
+          Did gyre and gimble in the wabe;<br>
+          All mimsy were the borogoves,<br>
+          And the mome raths outgrabe.</p>
+          <figcaption>
+            <cite>Jabberwocky</cite> (first verse). Lewis Carroll, 1832-98
+          </figcaption>
+        </figure>
+      </div>
+      <p>When you  wish to cite the source of a quote, you should do so using a figure also:</p>
+      <div class="example">
+        <blockquote cite="http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206">
+          <p>Many forms of Government have been tried, and will be tried in this world of sin and woe. No one pretends that democracy is perfect or all-wise. Indeed, it has been said that democracy is the worst form of government except all those other forms that have been tried from time to time.</p>
+        </blockquote>
+        <figcaption>
+          Winston Churchill, in <cite><a href="http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206">a speech to the House of Commons</a></cite>. 11th November 1947
+        </figcaption>
+      </div>
 
-  <h4>Horizontal description</h4>
-  <p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side. Starts off stacked like default <code>&lt;dl&gt;</code>s, but when the navbar expands, so do these.</p>
-  <div class="zero-clipboard"><span class="btn-clipboard with-example">Copy</span></div><div class="bs-example">
-    <dl class="dl-horizontal">
-      <dt>Description lists</dt>
-      <dd>A description list is perfect for defining terms.</dd>
-      <dt>Euismod</dt>
-      <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-      <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-      <dt>Malesuada porta</dt>
-      <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-      <dt>Felis euismod semper eget lacinia</dt>
-      <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
-    </dl>
-  </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"dl-horizontal"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;dt&gt;</span>...<span class="nt">&lt;/dt&gt;</span>
-  <span class="nt">&lt;dd&gt;</span>...<span class="nt">&lt;/dd&gt;</span>
-<span class="nt">&lt;/dl&gt;</span></code></pre></div>
+      <h2 id="text">Text-level Semantics</h2>
+      <p>There are a number of inline <abbr title="HyperText Markup Language">HTML</abbr> elements you may use anywhere within other elements.</p>
 
-  <div class="bs-callout bs-callout-info">
-    <h4>Auto-truncating</h4>
-    <p>Horizontal description lists will truncate terms that are too long to fit in the left column with <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.</p>
-  </div>
-</div>
+      <h3>Links and anchors</h3>
+      <p>The <code>a</code> element is used to hyperlink text, be that to another page, a named fragment on the current page or any other location on the web. Example:</p>
+      <div class="example">
+        <p><a href="/">Go to the home page</a> or <a href="#banner">return to the top of this page</a>.</p>
+      </div>
+
+      <h3>Stressed emphasis</h3>
+      <p>The <code>em</code> element is used to denote text with stressed emphasis, i.e., something you’d pronounce differently. Where italicizing is required for stylistic differentiation, the <code>i</code> element may be preferable. Example:</p>
+      <div class="example">
+        <p>You simply <em>must</em> try the negitoro maki!</p>
+      </div>
+
+      <h3>Strong importance</h3>
+      <p>The <code>strong</code> element is used to denote text with strong importance. Where bolding is used for stylistic differentiation, the <code>b</code> element may be preferable. Example:</p> 
+      <div class="example">
+        <p><strong>Don’t</strong> stick nails in the electrical outlet.</p>
+      </div>
+
+      <h3>Small print</h3>
+      <p>The <small>small</small> element is used to represent disclaimers, caveats, legal restrictions, or copyrights (commonly referred to as ‘small print’). It can also be used for attributions or satisfying licensing requirements. Example:</p>
+      <div class="example">
+        <p><small>Copyright &copy; 1922-2011 Acme Corporation. All Rights Reserved.</small></p>
+      </div>
+
+      <h3>Strikethrough</h3>
+      <p>The <code>s</code> element is used to represent content that is no longer accurate or relevant. When indicating document edits i.e., marking a span of text as having been removed from a document, use the <code>del</code> element instead. Example:</p>
+      <div class="example">
+        <p><s>Recommended retail price: £3.99 per bottle</s><br><strong>Now selling for just £2.99 a bottle!</strong></p>
+      </div>
+
+      <h3>Citations</h3>
+      <p>The <code>cite</code> element is used to represent the title of a work (e.g. a book, essay, poem, song, film, TV show, sculpture, painting, musical, exhibition, etc). This can be a work that is being quoted or referenced in detail (i.e. a citation), or it can just be a work that is mentioned in passing. Example:</p>
+      <div class="example">
+        <p><cite>Universal Declaration of Human Rights</cite>, United Nations, December 1948. Adopted by General Assembly resolution 217 A (III).</p>
+      </div>
+
+      <h3>Inline quotes</h3>
+      <p>The <code>q</code> element is used for quoting text inline. Example showing nested quotations:</p>
+      <div class="example">
+        <p>John said, <q>I saw Lucy at lunch, she told me <q>Mary wants you to get some ice cream on your way home</q>. I think I will get some at Ben and Jerry’s, on Gloucester Road.</q></p>
+      </div>
+
+      <h3>Definition</h3>
+      <p>The <code>dfn</code> element is used to highlight the first use of a term. The <code>title</code> attribute can be used to describe the term. Example:</p>
+      <div class="example">
+        <p>Bob’s <dfn title="Dog">canine</dfn> mother and <dfn title="Horse">equine</dfn> father sat him down and carefully explained that he was an <dfn title="A mutation that combines two or more sets of chromosomes from different species">allopolyploid</dfn> organism.</p>
+      </div>
+
+      <h3>Abbreviation</h3>
+      <p>The <code>abbr</code> element is used for any abbreviated text, whether it be acronym, initialism, or otherwise. Generally, it’s less work and useful (enough) to mark up only the first occurrence of any particular abbreviation on a page, and ignore the rest. Any text in the <code>title</code> attribute will appear when the user’s mouse hovers the abbreviation (although notably, this does not work in Internet Explorer for Windows). Example abbreviations:</p>
+      <div class="example">
+        <p><abbr title="British Broadcasting Corportation">BBC</abbr>, <abbr title="HyperText Markup Language">HTML</abbr>, and <abbr title="Staffordshire">Staffs.</abbr></p>
+      </div>
+
+      <h3>Time</h3>
+      <p>The <code>time</code> element is used to represent either a time on a 24 hour clock, or a precise date in the proleptic Gregorian calendar, optionally with a time and a time-zone offset. Example:</p>
+      <div class="example">
+        <p>Queen Elizabeth II was proclaimed sovereign of each of the Commonwealth realms on <time datetime="1952-02-6">6</time> and <time datetime="1952-02-7">7 February 1952</time>, after the death of her father, King George VI.</p>
+      </div>
+
+      <h3>Code</h3>
+      <p>The <code>code</code> element is used to represent fragments of computer code. Useful for technology-oriented sites, not so useful otherwise. Example:</p>
+      <div class="example">
+        <p>When you call the <code>activate()</code> method on the <code>robotSnowman</code> object, the eyes glow.</p>
+      </div>
+      <p>Used in conjunction with the <code>pre</code> element:</p>
+      <div class="example">
+<pre><code>function getJelly() {
+&nbsp;&nbsp;&nbsp;&nbsp;echo $aDeliciousSnack;
+}</code></pre>
+      </div>
+
+      <h3>Variable</h3>
+      <p>The <code>var</code> element is used to denote a variable in a mathematical expression or programming context, but can also be used to indicate a placeholder where the contents should be replaced with your own value. Example:</p>
+      <div class="example">
+        <p>If there are <var>n</var> pipes leading to the ice cream factory then I expect at <em>least</em> <var>n</var> flavours of ice cream to be available for purchase!</p>
+      </div>
+
+      <h3>Sample output</h3>
+      <p>The <code>samp</code> element is used to represent (sample) output from a program or computing system. Useful for technology-oriented sites, not so useful otherwise. Example:</p>
+      <div class="example">
+        <p>The computer said <samp>Too much cheese in tray two</samp> but I didn’t know what that meant.</p>
+      </div>
+
+      <h3>Keyboard entry</h3>
+      <p>The <code>kbd</code> element is used to denote user input (typically via a keyboard, although it may also be used to represent other input methods, such as voice commands). Example:</p><p>
+      </p><div class="example">
+        <p>To take a screenshot on your Mac, press <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>3</kbd>.</p>
+      </div>
+
+      <h3>Superscript and subscript text</h3>
+      <p>The <code>sup</code> element represents a superscript and the sub element represents a <code>sub</code>. These elements must be used only to mark up typographical conventions with specific meanings, not for typographical presentation. As a guide, only use these elements if their absence would change the meaning of the content. Example:</p>
+      <div class="example">
+        <p>The coordinate of the <var>i</var>th point is (<var>x<sub><var>i</var></sub></var>, <var>y<sub><var>i</var></sub></var>). For example, the 10th point has coordinate (<var>x<sub>10</sub></var>, <var>y<sub>10</sub></var>).</p>
+        <p>f(<var>x</var>, <var>n</var>) = log<sub>4</sub><var>x</var><sup><var>n</var></sup></p>
+      </div>
+
+      <h3>Italicised</h3>
+      <p>The <code>i</code> element is used for text in an alternate voice or mood, or otherwise offset from the normal prose. Examples include taxonomic designations, technical terms, idiomatic phrases from another language, the name of a ship or other spans of text whose typographic presentation is typically italicised. Example:</p>
+      <div class="example">
+        <p>There is a certain <i lang="fr">je ne sais quoi</i> in the air.</p>
+      </div>
+
+      <h3>Emboldened</h3>
+      <p>The <code>b</code> element is used for text stylistically offset from normal prose without conveying extra importance, such as key words in a document abstract, product names in a review, or other spans of text whose typographic presentation is typically emboldened. Example:</p>
+      <div class="example">
+        <p>You enter a small room. Your <b>sword</b> glows brighter. A <b>rat</b> scurries past the corner wall.</p>
+      </div>
+
+      <h3>Marked or highlighted text</h3>
+      <p>The <code>mark</code> element is used to represent a run of text marked or highlighted for reference purposes. When used in a quotation it indicates a highlight not originally present but added to bring the reader’s attention to that part of the text. When used in the main prose of a document, it indicates a part of the document that has been highlighted due to its relevance to the user’s current activity. Example:</p>
+      <div class="example">
+        <p>I also have some <mark>kitten</mark>s who are visiting me these days. They’re really cute. I think they like my garden! Maybe I should adopt a <mark>kitten</mark>.</p>
+      </div>
+
+      <h3 id="edits">Edits</h3>
+      <p>The <code>del</code> element is used to represent deleted or retracted text which still must remain on the page for some reason. Meanwhile its counterpart, the <code>ins</code> element, is used to represent inserted text. Both <code>del</code> and <code>ins</code> have a <code>datetime</code> attribute which allows you to include a timestamp directly in the element. Example inserted text and usage:</p>
+      <div class="example">
+        <p>She bought <del datetime="2005-05-30T13:00:00">two</del> <ins datetime="2005-05-30T13:00:00">five</ins> pairs of shoes.</p>
+      </div>
+
+      <h2 id="tables">Tabular data</h2>
+      <p>Tables should be used when displaying tabular data. The <code>thead</code>, <code>tfoot</code> and <code>tbody</code> elements enable you to group rows within each a table.</p>
+      <p>If you use these elements, you must use every element. They should appear in this order: <code>thead</code>, <code>tfoot</code> and <code>tbody</code>, so that browsers can render the foot before receiving all the data. You must use these tags within the table element.</p>
+      <div class="example">
+        <table>
+          <caption>The Very Best Eggnog</caption>
+          <colgroup>
+            <col style="width:50%">
+            <col style="width:25%">
+            <col style="width:25%">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Ingredients</th>
+              <th scope="col">Serves 12</th>
+              <th scope="col">Serves 24</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Milk</td>
+              <td>1 quart</td>
+              <td>2 quart</td>
+            </tr>
+            <tr>
+              <td>Cinnamon Sticks</td>
+              <td>2</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Vanilla Bean, Split</td>
+              <td>1</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Cloves</td>
+              <td>5</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Mace</td>
+              <td>10 blades</td>
+              <td>20 blades</td>
+            </tr>
+            <tr>
+              <td>Egg Yolks</td>
+              <td>12</td>
+              <td>24</td>
+            </tr>
+            <tr>
+              <td>Cups Sugar</td>
+              <td>1 ½ cups</td>
+              <td>3 cups</td>
+            </tr>
+            <tr>
+              <td>Dark Rum</td>
+              <td>1 ½ cups</td>
+              <td>3 cups</td>
+            </tr>
+            <tr>
+              <td>Brandy</td>
+              <td>1 ½ cups</td>
+              <td>3 cups</td>
+            </tr>
+            <tr>
+              <td>Vanilla</td>
+              <td>1 tbsp</td>
+              <td>2 tbsp</td>
+            </tr>
+            <tr>
+              <td>Half-and-half or Light Cream</td>
+              <td>1 quart</td>
+              <td>2 quart</td>
+            </tr>
+            <tr>
+              <td>Freshly grated nutmeg to taste</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
     </div><!-- /main-content -->
     
     </div>
 
 </div><!-- /wrapper -->
-<hr>
+</div>
 
 
 <!-- @include _footer.html -->
