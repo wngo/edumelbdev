@@ -46,8 +46,16 @@ h2, .h2 {
     font-weight: 400;
     font-size:2.006em;
     line-height: 1.618em;
-    margin-bottom: 1em;
-    padding: 0; }
+    padding: 0; 
+  a {
+      border-bottom: 1px solid lighten($color-main, 60%);
+      
+      &:hover {
+        border-bottom: none;
+        transition: all 1s linear;
+      }
+    } 
+  }
   
 
 h3, .h3 { 
@@ -55,12 +63,20 @@ h3, .h3 {
     font-weight: 400;
     font-size: 1.618em;
     line-height: 1.618em;
-    margin: 0 0 1em 0;
     padding: 0; 
 
 	
-	     &:hover {
+	   &:hover {
 		      background: none; } 
+    a {
+      border-bottom: 1px solid lighten($color-main, 60%);
+      
+      &:hover {
+        border-bottom: none;
+        transition: all 1s linear;
+      }
+    }
+
   }
 
 h4, .h4{
@@ -69,7 +85,16 @@ h4, .h4{
     font-family: $font-sans-bold;
     font-weight: 400;
     line-height: 1.618em;
-    margin-bottom:1.184em; }
+    margin-bottom:1.184em; 
+  a {
+      border-bottom: 1px solid lighten($color-main, 60%);
+      
+      &:hover {
+        border-bottom: none;
+        transition: all 1s linear;
+      }
+    } 
+  }
 
 h5, .h5 {
     color: $color-main;
@@ -78,8 +103,35 @@ h5, .h5 {
     font-size: 1em;
     line-height: 1.184em;
     margin: 0 0 0.732em 0;
-    padding: 0; }
+    padding: 0; 
 
+  a {
+      border-bottom: 1px solid lighten($color-main, 60%);
+      
+      &:hover {
+        border-bottom: none;
+        transition: all 1s linear;
+      }
+    } 
+  }
+
+// if heading is after a paragraph or a div add extra top margin.
+// makes it clearer which content the heading belongs
+
+p, div { display: block; margin: 0px; padding: 0px; 
+  
+  + h2  {
+      margin-top: 1.618em;
+    } 
+
+  + h3  {
+      margin-top: 1.618em;
+    }
+  + h4  {
+      margin-top: 1.618em;
+    } 
+
+  }
 
 
 strong, b {
@@ -225,8 +277,8 @@ blockquote {
 
 }
 blockquote p {
-    padding: 14px 28px 14px 18px;
-    margin: 0 0 10px;
+    padding: 0px;
+    margin: 0px;
 
      &:before {
       color: lighten($color-main, 50%);
@@ -262,6 +314,13 @@ i {
 	margin-left: 0.1em;
 }
 
+dt {
+  font-weight: 700;
+}
 
+dd {
+  margin-left: 0;
+  margin-bottom: 1em;
+}
 
 
