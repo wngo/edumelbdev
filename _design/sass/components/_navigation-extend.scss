@@ -59,23 +59,11 @@
         width: 33.33%;
         height: auto;
         }
-      }
 
-
-    ul, ol {
-     padding-left: 0;
-     margin-bottom: 0;
-    }
-  
-    .flexnav li a:hover {
-      background: lighten($primary-color-nav, 10%);
-    } 
-
-    .flexnav li {
-       
-      
-      
-       a {
+        a:hover {
+        background: lighten($primary-color-nav, 10%);
+        } 
+        a {
          background:($primary-color-nav);
          border-left: 1px solid darken($primary-color-nav, 5%);
          color: #FFFFFF;  
@@ -113,6 +101,20 @@
 
           }
         }
+      }
+
+
+    ul, ol {
+     padding-left: 0;
+     margin-bottom: 0;
+    }
+  
+
+    .flexnav li {
+       
+      
+      
+       
 
     }
 

@@ -1,4 +1,3 @@
-// default button styles
 
 .button {
     font-family: $font-sans;
@@ -35,7 +34,6 @@
         }
     }
 
-    // button with an arrow
     .button--go {
         @extend .button; 
 

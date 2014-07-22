@@ -1,4 +1,4 @@
-@mixin color-box($background: lighten($color-main, 68%), $border: lighten($color-main, 60%)) {
+@mixin color-box($background: lighten($color-main, 69%), $border: lighten($color-main, 65%)) {
     padding: 10px;
     background: $background;
     border: 1px solid $border;

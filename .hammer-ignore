@@ -8,3 +8,6 @@
 *.json
 *.zip
 *.txt
+doc_assets\
+*docs\
+*.yml

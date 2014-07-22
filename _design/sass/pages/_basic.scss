@@ -3,6 +3,7 @@
         background: #fff;
         /*@include max-width;*/
         padding: 1em;
+        margin-top: -7.7em;
 
         @include breakpoint (small) {
             float: left;
