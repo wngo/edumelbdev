@@ -51,8 +51,8 @@ h2, .h2 {
       border-bottom: 1px solid lighten($color-main, 60%);
       
       &:hover {
-        border-bottom: none;
-        transition: all 1s linear;
+        text-decoration: none;
+        transition: all 200ms linear;
       }
     } 
   }
