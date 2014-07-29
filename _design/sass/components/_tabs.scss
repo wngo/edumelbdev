@@ -66,20 +66,23 @@
                 }
     } 
 
+//restrict sizing of images on project page partner sections
+.panes--extras img {
+    max-width: 50%;
 
-
-#main-content .projects .button {
+}
+.projects .button {
     float: none;
     font-size: 1em;
     width: auto;       
 }
         
-    
-#main-content .abstract p {
+ /*   
+.abstract p {
     font-size: 95%;
-}
+}*/
 
-#main-content .e4kids .staff-tab img {
+.e4kids .staff-tab img {
   *width:24%;} 
 
 

@@ -22,14 +22,14 @@ body {
 }
 
 em, i {
- font-family: 'UniversLTW01-45LightObl', 'Helvetica Neue', Helvetica, Arial, sans-serif;
- font-style:normal; 
- font-size:1em; 
+ font-family: $font-sans;
+ font-style: italic; 
+ font-size: 1em; 
 }
 
 h1, .h1, .title {
     font-family: $font-sans-bold;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 2.6em;
     line-height: 1.263em;
     color: $color-main;
@@ -43,10 +43,11 @@ h1, .h1, .title {
 
 h2, .h2 {
     font-family: $font-sans-bold;
-    font-weight: 400;
+    font-weight: 700;
     font-size:2.006em;
     line-height: 1.618em;
     padding: 0; 
+    
   a {
       border-bottom: 1px solid lighten($color-main, 60%);
       
@@ -60,7 +61,7 @@ h2, .h2 {
 
 h3, .h3 { 
     font-family: $body-font-roman;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.618em;
     line-height: 1.618em;
     padding: 0; 
@@ -83,7 +84,7 @@ h4, .h4{
     color: #20201e;
     font-size: 1.24em;
     font-family: $font-sans-bold;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.618em;
     margin-bottom:1.184em; 
   a {
@@ -99,7 +100,7 @@ h4, .h4{
 h5, .h5 {
     color: $color-main;
     font-family: $font-sans-bold;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 1em;
     line-height: 1.184em;
     margin: 0 0 0.732em 0;
@@ -118,7 +119,7 @@ h5, .h5 {
 // if heading is after a paragraph or a div add extra top margin.
 // makes it clearer which content the heading belongs
 
-p, div { display: block; margin: 0px; padding: 0px; 
+div { display: block; margin: 0px; padding: 0px; 
   
   + h2  {
       margin-top: 1.618em;
