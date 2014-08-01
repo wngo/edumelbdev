@@ -13,7 +13,7 @@
     transition: all 200ms linear;
     display: inline-block;
     padding: 8px 14px 8px;
-    margin: 5px 5px 3em 0;
+    margin: 5px 5px 1em 0;
     border: 0;
     vertical-align: middle;
     float: left;
@@ -59,6 +59,7 @@
 .read-more, .read-less{
     cursor: pointer;
     float: right;
+    margin-bottom: 2em;
     margin: 0; padding: 0; }
             
 

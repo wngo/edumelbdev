@@ -206,10 +206,11 @@ li {
 /*.footer a, .footer  a:active, .footer a:visited {
   color:#007DB9;}*/
   
-.main ul, .main ol {
+.main ul, .main  ol {
     /*margin-left: -20px;*/
     margin-bottom: 2em;
-    margin-top:0.732em; }
+    margin-top:0.732em;
+    max-width: 36em; }
 
 
 #main-content ul li, #main-content li ul li, #main-content li li ul li {

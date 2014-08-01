@@ -2,7 +2,7 @@
   color: #fff;
   font-size: 1em;
   font-weight: 400;
-  font-family: 'Univers LT W01 55 Roman','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: $font-sans-roman;
   line-height: 1em;
  }
 
@@ -30,7 +30,7 @@ http://www.sitepoint.com/maintain-image-aspect-ratios-responsive-web-design/
     height: 0;
     margin-bottom: 1em;
     overflow:hidden;
-    padding-top: 56.25%; //golden ratio 320px/1.618 = 197.775px prevents gap with header and img when resizing
+    padding-top: 49.25%; //golden ratio 320px/1.618 = 197.775px prevents gap with header and img when resizing
     position:relative;
     width: 100%;
         
