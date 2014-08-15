@@ -52,11 +52,6 @@ pre, code, kbd, samp {
     font-family: monospace, sans-serif;
 }
 
-body, select, input, textarea {
-    color: #444;
-}
-
-
 
 ul, ol {
     margin-left: 1.8em;
@@ -264,12 +259,6 @@ button {
     border-right: 1px solid #ededed;
 }
 
-.show-grid {
-    outline: 2px solid rgba(0, 0, 255, 0.2);
-    background-image: -webkit-gradient(linear, left center, right center, from(rgba(0, 0, 0, 0)), color-stop(16.667%, rgba(0, 0, 0, 0)), color-stop(16.667%, rgba(255, 0, 0, 0.2)), to(rgba(255, 0, 0, 0.2)));
-    -webkit-background-size: 120px;
-    background-image: -moz-repeating-linear-gradient(center left, transparent, transparent 20.0px, rgba(255, 0, 0, 0.2) 20.0px, rgba(255, 0, 0, 0.2) 120px);
-}
 
 @media screen and (max-width:630px) {
     .mobile-nav {
@@ -483,7 +472,7 @@ table td {
     padding: 1em;
 }
 
-table tr, table th {
+table tr, table th, table td {
     border: 1px solid lighten($color-main, 60%);
     padding: 1em;
 }
@@ -698,11 +687,10 @@ p, h2, h3 {
 h2, h3 {
     page-break-after: avoid;
 }
+
 #newsbanner, div.nav, .footer div#local, #footernav, #g-header {
     display: none;
 }
 
-a.icon {
-    border: .5mm solid #d0d0d0!important;
-}
+
 }
