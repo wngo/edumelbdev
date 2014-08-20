@@ -5,32 +5,45 @@
 }
 
 .block {
+
     @include color-box;
+
     h2 {
         color: #444;
         margin-top: 1em;
-        &:first-child {
-            margin-top: 0;
-        }
+
+            &:first-child {
+                margin-top: 0;
+            }
     }
+
     > h3 {
         margin-top: 0;
     }
+
     .dls-speaker-container {
         margin-top: 0;
+
+        img {
+            max-width: 75%;
+        }
     }
+
     @include breakpoint(small) {
         img {
             display: none;
         }
+
         figcaption {
             display: none;
             position: relative;
             width: 100%;
         }
+
         .spotlight p {
             display: inline-block;
         }
+        
         .dls-speaker-container {
             width: 100%;
         }
@@ -42,9 +55,11 @@
         }
 
     }
-            max-width: 75%;
-
+    //        max-width: 75%;
+    
 }
+
+
 
 .block__sidebar {
     @include color-box;

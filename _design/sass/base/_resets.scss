@@ -15,3 +15,16 @@ ul li, ol li {
 	border-bottom: none;
 }
 
+
+
+
+.home {
+	h3 a, .h3 a {
+		border-bottom: none; }
+
+	.main-content-wrapper {
+  		margin-top: 0; } // remove gap when no breadcrumbs on homepage 
+
+  	.breadcrumbs {
+		padding: 0; } // remove default margin on home page
+}

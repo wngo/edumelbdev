@@ -17,7 +17,13 @@
 
 .news-item {
     margin-bottom: 3em;
-    overflow:hidden;}
+    overflow:hidden; 
+
+    @include breakpoint(small) {
+      margin-bottom: 1px solid lighten($color-main, 70%);
+    }
+
+  }
 
 .news-item h4 {
     margin-top: 0; }
@@ -76,8 +82,14 @@
   margin: 0.25em 0;
 }
 
+// events page date details
 .meta {
   float: left;
   padding-bottom: 0.474em;
+  padding-top: 0.474em;
+  
+    @include breakpoint(small) {
+      padding-right: 1em;
+    }
 }
 

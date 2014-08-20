@@ -23,11 +23,30 @@ $banner-height: 350px;
   }
 }
 
-#main-content #home-banners .banner-navigation {
-background: #005596;
-bottom: 0;
-right: 10px;
-top: auto; }
+#home-banners .banner-navigation {
+  background: #005596;
+  bottom: -20px;
+  border-radius: 2px;
+  padding: 10px 0 10px 10px;
+  position: absolute;
+  left: 0;
+  right: 10px;
+  top: auto;
+  width: 100%;
+  z-index: 10;
+
+  @include breakpoint (large) {
+  bottom: 0;
+  right: 10px;
+  top: auto; 
+  width: auto;
+  left: auto;
+  font-size: 60%;  }
+
+}
+
+
+
 
 
 .banner-img-wrapper {
@@ -182,10 +201,11 @@ h2.reset-m {
   position: absolute;
   height: $banner-height;
   overflow: hidden;
-  TOP: 0px; 
+  top: 0px; 
   left: 0px; 
   width:100%;
-}
+
+} 
 
 
 
@@ -200,43 +220,16 @@ h2.reset-m {
 
 }
 
-#home-banners .banner-navigation a {
-line-height:1.618em !important; }
 
-
-#home-banners .home-banner P.title {
-  font-family: "Droid Sans", "Helvetica Neue", Arial, sans-serif; margin-bottom: -10px; font-size: 25px; font-weight: bold
-}
-#home-banners .home-banner P.button-container {
-  position: absolute; width: auto; bottom: 2px; left: 730px
-}
-#home-banners .home-banner A.button {
-    background: none repeat scroll 0 0 #134272;
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
-    font-family: "Droid Sans","Helvetica Neue",Arial,sans-serif;
-    font-weight: bold;
-    padding: 3px 12px;
-}
-
-
-#home-banners .banner-navigation {
-    background: none repeat scroll 0 0 #003366;
-    border-radius: 5px 5px 5px 5px;
-    padding: 5px 0 5px 5px;
-    position: absolute;
-    right: 10px;
-    bottom: -17px;
-    z-index: 10;
-}
 
 #home-banners .next-banner {
-  text-indent: -$banner-height; margin: 0px 5px 0px 0px; width: 25px; display: block; float: left; overflow: hidden; -webkit-transition: opacity 300ms linear
+ margin: 0px 5px 0px 0px; width: 40px; display: block; float: left; overflow: hidden; -webkit-transition: opacity 300ms linear
 }
 #home-banners .previous-banner {
-  text-indent: -$banner-height; margin: 0px 5px 0px 0px; width: 25px; display: block; float: left; overflow: hidden; -webkit-transition: opacity 300ms linear
+ margin: 0px 5px 0px 0px; width: 40px; display: block; float: left; overflow: hidden; -webkit-transition: opacity 300ms linear
 }
 #home-banners .play-pause-banner {
-  text-indent: -$banner-height; margin: 0px 5px 0px 0px; width: 25px; display: block; float: left; overflow: hidden; -webkit-transition: opacity 300ms linear
+ margin: 0px 5px 0px 0px; width: 40px; display: block; float: left; overflow: hidden; -webkit-transition: opacity 300ms linear
 }
 #home-banners .next-banner:hover {
   opacity: 0.6
@@ -256,17 +249,62 @@ line-height:1.618em !important; }
 #home-banners .play-pause-banner:active {
   opacity: 0.6
 }
-#home-banners .previous-banner {
-  background: url(data:image/gif;base64,R0lGODlhCQAJAKIFAOXq71Z4mtff5ytVgI+lvAAzZgAAAAAAACH5BAEAAAUALAAAAAAJAAkAAAMZWFohsyoAIKCcYV2Q1wQExHydRopXhTpKAgA7) no-repeat 50% 50%
-}
-#home-banners .next-banner {
-  background: url(data:image/gif;base64,R0lGODlhCQAJAPIFAOXq71Z4mtff5ytVgI+lvAAzZgAAAAAAACH5BAUAAAUALAAAAAAJAAkAQAMXWDUS+qtBSIB9wQKHNVeC9XUilJUgWiQAOw==) no-repeat 50% 50%; margin-RIGHT: 0px
-}
-#home-banners .play-pause-banner {
-  background: url(data:image/gif;base64,R0lGODlhCQAJAJECAOXq73OPqwAzZgAAACH5BAEAAAIALAAAAAAJAAkAAAIVFBASJ4bKXFqgnRkvrHLbR30Yp4UFADs=) no-repeat 50% 50%
+
+#home-banners {
+      
+
+    .previous-banner {
+    //background: url(data:image/gif;base64,R0lGODlhCQAJAKIFAOXq71Z4mtff5ytVgI+lvAAzZgAAAAAAACH5BAEAAAUALAAAAAAJAAkAAAMZWFohsyoAIKCcYV2Q1wQExHydRopXhTpKAgA7) no-repeat 50% 50%;
+     
+
+       &:after {
+        content: $fa-var-step-backward; 
+        font-family: FontAwesome;
+        color: #fff;
+       }
+
+       &:hover {
+          border-bottom: none;
+        }
+  }
+
+  .next-banner {
+   // background: url(data:image/gif;base64,R0lGODlhCQAJAPIFAOXq71Z4mtff5ytVgI+lvAAzZgAAAAAAACH5BAUAAAUALAAAAAAJAAkAQAMXWDUS+qtBSIB9wQKHNVeC9XUilJUgWiQAOw==) no-repeat 50% 50%; margin-RIGHT: 0px;
+      
+      &:after {
+        content: $fa-var-step-forward; 
+        font-family: FontAwesome;
+        color: #fff;
+      }
+
+      &:hover {
+        border-bottom: none;
+      }
+  }
+
+  .play-pause-banner {
+    //background: url(data:image/gif;base64,R0lGODlhCQAJAJECAOXq73OPqwAzZgAAACH5BAEAAAIALAAAAAAJAAkAAAIVFBASJ4bKXFqgnRkvrHLbR30Yp4UFADs=) no-repeat 50% 50%;
+    
+    &:after {
+        content: $fa-var-play; 
+        font-family: FontAwesome;
+        color: #fff;
+      }
+
+    &:hover {
+        border-bottom: none;
+      }
+  }
 }
 .paused#home-banners .play-pause-banner {
-  background: url(data:image/gif;base64,R0lGODlhCQAJAPMIAI+lvLrI1itVgOXq71Z4mg4+btff58jT3gAzZgAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAUAAAgALAAAAAAJAAkAQAQaEKEgpJX02sH52RxQXJ1IGoSGdEMmse6KXhEAOw==) no-repeat 50% 50%
+  //background: url(data:image/gif;base64,R0lGODlhCQAJAPMIAI+lvLrI1itVgOXq71Z4mg4+btff58jT3gAzZgAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAUAAAgALAAAAAAJAAkAQAQaEKEgpJX02sH52RxQXJ1IGoSGdEMmse6KXhEAOw==) no-repeat 50% 50%
+  
+  &:after {
+    content: $fa-var-pause;
+    font-family: FontAwesome;
+    color: #fff;
+  }
+
 }
 #home-banners .previous-banner {
   
