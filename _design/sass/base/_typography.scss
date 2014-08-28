@@ -35,6 +35,7 @@ h1, .h1, .title {
     color: $color-main;
     text-shadow: none;
     padding: 0;
+    margin-bottom: 1em;
 
     @include breakpoint (small) {
       font-size: 2em;

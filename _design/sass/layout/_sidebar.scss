@@ -1,7 +1,7 @@
 @mixin color-box($background: lighten($color-main, 65%), $border: lighten($color-main, 55%)) {
     padding: 10px;
     background: $background;
-    border: 1px solid $border;
+    /*border: 1px solid $border;*/
 }
 
 .block {
@@ -59,7 +59,53 @@
     
 }
 
+.block-spotlight {
+    background: $color-main;
+    padding: 0;
+    // border-top: 3px solid $color-main;
+    border: none;
 
+        h4, p, .content-header {
+            color: #fff;
+            padding: 0em 20px;
+        }
+
+        a {
+            color: lighten($color-main, 60%);
+        }
+
+        .content-header {
+            text-transform: uppercase;
+            font-size: 0.7em;
+            margin-bottom: 2em;
+            margin-top: 1em;
+        }
+
+}
+
+.block-spotlight__lighten {
+        padding: 20px;
+        background: lighten($color-main, 9%);
+        margin-bottom: 4%;
+    }
+
+.block-spotlight__other {
+        background: #cecece;
+        padding: 20px;
+
+        h4 {
+            color: inherit;
+        }
+
+        a {
+            color: inherit;
+            text-transform: none;
+        }
+    }
+
+.margin-b {
+    margin-bottom: 3em;
+}
 
 .block__sidebar {
     @include color-box;
