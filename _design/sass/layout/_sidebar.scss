@@ -59,22 +59,29 @@
     
 }
 
-.block-spotlight {
-    background: $color-main;
-    padding: 0;
-    // border-top: 3px solid $color-main;
-    border: none;
+@mixin block-spotlight-styles ($background, $padding) {
+    background: $background;
+    padding: $padding;
+}
 
-        h4, p, .content-header {
+// @mixin block-spotlight-colors  {}
+
+
+.block-spotlight {
+    @include block-spotlight-styles($color-main, 0);
+   
+
+
+        .block-spotlight__link, .block-spotlight__title, .block-spotlight__detils, .block-spotlight__content-header {
             color: #fff;
             padding: 0em 20px;
         }
 
-        a {
+        .block-spotlight__link {
             color: lighten($color-main, 60%);
         }
 
-        .content-header {
+        .block-spotlight__content-header {
             text-transform: uppercase;
             font-size: 0.7em;
             margin-bottom: 2em;
@@ -83,9 +90,8 @@
 
 }
 
-.block-spotlight__lighten {
-        padding: 20px;
-        background: lighten($color-main, 9%);
+.block-spotlight--lighten {
+    @include block-spotlight-styles( lighten($color-main, 9%), 20px);
         margin-bottom: 4%;
     }
 
