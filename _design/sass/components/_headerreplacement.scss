@@ -41,7 +41,8 @@
     .header .hgroup  img {
         height: auto;
         margin-top:3px;
-        max-width:100%; 
+        max-width:100%;
+        width: 450px; 
       
         @include breakpoint (small) {
          width: 450px;

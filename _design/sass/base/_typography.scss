@@ -35,6 +35,7 @@ h1, .h1, .title {
     color: $color-main;
     text-shadow: none;
     padding: 0;
+    margin-bottom: 1em;
 
     @include breakpoint (small) {
       font-size: 2em;
@@ -69,6 +70,7 @@ h3, .h3 {
 	
 	   &:hover {
 		      background: none; } 
+
     a {
       border-bottom: 1px solid lighten($color-main, 60%);
       
@@ -76,17 +78,22 @@ h3, .h3 {
         border-bottom: none;
         transition: all 1s linear;
       }
+
+      ~ h3 {
+        margin-top: 1.618em;
+      }
     }
 
   }
 
-h4, .h4{
+h4, .h4 {
     color: #20201e;
     font-size: 1.24em;
     font-family: $font-sans-bold;
     font-weight: 700;
     line-height: 1.618em;
-    margin-bottom:1.184em; 
+    margin-bottom:1.184em;
+
   a {
       border-bottom: 1px solid lighten($color-main, 60%);
       
@@ -119,17 +126,14 @@ h5, .h5 {
 // if heading is after a paragraph or a div add extra top margin.
 // makes it clearer which content the heading belongs
 
-div { display: block; margin: 0px; padding: 0px; 
+div, p { 
+  display: block;
   
   + h2  {
       margin-top: 1.618em;
-
-      .label {
-        margin-top: 0;
-      }
     } 
 
-  + h3  {
+  ~ h3 {
       margin-top: 1.618em;
     }
   + h4  {
@@ -144,7 +148,8 @@ strong, b {
   font-family: $body-font-roman;
   font-weight: 700;
   font-size:1em;
-  line-height: 1.618em; }
+  line-height: 1.618em; 
+}
 
 footer strong, footer b {
   color: #fff;
@@ -155,13 +160,15 @@ footer strong, footer b {
   color: #444; 
   display:block;
   font-weight: 400; 
-  font-size: 1em; }
+  font-size: 1em; 
+}
 
 
 .opinion-name, .time-stamp, .source-name {
   //font-family:'UniversLTW01-67BoldCn',Helvetica Nueue, Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 0.732em; }
+  font-size: 0.732em; 
+}
 
 
 .hgroup a, .breadcrumbs a {
@@ -233,16 +240,16 @@ table th {
 
 #main-content form label, #main-content form p {
   font-family: $font-sans;
-  font-weight:400;}
+  font-weight: 400;}
 
 #main-content form h3, #main-content form h4, #main-content form h5 {
   font-family: $body-font-roman;
-  font-size:1.618em;
-  font-weight:normal;
+  font-size: 1.618em;
+  font-weight: normal;
   text-align: left;
-  margin:1em 0 0 0;
+  margin: 1em 0 0 0;
   border: none;
-  padding:0;}
+  padding: 0; }
 
 a.icon {
 font-family: $font-sans;  }

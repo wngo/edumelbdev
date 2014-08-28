@@ -192,3 +192,90 @@ label.check + .caption,
 		margin-left: 25%;
 	}
 }
+
+form {
+    overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+form fieldset {
+    position: relative;
+    margin-bottom: 10px;
+    background: #fafcff;
+    padding: 5px 0 20px;
+    border: 1px solid lighten(#005596, 60%);
+}
+
+form p {
+    text-align: center;
+    padding: 1px 80px;
+}
+form input, form textarea, form select {
+    padding: 5px;
+    margin: 0 0 6px;
+    max-width: 100%}
+form select {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+form textarea {
+    -webkit-appearance: textfield;
+}
+
+form .follower {
+    margin: 0;
+}
+form .follower label {
+    display: block;
+    font-family: sans-serif;
+    text-align: left;
+    font-weight: normal;
+}
+form .follower input {
+    margin: 0 3px 0 0;
+}
+form legend {
+    text-indent: -999em;
+}
+form .col-1, form .col-2, form .col-3, form .col-4, form .col-5, form .col-6 {
+    float: left;
+    display: inline;
+    margin-left: 16px;
+    margin-right: 0;
+}
+form .col-1 {
+    width: 95px;
+}
+form .col-2 {
+    width: 206px;
+}
+form .col-3 {
+    width: 317px;
+}
+form .col-4 {
+    width: 428px;
+}
+form .col-5 {
+    width: 539px;
+}
+form .col-6 {
+    width: 650px;
+}
+form .push-1 {
+    margin-left: 127px;
+}
+form .push-2 {
+    margin-left: 238px;
+}
+form .push-3 {
+    margin-left: 349px;
+}
+form .push-4 {
+    margin-left: 460px;
+}
+form .push-5 {
+    margin-left: 571px;
+}
+form .first {
+    margin-left: 0;
+}

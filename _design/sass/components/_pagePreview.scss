@@ -95,3 +95,50 @@ http://www.sitepoint.com/maintain-image-aspect-ratios-responsive-web-design/
     margin-bottom: 2em; }
 
 }
+
+
+
+/*------------------------*\
+
+  #PROJECT-PAGE
+
+\*-----------------------*/
+
+
+.grid-item-lines {
+    padding: 1em 0.5em;
+    margin-bottom: 2em;
+    background: #fff;
+    transition: background-color 0.3s ease-out;
+    outline: #fff;
+}
+
+.grid-item-lines--hasImg  {
+    padding: 0;
+    background: #fff;
+    transition: background-color 0.3s ease-out;
+    outline: #fff;
+}
+
+.grid-item-lines--hasImg .preview-img-wrap {
+    margin-bottom: 0;
+}
+
+.grid-item-lines--hasImg p{
+    padding: 1em 0.5em;
+}
+
+
+.grid-item-lines a {
+    /* color: #444; */
+}
+
+.grid-item-lines:hover, .grid-item-lines--hasImg:hover {
+
+        background: #c9e8ff;
+        outline: 1px solid #c9e8ff;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in;
+        
+    }
+

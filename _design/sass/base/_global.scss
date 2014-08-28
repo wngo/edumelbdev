@@ -206,6 +206,7 @@ li {
 /*.footer a, .footer  a:active, .footer a:visited {
   color:#007DB9;}*/
   
+
 .main ul, .main  ol {
     /*margin-left: -20px;*/
     margin-bottom: 1em;
@@ -295,9 +296,8 @@ html.pointerevents body.no-logo div.wrapper div.aside {
 
 
 
-#main-content img {
+.main-content-wrapper img {
 
-   margin-top:0.382em;
    width: 100%; }
 
 
@@ -316,8 +316,11 @@ html.pointerevents body.no-logo div.wrapper div.aside {
 1185px
 
 */
-@media all and (min-width: 45em) {
-body{
+// @media all and (min-width: 45em) {
+
+@include breakpoint(large) {
+
+body {
   
   background: url("mgseBg-l-alt.png") 0em 30em no-repeat,
   url("mgseBg-r.png") 101% 35em no-repeat !important;
@@ -325,18 +328,24 @@ body{
  /**background: url("mgseBg-r.png") 101% 35em no-repeat !important;
   background-color:#fff;**/
 }
+  
+  .home {
+    background: url("mgseBg-l-alt.png") 0em 14em no-repeat,
+    url("mgseBg-r.png") 101% 35em no-repeat !important;
+    background-color:#fff;
+  }
 }
 
 
 /*iphone portrait
 345px*/
-@media all and (max-width: 23em) {
+//@media all and (max-width: 23em) {
 
 
-  
+@include breakpoint(small) {
 
   .home .header .hgroup {
-    height:103px;
+    height: 103px;
   }
   .home .wrapper-header {
     background: none;
@@ -350,6 +359,11 @@ body{
 }
 
 /*1000px*/
+/** 
+  
+  Removed, looks like duplicate MQ
+
+
 @media all and (max-width:64em) {
 
 
@@ -367,12 +381,8 @@ body.home {
   url("mgseBg-r.png") 101% 13em no-repeat !important;
   }
 
-
-
- 
-
-
  }
+ **/
 
 /**GLOBAL
 770px**/
