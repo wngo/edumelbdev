@@ -125,7 +125,18 @@ background-color:$color-main; }
 
 
 
-// different button icons for various link types
+/*------------------------------------*\
+    #BUTTON TYPES
+\*------------------------------------*/
+
+
+/**
+ * PDF
+ */
+
+
+
+
 .button--pdf {
     @extend .button;
     position: relative;

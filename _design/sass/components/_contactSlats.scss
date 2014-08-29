@@ -1,17 +1,24 @@
-ol.slats{
+ol.slats, .slats li {
+
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
   max-width: 100%;
 }
+
 .slats li {
   margin-bottom: 2em;
   float: left;
+
+  img {
+    width: 15%;
+  }
 }
 
 .block {
   margin-bottom: 2em;
 }
+
 .slats .img {
      position: relative;
      float: left;
@@ -23,7 +30,7 @@ ol.slats{
  
 
   figcaption {
-    background: rgba(0,0,0,0.8);
+    background:  $color-main;
     color: #fff;
     height: 100%;
     left: 0;
@@ -35,7 +42,6 @@ ol.slats{
 
 
       p {
-
         font-size: 1.213em;
         text-align: center;
         margin-top: 45%;

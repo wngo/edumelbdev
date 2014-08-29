@@ -76,6 +76,7 @@ http://www.sitepoint.com/maintain-image-aspect-ratios-responsive-web-design/
                 text-decoration: none;
                 } 
             }
+
         }
       
         
@@ -118,15 +119,22 @@ http://www.sitepoint.com/maintain-image-aspect-ratios-responsive-web-design/
     background: #fff;
     transition: background-color 0.3s ease-out;
     outline: #fff;
+
+     p {
+    color: #333;  
+    padding: 1em 0.5em; 
+
+    .slats &  {
+      padding: 0 0 1em;
+    }
+  }
 }
 
 .grid-item-lines--hasImg .preview-img-wrap {
     margin-bottom: 0;
 }
 
-.grid-item-lines--hasImg p{
-    padding: 1em 0.5em;
-}
+
 
 
 .grid-item-lines a {
