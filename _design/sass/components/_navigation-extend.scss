@@ -11,6 +11,7 @@
       ul li, ol li {
         margin: 0;
         padding: 0; 
+
       }
   } 
   /** next closed**/
@@ -51,6 +52,7 @@
      margin-right:0px;
      width: auto;
      margin-left: 0;
+     background: none;
      /*width: 16.66666667%;*/
 
        @include breakpoint (medium) {
@@ -63,6 +65,7 @@
         a:hover {
         background: lighten($primary-color-nav, 10%);
         } 
+        
         a {
          background:($primary-color-nav);
          border-left: 1px solid darken($primary-color-nav, 5%);

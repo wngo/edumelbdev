@@ -10,12 +10,16 @@
   .preview-box {
     max-width: 100%;
     text-align: left;
-    margin-bottom: 2em; 
+    margin-bottom: 2em;
   
     @include breakpoint (large) {
       text-align: left;
     }
   }
+
+  .preview-box.grid-item--hasImg p {
+      padding: 1em 0.5em;
+    } 
 
 /*
 padding-top added to maintain aspect ratio: 
@@ -106,7 +110,10 @@ http://www.sitepoint.com/maintain-image-aspect-ratios-responsive-web-design/
 \*-----------------------*/
 
 
-.grid-item-lines {
+/**
+ * Used for project landing pages and new research centre landing pages
+ */
+.grid-item {
     padding: 1em 0.5em;
     margin-bottom: 2em;
     background: #fff;
@@ -114,34 +121,32 @@ http://www.sitepoint.com/maintain-image-aspect-ratios-responsive-web-design/
     outline: #fff;
 }
 
-.grid-item-lines--hasImg  {
+
+/**
+* Horizontal page previews
+*/
+.slats .grid-item--hasImg  {
     padding: 0;
     background: #fff;
     transition: background-color 0.3s ease-out;
     outline: #fff;
 
      p {
-    color: #333;  
-    padding: 1em 0.5em; 
+        color: #333;  
+        padding: 0 0 1em;
+        }
 
-    .slats &  {
-      padding: 0 0 1em;
+  img {
+      width: 25%;
     }
-  }
 }
 
-.grid-item-lines--hasImg .preview-img-wrap {
+.grid-item--hasImg .preview-img-wrap {
     margin-bottom: 0;
 }
 
 
-
-
-.grid-item-lines a {
-    /* color: #444; */
-}
-
-.grid-item-lines:hover, .grid-item-lines--hasImg:hover {
+.grid-item:hover, .grid-item--hasImg:hover {
 
         background: #c9e8ff;
         outline: 1px solid #c9e8ff;

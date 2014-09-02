@@ -9,10 +9,6 @@ ol.slats, .slats li {
 .slats li {
   margin-bottom: 2em;
   float: left;
-
-  img {
-    width: 15%;
-  }
 }
 
 .block {
@@ -22,15 +18,20 @@ ol.slats, .slats li {
 .slats .img {
      position: relative;
      float: left;
-     width: 200px;
-     height: 200px;
      background-position: 50% 50%;
      background-repeat: no-repeat;
      background-size: cover;
+     overflow: hidden;
+     height: 150px;
+     width: 150px;
+
+     @include breakpoint (small) {
+        width: 100%;
+     }
  
 
   figcaption {
-    background:  $color-main;
+    background:  rgba($color-main, 0.8);
     color: #fff;
     height: 100%;
     left: 0;
@@ -40,12 +41,19 @@ ol.slats, .slats li {
     top: 0;
     width: 100%;
 
+     @include breakpoint (small) {
+        background: rgba($color-main, 0.5);  
+        opacity: 1; 
+
+      }
+
 
       p {
-        font-size: 1.213em;
-        text-align: center;
+        font-size: 1em;
+        text-align: left;
         margin-top: 45%;
         word-wrap: break-word;
+        margin-left: 10px;
       }
       
 
@@ -53,6 +61,14 @@ ol.slats, .slats li {
         cursor: pointer;
         opacity: 1;
         transition: all 0.25s ease-in;
+      }
+
+      a {
+        color: #fff;
+
+          &:hover {
+            border-bottom: 1px solid #fff;
+          }
       }
   }
 
@@ -64,17 +80,80 @@ ol.slats, .slats li {
         opacity: 0.8;
       }
 
+
  }
 
- .slats img {
-   float: left;
-   width: 30%;
+
+ .slats__header, .slats__header--full {
+  float: left;
+  position: relative;
+  overflow: hidden;
+
+
+    img {
+      width: 100%;
+    }
+
+    .more-info {
+      color: #fff;
+      font-size: 1em;
+      position: absolute;
+      padding: 2px 10px;
+      top: 120px;
+      left: 0px;
+      background: $color-main;
+      text-align: left;
+
+       @include breakpoint (small) {
+        display: none; }
+
+    }
+
+
+ }
+
+.slats__header {
+    width: 30%;
+}
+
+ .slats__header--full {
+  width: 100%;
+    
+   .more-info {
+      color: #fff;
+      font-size: 1em;
+      position: absolute;
+      padding: 2px 10px;
+      top: 120px;
+      left: 0px;
+      background: $color-main;
+      text-align: left;
+
+    }
+  
  }
 
  .slats__details {
-  float: left;
+  float: right;
   width: 65%;
   margin-left: 5%;
+
+    h4 {
+      font-size: 1em;
+      font-family: $font-sans;
+      font-weight: 400;
+      color: $subtle-color;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .lead {
+      font-style: italic;
+    }
+
+    p {
+      margin-bottom: 0.732em;
+    }
  }
 
 

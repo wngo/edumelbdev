@@ -21,30 +21,6 @@
 
 
 
-/* Button > Primary */
-.primary-button {
-	color: #f6f6f6;
-	text-shadow: 0 -1px 0 #02a;
-	box-shadow: inset 0 -1px 0 #02a;
-	background-color: #34d;
-	background: -webkit-linear-gradient(top, #25d, #52d);
-	background: -moz-linear-gradient(top, #25d, #52d);
-	background: -o-linear-gradient(top, #25d, #52d);
-	background: linear-gradient(to bottom, #25d, #52d);
-	border: 1px solid #02a;
-	}
-	.primary-button:hover,
-	.primary-button:focus {
-		color: #fff;
-		box-shadow: inset 0 -1px 0 #006;
-		border-color: #006;
-	}
-	.primary-button:active {
-		color: #fff;
-		box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
-		background-color: #006;
-	}
-
 /* Combined inputs/buttons */
 .combined {
 	display: block;
