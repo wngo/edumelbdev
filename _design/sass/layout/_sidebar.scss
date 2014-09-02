@@ -93,6 +93,10 @@
         }
 
 }
+/**
+.spotlight {
+    margin-bottom: 2em;
+}
 
 .block-spotlight--lighten {
     @include block-spotlight-styles( lighten($color-main, 9%), 20px);
@@ -117,6 +121,7 @@
     margin-bottom: 3em;
 }
 
+**/
 .block__sidebar {
     @include color-box;
 }
@@ -138,6 +143,3 @@
     }
 }
 
-.spotlight {
-    margin-bottom: 2em;
-}
