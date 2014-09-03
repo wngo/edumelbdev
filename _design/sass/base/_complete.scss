@@ -119,17 +119,17 @@ input:invalid, textarea:invalid {
     background-color: #f0dddd;
 }
 ::-moz-selection {
-    background: #b14a1f;
-    color: #fff;
+    background: lighten($color-main, 60%);
+    color: #333;
     text-shadow: none;
 }
 ::selection {
-    background: #b14a1f;
-    color: #fff;
+    background: lighten ($color-main, 60%);
+    color: #333;
     text-shadow: none;
 }
 a:link {
-    -webkit-tap-highlight-color: #ff5e99;
+    -webkit-tap-highlight-color: lighten($color-main, 60%);
 }
 button {
     width: auto;

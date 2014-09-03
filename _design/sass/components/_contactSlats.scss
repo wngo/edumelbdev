@@ -18,34 +18,39 @@ ol.slats, .slats li {
 .slats .img {
      position: relative;
      float: left;
-     background-position: 50% 50%;
-     background-repeat: no-repeat;
-     background-size: cover;
      overflow: hidden;
      height: 150px;
      width: 150px;
 
-     @include breakpoint (small) {
-        width: 100%;
+     @include breakpoint (large) {
+        width: 150px;
      }
  
-
-  figcaption {
-    background:  rgba($color-main, 0.8);
-    color: #fff;
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-
-     @include breakpoint (small) {
-        background: rgba($color-main, 0.5);  
-        opacity: 1; 
-
+    .fa-link {
+        font-size: 1em;
+        bottom: 0;
+        position: absolute;
+        right: 0;
+        opacity: 0.8;
       }
+ }
+
+ .img figcaption {
+        background:  rgba($color-main, 0.8);
+        color: #fff;
+        height: 150px;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+
+         @include breakpoint (small) {
+            background: rgba($color-main, 0.5);  
+            opacity: 1; 
+
+          }
 
 
       p {
@@ -70,18 +75,7 @@ ol.slats, .slats li {
             border-bottom: 1px solid #fff;
           }
       }
-  }
-
-    .fa-link {
-        font-size: 1em;
-        bottom: 0;
-        position: absolute;
-        right: 0;
-        opacity: 0.8;
-      }
-
-
- }
+    }
 
 
  .slats__header, .slats__header--full {
@@ -91,8 +85,13 @@ ol.slats, .slats li {
 
 
     img {
-      width: 100%;
-    }
+      width: 150px;
+      height: 150px;
+
+        @include breakpoint(large) {
+          height: 150px;
+        }
+     }
 
     .more-info {
       color: #fff;
@@ -113,11 +112,11 @@ ol.slats, .slats li {
  }
 
 .slats__header {
-    width: 30%;
+    width: 25%;
 }
 
  .slats__header--full {
-  width: 100%;
+  width: 150;
     
    .more-info {
       color: #fff;
@@ -133,26 +132,51 @@ ol.slats, .slats li {
   
  }
 
- .slats__details {
+ .slats__details, 
+ %slat__details { //silent class //http://csswizardry.com/2014/01/extending-silent-classes-in-sass/
   float: right;
-  width: 65%;
-  margin-left: 5%;
+  width: 73%;
+  margin-left: 2%;
 
     h4 {
       font-size: 1em;
       font-family: $font-sans;
       font-weight: 400;
-      color: $subtle-color;
       letter-spacing: 1px;
-      text-transform: uppercase;
     }
 
     .lead {
-      font-style: italic;
+      color: $subtle-color;
+      font-size: $ms-down1;
     }
 
     p {
       margin-bottom: 0.732em;
+    }
+ }
+
+ .slats__details--full {
+  @extend %slat__details; 
+  float: left;
+  margin-left: 0;
+  margin-bottom: 2em;
+  width: 70%;
+ }
+
+ .grid-contacts .group {
+
+  width: 30%;
+
+    @include breakpoint(medium) {
+      float: left;
+      margin-right: 2%;
+      width: 30%;
+    }
+
+    @include breakpoint(large) {
+      float: left;
+      margin-right: 2%;
+      width: 30%;
     }
  }
 
