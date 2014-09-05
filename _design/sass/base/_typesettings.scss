@@ -194,11 +194,10 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  margin-bottom: emRhythm(4, $ms-up1);
+  margin-bottom: 0.236em;
   @include setType(5, $ms-up1);
 
   @media (min-width: 56.25em) {
-    margin-bottom: emRhythm(4, $ms-up2);
     @include setType(6, $ms-up2);
   }
 }
