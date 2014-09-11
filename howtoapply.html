@@ -3,7 +3,7 @@
 <!-- @include _mainNavigation -->
 
    
-        
+    
     
 <div class="title-image hero-img d-all t-all m-all" id="new_div_612396">
   <img src="<!-- @path insta-students_hero.jpg -->" />
@@ -38,10 +38,10 @@
 <div class="accordion-wrapper" role="tablist">
 
 
-  <h2 class="collapsible label collapse-close" role="tab"  tabindex="1">Apply for the Master of Teaching</h2>
+  <h2 class="collapsible label" role="tab" id="mteach" tabindex="1">Apply for the Master of Teaching</h2>
 
 
-<div class="accordion" style="display: none;" role="tabpanel">
+<div class="accordion"  role="tabpanel">
   <h3 role="tab">Domestic students</h3><strong>Applications for the 2014 intake of Master of Teaching have now closed.</strong> We are not accepting late applications.<br>
   <br>
   Our next intake for this program will be in 2015. Applications will open in August through the <a href="http://www.vtac.edu.au/">Victorian Tertiary Admissions Centre (VTAC)</a>.<br>
@@ -55,9 +55,9 @@
   Our next intake for this program will be in 2015. We will commence accepting applications shortly.
 </div>
 
-<h2 class="collapsible label collapse-close" role="tab" tabindex="2">Apply for a coursework program</h2>
+<h2 class="collapsible label" id="coursework" role="tab" tabindex="2">Apply for a coursework program</h2>
 
-<div class="accordion" style="display: none;" role="tabpanel">
+<div class="accordion" role="tabpanel">
   <h3>Domestic students<br></h3>Applications for mid-year intake (semester 2) are now open. Apply via the <a href="https://prod.ss.unimelb.edu.au/student/S1/eApplications/eAppLogin.aspx?r=&amp;f=%24S1.EAP.LOGIN.WEB">Online Application System</a>.<br>
   <br>
   Please note not all courses have a mid-year intake. Course availability will be confirmed shortly.<br>
@@ -72,9 +72,9 @@
   <br>
 </div>
 
-<h2 class="collapsible label collapse-open" role="tab" tabindex="3">Apply for a research program</h2>
+<h2 class="collapsible label" role="tab" tabindex="3" id="rhd">Apply for a research program</h2>
 
-<div class="accordion" style="display: block;" role="tabpanel">
+<div class="accordion" role="tabpanel">
   <h3>Application form<br></h3>
 
   <p>Access the RHD Application form on the <a href="http://futurestudents.unimelb.edu.au/admissions/applications/research">Future Students website</a> and submit to:</p>
@@ -125,9 +125,9 @@
   <p>If successful you will receive an offer letter, explaining how you can accept your place.</p>
 </div>
 
-<h2 class="collapsible label collapse-close" role="tab" tabindex="4">Apply for a breadth subject</h2>
+<h2 class="collapsible label" role="tab" tabindex="4">Apply for a breadth subject</h2>
 
-<div class="accordion" style="display: none;" role="tabpanel">
+<div class="accordion" role="tabpanel">
   <p>Speak to a Student Adviser in the faculty you are currently enrolled with to apply for a <a href="http://education.unimelb.edu.au/study_with_us/breadth">breadth subject</a>.</p>
 
   <p><em>*Domestic students include Australian citizens, Australian permanent resident and New Zealand citizens.</em></p>
@@ -178,40 +178,32 @@ MGSE-test</p>
 
 <script src="http://education.unimelb.edu.au/__data/assets/js_file/0010/744706/unoSlider-1.0.1.min.js"></script>
  <!--collapsible-->
-<script type="text/javascript" src="http://education.unimelb.edu.au/_design/js/jquery.collapsible.min.js"></script>
+
+<!-- @javascript collapsible -->
+
  <!--js expander-->
 <script type="text/javascript" src="http://education.unimelb.edu.au/__data/assets/js_file/0011/590906/jquery.expander.min.js"></script>
 
 <!--fancybox-->
 <script type="text/javascript" src="http://education.unimelb.edu.au/__data/assets/js_file/0020/705332/jquery.fancybox.pack.js"></script>
-  <!-- homepage banner -->   
-  <script src="http://education.unimelb.edu.au/__data/assets/js_file/0005/875597/banner-roller.js"></script>
- 
+
      
 
 <script type="text/javascript">
   $(document).ready(function() {
-    // My Uno Slider
-    window.unoSlider = $('#slider1').unoSlider(
-                   {animSpeed:  250,
-                   easing:'linear',
-                   
-                   bullets:true, auto: false});
 
 
- $('.collapsible').collapsible({
-                defaultOpen: 'content1,content2',
-          speed: 'fast'
-            });
-      
+var type = window.location.hash.substr(1);
+
                            
-    $('.abstract').expander({
-        slicePoint:       100,  // default is 100
-        expandPrefix:     '...', // default is '... '
-        detailClass: 'more-details',
+$('.abstract').expander ({
+        slicePoint:   100,   // default is 100
+        expandPrefix: '...', // default is '... '
+        detailClass:  'more-details',
         summaryClass: 'summary',
-        expandText: 'read more'
-                                });
+        expandText:   'read more'
+        });
+
 $(".fancybox").fancybox();
 
  $(".flexnav").flexNav({
@@ -221,7 +213,12 @@ $(".fancybox").fancybox();
     'hover': true
  });
 
+ $('.collapsible').collapsible({
+          defaultOpen: type,
+          speed: 'fast'
             });
+
+});
  
                            
 </script>

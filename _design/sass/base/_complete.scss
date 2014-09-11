@@ -465,6 +465,21 @@ table {
     margin-top: 10px;
 }
 
+
+.table-basic {
+    border: none;
+
+    tr, th, td {
+        border: none;
+        background: none;
+    }
+
+    tbody tr:nth-child(2n+1) {
+        background: none; 
+    }
+}
+
+
 table caption {
     text-align: left;
     padding-bottom: 5px;
@@ -476,7 +491,8 @@ table td {
 table tr, table th, table td {
     border: 1px solid lighten($color-main, 60%);
     padding: 1em;
-}
+    }
+
 table tbody tr:nth-child(2n+1) {
     background: lighten($color-main, 65%);
 }
