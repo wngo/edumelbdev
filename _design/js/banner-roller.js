@@ -4,7 +4,7 @@ $(function() {
   /*  Homepage Banners  */
   var homeTimer = false;
   // Hide all banners except the first one
-  $('.home-banner').hide().last().show().addClass('current');
+  $('.home-banner').hide().first().show().addClass('current');
 
   // Only add the banner navigation if there is more than one banner
   if ($('#home-banners .home-banner').length > 1) {
@@ -39,8 +39,8 @@ $(function() {
       // If there is no next banner, cycle back to the start
       if (!next.length) next = $('#home-banners .home-banner').first();
       // Fade out the current banner and fade in the new one
-      current.removeClass('current').fadeOut(2000);
-      next.addClass('current').fadeIn(2000, callback);
+      current.removeClass('current').fadeOut(250);
+      next.addClass('current').fadeIn(250, callback);
       // Update banner count
       updateBannerCount(next);
     });
@@ -55,8 +55,8 @@ $(function() {
       // If there is no previous banner, cycle back to the last one
       if (!prev.length) prev = $('#home-banners .home-banner').last();
       // Fade out the current banner and fade in the new one
-      current.removeClass('current').fadeOut(2000);
-      prev.addClass('current').fadeIn(2000);
+      current.removeClass('current').fadeOut(250);
+      prev.addClass('current').fadeIn(250);
       // Update banner count
       updateBannerCount(prev);
     });
@@ -72,6 +72,13 @@ $(function() {
         $('#home-banners').addClass('paused');
       }
     });
+
+    $('#home-banners').focusin(function(e) {
+      // Pause the homepage banners
+      clearTimeout(homeTimer);
+      $(this).addClass('paused');
+    });
+
     // Autoplay the banners
     $('#home-banners .play-pause-banner').click();
   }
