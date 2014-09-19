@@ -136,7 +136,7 @@ $base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size;
 // Default Type Styles
 // ---------------------
 html {
-  font-size: ($base-font-size / 16px) * 100%; // Sets the font-size of the project as a percentage. Making it easy to scale up/down the whole project for specific media queries
+  font-size: ($base-font-size / 16px) * 105%; // Sets the font-size of the project as a percentage. Making it easy to scale up/down the whole project for specific media queries
 }
 
 body {
@@ -202,10 +202,6 @@ h3, .h3 {
   }
 }
 
-h4, .h4 {
-  margin-bottom: emRhythm(4, $ms-up1);
-  @include setType(5, $ms-up1);
-}
 
 h5, .h5 {
   margin-bottom: emRhythm(4);

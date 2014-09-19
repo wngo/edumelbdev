@@ -63,7 +63,7 @@ h2, .h2 {
 h3, .h3 { 
     font-family: $body-font-roman;
     font-weight: 500;
-    font-size: 1.618em;
+    font-size: 1.24em;
     line-height: 1.618em;
     padding: 0; 
 
@@ -88,7 +88,7 @@ h3, .h3 {
 
 h4, .h4 {
     color: #20201e;
-    font-size: 1.24em;
+    font-size: 1.1em;
     font-family: $font-sans-bold;
     font-weight: 700;
     line-height: 1.618em;
@@ -150,10 +150,10 @@ div, p {
 
 
 strong, b {
-  color: #20201e;
+  color: #404040;
   font-family: $body-font-roman;
   font-weight: 700;
-  font-size:1em;
+  font-size:0.9em;
   line-height: 1.618em; 
 }
 
@@ -226,10 +226,11 @@ a.button {
   font-size: $ms-up1;
   font-family: $body-font-family;
   line-height: $base-line-height;
-  font-weight: 400; 
+  font-weight: 400;
+  max-width: 90%; 
     
     @include breakpoint(small) {
-      font-size: 1em; }
+      font-size: 1.1em; }
 
   }
 
