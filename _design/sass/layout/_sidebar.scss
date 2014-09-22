@@ -4,7 +4,7 @@
     /*border: 1px solid $border;*/
 }
 
-.block {
+.block, .glance-clear {
 
     @include color-box;
 
@@ -21,9 +21,20 @@
         margin-top: 0;
     }
 
+    //force header to stack
+    h4 {
+        clear: both;
+    }
+
     h5 {
         color: $subtle-color;
     }
+    
+    //force the buttons to stack
+    .button {
+        clear: both;
+    }
+
 
     .dls-speaker-container {
         margin-top: 0;

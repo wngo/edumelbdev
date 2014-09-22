@@ -123,8 +123,14 @@ input:invalid, textarea:invalid {
     color: #333;
     text-shadow: none;
 }
+
+::-webkit-selection {
+    background: lighten($color-main, 60%);
+    color: #333;
+}
+
 ::selection {
-    background: lighten ($color-main, 60%);
+    background: lighten($color-main, 60%);
     color: #333;
     text-shadow: none;
 }
