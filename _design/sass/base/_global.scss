@@ -166,7 +166,7 @@ p {
     font-size: 1em;
     line-height: 1.618;
     margin: 0 0 1.618em 0;
-    max-width: 37em;
+    /*max-width: 37em;*/
     /*overflow:hidden;*/
     }
     
@@ -330,7 +330,7 @@ body {
 }
   
   .home {
-    background: url("mgseBg-l-alt.png") 0em 14em no-repeat,
+    background: url("mgseBg-l-alt.png") 0em 11em no-repeat,
     url("mgseBg-r.png") 101% 35em no-repeat !important;
     background-color:#fff;
   }

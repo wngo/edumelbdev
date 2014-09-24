@@ -1,6 +1,23 @@
 /*================================================
     HEADER REPLACMENT
-    ===========================================*/    
+    ===========================================*/   
+
+.home {
+    
+    .wrapper-header, .header .hgroup {
+        height: 125px;
+    }
+    
+    .mgse-search {
+        right: 0;
+        top: 150px;
+    }
+    
+    body {
+        background: none !important;
+    }
+} 
+
     .header .hgroup {
         background-color: #00457C;
         height:145px;
@@ -14,7 +31,6 @@
         @include breakpoint (small) {
           height: 115px;
         }
-
 
       }
 
