@@ -13,9 +13,7 @@
         top: 150px;
     }
     
-    body {
-        background: none !important;
-    }
+
 } 
 
     .header .hgroup {
@@ -45,6 +43,10 @@
         /*height:126px;
         width:126px; 
         background-position: 15px 15px;       */} 
+
+        #g-header #g-audience-links li {
+            background: none;
+        }
         
     .header .hgroup h1 {
         height:145px; 

@@ -37,10 +37,12 @@
     padding: 0;
 }
 .footer ul li {
+    background: none; // clear the image used for list items
     clear: both;
     margin: 0;
     padding: 0;
     text-indent: 0;
+
 }
 .footer li strong {
     margin: 0;

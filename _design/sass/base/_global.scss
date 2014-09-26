@@ -88,7 +88,34 @@ $fourth_level: #cbcbc9;
 
 
 
-          
+ .main-content-wrapper {
+        background: #fff;
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 1em; 
+
+        @include breakpoint (small) {
+            float: left;
+            margin-top: 0;
+            padding: 0 20px;
+
+        }
+
+        @include breakpoint (small-md) {
+            margin-top: -1em;
+        }
+
+        @include breakpoint (large) {
+            margin-top: -7.7em;
+        }
+
+    }
+
+    .breadcrumbs {
+    padding-bottom: 1.6em; 
+}
+
+         
 .video-content, .video-content__embed {
     margin-bottom: 1.618em; }
 

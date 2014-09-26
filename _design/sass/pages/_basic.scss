@@ -1,28 +1,4 @@
 
-    .main-content-wrapper {
-        background: #fff;
-        max-width:1140px;
-        padding: 1em;
-        margin-top: -0.7em;
-        margin-top: -7.7em;
-
-        @include breakpoint (small) {
-            float: left;
-            margin-top: 0;
-            padding: 0 20px;
-
-        }
-
-        @include breakpoint (small-md) {
-            margin-top: -1em;
-        }
-
-        @include breakpoint (large) {
-            margin-top: -7.7em;
-        }
-
-    }
-
 body { 
   
   background-color: linear-gradient (#fff 50%, #005596);
@@ -50,9 +26,6 @@ body {
  #content { 
         clear: both;
          }
-.breadcrumbs {
-    padding-bottom: 1.6em; 
-}
 
 /** if no hero image on landing page push wrapper down **/
 .wrapper.no-landing, .main-content-wrapper.no-landing {
