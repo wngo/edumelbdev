@@ -35,7 +35,7 @@ h1, .h1, .title {
     color: $color-main;
     text-shadow: none;
     padding: 0;
-    margin-bottom: 1em;
+    margin-bottom: 0.382em;
 
     @include breakpoint (small) {
       font-size: 2em;
@@ -87,8 +87,8 @@ h3, .h3 {
   }
 
 h4, .h4 {
-    color: #20201e;
-    font-size: 1.1em;
+    color: rgba(32, 32, 30, 0.8);
+    font-size: 1em;
     font-family: $font-sans-bold;
     font-weight: 700;
     line-height: 1.618em;
@@ -150,10 +150,10 @@ div, p {
 
 
 strong, b {
-  color: #404040;
+  color: #4a4a4a;
   font-family: $font-sans-bold;
   font-weight: 700;
-  font-size:0.9em;
+  font-size: 1em;
   line-height: 1.618em; 
 }
 
@@ -187,7 +187,7 @@ footer strong, footer b {
 }
 
 a.button {
-    margin-bottom: 3em; }
+    margin-bottom: 1em; }
 
 .home a, .home a:active, .footer a, .home h3 {
     /*color:#009a49;*/
@@ -228,7 +228,6 @@ a.button {
   font-family: $body-font-family;
   line-height: $base-line-height;
   font-weight: 400;
-  max-width: 90%; 
     
     @include breakpoint(small) {
       font-size: 1.1em; }

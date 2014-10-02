@@ -215,11 +215,6 @@ h6, .h6 {
 p {
   margin-top: 0;
   padding: 0 auto;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -o-hyphens: auto;
-  hyphens: auto;
   word-wrap: break-word;
   margin-bottom: emRhythm(4);
 
@@ -228,7 +223,7 @@ p {
 
 
 small, .font-small {
-  @include setType(3, $base-em-font-size);
+  @include setType(2, $base-em-font-size);
 }
 
 em {

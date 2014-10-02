@@ -46,7 +46,8 @@ http://www.sitepoint.com/maintain-image-aspect-ratios-responsive-web-design/
 
       img {
         display: block;
-        max-width: 100%;
+        /*max-width: 100%;*/
+        width: 100%;
         max-height: 100%;
         margin: auto;
         position: absolute;

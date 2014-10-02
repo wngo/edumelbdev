@@ -137,7 +137,7 @@ $fourth_level: #cbcbc9;
 /*=======================>> GLOBAL <<===============================*/
 /*==================================================================*/  
 .main {
-  padding: 20px 0 0; 
+  /*padding: 10px 0 0; */
   background:none;
   /*border-top: 3px solid #005596;*/}
 
@@ -349,7 +349,7 @@ html.pointerevents body.no-logo div.wrapper div.aside {
 
 body {
   
-  background: url("mgseBg-l-alt.png") 0em 30em no-repeat,
+  background: url("mgseBg-l-alt.png") 0em 28em no-repeat,
   url("mgseBg-r.png") 101% 35em no-repeat !important;
   background-color:#fff;
  /**background: url("mgseBg-r.png") 101% 35em no-repeat !important;
@@ -445,7 +445,7 @@ body.home {
     width:100%;
 
       @include breakpoint (small) {
-        margin-bottom: 0; }
+        margin-bottom: 2em; }
     } 
     
   .col-6 {
