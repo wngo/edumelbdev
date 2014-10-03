@@ -12,7 +12,7 @@
    float:right; }
 
 .news-item {
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     overflow:hidden; 
 
     @include breakpoint(small) {
@@ -81,6 +81,7 @@
 // events page date details
 .meta {
   float: left;
+  font-size: 0.9em;
   padding-bottom: 0.474em;
   padding-top: 0.474em;
   

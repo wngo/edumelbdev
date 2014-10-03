@@ -45,7 +45,6 @@ h1, .h1, .title {
 h2, .h2 {
     font-family: $font-sans-bold;
     font-weight: 700;
-    font-size:2.006em;
     line-height: 1.618em;
     padding: 0; 
     
@@ -201,7 +200,7 @@ a.button {
 
 
     a, a:active, a:visited {
-    border-bottom: none;
+    border-bottom: 1px solid lighten($color-main, 10%);
     color: $color-main;
     transition-property: color;
     transition-timing: ease-out;
@@ -215,7 +214,7 @@ a.button {
     
     a:hover {
       color: lighten($color-main,10%);
-      border-bottom: 1px solid lighten($color-main, 10%);
+      border-bottom: none;
       transition-property: color;
       transition-timing: ease-out;
       transition-duration: 1s;
