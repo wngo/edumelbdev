@@ -189,7 +189,7 @@ a.button {
     margin-bottom: 1em; }
 
 .home a, .home a:active, .footer a, .home h3 {
-    /*color:#009a49;*/
+    border-bottom: none;
     color: #00447C;
     transition-property: background-color;
     transition-timing: ease-out;

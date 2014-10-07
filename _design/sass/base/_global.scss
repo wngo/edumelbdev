@@ -90,6 +90,12 @@ html {
   overflow-x: hidden;
 }
 
+.preview-box-wrapper {
+
+margin: 0 !important;
+width: 100% !important;
+}
+
  .main-content-wrapper {
         background: #fff;
         max-width: 1140px;
@@ -351,16 +357,16 @@ html.pointerevents body.no-logo div.wrapper div.aside {
 
 body {
   
-  background: url("mgseBg-l-alt.png") 0em 28em no-repeat,
-  url("mgseBg-r.png") 101% 35em no-repeat !important;
+  background: url("mysource_files/mgseBg-l-alt.png") 0em 28em no-repeat,
+  url("mysource_files/mgseBg-r.png") 101% 35em no-repeat !important;
   background-color:#fff;
  /**background: url("mgseBg-r.png") 101% 35em no-repeat !important;
   background-color:#fff;**/
 }
   
   .home {
-    background: url("mgseBg-l-alt.png") 0em 11em no-repeat,
-    url("mgseBg-r.png") 101% 35em no-repeat !important;
+    background: url("mysource_files/mgseBg-l-alt.png") 0em 11em no-repeat,
+    url("mysource_files/mgseBg-r.png") 101% 35em no-repeat !important;
     background-color:#fff;
   }
 }
