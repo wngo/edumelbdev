@@ -98,12 +98,12 @@ width: 100% !important;
 
  .main-content-wrapper {
         background: #fff;
-        max-width: 1140px;
+        max-width: 1250px;
         margin: 0 auto;
         padding: 1em; 
 
         @include breakpoint (small) {
-            float: left;
+            // float: left; //break the layout does not go full width
             margin-top: 0;
             padding: 0 20px;
 
@@ -201,7 +201,7 @@ p {
     font-size: 1em;
     line-height: 1.618;
     margin: 0 0 1.618em 0;
-    /*max-width: 37em;*/
+    max-width: 37em;
     /*overflow:hidden;*/
     }
     
@@ -222,8 +222,13 @@ li {
     line-height: 1.618em; }
 
 /*reduce home page h3*/
-.home h3 { 
-  font-size:1.184em; line-height:1.618em; }
+.home {
+
+  h3 { 
+  font-size:1.184em; 
+  line-height:1.618em; }
+
+}
 
 /*columns too wide to fit 8 columns, making smaller
 #main-content .home .col-2 { 
