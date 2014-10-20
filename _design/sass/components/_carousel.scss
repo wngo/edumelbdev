@@ -215,9 +215,9 @@ h2.reset-m {
   }
 
 
-.home #home-banners  a {
+.home .home-banners  a {
   color: $color-main;
-  /*border-bottom: 1px solid $color-main;*/
+  border-bottom: none;
 
 }
 
