@@ -34,8 +34,7 @@
 
       .header {
         margin:0 auto;
-        @include max-width;
-        width:1600px;
+        max-width:1250px
       }
 
      #g-global-menu a#g-global-menu-logo {

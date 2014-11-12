@@ -240,10 +240,10 @@ li {
 .home h3  { 
   border-bottom: 2px solid #2D71B3; }
 
-#main-content .home h3 a, #main-content .home h3 a:hover { 
+.home h3 a:hover { 
   border-bottom:none; }
 
-/*.footer a, .footer  a:active, .footer a:visited {
+/*.footer a, .footer  a:active,  .footer a:visited {
   color:#007DB9;}*/
   
 
@@ -374,6 +374,10 @@ body {
     url("mysource_files/mgseBg-r.png") 101% 35em no-repeat !important;
     background-color:#fff;
   }
+
+  .no-bg {
+    background: none;
+  }
 }
 
 
@@ -398,31 +402,7 @@ body {
     }
 }
 
-/*1000px*/
-/** 
-  
-  Removed, looks like duplicate MQ
 
-
-@media all and (max-width:64em) {
-
-
-body {
-  
-  background: url("mgseBg-l-alt.png") -13.5em 12em no-repeat,
-  url("mgseBg-r.png") 101% 35em no-repeat !important;
-  background-color:#fff;
-  background: -moz-linear-gradient (#fff 20%, #005596);
-  transition: 0s;
-}
-
-body.home {
-    background: url("mgseBg-l-alt.png") -13.5em 12em no-repeat,
-  url("mgseBg-r.png") 101% 13em no-repeat !important;
-  }
-
- }
- **/
 
 /**GLOBAL
 770px**/

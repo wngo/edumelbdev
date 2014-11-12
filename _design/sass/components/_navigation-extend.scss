@@ -3,6 +3,8 @@
  .flexnav {
    background: $primary-color-nav;
    padding:0 0 0 0px;
+   margin: 0 auto;
+   max-width: 1250px;
 
       @include breakpoint (small) {
         max-height: 0;
@@ -19,6 +21,8 @@
   .main_nav {
    background: $header-color;
    margin-top: -2.5em;
+   width:100%;
+   float: left;
 
   
      .flexnav .touch-button {

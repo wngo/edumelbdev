@@ -1,3 +1,22 @@
+/* 
+
+# Basic buttons
+
+Displaying different type of buttons availble
+
+```
+<div class="button-group">
+    <a href="#" class="button">Compose new</a>
+    
+    <a href="#" class="button--go">Compose new</a>
+    
+    <a href="#" class="button--pdf">Compose new</a>
+
+    <a href="#" class="button--document">Compose new</a>
+</div>
+```
+
+ */
 
 .button {
     font-family: $font-sans;
