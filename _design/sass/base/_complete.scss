@@ -14,12 +14,12 @@ a {
     background: transparent;
 }
 ins {
-    background-color: #ff9;
+    background-color: lighten($color-main, 60%);
     color: #000;
     text-decoration: none;
 }
 mark {
-    background-color: #ff9;
+    background-color: lighten($color-main, 60%);
     color: #000;
     font-style: italic;
     font-weight: bold;
@@ -58,7 +58,23 @@ ul, ol {
 }
 ol {
     list-style-type: decimal;
+    counter-reset: item;
+
+    li {
+        display: block;
+        position: relative;
+
+        &:before {
+            content: counters(item, ".")".";
+            counter-increment: item;
+            position: absolute;
+            margin-right: 100%;
+            right: 10px; /* space between number and text */
+        }
+    }
 }
+
+
 nav ul, nav li {
     margin: 0;
 }
