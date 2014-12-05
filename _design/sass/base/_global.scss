@@ -254,12 +254,21 @@ li {
  }
 
 
-ul li, li ul li, li li ul li {
+ul li {
   background: url("http://www.education.unimelb.edu.au/__data/assets/image/0019/815203/list-block-sml.gif") no-repeat 0px 10px;
   padding-left:1em;
   list-style-type: none;
   margin-left:-1em;
   max-width: 35em;
+
+   li {
+    background: none;
+    list-style-type: none;
+
+    &:before {
+      content: "-" " ";
+    }
+  }
 }
 /**bullet list style was overlaping due to hanging lists**/
 .col-3 ul {
@@ -286,9 +295,6 @@ table {
 
 .main ul ul {
     margin-left: 0px; }
-
-ul ul li {
-   list-style: none; }
 
 
 html.pointerevents body.no-logo div.wrapper div.aside {
