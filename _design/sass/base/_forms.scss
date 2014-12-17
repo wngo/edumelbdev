@@ -177,8 +177,8 @@ form {
 form fieldset {
     position: relative;
     margin-bottom: 10px;
-    background: lighten($color-main, 10%);
-    padding: 1em;
+    background: none;
+    padding: 0.618em;
     border: none;
 }
 

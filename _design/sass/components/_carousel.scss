@@ -25,11 +25,11 @@ $banner-height: 350px;
 
 #home-banners .banner-navigation {
   background: $color-main;
-  bottom: -20px;
+  bottom: -10px;
   border-radius: 2px;
   padding: 10px 0 10px 10px;
   position: absolute;
-  right: 0px;
+  right: 10px;
   top: auto;
   width: auto;
   z-index: 10;
@@ -74,14 +74,13 @@ $banner-height: 350px;
 }
 
 #home-banners .home-banner img {
- /*height: $banner-height;*/
- width: auto; 
+  width: auto; 
 
-  @include breakpoint(medium) {
-    width: auto; }
+    @include breakpoint(medium) {
+      width: auto; }
 
     @include breakpoint(large) {
-    width: 100%; }
+      width: 100%; }
 }
 
 .home-banner .summary {
@@ -98,6 +97,9 @@ $banner-height: 350px;
     background: none;
     position: relative;
     width: 40%; }
+
+  @include breakpoint(small) {
+    background: rgba(0,0,0,0.6); }
 }
 
 
@@ -107,7 +109,11 @@ color: $color-main;
 margin-bottom: 0;
 font-size: 176%;
 line-height: 1.618em;
-text-align: left; }
+text-align: left; 
+
+@include breakpoint(small) {
+    color: #fff; }
+}
 
 .summary h4 {
  margin-bottom: 0; }
@@ -148,8 +154,11 @@ h2.reset-m {
   }
 }
 
-#home-banners .home-banner .summary p, #home-banners .home-banner .summary strong, .summary h4 {
+#home-banners .home-banner .summary p, #home-banners .home-banner .summary strong, .summary h4, .summary a {
   color: $color-main;
+
+  @include breakpoint(small) {
+    color: #fff; }
 }
 
 #main-content #home-banners {
@@ -196,6 +205,10 @@ h2.reset-m {
   margin-bottom: 5px; 
   height: $banner-height;
   box-shadow: 2px 2px 2px rgba(0, 85, 150, 0.2);
+
+  @include breakpoint(small) {
+    box-shadow: none;
+  }
 }
 
 #home-banners .home-banner {
