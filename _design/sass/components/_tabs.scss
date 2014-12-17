@@ -4,7 +4,7 @@
     =====================================*/   
 
         /* root element for tabs  */
-    #main-content ul.tabs { 
+    ul.tabs { 
         border-bottom: 3px solid $color-main;
         list-style:none;
         display: inline-block;
@@ -87,7 +87,7 @@
 
 
 /**quick for e4kids images**/
-#main-content .e4kids .preview-img-wrap img {
+.e4kids .preview-img-wrap img {
   width:50%; }
 
  
@@ -98,7 +98,7 @@
 
 
     /* when mouse enters the tab move the background image */
-    #main-content ul.tabs a:hover {
+    ul.tabs a:hover {
         background:lighten($color-main,10%);
     }
 
@@ -110,7 +110,7 @@
 
 
         
- #main-content ul.tabs a.current {
+ ul.tabs a.current {
         color:#fff;
         border-bottom:none; 
         background:lighten($color-main,10%);
@@ -118,7 +118,7 @@
     }
     
 
-#main-content ul.tabs a:hover {
+ul.tabs a:hover {
     border-bottom:none;
     transition: background 0.3s;}
 

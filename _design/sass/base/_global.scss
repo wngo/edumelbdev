@@ -205,14 +205,6 @@ p {
     /*overflow:hidden;*/
     }
     
-p.pullquote {
-    border-left: 2px solid #009A49;
-    line-height: 28px;
-    margin: 0;
-    padding-left:0.732em;
-    }
-
-
 
 /*===========================
     Home main content
@@ -230,9 +222,6 @@ li {
 
 }
 
-/*columns too wide to fit 8 columns, making smaller
-#main-content .home .col-2 { 
-  width:30%; }*/
  
 #main-content.main .aside { 
   width:23.40455%; margin-top:0; padding-top:0; }
@@ -243,12 +232,7 @@ li {
 .home h3 a:hover { 
   border-bottom:none; }
 
-/*.footer a, .footer  a:active,  .footer a:visited {
-  color:#007DB9;}*/
-  
-
 .main ul, .main  ol {
-    /*margin-left: -20px;*/
     margin-bottom: 1em;
     margin-top:0.732em;
  }
@@ -285,13 +269,6 @@ table {
 .main table ul {
     list-style:none; }
 
-
-    
-/*.main table tr {
-    border-bottom: 1px solid #B9CFE7;
-    border-top:none;
-    border-left: none;
-    border-right: none; }*/
 
 .main ul ul {
     margin-left: 0px; }
@@ -426,7 +403,7 @@ body {
 
   
   .wrapper-header {
-  background: #00457C;}
+  background: $primary-color-nav;}
   
   .header {
   width:100%; }

@@ -177,9 +177,9 @@ form {
 form fieldset {
     position: relative;
     margin-bottom: 10px;
-    background: #fafcff;
-    padding: 5px 0 20px;
-    border: 1px solid lighten(#005596, 60%);
+    background: lighten($color-main, 10%);
+    padding: 1em;
+    border: none;
 }
 
 form p {
@@ -187,7 +187,8 @@ form p {
     padding: 1px 80px;
 }
 form input, form textarea, form select {
-    padding: 5px;
+    font-size: 90%;
+    padding: 1em;
     margin: 0 0 6px;
     max-width: 100%}
 form select {

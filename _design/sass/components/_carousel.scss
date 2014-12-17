@@ -24,7 +24,7 @@ $banner-height: 350px;
 }
 
 #home-banners .banner-navigation {
-  background: #005596;
+  background: $color-main;
   bottom: -20px;
   border-radius: 2px;
   padding: 10px 0 10px 10px;
@@ -149,7 +149,7 @@ h2.reset-m {
 }
 
 #home-banners .home-banner .summary p, #home-banners .home-banner .summary strong, .summary h4 {
-  color:#005596;
+  color: $color-main;
 }
 
 #main-content #home-banners {

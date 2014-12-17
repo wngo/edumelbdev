@@ -53,15 +53,16 @@
 }
 
 form button, input[type="submit"] {
-    background:#164682;
+    background: $color-main;
     border-bottom: none;
     color:#fff;
     border: 0 none;
     border-radius: 3px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     color: #FFFFFF;
+    font-size: 0.9em;
     line-height: 16px;
-    padding: 8px 18px;
+    padding: 10px 45px;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
     vertical-align: middle;
     margin:0;

@@ -56,6 +56,7 @@ pre, code, kbd, samp {
 ul, ol {
     margin-left: 1.8em;
 }
+
 ol {
     list-style-type: decimal;
     counter-reset: item;
@@ -70,6 +71,12 @@ ol {
             position: absolute;
             margin-right: 100%;
             right: 10px; /* space between number and text */
+        }
+    }
+
+    li.group {
+        &:before {
+            content: " ";
         }
     }
 }
@@ -518,21 +525,6 @@ table tr, table th, table td {
 table tbody tr:nth-child(2n+1) {
     background: lighten($color-main, 65%);
 }
-
-
-.error {
-    color: #600;
-    background: #ffe6e5 url("../images/error-bg.png") 2% 50% no-repeat;
-    border: 1px solid #dfa19f;
-}
-
-.alert {
-    color: #024;
-    background: #fafcff url("../images/alert-bg.png") 2% 50% no-repeat;
-    border: 1px solid #afc4e4;
-}
-
-
 
 
 ul.news {
