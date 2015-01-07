@@ -256,3 +256,136 @@ form .push-5 {
 form .first {
     margin-left: 0;
 }
+
+/**
+
+		CHECKLIST
+
+**/
+ fieldset input[type="checkbox"] {
+      display: none; }
+       fieldset input[type="checkbox"]:checked + label:active,  fieldset input[type="checkbox"]:checked + label::after {
+        opacity: 1; }
+     fieldset input[type="checkbox"] + label {
+      display: block;
+      position: relative; }
+       fieldset input[type="checkbox"] + label::after {
+        background: transparent;
+        border: 3px solid #0076de;
+        border-right: 0 none;
+        border-top: 0 none;
+        content: '';
+        height: 5px;
+        left: 3px;
+        opacity: 0;
+        position: absolute;
+        top: 5px;
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        width: 10px; }
+
+       fieldset input[type="checkbox"] + label:active::after {
+        opacity: .2; }
+
+       fieldset input[type="checkbox"] + label span {
+        margin-top: -5px;
+        margin-top: -0.3125rem;
+        padding-left: 35px;
+        padding-left: 2.1875rem;
+        width: 640px;
+        width: 40rem;
+        cursor: pointer;
+        display: block;
+        text-indent: 0; }
+
+         fieldset input[type="checkbox"] + label span::before {
+          background-color: #fff;
+          border: 1px solid #e0e0e0;
+          border-radius: 3px;
+          -moz-box-sizing: border-box;
+               box-sizing: border-box;
+          content: '';
+          cursor: default;
+          display: block;
+          height: 20px;
+          left: -1px;
+          margin: 0 10px -3px 0;
+          padding: 1px;
+          position: absolute;
+          top: 1px;
+          width: 20px; }
+
+     fieldset .invalid input[type="checkbox"] + label {
+      border-color: #fb6a7b; }
+
+      .checklist {
+  margin-left: 0; }
+
+  .checklist li {
+  	background: none;
+  	display: inline-block;
+    padding: 30px 0 30px 45px;
+    padding:  1.875rem 0 1.875rem 2.8125rem;
+    text-indent: -45px;
+    text-indent: -2.8125rem;
+    border-top: 1px solid #e0e0e0;
+    list-style-type: none; }
+
+    .checklist li:first-child {
+      border-top: 0 none; }
+
+    .checklist li.on span {
+      color: #008a00;
+      text-decoration: line-through; }
+
+      fieldset input[type="checkbox"] + label::after {
+        background: transparent;
+        border: 3px solid #0076de;
+        border-right: 0 none;
+        border-top: 0 none;
+        content: '';
+        height: 5px;
+        left: 5px;
+        opacity: 0;
+        position: absolute;
+        top: 7px;
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        width: 10px; }
+
+      fieldset input[type="checkbox"] + label:active::after {
+        opacity: .2; }
+
+      fieldset input[type="checkbox"] + label span {
+        margin-top: -5px;
+        margin-top: -0.3125rem;
+        padding-left: 35px;
+        padding-left: 2.1875rem;
+        width: 640px;
+        width: 40rem;
+        cursor: pointer;
+        display: block;
+        text-indent: 0; }
+
+        fieldset input[type="checkbox"] + label span::before {
+          background-color: #fff;
+          border: 1px solid #e0e0e0;
+          border-radius: 3px;
+          -moz-box-sizing: border-box;
+               box-sizing: border-box;
+          content: '';
+          cursor: default;
+          display: block;
+          height: 20px;
+          left: -1px;
+          margin: 0 10px -3px 0;
+          padding: 1px;
+          position: absolute;
+          top: 1px;
+          width: 20px; }
+
+
+
+
