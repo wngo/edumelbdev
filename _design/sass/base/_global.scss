@@ -220,6 +220,9 @@ li {
   font-size:1.184em; 
   line-height:1.618em; }
 
+  ul {
+    padding-left: 0;
+  }
 }
 
  
@@ -249,10 +252,11 @@ ul li {
     background: none;
     list-style-type: none;
 
-    &:before {
-      content: "-" " ";
-    }
   }
+}
+
+#g-global-menu li:before {
+  content: ' ';
 }
 /**bullet list style was overlaping due to hanging lists**/
 .col-3 ul {
@@ -342,21 +346,17 @@ html.pointerevents body.no-logo div.wrapper div.aside {
 // @media all and (min-width: 45em) {
 
 @include breakpoint(large) {
-
 body {
-  
-  background: url("mysource_files/mgseBg-l-alt.png") 0em 28em no-repeat,
-  url("mysource_files/mgseBg-r.png") 101% 35em no-repeat !important;
-  background-color:#fff;
- /**background: url("mgseBg-r.png") 101% 35em no-repeat !important;
-  background-color:#fff;**/
-}
-  
+    background: url(mysource/mgseBg-l-alt.png) 0em 28em no-repeat, 
+    url(mysource/mgseBg-r.png) 101% 35em no-repeat !important;
+    background-color: #fff;
+    /**background: url(../images/mgseBg-r.png) 101% 35em no-repeat !important;
+     background-color:#fff;**/ }
+
   .home {
-    background: url("mysource_files/mgseBg-l-alt.png") 0em 11em no-repeat,
-    url("mysource_files/mgseBg-r.png") 101% 35em no-repeat !important;
-    background-color:#fff;
-  }
+    background: url(mysource/mgseBg-l-alt.png) 0em 10em no-repeat, 
+    url(mysource/mgseBg-r.png) 101% 35em no-repeat !important;
+    background-color: #fff; }
 
   .no-bg {
     background: none;

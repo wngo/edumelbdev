@@ -192,7 +192,7 @@ footer strong, footer b {
 a.button {
     margin-bottom: 1em; }
 
-.home a, .home a:active, .footer a, .home h3 {
+.home a, .home a:active, .footer a {
     border-bottom: none;
     color: $color-main;
     transition-property: background-color;
@@ -200,7 +200,9 @@ a.button {
     transition-duration: 0.5s;
     line-height:1 .618em; }
 
-
+.home a:hover {
+  border-bottom: 1px solid lighten($color-main, 10%); 
+}
 
 
     a, a:active {
