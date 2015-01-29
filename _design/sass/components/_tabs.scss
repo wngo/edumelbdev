@@ -12,7 +12,7 @@
         padding:0;
         border-radius: 4px 4px 0 0;
         height:43px;
-        max-width: 100%;
+        width: 100%;
 
         @media all and (max-width: 45em) {
             height: auto;
@@ -75,9 +75,14 @@
             transition: background 0.8s; } 
         }
 
+
         @include breakpoint (small) {
             a.current {
             background:lighten($color-main,10%); }
+
+            ul.tabs {
+                width: 100%;
+            }
         }
 
 
