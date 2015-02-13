@@ -1,4 +1,4 @@
-ol.slats, .slats li {
+.slats, .slats li {
 
   list-style-type: none;
   margin-left: 0;
@@ -116,14 +116,14 @@ ol.slats, .slats li {
 }
 
  .slats__header--full {
-  width: 150;
+  width: 250px;
     
    .more-info {
       color: #fff;
       font-size: 1em;
       position: absolute;
       padding: 2px 10px;
-      top: 120px;
+      top: 221px;
       left: 0px;
       background: $color-main;
       text-align: left;
@@ -141,7 +141,7 @@ ol.slats, .slats li {
     h4 {
       font-size: 1em;
       font-family: $font-sans;
-      font-weight: 400;
+      font-weight: 700;
       letter-spacing: 1px;
     }
 
@@ -160,24 +160,56 @@ ol.slats, .slats li {
   float: left;
   margin-left: 0;
   margin-bottom: 2em;
-  width: 70%;
+  width: 90%;
  }
 
- .grid-contacts .group {
+ .slats--columns .group {
 
-  width: 30%;
+  width: 100%;
 
     @include breakpoint(medium) {
       float: left;
       margin-right: 2%;
-      width: 30%;
+      margin-bottom: 3em;
+      width: 48%;
     }
 
     @include breakpoint(large) {
       float: left;
       margin-right: 2%;
-      width: 30%;
+      margin-bottom: 3em;
+      width: 48%;
     }
+
+  .slats__header--full {
+    float: left;
+
+    @include breakpoint(medium) {
+      float: none;
+    }
+
+    @include breakpoint(large) {
+      float: none;
+    }
+
+  }
+
+  .slats__details--full {
+    margin-left: 0;
+  }
  }
 
+.slats, .slats--columns {
+  .button--go {
+    clear: both;
+  }
+}
 
+
+.slats--columns {
+
+  .img figcaption, .slats__header--full img {
+    width: 250px;
+    height: 250px;
+  }
+}

@@ -347,15 +347,15 @@ html.pointerevents body.no-logo div.wrapper div.aside {
 
 @include breakpoint(large) {
 body {
-    background: url(mysource/mgseBg-l-alt.png) 0em 28em no-repeat, 
-    url(mysource/mgseBg-r.png) 101% 35em no-repeat !important;
+    background: url(mysource_files/mgseBg-l-alt.png) 0em 28em no-repeat, 
+    url(mysource_files/mgseBg-r.png) 101% 35em no-repeat !important;
     background-color: #fff;
     /**background: url(../images/mgseBg-r.png) 101% 35em no-repeat !important;
      background-color:#fff;**/ }
 
   .home {
-    background: url(mysource/mgseBg-l-alt.png) 0em 10em no-repeat, 
-    url(mysource/mgseBg-r.png) 101% 35em no-repeat !important;
+    background: url(mysource_files/mgseBg-l-alt.png) 0em 10em no-repeat, 
+    url(mysource_files/mgseBg-r.png) 101% 35em no-repeat !important;
     background-color: #fff; }
 
   .no-bg {

@@ -1,20 +1,22 @@
 
 
 .content-img__left {
-    width: 100%;
+    width: 50%;
     float: left;
-    margin-right: 1.184em;
-    margin-bottom: 1.618em;
+    margin-right: 1.618em;
+    margin-bottom: 1em;
 
 
 }
             
-.content-img-right {
-    width: 25.3464%;
+.content-img__right {
+    width: 50%;
     float: right;
-    margin-left: 1.184em;    }    
+    margin-left: 1.618em;
+    margin-bottom: 1em;
+}    
             
-.content-img-right img, .content-img__left img , .content-img {
+.content-img__right img, .content-img__left img , .content-img {
     margin-top: 0em;
     width: 100%; 
   }
@@ -31,3 +33,5 @@ figcaption, .figcaption {
      padding: 5px;
      margin-bottom: 1em;
  }
+
+

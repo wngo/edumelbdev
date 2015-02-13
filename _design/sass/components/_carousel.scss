@@ -154,7 +154,8 @@ h2.reset-m {
   }
 }
 
-#home-banners .home-banner .summary p, #home-banners .home-banner .summary strong, .summary h4, .summary a {
+#home-banners .home-banner .summary p, #home-banners .home-banner .summary strong, .summary h4, #home-banners .summary a {
+
   color: $color-main;
 
   @include breakpoint(small) {
