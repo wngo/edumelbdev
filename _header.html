@@ -112,7 +112,42 @@
   Page generated: 17 February 2014 11:39:06
 -->
 
+<style>
 
+.mgse-search {
+  margin-top: 0.618em;
+}
+
+.mgse-search__input {
+  position: absolute;
+    right: 44px;
+    border: none;
+    outline: none;
+    margin: 0;
+    z-index: 10;
+    font-family: inherit;
+    font-size: 20px;
+    color: #2c3e50; }
+
+.mgse-search__input input {
+  border-radius: 2px 0 0 2px; }
+
+.mgse-search__button {
+  position: absolute;
+  width: 47px;
+  display: block;
+  right: 0;
+  text-align: center;
+  cursor: pointer;
+  margin: 0;
+  padding: 0; }
+
+.mgse-search__button .icon {
+      padding-left:20px;
+      padding-right: 20px; }
+
+
+</style>
 
 </head>
 <body class="no-logo mgse" role="application">
@@ -133,8 +168,15 @@
          <div class="mgse-search">
 
                     <form id="searchbox_010626520995356427609:quos3ex_5tm" action="/search">
-                      <input id="s" name="s" size="120" type="search" placeholder="Search MGSE" />
-                      <!--<button aria-label="search MGSE" title="search MGSE"><i class="fa fa-search"></i></button> -->
+                      <span class="mgse-search__input">
+                        <input id="s" name="s" type="text" placeholder="Search MGSE" />
+                      </span>
+
+                      <span class="mgse-search__button">
+                        <button class="icon">
+                          <i class="fa fa-search"></i>
+                        </button>
+                      </span>
                    </form>
         </div>
         <hr>

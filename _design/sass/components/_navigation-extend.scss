@@ -1,4 +1,4 @@
- $header-color: #00457c;
+
 
  .flexnav {
    background: $primary-color-nav;
@@ -19,7 +19,7 @@
   /** next closed**/
   
   .main_nav {
-   background: $header-color;
+   background: $primary-color-nav;
    margin-top: -2.5em;
    width:100%;
    float: left;

@@ -139,7 +139,7 @@ http://www.sitepoint.com/maintain-image-aspect-ratios-responsive-web-design/
         }
 
   img {
-      margin-top: 0.7em;
+      margin-top: 0.5em;
       width: 25%;
     }
 }
@@ -149,12 +149,16 @@ http://www.sitepoint.com/maintain-image-aspect-ratios-responsive-web-design/
 }
 
 
-.grid-item:hover, .grid-item--hasImg:hover {
+.grid-item:hover, .grid-item--hasImg:hover{
 
         background: #c9e8ff;
         outline: 1px solid #c9e8ff;
         cursor: pointer;
         transition: background-color 0.2s ease-in;
-        
     }
 
+/* .grid-item--hasImg:hover img {
+  border: 2px solid $color-main;
+  transition: border-color 0.1s ease-in;
+}
+ */

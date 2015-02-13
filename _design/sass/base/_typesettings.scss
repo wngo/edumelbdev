@@ -222,10 +222,6 @@ p {
 }
 
 
-small, .font-small {
-  @include setType(2, $base-em-font-size);
-}
-
 em {
   font-style: italic;
 }
@@ -244,10 +240,6 @@ strong {
 
 pre, code {
   font-family: $font-mono;
-}
-
-time, .time {
-  text-transform: uppercase;
 }
 
 ol, ul {

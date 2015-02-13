@@ -4,14 +4,14 @@
     =====================================*/   
 
         /* root element for tabs  */
-    #main-content ul.tabs { 
-        border-bottom: 3px solid $color-main;
+    ul.tabs { 
+        border-bottom: 7px solid lighten($color-main,10%);
         list-style:none;
         display: inline-block;
         margin:0 0 25px 0 !important; 
         padding:0;
         border-radius: 4px 4px 0 0;
-        height:40px;
+        height:43px;
         max-width: 100%;
 
         @media all and (max-width: 45em) {
@@ -28,42 +28,59 @@
                 text-indent:0;
                 border-bottom: none;
 
-                 @media all and (max-width: 44em) {
-                    float: none;
-                }
+                 @include breakpoint (small) {
+                    float: none; }
         
 
-            a {
-                    background: $color-main;          
-                    border-bottom: none; 
-                    border-right: 1px solid darken($color-main, 5%);
-                    color:#fff; 
-                    height: 3em; 
-                    font-size: 90%; 
-                    line-height: 40px; 
-                    padding: 0.618em 2em;
-                    width: auto; 
+                    a {
+                            background: $color-main;          
+                            border-bottom: none; 
+                            border-right: 1px solid darken($color-main, 5%);
+                            color:#fff; 
+                            height: 3em; 
+                            font-size: 90%; 
+                            line-height: 40px; 
+                            padding: 0.618em 2em;
+                            width: auto; 
 
-                    .current {
-                        background:lighten($color-main,10%);
-                        color:#fff; }
+                            
 
-                        @media all and (max-width: 45em) {
-                        /* link inside the tab. uses a background image */
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.15); 
-                        font-size:0.9em;
-                        display:block;
-                        text-align:center;    
-                        text-decoration:none;
-                        margin:0;    
-                        position:relative;
-                        padding: 0.263em 1em;
-                        /*top:1px;*/
-                        } 
+                                @media all and (max-width: 45em) {
+                                /* link inside the tab. uses a background image */
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.15); 
+                                font-size:0.9em;
+                                display:block;
+                                text-align:center;    
+                                text-decoration:none;
+                                margin:0;    
+                                position:relative;
+                                padding: 0.263em 1em;
+                                /*top:1px;*/
+                                } 
+
+                            &:hover {
+                                border-bottom:none;
+                                background:lighten($color-main,10%);
+                                transition: background 0.3s; }
+
+                    }
 
                 }
 
-                }
+        @include breakpoint (large) {
+            a.current {
+            background:lighten($color-main,10%);
+            color:#fff;
+            padding-top: 1em;
+            transition: background 0.8s; } 
+        }
+
+        @include breakpoint (small) {
+            a.current {
+            background:lighten($color-main,10%); }
+        }
+
+
     } 
 
 //restrict sizing of images on project page partner sections
@@ -87,42 +104,14 @@
 
 
 /**quick for e4kids images**/
-#main-content .e4kids .preview-img-wrap img {
+.e4kids .preview-img-wrap img {
   width:50%; }
 
  
  .e4kids-preview img { 
     margin-left: -25px;}
-
+ 
     
-
-
-    /* when mouse enters the tab move the background image */
-    #main-content ul.tabs a:hover {
-        background:lighten($color-main,10%);
-    }
-
-    /* active tab uses a class name "current". it's highlight is also done by moving the background image. */
-    .tabs .current, .tabs .current:hover, .tabs li.current a {
-        background:lighten($color-main,10%);
-        border:none;   
-    }
-
-
-        
- #main-content ul.tabs a.current {
-        color:#fff;
-        border-bottom:none; 
-        background:lighten($color-main,10%);
-        transition: background 0.8s;
-    }
-    
-
-#main-content ul.tabs a:hover {
-    border-bottom:none;
-    transition: background 0.3s;}
-
-    /* Different widths for tabs: use a class name: w1, w2, w3 or w2 */
 
     /* initially all panes are hidden */ 
     .panes .pane {

@@ -201,18 +201,10 @@ p {
     font-size: 1em;
     line-height: 1.618;
     margin: 0 0 1.618em 0;
-    max-width: 37em;
+    max-width: 700px;
     /*overflow:hidden;*/
     }
     
-p.pullquote {
-    border-left: 2px solid #009A49;
-    line-height: 28px;
-    margin: 0;
-    padding-left:0.732em;
-    }
-
-
 
 /*===========================
     Home main content
@@ -228,11 +220,11 @@ li {
   font-size:1.184em; 
   line-height:1.618em; }
 
+  ul {
+    padding-left: 0;
+  }
 }
 
-/*columns too wide to fit 8 columns, making smaller
-#main-content .home .col-2 { 
-  width:30%; }*/
  
 #main-content.main .aside { 
   width:23.40455%; margin-top:0; padding-top:0; }
@@ -243,23 +235,28 @@ li {
 .home h3 a:hover { 
   border-bottom:none; }
 
-/*.footer a, .footer  a:active,  .footer a:visited {
-  color:#007DB9;}*/
-  
-
 .main ul, .main  ol {
-    /*margin-left: -20px;*/
     margin-bottom: 1em;
     margin-top:0.732em;
  }
 
 
-ul li, li ul li, li li ul li {
+ul li {
   background: url("http://www.education.unimelb.edu.au/__data/assets/image/0019/815203/list-block-sml.gif") no-repeat 0px 10px;
   padding-left:1em;
   list-style-type: none;
   margin-left:-1em;
   max-width: 35em;
+
+   li {
+    background: none;
+    list-style-type: none;
+
+  }
+}
+
+#g-global-menu li:before {
+  content: ' ';
 }
 /**bullet list style was overlaping due to hanging lists**/
 .col-3 ul {
@@ -277,18 +274,8 @@ table {
     list-style:none; }
 
 
-    
-/*.main table tr {
-    border-bottom: 1px solid #B9CFE7;
-    border-top:none;
-    border-left: none;
-    border-right: none; }*/
-
 .main ul ul {
     margin-left: 0px; }
-
-ul ul li {
-   list-style: none; }
 
 
 html.pointerevents body.no-logo div.wrapper div.aside {
@@ -359,21 +346,17 @@ html.pointerevents body.no-logo div.wrapper div.aside {
 // @media all and (min-width: 45em) {
 
 @include breakpoint(large) {
-
 body {
-  
-  background: url("mysource_files/mgseBg-l-alt.png") 0em 28em no-repeat,
-  url("mysource_files/mgseBg-r.png") 101% 35em no-repeat !important;
-  background-color:#fff;
- /**background: url("mgseBg-r.png") 101% 35em no-repeat !important;
-  background-color:#fff;**/
-}
-  
+    background: url(mysource/mgseBg-l-alt.png) 0em 28em no-repeat, 
+    url(mysource/mgseBg-r.png) 101% 35em no-repeat !important;
+    background-color: #fff;
+    /**background: url(../images/mgseBg-r.png) 101% 35em no-repeat !important;
+     background-color:#fff;**/ }
+
   .home {
-    background: url("mysource_files/mgseBg-l-alt.png") 0em 11em no-repeat,
-    url("mysource_files/mgseBg-r.png") 101% 35em no-repeat !important;
-    background-color:#fff;
-  }
+    background: url(mysource/mgseBg-l-alt.png) 0em 10em no-repeat, 
+    url(mysource/mgseBg-r.png) 101% 35em no-repeat !important;
+    background-color: #fff; }
 
   .no-bg {
     background: none;
@@ -420,7 +403,7 @@ body {
 
   
   .wrapper-header {
-  background: #00457C;}
+  background: $primary-color-nav;}
   
   .header {
   width:100%; }
