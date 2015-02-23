@@ -85,11 +85,17 @@
 
 
     img {
-      width: 150px;
-      height: 150px;
+      width: 100px;
+      height: 100px;
 
         @include breakpoint(large) {
           height: 150px;
+          width: 150px;
+        }
+
+        @include breakpoint(large) {
+          height: 150px;
+          width:150px;
         }
      }
 
@@ -166,37 +172,39 @@
  .slats--columns .group {
 
   width: 100%;
+  float:left;
+  margin-bottom: 5em;
 
     @include breakpoint(medium) {
       float: left;
       margin-right: 2%;
-      margin-bottom: 3em;
       width: 48%;
     }
 
     @include breakpoint(large) {
       float: left;
       margin-right: 2%;
-      margin-bottom: 3em;
       width: 48%;
     }
 
-  .slats__header--full {
-    float: left;
+    .slats__header--full {
+      float: left;
 
-    @include breakpoint(medium) {
-      float: none;
-    }
+      @include breakpoint(medium) {
+        float: none;
+      }
 
-    @include breakpoint(large) {
-      float: none;
-    }
+      @include breakpoint(large) {
+        float: none;
+      }
 
+    
   }
 
   .slats__details--full {
     margin-left: 0;
   }
+
  }
 
 .slats, .slats--columns {
@@ -209,7 +217,25 @@
 .slats--columns {
 
   .img figcaption, .slats__header--full img {
-    width: 250px;
-    height: 250px;
+    width: 100px;
+    height: 100px;
   }
+
+    @include breakpoint (large) {
+      .img figcaption, .slats__header--full img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+    @include breakpoint (medium) {
+      .img figcaption, .slats__header--full img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .abstract {
+      max-width: 90%;
+    }
 }
