@@ -93,9 +93,9 @@
           width: 150px;
         }
 
-        @include breakpoint(large) {
-          height: 150px;
-          width:150px;
+        @include breakpoint(medium) {
+          height: 100px;
+          width:100px;
         }
      }
 
@@ -118,7 +118,15 @@
  }
 
 .slats__header {
-    width: 25%;
+    width: 100px;
+
+    @include breakpoint (medium) {
+        width: 25%;
+      }
+
+    @include breakpoint (large) {
+        width: 25%;
+      }
 }
 
  .slats__header--full {
@@ -134,15 +142,16 @@
       background: $color-main;
       text-align: left;
 
+
     }
   
  }
 
  .slats__details, 
  %slat__details { //silent class //http://csswizardry.com/2014/01/extending-silent-classes-in-sass/
-  float: right;
-  width: 73%;
-  margin-left: 2%;
+  float: left;
+  width: 100%;
+  margin-left: 0%;
 
     h4 {
       font-size: 1em;
@@ -159,6 +168,18 @@
     p {
       margin-bottom: 0.732em;
     }
+
+    @include breakpoint (medium) {
+      float: right;
+      margin-left: 2%;
+      width: 73%;
+    }
+
+    @include breakpoint (large) {
+      float: right;
+      margin-left: 2%;
+      width: 73%;
+    }
  }
 
  .slats__details--full {
@@ -173,11 +194,12 @@
 
   width: 100%;
   float:left;
-  margin-bottom: 5em;
+  margin-bottom: 1em;
 
     @include breakpoint(medium) {
       float: left;
       margin-right: 2%;
+      margin-bottom: 3em;
       width: 48%;
     }
 
@@ -185,6 +207,7 @@
       float: left;
       margin-right: 2%;
       width: 48%;
+      margin-bottom: 4em;
     }
 
     .slats__header--full {
@@ -230,12 +253,13 @@
 
     @include breakpoint (medium) {
       .img figcaption, .slats__header--full img {
-      width: 150px;
-      height: 150px;
+      width: 100px;
+      height: 100px;
     }
   }
 
   .abstract {
+      font-size: 90%;
       max-width: 90%;
     }
 }
